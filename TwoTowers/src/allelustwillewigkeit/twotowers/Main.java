@@ -1,4 +1,4 @@
-package twotowers;
+package allelustwillewigkeit.twotowers;
 
 public class Main {
 
