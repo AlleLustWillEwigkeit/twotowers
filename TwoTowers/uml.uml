@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_FhYUYJmGEeOSd-xiGoW2OA" name="model">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_I2yxAJmGEeOSd-xiGoW2OA" name="Player"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_1oprsJmGEeOSd-xiGoW2OA" name="Akadály varázskövezése">
+    <include xmi:type="uml:Include" xmi:id="_RtZI0JmHEeOSd-xiGoW2OA" addition="_LhoKIJmHEeOSd-xiGoW2OA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_L2FzsJmGEeOSd-xiGoW2OA" name="Torony lerakása">
+    <include xmi:type="uml:Include" xmi:id="_QB9hwJmHEeOSd-xiGoW2OA" addition="_JkZBYJmHEeOSd-xiGoW2OA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8vfLgJmGEeOSd-xiGoW2OA" name="Torony felkövezése">
+    <include xmi:type="uml:Include" xmi:id="_Q4h9YJmHEeOSd-xiGoW2OA" addition="_JkZBYJmHEeOSd-xiGoW2OA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Dj4QcJmHEeOSd-xiGoW2OA" name="Akadály varázskövezése">
+    <include xmi:type="uml:Include" xmi:id="_SVylkJmHEeOSd-xiGoW2OA" addition="_LhoKIJmHEeOSd-xiGoW2OA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_JkZBYJmHEeOSd-xiGoW2OA" name="Torony kiválasztása"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_LhoKIJmHEeOSd-xiGoW2OA" name="Akadály kiválasztása"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZgLvsJmHEeOSd-xiGoW2OA" name="A_player_torony lerakása" memberEnd="_ZgLvsZmHEeOSd-xiGoW2OA _ZgLvtJmHEeOSd-xiGoW2OA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZgLvsZmHEeOSd-xiGoW2OA" name="player" type="_I2yxAJmGEeOSd-xiGoW2OA" association="_ZgLvsJmHEeOSd-xiGoW2OA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZgLvspmHEeOSd-xiGoW2OA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZgLvs5mHEeOSd-xiGoW2OA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZgLvtJmHEeOSd-xiGoW2OA" name="torony lerakása" type="_L2FzsJmGEeOSd-xiGoW2OA" association="_ZgLvsJmHEeOSd-xiGoW2OA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZgLvtZmHEeOSd-xiGoW2OA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZgLvtpmHEeOSd-xiGoW2OA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bfy3AJmHEeOSd-xiGoW2OA" name="A_player_torony felkövezése" memberEnd="_bfy3AZmHEeOSd-xiGoW2OA _bfy3BJmHEeOSd-xiGoW2OA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bfy3AZmHEeOSd-xiGoW2OA" name="player" type="_I2yxAJmGEeOSd-xiGoW2OA" association="_bfy3AJmHEeOSd-xiGoW2OA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bfy3ApmHEeOSd-xiGoW2OA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bfy3A5mHEeOSd-xiGoW2OA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bfy3BJmHEeOSd-xiGoW2OA" name="torony felkövezése" type="_8vfLgJmGEeOSd-xiGoW2OA" association="_bfy3AJmHEeOSd-xiGoW2OA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bfy3BZmHEeOSd-xiGoW2OA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bfy3BpmHEeOSd-xiGoW2OA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cEqeoJmHEeOSd-xiGoW2OA" name="A_player_akadály felkövezése" memberEnd="_cEqeoZmHEeOSd-xiGoW2OA _cEqepJmHEeOSd-xiGoW2OA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cEqeoZmHEeOSd-xiGoW2OA" name="player" type="_I2yxAJmGEeOSd-xiGoW2OA" association="_cEqeoJmHEeOSd-xiGoW2OA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cEqeopmHEeOSd-xiGoW2OA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cEqeo5mHEeOSd-xiGoW2OA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cEqepJmHEeOSd-xiGoW2OA" name="akadály felkövezése" type="_Dj4QcJmHEeOSd-xiGoW2OA" association="_cEqeoJmHEeOSd-xiGoW2OA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cEqepZmHEeOSd-xiGoW2OA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cEqeppmHEeOSd-xiGoW2OA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_coVzcJmHEeOSd-xiGoW2OA" name="A_player_akadály lerakása" memberEnd="_coVzcZmHEeOSd-xiGoW2OA _coVzdJmHEeOSd-xiGoW2OA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_coVzcZmHEeOSd-xiGoW2OA" name="player" type="_I2yxAJmGEeOSd-xiGoW2OA" association="_coVzcJmHEeOSd-xiGoW2OA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_coVzcpmHEeOSd-xiGoW2OA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_coVzc5mHEeOSd-xiGoW2OA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_coVzdJmHEeOSd-xiGoW2OA" name="akadály lerakása" type="_1oprsJmGEeOSd-xiGoW2OA" association="_coVzcJmHEeOSd-xiGoW2OA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_coVzdZmHEeOSd-xiGoW2OA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_coVzdpmHEeOSd-xiGoW2OA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_gA_xUJmHEeOSd-xiGoW2OA" name="Enemy"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_jBOBEJmHEeOSd-xiGoW2OA" name="Lép"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_l7uDUJmHEeOSd-xiGoW2OA" name="A_enemy_lép" memberEnd="_l7uDUZmHEeOSd-xiGoW2OA _l7uDVJmHEeOSd-xiGoW2OA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_l7uDUZmHEeOSd-xiGoW2OA" name="enemy" type="_gA_xUJmHEeOSd-xiGoW2OA" association="_l7uDUJmHEeOSd-xiGoW2OA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l7uDUpmHEeOSd-xiGoW2OA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l7uDU5mHEeOSd-xiGoW2OA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_l7uDVJmHEeOSd-xiGoW2OA" name="lép" type="_jBOBEJmHEeOSd-xiGoW2OA" association="_l7uDUJmHEeOSd-xiGoW2OA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l7uDVZmHEeOSd-xiGoW2OA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l7uDVpmHEeOSd-xiGoW2OA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
