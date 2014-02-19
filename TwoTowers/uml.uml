@@ -3,6 +3,7 @@
   <packagedElement xmi:type="uml:Actor" xmi:id="_I2yxAJmGEeOSd-xiGoW2OA" name="Player"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_1oprsJmGEeOSd-xiGoW2OA" name="Akadály varázskövezése">
     <include xmi:type="uml:Include" xmi:id="_RtZI0JmHEeOSd-xiGoW2OA" addition="_LhoKIJmHEeOSd-xiGoW2OA"/>
+    <include xmi:type="uml:Include" xmi:id="_HCiWYJmMEeOcUpBKzwoQcw" addition="_DgSXoJmMEeOcUpBKzwoQcw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_L2FzsJmGEeOSd-xiGoW2OA" name="Torony lerakása">
     <include xmi:type="uml:Include" xmi:id="_QB9hwJmHEeOSd-xiGoW2OA" addition="_JkZBYJmHEeOSd-xiGoW2OA"/>
@@ -12,6 +13,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_Dj4QcJmHEeOSd-xiGoW2OA" name="Akadály varázskövezése">
     <include xmi:type="uml:Include" xmi:id="_SVylkJmHEeOSd-xiGoW2OA" addition="_LhoKIJmHEeOSd-xiGoW2OA"/>
+    <include xmi:type="uml:Include" xmi:id="_Gb9ekJmMEeOcUpBKzwoQcw" addition="_DgSXoJmMEeOcUpBKzwoQcw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_JkZBYJmHEeOSd-xiGoW2OA" name="Torony kiválasztása"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_LhoKIJmHEeOSd-xiGoW2OA" name="Akadály kiválasztása"/>
@@ -67,4 +69,5 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l7uDVpmHEeOSd-xiGoW2OA" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DgSXoJmMEeOcUpBKzwoQcw" name="Varázskő kiválasztása"/>
 </uml:Model>
