@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_FhYUYJmGEeOSd-xiGoW2OA" name="model">
   <packagedElement xmi:type="uml:Actor" xmi:id="_I2yxAJmGEeOSd-xiGoW2OA" name="Player"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_1oprsJmGEeOSd-xiGoW2OA" name="Akadály varázskövezése">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_1oprsJmGEeOSd-xiGoW2OA" name="Akadály varázskövezés">
     <include xmi:type="uml:Include" xmi:id="_RtZI0JmHEeOSd-xiGoW2OA" addition="_LhoKIJmHEeOSd-xiGoW2OA"/>
     <include xmi:type="uml:Include" xmi:id="_HCiWYJmMEeOcUpBKzwoQcw" addition="_DgSXoJmMEeOcUpBKzwoQcw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_L2FzsJmGEeOSd-xiGoW2OA" name="Torony lerakása">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_L2FzsJmGEeOSd-xiGoW2OA" name="Torony lerakás">
     <include xmi:type="uml:Include" xmi:id="_QB9hwJmHEeOSd-xiGoW2OA" addition="_JkZBYJmHEeOSd-xiGoW2OA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_8vfLgJmGEeOSd-xiGoW2OA" name="Torony felkövezése">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8vfLgJmGEeOSd-xiGoW2OA" name="Torony felkövezés">
     <include xmi:type="uml:Include" xmi:id="_Q4h9YJmHEeOSd-xiGoW2OA" addition="_JkZBYJmHEeOSd-xiGoW2OA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_Dj4QcJmHEeOSd-xiGoW2OA" name="Akadály varázskövezése">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Dj4QcJmHEeOSd-xiGoW2OA" name="Akadály varázskövezés">
     <include xmi:type="uml:Include" xmi:id="_SVylkJmHEeOSd-xiGoW2OA" addition="_LhoKIJmHEeOSd-xiGoW2OA"/>
     <include xmi:type="uml:Include" xmi:id="_Gb9ekJmMEeOcUpBKzwoQcw" addition="_DgSXoJmMEeOcUpBKzwoQcw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_JkZBYJmHEeOSd-xiGoW2OA" name="Torony kiválasztása"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_LhoKIJmHEeOSd-xiGoW2OA" name="Akadály kiválasztása"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_JkZBYJmHEeOSd-xiGoW2OA" name="Torony kiválasztás"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_LhoKIJmHEeOSd-xiGoW2OA" name="Akadály kiválasztás"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_ZgLvsJmHEeOSd-xiGoW2OA" name="A_player_torony lerakása" memberEnd="_ZgLvsZmHEeOSd-xiGoW2OA _ZgLvtJmHEeOSd-xiGoW2OA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_ZgLvsZmHEeOSd-xiGoW2OA" name="player" type="_I2yxAJmGEeOSd-xiGoW2OA" association="_ZgLvsJmHEeOSd-xiGoW2OA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZgLvspmHEeOSd-xiGoW2OA" value="1"/>
@@ -58,7 +58,7 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_gA_xUJmHEeOSd-xiGoW2OA" name="Enemy"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_jBOBEJmHEeOSd-xiGoW2OA" name="Lép"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_jBOBEJmHEeOSd-xiGoW2OA" name="Lépés"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_l7uDUJmHEeOSd-xiGoW2OA" name="A_enemy_lép" memberEnd="_l7uDUZmHEeOSd-xiGoW2OA _l7uDVJmHEeOSd-xiGoW2OA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_l7uDUZmHEeOSd-xiGoW2OA" name="enemy" type="_gA_xUJmHEeOSd-xiGoW2OA" association="_l7uDUJmHEeOSd-xiGoW2OA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l7uDUpmHEeOSd-xiGoW2OA" value="1"/>
@@ -69,5 +69,38 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l7uDVpmHEeOSd-xiGoW2OA" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_DgSXoJmMEeOcUpBKzwoQcw" name="Varázskő kiválasztása"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DgSXoJmMEeOcUpBKzwoQcw" name="Varázskő kiválasztás"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_vroV0JmVEeOcUpBKzwoQcw" name="Játékindítás"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_6KCOYJmVEeOcUpBKzwoQcw" name="Programindítás"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8Bv98JmVEeOcUpBKzwoQcw" name="Kilépés"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SG0-sJmWEeOcUpBKzwoQcw" name="A_player_játékindítás" memberEnd="_SG0-sZmWEeOcUpBKzwoQcw _SG0-tJmWEeOcUpBKzwoQcw">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_SG0-sZmWEeOcUpBKzwoQcw" name="player" type="_I2yxAJmGEeOSd-xiGoW2OA" association="_SG0-sJmWEeOcUpBKzwoQcw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SG0-spmWEeOcUpBKzwoQcw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SG0-s5mWEeOcUpBKzwoQcw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_SG0-tJmWEeOcUpBKzwoQcw" name="játékindítás" type="_vroV0JmVEeOcUpBKzwoQcw" association="_SG0-sJmWEeOcUpBKzwoQcw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SG0-tZmWEeOcUpBKzwoQcw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SG0-tpmWEeOcUpBKzwoQcw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UQxGsJmWEeOcUpBKzwoQcw" name="A_programindítás_player" memberEnd="_UQxGsZmWEeOcUpBKzwoQcw _UQxGtJmWEeOcUpBKzwoQcw">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UQxGsZmWEeOcUpBKzwoQcw" name="programindítás" type="_6KCOYJmVEeOcUpBKzwoQcw" association="_UQxGsJmWEeOcUpBKzwoQcw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UQxGspmWEeOcUpBKzwoQcw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UQxGs5mWEeOcUpBKzwoQcw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UQxGtJmWEeOcUpBKzwoQcw" name="player" type="_I2yxAJmGEeOSd-xiGoW2OA" association="_UQxGsJmWEeOcUpBKzwoQcw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UQxGtZmWEeOcUpBKzwoQcw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UQxGtpmWEeOcUpBKzwoQcw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Vc14QJmWEeOcUpBKzwoQcw" name="A_kilépés_a_player_játékindítás" memberEnd="_Vc14QZmWEeOcUpBKzwoQcw _Vc14RJmWEeOcUpBKzwoQcw">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Vc14QZmWEeOcUpBKzwoQcw" name="kilépés" type="_8Bv98JmVEeOcUpBKzwoQcw" association="_Vc14QJmWEeOcUpBKzwoQcw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vc14QpmWEeOcUpBKzwoQcw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vc14Q5mWEeOcUpBKzwoQcw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Vc14RJmWEeOcUpBKzwoQcw" name="a_player_játékindítás" type="_I2yxAJmGEeOSd-xiGoW2OA" association="_Vc14QJmWEeOcUpBKzwoQcw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vc14RZmWEeOcUpBKzwoQcw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vc14RpmWEeOcUpBKzwoQcw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>
