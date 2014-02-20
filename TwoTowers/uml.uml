@@ -8,10 +8,10 @@
   <packagedElement xmi:type="uml:UseCase" xmi:id="_L2FzsJmGEeOSd-xiGoW2OA" name="Torony lerakás">
     <include xmi:type="uml:Include" xmi:id="_QB9hwJmHEeOSd-xiGoW2OA" addition="_JkZBYJmHEeOSd-xiGoW2OA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_8vfLgJmGEeOSd-xiGoW2OA" name="Torony felkövezés">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8vfLgJmGEeOSd-xiGoW2OA" name="Torony varázskövezés">
     <include xmi:type="uml:Include" xmi:id="_Q4h9YJmHEeOSd-xiGoW2OA" addition="_JkZBYJmHEeOSd-xiGoW2OA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_Dj4QcJmHEeOSd-xiGoW2OA" name="Akadály varázskövezés">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Dj4QcJmHEeOSd-xiGoW2OA" name="Akadály lerakás">
     <include xmi:type="uml:Include" xmi:id="_SVylkJmHEeOSd-xiGoW2OA" addition="_LhoKIJmHEeOSd-xiGoW2OA"/>
     <include xmi:type="uml:Include" xmi:id="_Gb9ekJmMEeOcUpBKzwoQcw" addition="_DgSXoJmMEeOcUpBKzwoQcw"/>
   </packagedElement>

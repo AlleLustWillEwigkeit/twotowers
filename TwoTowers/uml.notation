@@ -77,7 +77,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8vkrFZmGEeOSd-xiGoW2OA"/>
     </children>
     <element xmi:type="uml:UseCase" href="uml.uml#_8vfLgJmGEeOSd-xiGoW2OA"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8vi14ZmGEeOSd-xiGoW2OA" x="140" y="65" width="151" height="46"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8vi14ZmGEeOSd-xiGoW2OA" x="140" y="65" width="161" height="46"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Dj9I8JmHEeOSd-xiGoW2OA" type="2013" fontName="Segoe UI" lineColor="0">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Dj9wAJmHEeOSd-xiGoW2OA" source="ShadowFigure">
