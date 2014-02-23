@@ -103,4 +103,39 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vc14RpmWEeOcUpBKzwoQcw" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_cWRU8JxZEeOLg9P08aA50A" name="Torony"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_e93pUJxZEeOLg9P08aA50A" name="Lövés"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_idTkoJxZEeOLg9P08aA50A" name="A_torony_lövés" memberEnd="_idTkoZxZEeOLg9P08aA50A _idTkpJxZEeOLg9P08aA50A">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_idTkoZxZEeOLg9P08aA50A" name="torony" type="_cWRU8JxZEeOLg9P08aA50A" association="_idTkoJxZEeOLg9P08aA50A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_idTkopxZEeOLg9P08aA50A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_idTko5xZEeOLg9P08aA50A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_idTkpJxZEeOLg9P08aA50A" name="lövés" type="_e93pUJxZEeOLg9P08aA50A" association="_idTkoJxZEeOLg9P08aA50A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_idTkpZxZEeOLg9P08aA50A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_idTkppxZEeOLg9P08aA50A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uIy7YJxZEeOLg9P08aA50A" name="Akadály"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_xJHRwJxZEeOLg9P08aA50A" name="Akadályozás"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zMjJIJxZEeOLg9P08aA50A" name="A_akadály_akadályozás" memberEnd="_zMjJIZxZEeOLg9P08aA50A _zMjJJJxZEeOLg9P08aA50A">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zMjJIZxZEeOLg9P08aA50A" name="akadály" type="_uIy7YJxZEeOLg9P08aA50A" association="_zMjJIJxZEeOLg9P08aA50A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zMjJIpxZEeOLg9P08aA50A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zMjJI5xZEeOLg9P08aA50A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zMjJJJxZEeOLg9P08aA50A" name="akadályozás" type="_xJHRwJxZEeOLg9P08aA50A" association="_zMjJIJxZEeOLg9P08aA50A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zMjJJZxZEeOLg9P08aA50A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zMjJJpxZEeOLg9P08aA50A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ftU64JxaEeOLg9P08aA50A" name="Akadály lebontás"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_j-rbUJxaEeOLg9P08aA50A" name="A_enemy_akadály lebontás" memberEnd="_j-rbUZxaEeOLg9P08aA50A _j-rbVJxaEeOLg9P08aA50A">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_j-rbUZxaEeOLg9P08aA50A" name="enemy" type="_gA_xUJmHEeOSd-xiGoW2OA" association="_j-rbUJxaEeOLg9P08aA50A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j-rbUpxaEeOLg9P08aA50A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j-rbU5xaEeOLg9P08aA50A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_j-rbVJxaEeOLg9P08aA50A" name="akadály lebontás" type="_ftU64JxaEeOLg9P08aA50A" association="_j-rbUJxaEeOLg9P08aA50A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j-rbVZxaEeOLg9P08aA50A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j-rbVpxaEeOLg9P08aA50A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>
