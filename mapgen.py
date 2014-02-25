@@ -1,19 +1,19 @@
 # -*- coding:utf8 -*-
 import Tkinter
 
-#HA LE AKAROD CSERÉLNI A PÁLYA MÉRETÉT, KÉRLEK ITT TEDD!
-MAGASSAG = 25  # sorok száma
+#HA LE AKAROD CSERÉLNI A PÁLYA MÉRETÉT, KÉRLEK ITT TEDD! 
+MAGASSAG  = 25 # sorok száma
 SZELESSEG = 25 # oszlopok száma
-
-
 
 #CONSTANTS
 EPITESI,UT,KEZDET,VEG = 0,1,2,3 # Guba Said So.
 DEBUGBULLSHIT = ["építési","út","kezdet","vég"]
 COLORZ = ["green", "brown", "red", "blue"] #Csak valami random reprezentáció.
 FELBONTAS = 15 # egy négyzet hányszor hány pixel legyen megjelenítéskor. 
-MAGASSAG = 25  # sorok száma
-SZELESSEG = 25 # oszlopok száma
+global watDidIChangeLastX
+global watDidIChangeLastY
+watDidIChangeLastX = 0
+watDidIChangeLastY = 0
 #FUNCTIONS
 def ketDimKiiras(ketDimTomb):
 	for y in ketDimTomb:
@@ -48,7 +48,36 @@ def onCanvasLeftClick(event):
 	lett = mezok[hanyadikSor][hanyadikOszlop]
 	debugLine.set(str("volt: ")+str(DEBUGBULLSHIT[volt])+str("\tlett:  ")+str(DEBUGBULLSHIT[lett])+"\tx="+str(hanyadikOszlop)+"\ty="+str(hanyadikSor) )
 	kirajzoloSzin = COLORZ[aktualisElem]
+	watDidIChangeLastX = hanyadikSor
+	watDidIChangeLastY = hanyadikOszlop
 	vaszon.create_rectangle(hanyadikOszlop*FELBONTAS+1, hanyadikSor*FELBONTAS+1, (hanyadikOszlop+1) * FELBONTAS+1, (hanyadikSor+1) * FELBONTAS+1, fill = kirajzoloSzin)
+
+def onDraggedWhileMouseButtonIsPressed(event):
+	global watDidIChangeLastX
+	global watDidIChangeLastY
+	hanyadikSor = int(event.y/FELBONTAS)
+	hanyadikOszlop = int(event.x/FELBONTAS)
+
+			
+	if(not ( (watDidIChangeLastX == hanyadikOszlop) and (watDidIChangeLastY == hanyadikSor) )):
+		debugLine.set("Miből: "+str(watDidIChangeLastX)+","+str(watDidIChangeLastY)+"\tMivé:"+str(hanyadikOszlop)+","+str(hanyadikSor))
+		#debugLine.set("Elvileg most átléptél!!")
+		watDidIChangeLastX = hanyadikOszlop
+		watDidIChangeLastY = hanyadikSor
+		aktualisElem = mezok[hanyadikSor][hanyadikOszlop]
+		volt = aktualisElem
+		if aktualisElem == EPITESI:
+			mezok[hanyadikSor][hanyadikOszlop] = UT
+			aktualisElem = UT
+		else:
+			mezok[hanyadikSor][hanyadikOszlop] = EPITESI
+			aktualisElem = EPITESI
+		lett = mezok[hanyadikSor][hanyadikOszlop]
+		debugLine.set(str("volt: ")+str(DEBUGBULLSHIT[volt])+str("\tlett:  ")+str(DEBUGBULLSHIT[lett])+"\tx="+str(hanyadikOszlop)+"\ty="+str(hanyadikSor) )
+		kirajzoloSzin = COLORZ[aktualisElem]
+		watDidIChangeLastX = hanyadikOszlop
+		watDidIChangeLastY = hanyadikSor
+		vaszon.create_rectangle(hanyadikOszlop*FELBONTAS+1, hanyadikSor*FELBONTAS+1, (hanyadikOszlop+1) * FELBONTAS+1, (hanyadikSor+1) * FELBONTAS+1, fill = kirajzoloSzin)
 
 
 #copy-paste is on my side with this one.
@@ -104,6 +133,7 @@ vaszon = Tkinter.Canvas(ablakom, width = GRAFSZEL+1 , height = GRAFMAG+1)
 vaszon.grid(column = 0, row = 0, columnspan = 500, padx = 5, pady = 5 ) # senkivle sem lesz egy sorban
 vaszon.bind("<Button-1>", onCanvasLeftClick)
 vaszon.bind("<Button-3>", onCanvasRightClick)
+vaszon.bind("<B1-Motion>", onDraggedWhileMouseButtonIsPressed) 
 global debugLine
 debugLine = Tkinter.StringVar()
 debugger  = Tkinter.Label(ablakom,textvariable = debugLine)
@@ -124,6 +154,4 @@ mindentKirajzol(mezok, vaszon, FELBONTAS , COLORZ)
 ablakom.mainloop()
 
 ketDimKiiras(mezok)
-kiirV1("proba.map", mezok)
-
-
+kiirV1("failsafe.map", mezok)
