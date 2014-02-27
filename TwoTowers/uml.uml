@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_FhYUYJmGEeOSd-xiGoW2OA" name="model">
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_FhYUYJmGEeOSd-xiGoW2OA" name="model">
   <packagedElement xmi:type="uml:Actor" xmi:id="_I2yxAJmGEeOSd-xiGoW2OA" name="Player"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_1oprsJmGEeOSd-xiGoW2OA" name="Akadály varázskövezés">
     <include xmi:type="uml:Include" xmi:id="_RtZI0JmHEeOSd-xiGoW2OA" addition="_LhoKIJmHEeOSd-xiGoW2OA"/>
@@ -137,5 +137,100 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j-rbVZxaEeOLg9P08aA50A" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j-rbVpxaEeOLg9P08aA50A" value="1"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QVNtcJ_0EeOsxftnH4_MFA" name="Ellenseg">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_dbejoJ_1EeOsxftnH4_MFA" name="Attribute1" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d_--4J_1EeOsxftnH4_MFA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eAA0EJ_1EeOsxftnH4_MFA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_eACpQJ_1EeOsxftnH4_MFA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eyZ6UJ_1EeOsxftnH4_MFA" name="Attribute2" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fSz4sJ_1EeOsxftnH4_MFA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fS1G0J_1EeOsxftnH4_MFA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_fS28AJ_1EeOsxftnH4_MFA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gQkhcJ_1EeOsxftnH4_MFA" name="Operation1"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_hUVrkJ_1EeOsxftnH4_MFA" name="Operation2"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Ql500J_0EeOsxftnH4_MFA" name="Ember">
+    <generalization xmi:type="uml:Generalization" xmi:id="_oGvo8J_0EeOsxftnH4_MFA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Q40w0J_0EeOsxftnH4_MFA" name="Torp">
+    <generalization xmi:type="uml:Generalization" xmi:id="_pzb0QJ_0EeOsxftnH4_MFA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_RKcsUJ_0EeOsxftnH4_MFA" name="Hobbit">
+    <generalization xmi:type="uml:Generalization" xmi:id="_qQIXUJ_0EeOsxftnH4_MFA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_RccbQJ_0EeOsxftnH4_MFA" name="Elf">
+    <generalization xmi:type="uml:Generalization" xmi:id="_quMMUJ_0EeOsxftnH4_MFA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_S2YpsJ_0EeOsxftnH4_MFA" name="Varazsko"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hI-lkJ_0EeOsxftnH4_MFA" name="Program"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hZXyAJ_0EeOsxftnH4_MFA" name="EpitesiTerulet">
+    <generalization xmi:type="uml:Generalization" xmi:id="_sE7VwJ_0EeOsxftnH4_MFA" general="_it1DgJ_0EeOsxftnH4_MFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_it1DgJ_0EeOsxftnH4_MFA" name="PalyaElem"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfei4J_0EeOsxftnH4_MFA" name="Torony">
+    <generalization xmi:type="uml:Generalization" xmi:id="_sZqPoJ_0EeOsxftnH4_MFA" general="_it1DgJ_0EeOsxftnH4_MFA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jIfJwJ_1EeOsxftnH4_MFA" name="Attribute1" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jZ5p4J_1EeOsxftnH4_MFA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jZ64AJ_1EeOsxftnH4_MFA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_jZ8GIJ_1EeOsxftnH4_MFA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_kh6a0J_1EeOsxftnH4_MFA" name="Attribute2" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lLb48J_1EeOsxftnH4_MFA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lLdHEJ_1EeOsxftnH4_MFA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_lLeVMJ_1EeOsxftnH4_MFA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_juq1cJ_0EeOsxftnH4_MFA" name="Ut">
+    <generalization xmi:type="uml:Generalization" xmi:id="_stIlQJ_0EeOsxftnH4_MFA" general="_it1DgJ_0EeOsxftnH4_MFA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_s897kJ_1EeOsxftnH4_MFA" name="Attribute1" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tLp30J_1EeOsxftnH4_MFA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tLrF8J_1EeOsxftnH4_MFA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_tLsUEJ_1EeOsxftnH4_MFA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tdtRIJ_1EeOsxftnH4_MFA" name="Attribute2" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_toHKUJ_1EeOsxftnH4_MFA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_toIYcJ_1EeOsxftnH4_MFA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_toJmkJ_1EeOsxftnH4_MFA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_t-EzQJ_1EeOsxftnH4_MFA" name="Attribute3" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ua7uYJ_1EeOsxftnH4_MFA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ua9jkJ_1EeOsxftnH4_MFA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_ua_YwJ_1EeOsxftnH4_MFA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vFfHQJ_1EeOsxftnH4_MFA" name="Operation1"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_v2d4QJ_1EeOsxftnH4_MFA" name="Operation2"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kJ5Y4J_0EeOsxftnH4_MFA" name="Akadaly">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_p9Wv0J_1EeOsxftnH4_MFA" name="Attribute1" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qVSHoJ_1EeOsxftnH4_MFA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qVTVwJ_1EeOsxftnH4_MFA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_qVVK8J_1EeOsxftnH4_MFA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nW7gIJ_1EeOsxftnH4_MFA" name="Operation1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kbEocJ_0EeOsxftnH4_MFA" name="UtKezdet">
+    <generalization xmi:type="uml:Generalization" xmi:id="_uOwwEJ_0EeOsxftnH4_MFA" general="_juq1cJ_0EeOsxftnH4_MFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_k73BUJ_0EeOsxftnH4_MFA" name="VegzetHegye">
+    <generalization xmi:type="uml:Generalization" xmi:id="_t4HxsJ_0EeOsxftnH4_MFA" general="_juq1cJ_0EeOsxftnH4_MFA"/>
   </packagedElement>
 </uml:Model>
