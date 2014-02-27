@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_FhYUYJmGEeOSd-xiGoW2OA" name="model">
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_Zptv8J_6EeOI6vxMIpY2eg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_ZpuXAJ_6EeOI6vxMIpY2eg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_ZpuXAZ_6EeOI6vxMIpY2eg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_ZpuXAp_6EeOI6vxMIpY2eg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_ZpuXA5_6EeOI6vxMIpY2eg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_ZpuXBJ_6EeOI6vxMIpY2eg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_ZpuXBZ_6EeOI6vxMIpY2eg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_ZpuXBp_6EeOI6vxMIpY2eg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+  </elementImport>
   <packagedElement xmi:type="uml:Actor" xmi:id="_I2yxAJmGEeOSd-xiGoW2OA" name="Player"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_1oprsJmGEeOSd-xiGoW2OA" name="Akadály varázskövezés">
     <include xmi:type="uml:Include" xmi:id="_RtZI0JmHEeOSd-xiGoW2OA" addition="_LhoKIJmHEeOSd-xiGoW2OA"/>
@@ -138,23 +162,25 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j-rbVpxaEeOLg9P08aA50A" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_QVNtcJ_0EeOsxftnH4_MFA" name="Ellenseg">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_dbejoJ_1EeOsxftnH4_MFA" name="Attribute1" visibility="public">
+  <packagedElement xmi:type="uml:Class" xmi:id="_QVNtcJ_0EeOsxftnH4_MFA" name="Ellenseg" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_dbejoJ_1EeOsxftnH4_MFA" name="eletero" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d_--4J_1EeOsxftnH4_MFA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eAA0EJ_1EeOsxftnH4_MFA" value="1"/>
       <defaultValue xmi:type="uml:LiteralString" xmi:id="_eACpQJ_1EeOsxftnH4_MFA">
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_eyZ6UJ_1EeOsxftnH4_MFA" name="Attribute2" visibility="public">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eyZ6UJ_1EeOsxftnH4_MFA" name="sebzes" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fSz4sJ_1EeOsxftnH4_MFA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fS1G0J_1EeOsxftnH4_MFA" value="1"/>
       <defaultValue xmi:type="uml:LiteralString" xmi:id="_fS28AJ_1EeOsxftnH4_MFA">
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_gQkhcJ_1EeOsxftnH4_MFA" name="Operation1"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_hUVrkJ_1EeOsxftnH4_MFA" name="Operation2"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gQkhcJ_1EeOsxftnH4_MFA" name="sebzodik"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_hUVrkJ_1EeOsxftnH4_MFA" name="bont"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Ql500J_0EeOsxftnH4_MFA" name="Ember">
     <generalization xmi:type="uml:Generalization" xmi:id="_oGvo8J_0EeOsxftnH4_MFA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
@@ -166,7 +192,7 @@
     <generalization xmi:type="uml:Generalization" xmi:id="_qQIXUJ_0EeOsxftnH4_MFA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_RccbQJ_0EeOsxftnH4_MFA" name="Elf">
-    <generalization xmi:type="uml:Generalization" xmi:id="_quMMUJ_0EeOsxftnH4_MFA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_w6KpkJ_4EeOI6vxMIpY2eg" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_S2YpsJ_0EeOsxftnH4_MFA" name="Varazsko"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_hI-lkJ_0EeOsxftnH4_MFA" name="Program"/>
@@ -193,32 +219,25 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_juq1cJ_0EeOsxftnH4_MFA" name="Ut">
     <generalization xmi:type="uml:Generalization" xmi:id="_stIlQJ_0EeOsxftnH4_MFA" general="_it1DgJ_0EeOsxftnH4_MFA"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_s897kJ_1EeOsxftnH4_MFA" name="Attribute1" visibility="public">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_s897kJ_1EeOsxftnH4_MFA" name="kovUt" visibility="public" type="_juq1cJ_0EeOsxftnH4_MFA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tLp30J_1EeOsxftnH4_MFA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tLrF8J_1EeOsxftnH4_MFA" value="1"/>
       <defaultValue xmi:type="uml:LiteralString" xmi:id="_tLsUEJ_1EeOsxftnH4_MFA">
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_tdtRIJ_1EeOsxftnH4_MFA" name="Attribute2" visibility="public">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tdtRIJ_1EeOsxftnH4_MFA" name="torony" visibility="public" type="_jfei4J_0EeOsxftnH4_MFA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_toHKUJ_1EeOsxftnH4_MFA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_toIYcJ_1EeOsxftnH4_MFA" value="1"/>
       <defaultValue xmi:type="uml:LiteralString" xmi:id="_toJmkJ_1EeOsxftnH4_MFA">
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_t-EzQJ_1EeOsxftnH4_MFA" name="Attribute3" visibility="public">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ua7uYJ_1EeOsxftnH4_MFA" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ua9jkJ_1EeOsxftnH4_MFA" value="1"/>
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_ua_YwJ_1EeOsxftnH4_MFA">
-        <value xsi:nil="true"/>
-      </defaultValue>
-    </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_vFfHQJ_1EeOsxftnH4_MFA" name="Operation1"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_v2d4QJ_1EeOsxftnH4_MFA" name="Operation2"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vFfHQJ_1EeOsxftnH4_MFA" name="toronyakSzol"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_kJ5Y4J_0EeOsxftnH4_MFA" name="Akadaly">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_p9Wv0J_1EeOsxftnH4_MFA" name="Attribute1" visibility="public">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_p9Wv0J_1EeOsxftnH4_MFA" name="eletero" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qVSHoJ_1EeOsxftnH4_MFA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qVTVwJ_1EeOsxftnH4_MFA" value="1"/>
       <defaultValue xmi:type="uml:LiteralString" xmi:id="_qVVK8J_1EeOsxftnH4_MFA">
@@ -232,5 +251,17 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_k73BUJ_0EeOsxftnH4_MFA" name="VegzetHegye">
     <generalization xmi:type="uml:Generalization" xmi:id="_t4HxsJ_0EeOsxftnH4_MFA" general="_juq1cJ_0EeOsxftnH4_MFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_P_xFEJ_4EeOI6vxMIpY2eg" name="Palya">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ipVoQJ_4EeOI6vxMIpY2eg" name="palyaElem" type="_it1DgJ_0EeOsxftnH4_MFA" association="_ipWPUJ_4EeOI6vxMIpY2eg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ipVoQZ_4EeOI6vxMIpY2eg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ipVoQp_4EeOI6vxMIpY2eg" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ipWPUJ_4EeOI6vxMIpY2eg" name="palya_palyaElem_1" memberEnd="_ipWPUZ_4EeOI6vxMIpY2eg _ipVoQJ_4EeOI6vxMIpY2eg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ipWPUZ_4EeOI6vxMIpY2eg" name="palya" type="_P_xFEJ_4EeOI6vxMIpY2eg" association="_ipWPUJ_4EeOI6vxMIpY2eg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ipWPUp_4EeOI6vxMIpY2eg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ipWPU5_4EeOI6vxMIpY2eg" value="1"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Model>
