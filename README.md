@@ -10,4 +10,4 @@ A Gyűrű szövetségének tagjai különböző utakon juthatnak el a Végzet He
 A játék során az ellenségek folyamatosan jönnek. A játék elején ritkábban, később gyakrabban és nagyobb csoportokban, azonban számuk véges, előbb-utóbb elfogynak. A játék akkor ér véget, ha egy ellenség eljut a Végzet Hegyéhez, vagy ha már sikerült az összes ellenséget kiirtani. Az első esetben Szauron és Szarumán megsemmisül, utóbbi esetben fényes győzelmet aratnak és örökké uralni fogják a világot.
 
 ------
-*Alle Lust will Ewigkeit - Szoftver Labor 4. @ BME*
+*Alle Lust will Ewigkeit
