@@ -181,27 +181,41 @@
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_gQkhcJ_1EeOsxftnH4_MFA" name="sebzodik"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_hUVrkJ_1EeOsxftnH4_MFA" name="bont"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_jDTEIKBrEeOCyvmC2BYgOA" name="lep"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Ql500J_0EeOsxftnH4_MFA" name="Ember">
-    <generalization xmi:type="uml:Generalization" xmi:id="_oGvo8J_0EeOsxftnH4_MFA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_MmGW8KBuEeOCyvmC2BYgOA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Q40w0J_0EeOsxftnH4_MFA" name="Torp">
-    <generalization xmi:type="uml:Generalization" xmi:id="_pzb0QJ_0EeOsxftnH4_MFA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_QgkocKBuEeOCyvmC2BYgOA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_RKcsUJ_0EeOsxftnH4_MFA" name="Hobbit">
-    <generalization xmi:type="uml:Generalization" xmi:id="_qQIXUJ_0EeOsxftnH4_MFA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_ydMe8KBuEeOCyvmC2BYgOA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_RccbQJ_0EeOsxftnH4_MFA" name="Elf">
-    <generalization xmi:type="uml:Generalization" xmi:id="_w6KpkJ_4EeOI6vxMIpY2eg" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_0guc8KBuEeOCyvmC2BYgOA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_S2YpsJ_0EeOsxftnH4_MFA" name="Varazsko"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_hI-lkJ_0EeOsxftnH4_MFA" name="Program"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_S2YpsJ_0EeOsxftnH4_MFA" name="Varazsko">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Vk_SoKBwEeOCyvmC2BYgOA" name="torony" type="_jfei4J_0EeOsxftnH4_MFA" association="_Vk_5sKBwEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vk_SoaBwEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vk_SoqBwEeOCyvmC2BYgOA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hI-lkJ_0EeOsxftnH4_MFA" name="Program">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_NAvL4KBrEeOCyvmC2BYgOA" name="jatek" type="_zBDWwKBqEeOCyvmC2BYgOA" association="_NAwaAKBrEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NAvL4aBrEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NAvL4qBrEeOCyvmC2BYgOA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_hZXyAJ_0EeOsxftnH4_MFA" name="EpitesiTerulet">
     <generalization xmi:type="uml:Generalization" xmi:id="_sE7VwJ_0EeOsxftnH4_MFA" general="_it1DgJ_0EeOsxftnH4_MFA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mleNkKBvEeOCyvmC2BYgOA" name="torony" type="_jfei4J_0EeOsxftnH4_MFA" association="_mle0oKBvEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mleNkaBvEeOCyvmC2BYgOA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mleNkqBvEeOCyvmC2BYgOA" value="1"/>
+    </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_it1DgJ_0EeOsxftnH4_MFA" name="PalyaElem"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_jfei4J_0EeOsxftnH4_MFA" name="Torony">
-    <generalization xmi:type="uml:Generalization" xmi:id="_sZqPoJ_0EeOsxftnH4_MFA" general="_it1DgJ_0EeOsxftnH4_MFA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_jIfJwJ_1EeOsxftnH4_MFA" name="Attribute1" visibility="public">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jZ5p4J_1EeOsxftnH4_MFA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jZ64AJ_1EeOsxftnH4_MFA" value="1"/>
@@ -233,6 +247,10 @@
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_FoXTUKBvEeOCyvmC2BYgOA" name="akadaly" type="_kJ5Y4J_0EeOsxftnH4_MFA" association="_FoYhcKBvEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FoXTUaBvEeOCyvmC2BYgOA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FoXTUqBvEeOCyvmC2BYgOA" value="1"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_vFfHQJ_1EeOsxftnH4_MFA" name="toronyakSzol"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_kJ5Y4J_0EeOsxftnH4_MFA" name="Akadaly">
@@ -254,7 +272,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_P_xFEJ_4EeOI6vxMIpY2eg" name="Palya">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_ipVoQJ_4EeOI6vxMIpY2eg" name="palyaElem" type="_it1DgJ_0EeOsxftnH4_MFA" association="_ipWPUJ_4EeOI6vxMIpY2eg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ipVoQZ_4EeOI6vxMIpY2eg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ipVoQZ_4EeOI6vxMIpY2eg"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ipVoQp_4EeOI6vxMIpY2eg" value="1"/>
     </ownedAttribute>
   </packagedElement>
@@ -262,6 +280,64 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_ipWPUZ_4EeOI6vxMIpY2eg" name="palya" type="_P_xFEJ_4EeOI6vxMIpY2eg" association="_ipWPUJ_4EeOI6vxMIpY2eg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ipWPUp_4EeOI6vxMIpY2eg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ipWPU5_4EeOI6vxMIpY2eg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_VmWzUKBqEeOCyvmC2BYgOA" name="Ellensegek">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mPZCIKBqEeOCyvmC2BYgOA" name="ellenseg" type="_QVNtcJ_0EeOsxftnH4_MFA" association="_mPaQQKBqEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mPZCIaBqEeOCyvmC2BYgOA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mPZCIqBqEeOCyvmC2BYgOA" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_mPaQQKBqEeOCyvmC2BYgOA" name="ellensegek_ellenseg_1" memberEnd="_mPaQQaBqEeOCyvmC2BYgOA _mPZCIKBqEeOCyvmC2BYgOA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_mPaQQaBqEeOCyvmC2BYgOA" name="ellensegek" type="_VmWzUKBqEeOCyvmC2BYgOA" aggregation="shared" association="_mPaQQKBqEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mPaQQqBqEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mPaQQ6BqEeOCyvmC2BYgOA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zBDWwKBqEeOCyvmC2BYgOA" name="Jatek">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5TF8kKBqEeOCyvmC2BYgOA" name="ellensegek" type="_VmWzUKBqEeOCyvmC2BYgOA" association="_5TF8k6BqEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5TF8kaBqEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5TF8kqBqEeOCyvmC2BYgOA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_7k3x8KBqEeOCyvmC2BYgOA" name="palya" type="_P_xFEJ_4EeOI6vxMIpY2eg" association="_7k4ZAKBqEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7k3x8aBqEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7k3x8qBqEeOCyvmC2BYgOA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5TF8k6BqEeOCyvmC2BYgOA" name="jatek_ellensegek_1" memberEnd="_5TF8lKBqEeOCyvmC2BYgOA _5TF8kKBqEeOCyvmC2BYgOA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_5TF8lKBqEeOCyvmC2BYgOA" name="jatek" type="_zBDWwKBqEeOCyvmC2BYgOA" association="_5TF8k6BqEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5TF8laBqEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5TF8lqBqEeOCyvmC2BYgOA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7k4ZAKBqEeOCyvmC2BYgOA" name="jatek_palya_1" memberEnd="_7k4ZAaBqEeOCyvmC2BYgOA _7k3x8KBqEeOCyvmC2BYgOA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7k4ZAaBqEeOCyvmC2BYgOA" name="jatek" type="_zBDWwKBqEeOCyvmC2BYgOA" association="_7k4ZAKBqEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7k4ZAqBqEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7k4ZA6BqEeOCyvmC2BYgOA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_NAwaAKBrEeOCyvmC2BYgOA" name="program_jatek_1" memberEnd="_NAwaAaBrEeOCyvmC2BYgOA _NAvL4KBrEeOCyvmC2BYgOA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NAwaAaBrEeOCyvmC2BYgOA" name="program" type="_hI-lkJ_0EeOsxftnH4_MFA" association="_NAwaAKBrEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NAwaAqBrEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NAwaA6BrEeOCyvmC2BYgOA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FoYhcKBvEeOCyvmC2BYgOA" name="ut_akadaly_1" memberEnd="_FoYhcaBvEeOCyvmC2BYgOA _FoXTUKBvEeOCyvmC2BYgOA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_FoYhcaBvEeOCyvmC2BYgOA" name="ut" type="_juq1cJ_0EeOsxftnH4_MFA" association="_FoYhcKBvEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FoYhcqBvEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FoYhc6BvEeOCyvmC2BYgOA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_mle0oKBvEeOCyvmC2BYgOA" name="epitesiTerulet_torony_1" memberEnd="_mle0oaBvEeOCyvmC2BYgOA _mleNkKBvEeOCyvmC2BYgOA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_mle0oaBvEeOCyvmC2BYgOA" name="epitesiTerulet" type="_hZXyAJ_0EeOsxftnH4_MFA" association="_mle0oKBvEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mle0oqBvEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mle0o6BvEeOCyvmC2BYgOA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Vk_5sKBwEeOCyvmC2BYgOA" name="varazsko_torony_1" memberEnd="_Vk_5saBwEeOCyvmC2BYgOA _Vk_SoKBwEeOCyvmC2BYgOA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Vk_5saBwEeOCyvmC2BYgOA" name="varazsko" type="_S2YpsJ_0EeOsxftnH4_MFA" association="_Vk_5sKBwEeOCyvmC2BYgOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vk_5sqBwEeOCyvmC2BYgOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vk_5s6BwEeOCyvmC2BYgOA" value="1"/>
     </ownedEnd>
   </packagedElement>
 </uml:Model>
