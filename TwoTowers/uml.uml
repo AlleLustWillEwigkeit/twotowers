@@ -203,7 +203,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NAvL4aBrEeOCyvmC2BYgOA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NAvL4qBrEeOCyvmC2BYgOA" value="1"/>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_MV-VkKFFEeO5yac37d71nQ" name="startNewGame" method="_KP7iAKE4EeO5yac37d71nQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MV-VkKFFEeO5yac37d71nQ" name="ujJatek" method="_KP7iAKE4EeO5yac37d71nQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_VB4VwKFFEeO5yac37d71nQ" name="main" isStatic="true"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_hZXyAJ_0EeOsxftnH4_MFA" name="EpitesiTerulet">
@@ -300,7 +300,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_yhkgMKFAEeO5yac37d71nQ" name="buildPalya">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yhkgMKFAEeO5yac37d71nQ" name="palyaEpit">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_-aEYMKFAEeO5yac37d71nQ" name="palyaNum" isUnique="false">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
@@ -374,7 +374,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_QFNPIKE_EeO5yac37d71nQ" name="newGame"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_QFNPIKE_EeO5yac37d71nQ" name="ujJatekInditas"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_5TF8k6BqEeOCyvmC2BYgOA" name="jatek_ellensegek_1" memberEnd="_5TF8lKBqEeOCyvmC2BYgOA _5TF8kKBqEeOCyvmC2BYgOA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_5TF8lKBqEeOCyvmC2BYgOA" name="jatek" type="_zBDWwKBqEeOCyvmC2BYgOA" association="_5TF8k6BqEeOCyvmC2BYgOA">
