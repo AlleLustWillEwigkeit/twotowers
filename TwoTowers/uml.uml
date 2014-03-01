@@ -94,7 +94,7 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_DgSXoJmMEeOcUpBKzwoQcw" name="Varázskő kiválasztás"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_vroV0JmVEeOcUpBKzwoQcw" name="Játékindítás"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_vroV0JmVEeOcUpBKzwoQcw" name="Játékindítás" subject="_KP7iAKE4EeO5yac37d71nQ"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_6KCOYJmVEeOcUpBKzwoQcw" name="Programindítás"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_8Bv98JmVEeOcUpBKzwoQcw" name="Kilépés"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_SG0-sJmWEeOcUpBKzwoQcw" name="A_player_játékindítás" memberEnd="_SG0-sZmWEeOcUpBKzwoQcw _SG0-tJmWEeOcUpBKzwoQcw">
@@ -412,4 +412,8 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="__QaLwKC7EeOwPsduuPxjMA" name="" client="_6gAUoKC3EeOwPsduuPxjMA" supplier="_QVNtcJ_0EeOsxftnH4_MFA"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_KP7iAKE4EeO5yac37d71nQ" name="Játékindítás" useCase="_vroV0JmVEeOcUpBKzwoQcw">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_dRZAwKE4EeO5yac37d71nQ" name="program" represents="_NAvL4KBrEeOCyvmC2BYgOA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_0K-noKE4EeO5yac37d71nQ" name="program: Program"/>
+  </packagedElement>
 </uml:Model>

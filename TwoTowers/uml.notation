@@ -1591,4 +1591,53 @@
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__QsfoaC7EeOwPsduuPxjMA" id="(0.5833333333333334,0.8411764705882353)"/>
     </edges>
   </notation:Diagram>
+  <notation:Diagram xmi:id="_PS9-EKE4EeO5yac37d71nQ" type="PapyrusUMLSequenceDiagram" name="Játékindítás" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_PS9-EaE4EeO5yac37d71nQ" type="2001" fontName="Segoe UI" lineColor="0">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PS9-EqE4EeO5yac37d71nQ" source="ShadowFigure">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PS9-E6E4EeO5yac37d71nQ" key="ShadowFigure_Value" value="false"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PS9-FKE4EeO5yac37d71nQ" source="displayNameLabelIcon">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PS9-FaE4EeO5yac37d71nQ" key="displayNameLabelIcon_value" value="false"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PS9-FqE4EeO5yac37d71nQ" source="QualifiedName">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PS9-F6E4EeO5yac37d71nQ" key="QualifiedNameDepth" value="1000"/>
+      </eAnnotations>
+      <children xmi:type="notation:DecorationNode" xmi:id="_PS9-GKE4EeO5yac37d71nQ" type="5001"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_PS9-GaE4EeO5yac37d71nQ" type="7001">
+        <children xmi:type="notation:Shape" xmi:id="_dRd5QKE4EeO5yac37d71nQ" type="3001" fontName="Segoe UI" lineColor="0">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dRegUKE4EeO5yac37d71nQ" source="ShadowFigure">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dRegUaE4EeO5yac37d71nQ" key="ShadowFigure_Value" value="false"/>
+          </eAnnotations>
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dRegUqE4EeO5yac37d71nQ" source="displayNameLabelIcon">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dRegU6E4EeO5yac37d71nQ" key="displayNameLabelIcon_value" value="false"/>
+          </eAnnotations>
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dRegVKE4EeO5yac37d71nQ" source="QualifiedName">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dRegVaE4EeO5yac37d71nQ" key="QualifiedNameDepth" value="1000"/>
+          </eAnnotations>
+          <children xmi:type="notation:DecorationNode" xmi:id="_dRegVqE4EeO5yac37d71nQ" type="5002"/>
+          <element xmi:type="uml:Lifeline" href="uml.uml#_dRZAwKE4EeO5yac37d71nQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dRd5QaE4EeO5yac37d71nQ" x="185" y="10" width="102"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_0K_OsKE4EeO5yac37d71nQ" type="3001" fontName="Segoe UI" lineColor="0">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0K_OsqE4EeO5yac37d71nQ" source="ShadowFigure">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0K_1wKE4EeO5yac37d71nQ" key="ShadowFigure_Value" value="false"/>
+          </eAnnotations>
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0K_1waE4EeO5yac37d71nQ" source="displayNameLabelIcon">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0K_1wqE4EeO5yac37d71nQ" key="displayNameLabelIcon_value" value="false"/>
+          </eAnnotations>
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0K_1w6E4EeO5yac37d71nQ" source="QualifiedName">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0K_1xKE4EeO5yac37d71nQ" key="QualifiedNameDepth" value="1000"/>
+          </eAnnotations>
+          <children xmi:type="notation:DecorationNode" xmi:id="_0K_1xaE4EeO5yac37d71nQ" type="5002"/>
+          <element xmi:type="uml:Lifeline" href="uml.uml#_0K-noKE4EeO5yac37d71nQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0K_OsaE4EeO5yac37d71nQ" x="25" y="10" width="112"/>
+        </children>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PS9-GqE4EeO5yac37d71nQ"/>
+      </children>
+      <element xmi:type="uml:Interaction" href="uml.uml#_KP7iAKE4EeO5yac37d71nQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PS9-G6E4EeO5yac37d71nQ"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_PS9-HKE4EeO5yac37d71nQ"/>
+    <element xmi:type="uml:Interaction" href="uml.uml#_KP7iAKE4EeO5yac37d71nQ"/>
+  </notation:Diagram>
 </xmi:XMI>
