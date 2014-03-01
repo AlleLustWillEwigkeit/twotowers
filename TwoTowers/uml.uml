@@ -225,6 +225,7 @@
       <minint xmi:type="uml:LiteralInteger" xmi:id="_P2G70aFCEeO5yac37d71nQ" value="1"/>
     </ownedRule>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_FXxKkKDHEeOeZ4CJHulCSA" name="toronyEpithetoE"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_zKxMMKFWEeO5yac37d71nQ" name="akadalyEpithetoE"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_jfei4J_0EeOsxftnH4_MFA" clientDependency="_nTcX8KCdEeOZD5ER1KaDqQ" name="Torony">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_jIfJwJ_1EeOsxftnH4_MFA" name="jelenlegiCelpont" visibility="public" type="_QVNtcJ_0EeOsxftnH4_MFA">

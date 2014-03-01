@@ -885,6 +885,10 @@
           <element xmi:type="uml:Operation" href="uml.uml#_FXxKkKDHEeOeZ4CJHulCSA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_FXyYsaDHEeOeZ4CJHulCSA"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_zK02kKFWEeO5yac37d71nQ" type="3013" fontName="Segoe UI" lineColor="0">
+          <element xmi:type="uml:Operation" href="uml.uml#_zKxMMKFWEeO5yac37d71nQ"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_zK02kaFWEeO5yac37d71nQ"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_it6jEZ_0EeOsxftnH4_MFA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_it6jEp_0EeOsxftnH4_MFA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_it6jE5_0EeOsxftnH4_MFA"/>
