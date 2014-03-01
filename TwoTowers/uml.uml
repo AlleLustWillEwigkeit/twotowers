@@ -630,4 +630,23 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j5huY6FkEeOmto-uGg6CxA" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_Of1kQKF1EeOvYL28MhoMgQ" name="Programindítás">
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HDmmwaF2EeOvYL28MhoMgQ" name="Message2Recv" covered="_jkCW0KF1EeOvYL28MhoMgQ" message="_HDmmwKF2EeOvYL28MhoMgQ"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_7FOwQKF1EeOvYL28MhoMgQ" name="ActionExecSpecStart" covered="_jkCW0KF1EeOvYL28MhoMgQ" execution="_7FP-YKF1EeOvYL28MhoMgQ"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_7FP-YKF1EeOvYL28MhoMgQ" name="ActionExecSpec" covered="_jkCW0KF1EeOvYL28MhoMgQ" finish="_7FQlcKF1EeOvYL28MhoMgQ" start="_7FOwQKF1EeOvYL28MhoMgQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JddaEKF2EeOvYL28MhoMgQ" name="Message2Send" covered="_jkCW0KF1EeOvYL28MhoMgQ" message="_JdcL8KF2EeOvYL28MhoMgQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JdeBIKF2EeOvYL28MhoMgQ" name="Message2Recv0" covered="_JdAHEKF2EeOvYL28MhoMgQ" message="_JdcL8KF2EeOvYL28MhoMgQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_R4GrIKF2EeOvYL28MhoMgQ" name="Message2Send0" covered="_jkCW0KF1EeOvYL28MhoMgQ" message="_R4FdAKF2EeOvYL28MhoMgQ"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_SVi1EKF2EeOvYL28MhoMgQ" name="ActionExecSpec0" covered="_JdAHEKF2EeOvYL28MhoMgQ" finish="_SVjcIKF2EeOvYL28MhoMgQ" start="_R4HSMKF2EeOvYL28MhoMgQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_R4HSMKF2EeOvYL28MhoMgQ" name="Message2Recv1" covered="_JdAHEKF2EeOvYL28MhoMgQ" message="_R4FdAKF2EeOvYL28MhoMgQ"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_SVjcIKF2EeOvYL28MhoMgQ" name="ActionExecSpec0Finish" covered="_JdAHEKF2EeOvYL28MhoMgQ" execution="_SVi1EKF2EeOvYL28MhoMgQ"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_7FQlcKF1EeOvYL28MhoMgQ" name="ActionExecSpecFinish" covered="_jkCW0KF1EeOvYL28MhoMgQ" execution="_7FP-YKF1EeOvYL28MhoMgQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_jkCW0KF1EeOvYL28MhoMgQ" name=":Program" coveredBy="_7FOwQKF1EeOvYL28MhoMgQ _7FQlcKF1EeOvYL28MhoMgQ _7FP-YKF1EeOvYL28MhoMgQ _HDmmwaF2EeOvYL28MhoMgQ _JddaEKF2EeOvYL28MhoMgQ _R4GrIKF2EeOvYL28MhoMgQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_JdAHEKF2EeOvYL28MhoMgQ" name="jatek: JatekMotor" coveredBy="_JdeBIKF2EeOvYL28MhoMgQ _R4HSMKF2EeOvYL28MhoMgQ _SVjcIKF2EeOvYL28MhoMgQ _SVi1EKF2EeOvYL28MhoMgQ"/>
+    <message xmi:type="uml:Message" xmi:id="_1syr8KF1EeOvYL28MhoMgQ" name="Message0" messageSort="createMessage"/>
+    <message xmi:type="uml:Message" xmi:id="_2uahAKF1EeOvYL28MhoMgQ" name="Message1" messageSort="createMessage"/>
+    <message xmi:type="uml:Message" xmi:id="_HDmmwKF2EeOvYL28MhoMgQ" name="ujJatek()" messageSort="asynchSignal" receiveEvent="_HDmmwaF2EeOvYL28MhoMgQ"/>
+    <message xmi:type="uml:Message" xmi:id="_JdcL8KF2EeOvYL28MhoMgQ" name="&lt;&lt;create>>" messageSort="createMessage" receiveEvent="_JdeBIKF2EeOvYL28MhoMgQ" sendEvent="_JddaEKF2EeOvYL28MhoMgQ"/>
+    <message xmi:type="uml:Message" xmi:id="_R4FdAKF2EeOvYL28MhoMgQ" name="ujJatekInditas()" receiveEvent="_R4HSMKF2EeOvYL28MhoMgQ" sendEvent="_R4GrIKF2EeOvYL28MhoMgQ"/>
+  </packagedElement>
 </uml:Model>
