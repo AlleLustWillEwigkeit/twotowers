@@ -518,7 +518,7 @@
     <fragment xmi:type="uml:CombinedFragment" xmi:id="_W7jWsKFREeO5yac37d71nQ" name="CombinedFragment" covered="_f4GXwKFNEeO5yac37d71nQ _gQ__8KFNEeO5yac37d71nQ _fcUasKFNEeO5yac37d71nQ _E6HKgKFREeO5yac37d71nQ" interactionOperator="alt">
       <operand xmi:type="uml:InteractionOperand" xmi:id="_W7j9wKFREeO5yac37d71nQ" name="InteractionOperand" covered="_f4GXwKFNEeO5yac37d71nQ _gQ__8KFNEeO5yac37d71nQ _fcUasKFNEeO5yac37d71nQ _E6HKgKFREeO5yac37d71nQ">
         <guard xmi:type="uml:InteractionConstraint" xmi:id="_W7kk0KFREeO5yac37d71nQ" name="epithetoseg">
-          <specification xmi:type="uml:LiteralBoolean" xmi:id="_dKassKFREeO5yac37d71nQ" name="epithetoseg" value="true"/>
+          <specification xmi:type="uml:LiteralString" xmi:id="_5qhjQKFpEeOVoffps1DL1A" name="e" value="epithetoseg == true"/>
           <maxint xmi:type="uml:LiteralInteger" xmi:id="_W7lL4KFREeO5yac37d71nQ" value="1"/>
           <minint xmi:type="uml:LiteralInteger" xmi:id="_W7kk0qFREeO5yac37d71nQ"/>
         </guard>
@@ -548,7 +548,6 @@
     <ownedComment xmi:type="uml:Comment" xmi:id="_ys0kkKFZEeO5yac37d71nQ">
       <body> Ide még fel kell venni, hogy az akadály feliratkozik a hatósugarában lévő utakra, de erre nincs függvény.</body>
     </ownedComment>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_mfLjAKFZEeO5yac37d71nQ" name="MessageRecv4" covered="_lHsoIKFYEeO5yac37d71nQ" message="_mfKU4KFZEeO5yac37d71nQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1U-IAKFYEeO5yac37d71nQ" name="MessageRecv" covered="_a8XckKFYEeO5yac37d71nQ" message="_1U9g8KFYEeO5yac37d71nQ"/>
     <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_x4y8EKFYEeO5yac37d71nQ" name="BehaviorExecSpecStart" covered="_a8XckKFYEeO5yac37d71nQ" execution="_x4zjIKFYEeO5yac37d71nQ"/>
     <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_x4zjIKFYEeO5yac37d71nQ" name="BehaviorExecSpec" covered="_a8XckKFYEeO5yac37d71nQ" finish="_x4zjIaFYEeO5yac37d71nQ" start="_x4y8EKFYEeO5yac37d71nQ"/>
@@ -567,13 +566,14 @@
     <fragment xmi:type="uml:CombinedFragment" xmi:id="_lJJkMKFZEeO5yac37d71nQ" name="CombinedFragment" covered="_bugrMKFYEeO5yac37d71nQ _a8XckKFYEeO5yac37d71nQ _bYTxsKFYEeO5yac37d71nQ _lHsoIKFYEeO5yac37d71nQ" interactionOperator="alt">
       <operand xmi:type="uml:InteractionOperand" xmi:id="_lJKLQKFZEeO5yac37d71nQ" name="InteractionOperand" covered="_bugrMKFYEeO5yac37d71nQ _a8XckKFYEeO5yac37d71nQ _bYTxsKFYEeO5yac37d71nQ _lHsoIKFYEeO5yac37d71nQ">
         <guard xmi:type="uml:InteractionConstraint" xmi:id="_lJKLQaFZEeO5yac37d71nQ" name="">
-          <specification xmi:type="uml:LiteralBoolean" xmi:id="_rRNuoKFZEeO5yac37d71nQ" name="epithetoseg" value="true"/>
+          <specification xmi:type="uml:LiteralString" xmi:id="_FYzIQKFqEeOVoffps1DL1A" name="e" value="epithetoseg == true"/>
           <maxint xmi:type="uml:LiteralInteger" xmi:id="_lJKLRKFZEeO5yac37d71nQ" value="1"/>
           <minint xmi:type="uml:LiteralInteger" xmi:id="_lJKLQ6FZEeO5yac37d71nQ"/>
         </guard>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_mfK78KFZEeO5yac37d71nQ" name="MessageSend" covered="_a8XckKFYEeO5yac37d71nQ" message="_mfKU4KFZEeO5yac37d71nQ"/>
       </operand>
     </fragment>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_mfLjAKFZEeO5yac37d71nQ" name="MessageRecv4" covered="_lHsoIKFYEeO5yac37d71nQ" message="_mfKU4KFZEeO5yac37d71nQ"/>
     <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_x4zjIaFYEeO5yac37d71nQ" name="BehaviorExecSpecFinish" covered="_a8XckKFYEeO5yac37d71nQ" execution="_x4zjIKFYEeO5yac37d71nQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_a8XckKFYEeO5yac37d71nQ" name="jatekMotor" represents="_NAvL4KBrEeOCyvmC2BYgOA" coveredBy="_x4y8EKFYEeO5yac37d71nQ _x4zjIaFYEeO5yac37d71nQ _x4zjIKFYEeO5yac37d71nQ _1U-IAKFYEeO5yac37d71nQ _8qC4IKFYEeO5yac37d71nQ _CBSpoKFZEeO5yac37d71nQ _KQ-n4KFZEeO5yac37d71nQ _Ravf4KFZEeO5yac37d71nQ _lJJkMKFZEeO5yac37d71nQ _lJKLQKFZEeO5yac37d71nQ _mfK78KFZEeO5yac37d71nQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_bYTxsKFYEeO5yac37d71nQ" name="palya" represents="_7k3x8KBqEeOCyvmC2BYgOA" coveredBy="_8qC4IaFYEeO5yac37d71nQ _88fTAaFYEeO5yac37d71nQ _88fTAKFYEeO5yac37d71nQ _CBSCkKFZEeO5yac37d71nQ _lJJkMKFZEeO5yac37d71nQ _lJKLQKFZEeO5yac37d71nQ"/>
