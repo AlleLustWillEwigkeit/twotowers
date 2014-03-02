@@ -242,10 +242,11 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iTxJQaJbEeOgD_QoGWHWpA"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iTxJQqJbEeOgD_QoGWHWpA" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_D0bDMKJhEeOvDey7tVL-vA" name="ut" type="_juq1cJ_0EeOsxftnH4_MFA" association="_D0bqQKJhEeOvDey7tVL-vA">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_D0bDMKJhEeOvDey7tVL-vA" name="kov" type="_juq1cJ_0EeOsxftnH4_MFA" association="_D0bqQKJhEeOvDey7tVL-vA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D0bDMaJhEeOvDey7tVL-vA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D0bDMqJhEeOvDey7tVL-vA" value="1"/>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_msR9cKJiEeOvDey7tVL-vA" name="ramLeptek"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_P_xFEJ_4EeOI6vxMIpY2eg" name="Palya">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_ipVoQJ_4EeOI6vxMIpY2eg" name="utak" aggregation="composite">
@@ -265,7 +266,7 @@
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_am4hgKFoEeOVoffps1DL1A" type="_jKZokKJWEeOH3b4EbaXuNQ" isUnique="false" direction="return"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_yhkgMKFAEeO5yac37d71nQ" name="palyaEpit">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yhkgMKFAEeO5yac37d71nQ" name="palyaBetolt">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_-aEYMKFAEeO5yac37d71nQ" name="palyaNum" isUnique="false">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
@@ -886,10 +887,16 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_D0bqQKJhEeOvDey7tVL-vA" name="ut_ut_1" memberEnd="_D0bqQaJhEeOvDey7tVL-vA _D0bDMKJhEeOvDey7tVL-vA">
+  <packagedElement xmi:type="uml:Association" xmi:id="_D0bqQKJhEeOvDey7tVL-vA" name="" memberEnd="_D0bqQaJhEeOvDey7tVL-vA _D0bDMKJhEeOvDey7tVL-vA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_D0bqQaJhEeOvDey7tVL-vA" name="ut" type="_juq1cJ_0EeOsxftnH4_MFA" association="_D0bqQKJhEeOvDey7tVL-vA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D0bqQqJhEeOvDey7tVL-vA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D0bqQ6JhEeOvDey7tVL-vA" value="1"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_o_wb8KJiEeOvDey7tVL-vA" name="BakacsinErdo">
+    <generalization xmi:type="uml:Generalization" xmi:id="_upYW4KJiEeOvDey7tVL-vA" general="_juq1cJ_0EeOsxftnH4_MFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pSg_4KJiEeOvDey7tVL-vA" name="VegzetHegye">
+    <generalization xmi:type="uml:Generalization" xmi:id="_uLA_4KJiEeOvDey7tVL-vA" general="_juq1cJ_0EeOsxftnH4_MFA"/>
   </packagedElement>
 </uml:Model>
