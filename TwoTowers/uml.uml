@@ -244,6 +244,10 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ipVoQZ_4EeOI6vxMIpY2eg"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ipVoQp_4EeOI6vxMIpY2eg" value="*"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Hm7IoKJaEeOgD_QoGWHWpA" name="tornyok" type="_jKZokKJWEeOH3b4EbaXuNQ" aggregation="composite" association="_Hm7vsKJaEeOgD_QoGWHWpA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Hm7IoaJaEeOgD_QoGWHWpA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Hm7IoqJaEeOgD_QoGWHWpA" value="*"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_H60LkKDGEeOeZ4CJHulCSA" name="palyaElemLeker">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_OM99UKFOEeO5yac37d71nQ" name="x" isUnique="false">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -797,7 +801,22 @@
     <message xmi:type="uml:Message" xmi:id="_GdIQAKJPEeOtKpX18JYhrQ" name="felKovezhetoE(): boolean" receiveEvent="_GdKFMKJPEeOtKpX18JYhrQ" sendEvent="_GdJeIKJPEeOtKpX18JYhrQ"/>
     <message xmi:type="uml:Message" xmi:id="_M064gKJPEeOtKpX18JYhrQ" name="felkovezhetoseg" messageSort="reply" receiveEvent="_M09UwKJPEeOtKpX18JYhrQ" sendEvent="_M08tsKJPEeOtKpX18JYhrQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_3mUIkKJVEeOH3b4EbaXuNQ" name="PalyaElem"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_jKZokKJWEeOH3b4EbaXuNQ" name="Torony"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_j4onkKJWEeOH3b4EbaXuNQ" name="Akadaly"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Hm7vsKJaEeOgD_QoGWHWpA" name="palya_torony_1" memberEnd="_Hm7vsaJaEeOgD_QoGWHWpA _Hm7IoKJaEeOgD_QoGWHWpA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Hm7vsaJaEeOgD_QoGWHWpA" name="palya" type="_P_xFEJ_4EeOI6vxMIpY2eg" association="_Hm7vsKJaEeOgD_QoGWHWpA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Hm7vsqJaEeOgD_QoGWHWpA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Hm7vs6JaEeOgD_QoGWHWpA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_H3kMsKJaEeOgD_QoGWHWpA" name="palya_ut_1" memberEnd="_H3kMsaJaEeOgD_QoGWHWpA _H3jloKJaEeOgD_QoGWHWpA" navigableOwnedEnd="_H3jloKJaEeOgD_QoGWHWpA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_H3kMsaJaEeOgD_QoGWHWpA" name="palya" type="_P_xFEJ_4EeOI6vxMIpY2eg" association="_H3kMsKJaEeOgD_QoGWHWpA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H3kMsqJaEeOgD_QoGWHWpA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H3kMs6JaEeOgD_QoGWHWpA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_H3jloKJaEeOgD_QoGWHWpA" name="utak" type="_juq1cJ_0EeOsxftnH4_MFA" aggregation="composite" association="_H3kMsKJaEeOgD_QoGWHWpA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H3jloaJaEeOgD_QoGWHWpA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H3jloqJaEeOgD_QoGWHWpA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>
