@@ -390,7 +390,7 @@
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_JWH10KHgEeOyQo6s90Qjlg" name="torony" type="_jfei4J_0EeOsxftnH4_MFA" association="_JWJD8KHgEeOyQo6s90Qjlg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JWH10aHgEeOyQo6s90Qjlg"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JWH10qHgEeOyQo6s90Qjlg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JWH10qHgEeOyQo6s90Qjlg" value="*"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_elNrcKC8EeOwPsduuPxjMA" name="tick"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_H-g1QKDFEeOeZ4CJHulCSA" name="lerakTornyot">
@@ -775,7 +775,7 @@
   <packagedElement xmi:type="uml:Interface" xmi:id="_PvYLAKHtEeOrCOC3nN0unA" name="UtraRakhato">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Q1k-EKHtEeOrCOC3nN0unA" name="akcioVegrehajtasa"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Realization" xmi:id="_fa2lYKHtEeOrCOC3nN0unA" name="Realization1" client="_kJ5Y4J_0EeOsxftnH4_MFA" supplier="_PvYLAKHtEeOrCOC3nN0unA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_fa2lYKHtEeOrCOC3nN0unA" name="" client="_kJ5Y4J_0EeOsxftnH4_MFA" supplier="_PvYLAKHtEeOrCOC3nN0unA"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_jvfqYKHtEeOrCOC3nN0unA" name="ut_utraRakhato_1" memberEnd="_jvfqYaHtEeOrCOC3nN0unA _jvecQKHtEeOrCOC3nN0unA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_jvfqYaHtEeOrCOC3nN0unA" name="ut" type="_juq1cJ_0EeOsxftnH4_MFA" association="_jvfqYKHtEeOrCOC3nN0unA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jvfqYqHtEeOrCOC3nN0unA" value="1"/>
