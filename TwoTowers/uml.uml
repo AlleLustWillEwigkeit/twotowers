@@ -543,9 +543,6 @@
     <message xmi:type="uml:Message" xmi:id="_ShzwQKFGEeO5yac37d71nQ" name="" messageSort="reply" receiveEvent="_Sh0-YKFGEeO5yac37d71nQ" sendEvent="_Sh0XUKFGEeO5yac37d71nQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_L1oH8KFNEeO5yac37d71nQ" name="Toronylerakás">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_tjBygKFUEeO5yac37d71nQ">
-      <body>Ide még fel kell venni, hogy a torony feliratkozik a hatósugarában lévő utakra, de erre nincs függvény.</body>
-    </ownedComment>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BTfwgKFOEeO5yac37d71nQ" name="MessageRecv0" covered="_fcUasKFNEeO5yac37d71nQ" message="_BTfJcKFOEeO5yac37d71nQ"/>
     <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_PFP-QKFQEeO5yac37d71nQ" name="BehaviorExecSpecStart" covered="_fcUasKFNEeO5yac37d71nQ" execution="_PFP-QaFQEeO5yac37d71nQ"/>
     <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_PFP-QaFQEeO5yac37d71nQ" name="BehaviorExecSpec" covered="_fcUasKFNEeO5yac37d71nQ" finish="_PFP-QqFQEeO5yac37d71nQ" start="_PFP-QKFQEeO5yac37d71nQ"/>
@@ -591,9 +588,6 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_NFfzYKFYEeO5yac37d71nQ" name="Akadálylerakás">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_ys0kkKFZEeO5yac37d71nQ">
-      <body> Ide még fel kell venni, hogy az akadály feliratkozik a hatósugarában lévő utakra, de erre nincs függvény.</body>
-    </ownedComment>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_mfLjAKFZEeO5yac37d71nQ" name="MessageRecv4" covered="_lHsoIKFYEeO5yac37d71nQ" message="_mfKU4KFZEeO5yac37d71nQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1U-IAKFYEeO5yac37d71nQ" name="MessageRecv" covered="_a8XckKFYEeO5yac37d71nQ" message="_1U9g8KFYEeO5yac37d71nQ"/>
     <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_x4y8EKFYEeO5yac37d71nQ" name="BehaviorExecSpecStart" covered="_a8XckKFYEeO5yac37d71nQ" execution="_x4zjIKFYEeO5yac37d71nQ"/>
