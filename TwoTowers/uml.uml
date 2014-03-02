@@ -527,7 +527,21 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_IwTMUKIqEeOe2ud12PWuVg" name="indit"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_yiEksKIrEeOe2ud12PWuVg" name="merkozes"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_CA2yoKJHEeOQHcenuVpNxg" name="koKivalaszt"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_CA2yoKJHEeOQHcenuVpNxg" name="koKivalaszt">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_AiBAoKJIEeOQHcenuVpNxg" name="hanyadik">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5DpKkKJHEeOQHcenuVpNxg" name="toronyKivalaszt">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CnAXMKJIEeOQHcenuVpNxg" name="hanyadik">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5rGMIKJHEeOQHcenuVpNxg" name="akadalyKivalaszt">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_EmdtgKJIEeOQHcenuVpNxg" name="hanyadik">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_5TF8k6BqEeOCyvmC2BYgOA" name="ellensegek" memberEnd="_5TF8lKBqEeOCyvmC2BYgOA _5TF8kKBqEeOCyvmC2BYgOA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_5TF8lKBqEeOCyvmC2BYgOA" name="" type="_zBDWwKBqEeOCyvmC2BYgOA" association="_5TF8k6BqEeOCyvmC2BYgOA">

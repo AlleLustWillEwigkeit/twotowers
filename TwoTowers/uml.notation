@@ -1369,6 +1369,14 @@
           <element xmi:type="uml:Operation" href="uml.uml#_CA2yoKJHEeOQHcenuVpNxg"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_CA4AwaJHEeOQHcenuVpNxg"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_5DqYsKJHEeOQHcenuVpNxg" type="3013" fontName="Cantarell" fontHeight="11" lineColor="0">
+          <element xmi:type="uml:Operation" href="uml.uml#_5DpKkKJHEeOQHcenuVpNxg"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_5DqYsaJHEeOQHcenuVpNxg"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_5rHaQKJHEeOQHcenuVpNxg" type="3013" fontName="Cantarell" fontHeight="11" lineColor="0">
+          <element xmi:type="uml:Operation" href="uml.uml#_5rGMIKJHEeOQHcenuVpNxg"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_5rHaQaJHEeOQHcenuVpNxg"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_zBIPQaBqEeOCyvmC2BYgOA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_zBIPQqBqEeOCyvmC2BYgOA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_zBIPQ6BqEeOCyvmC2BYgOA"/>
