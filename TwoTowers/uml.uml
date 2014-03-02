@@ -866,4 +866,30 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UN3Uc6ItEeOe2ud12PWuVg" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_1oxN4KJBEeOtKpX18JYhrQ" name="Akadály varázskövezés">
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_c_0swKJCEeOtKpX18JYhrQ" name="MessageRecv" covered="_Zj1uEKJCEeOtKpX18JYhrQ" message="_c_OP0KJCEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_mSkDcKJCEeOtKpX18JYhrQ" name="ActionExecSpecStart" covered="_Zj1uEKJCEeOtKpX18JYhrQ" execution="_mSl4oKJCEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_mSl4oKJCEeOtKpX18JYhrQ" name="ActionExecSpec" covered="_Zj1uEKJCEeOtKpX18JYhrQ" finish="_mSmfsKJCEeOtKpX18JYhrQ" start="_mSkDcKJCEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_blgOYKJDEeOtKpX18JYhrQ" name="MessageSend" covered="_Zj1uEKJCEeOtKpX18JYhrQ" message="_blfAQKJDEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_aF41wKJDEeOtKpX18JYhrQ" name="ActionExecSpec0" covered="_n4mNIKJCEeOtKpX18JYhrQ" finish="_aF5c0KJDEeOtKpX18JYhrQ" start="_blg1cKJDEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_blg1cKJDEeOtKpX18JYhrQ" name="MessageRecv0" covered="_n4mNIKJCEeOtKpX18JYhrQ" message="_blfAQKJDEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pUDpEKJDEeOtKpX18JYhrQ" name="MessageSend0" covered="_n4mNIKJCEeOtKpX18JYhrQ" message="_pUDCAKJDEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_aF5c0KJDEeOtKpX18JYhrQ" name="ActionExecSpec0Finish" covered="_n4mNIKJCEeOtKpX18JYhrQ" execution="_aF41wKJDEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pUEQIKJDEeOtKpX18JYhrQ" name="MessageRecv1" covered="_Zj1uEKJCEeOtKpX18JYhrQ" message="_pUDCAKJDEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IrHykKJEEeOtKpX18JYhrQ" name="MessageSend1" covered="_Zj1uEKJCEeOtKpX18JYhrQ" message="_IrHLgKJEEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_FHpr0KJEEeOtKpX18JYhrQ" name="ActionExecSpec1" covered="_BzELEKJDEeOtKpX18JYhrQ" finish="_FHqS4KJEEeOtKpX18JYhrQ" start="_IrJAsKJEEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IrJAsKJEEeOtKpX18JYhrQ" name="MessageRecv2" covered="_BzELEKJDEeOtKpX18JYhrQ" message="_IrHLgKJEEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TADmEKJEEeOtKpX18JYhrQ" name="MessageSend2" covered="_BzELEKJDEeOtKpX18JYhrQ" message="_TACX8KJEEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TAE0MKJEEeOtKpX18JYhrQ" name="MessageRecv3" covered="_Zj1uEKJCEeOtKpX18JYhrQ" message="_TACX8KJEEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_FHqS4KJEEeOtKpX18JYhrQ" name="ActionExecSpec1Finish" covered="_BzELEKJDEeOtKpX18JYhrQ" execution="_FHpr0KJEEeOtKpX18JYhrQ"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_mSmfsKJCEeOtKpX18JYhrQ" name="ActionExecSpecFinish" covered="_Zj1uEKJCEeOtKpX18JYhrQ" execution="_mSl4oKJCEeOtKpX18JYhrQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Zj1uEKJCEeOtKpX18JYhrQ" name="jatek: JatekMotor" coveredBy="_c_0swKJCEeOtKpX18JYhrQ _mSkDcKJCEeOtKpX18JYhrQ _mSmfsKJCEeOtKpX18JYhrQ _mSl4oKJCEeOtKpX18JYhrQ _blgOYKJDEeOtKpX18JYhrQ _pUEQIKJDEeOtKpX18JYhrQ _IrHykKJEEeOtKpX18JYhrQ _TAE0MKJEEeOtKpX18JYhrQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_n4mNIKJCEeOtKpX18JYhrQ" name=":Palya" coveredBy="_aF5c0KJDEeOtKpX18JYhrQ _aF41wKJDEeOtKpX18JYhrQ _blg1cKJDEeOtKpX18JYhrQ _pUDpEKJDEeOtKpX18JYhrQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_BzELEKJDEeOtKpX18JYhrQ" name=":PalyaElem" coveredBy="_FHqS4KJEEeOtKpX18JYhrQ _FHpr0KJEEeOtKpX18JYhrQ _IrJAsKJEEeOtKpX18JYhrQ _TADmEKJEEeOtKpX18JYhrQ"/>
+    <message xmi:type="uml:Message" xmi:id="_c_OP0KJCEeOtKpX18JYhrQ" name="felkovez(int: x, int: y, Varazsko: ko)" messageSort="asynchSignal" receiveEvent="_c_0swKJCEeOtKpX18JYhrQ"/>
+    <message xmi:type="uml:Message" xmi:id="_blfAQKJDEeOtKpX18JYhrQ" name="palyaElemLeker(int: x,int: y): Palyaelem" receiveEvent="_blg1cKJDEeOtKpX18JYhrQ" sendEvent="_blgOYKJDEeOtKpX18JYhrQ"/>
+    <message xmi:type="uml:Message" xmi:id="_pUDCAKJDEeOtKpX18JYhrQ" name="palyaElem" messageSort="reply" receiveEvent="_pUEQIKJDEeOtKpX18JYhrQ" sendEvent="_pUDpEKJDEeOtKpX18JYhrQ"/>
+    <message xmi:type="uml:Message" xmi:id="_IrHLgKJEEeOtKpX18JYhrQ" name="felKovezhetoE(): boolean" receiveEvent="_IrJAsKJEEeOtKpX18JYhrQ" sendEvent="_IrHykKJEEeOtKpX18JYhrQ"/>
+    <message xmi:type="uml:Message" xmi:id="_TACX8KJEEeOtKpX18JYhrQ" name="felkovezhetoseg" messageSort="reply" receiveEvent="_TAE0MKJEEeOtKpX18JYhrQ" sendEvent="_TADmEKJEEeOtKpX18JYhrQ"/>
+  </packagedElement>
 </uml:Model>
