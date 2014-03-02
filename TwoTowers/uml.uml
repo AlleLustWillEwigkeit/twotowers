@@ -291,7 +291,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8XpqEqIoEeOe2ud12PWuVg" value="1"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_b7t0wKHcEeODTJ8--doxPw" name="felKovez">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hxy3UKHcEeODTJ8--doxPw" name="ko" type="_kff0IKFiEeOmto-uGg6CxA"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hxy3UKHcEeODTJ8--doxPw" name="ko" type="_n1qzwKIoEeOe2ud12PWuVg"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_v32jUKHtEeOrCOC3nN0unA" name="lo" visibility="private"/>
   </packagedElement>
