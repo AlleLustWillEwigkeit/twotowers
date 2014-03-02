@@ -562,7 +562,7 @@
     <message xmi:type="uml:Message" xmi:id="_Q54AwKFUEeO5yac37d71nQ" name="&lt;&lt;create>>" messageSort="createMessage" receiveEvent="_Q54n0aFUEeO5yac37d71nQ" sendEvent="_Q54n0KFUEeO5yac37d71nQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_iAoQ4KFVEeO5yac37d71nQ" name="kovUt" memberEnd="_iAoQ4aFVEeO5yac37d71nQ _iAl0oKFVEeO5yac37d71nQ">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_iAoQ4aFVEeO5yac37d71nQ" name="kovUt" type="_juq1cJ_0EeOsxftnH4_MFA" association="_iAoQ4KFVEeO5yac37d71nQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iAoQ4aFVEeO5yac37d71nQ" name="" type="_juq1cJ_0EeOsxftnH4_MFA" association="_iAoQ4KFVEeO5yac37d71nQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iAoQ4qFVEeO5yac37d71nQ" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iAoQ46FVEeO5yac37d71nQ" value="1"/>
     </ownedEnd>

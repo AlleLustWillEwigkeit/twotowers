@@ -689,7 +689,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_12FnUqF0EeOvYL28MhoMgQ"/>
       </children>
       <element xmi:type="uml:Class" href="uml.uml#_QVNtcJ_0EeOsxftnH4_MFA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QWW88Z_0EeOsxftnH4_MFA" x="65" y="45"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QWW88Z_0EeOsxftnH4_MFA" x="60" y="45"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_Ql84IJ_0EeOsxftnH4_MFA" type="2008" fontName="Ubuntu" fontHeight="11" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ql-GQJ_0EeOsxftnH4_MFA" source="ShadowFigure">
