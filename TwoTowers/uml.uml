@@ -790,6 +790,11 @@
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_tfwYMKJpEeOV1qKYj6Ytkg" name="sebzodik">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vv-uYKJpEeOV1qKYj6Ytkg" name="mennyivel">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_Hm7vsKJaEeOgD_QoGWHWpA" name="palya_torony_1" memberEnd="_Hm7vsaJaEeOgD_QoGWHWpA _Hm7IoKJaEeOgD_QoGWHWpA" navigableOwnedEnd="_Hm7vsaJaEeOgD_QoGWHWpA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_Hm7vsaJaEeOgD_QoGWHWpA" name="palya" type="_P_xFEJ_4EeOI6vxMIpY2eg" association="_Hm7vsKJaEeOgD_QoGWHWpA">

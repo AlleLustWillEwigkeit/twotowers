@@ -1305,6 +1305,10 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j4rD1KJWEeOH3b4EbaXuNQ"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_j4rD1aJWEeOH3b4EbaXuNQ" type="7018">
+        <children xmi:type="notation:Shape" xmi:id="_tfyNYKJpEeOV1qKYj6Ytkg" type="3013" fontHeight="8" lineColor="0">
+          <element xmi:type="uml:Operation" href="uml.uml#_tfwYMKJpEeOV1qKYj6Ytkg"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_tfyNYaJpEeOV1qKYj6Ytkg"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_j4rD1qJWEeOH3b4EbaXuNQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_j4rD16JWEeOH3b4EbaXuNQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_j4rD2KJWEeOH3b4EbaXuNQ"/>
