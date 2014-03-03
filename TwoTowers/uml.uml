@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_FhYUYJmGEeOSd-xiGoW2OA" name="model">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_ctOX4KKlEeOV_5xxC3fMGA">
+    <body>Ez az asszociáció járható&#xD;
+Torny-> pálya irányba is, csak&#xD;
+nem látszik</body>
+  </ownedComment>
   <elementImport xmi:type="uml:ElementImport" xmi:id="_Zptv8J_6EeOI6vxMIpY2eg">
     <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
   </elementImport>
@@ -342,14 +347,6 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fLZ8gKHfEeOyQo6s90Qjlg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fLrpUKHfEeOyQo6s90Qjlg" value="1"/>
       <defaultValue xmi:type="uml:LiteralString" xmi:id="_fLsQYKHfEeOyQo6s90Qjlg">
-        <value xsi:nil="true"/>
-      </defaultValue>
-    </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_I_ZxMKHbEeODTJ8--doxPw" name="ellensegSzam" visibility="private">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JO93MKHbEeODTJ8--doxPw" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JO_FUKHbEeODTJ8--doxPw" value="1"/>
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_JPATcKHbEeODTJ8--doxPw">
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
@@ -979,6 +976,10 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_pSg_4KJiEeOvDey7tVL-vA" name="VegzetHegye">
     <generalization xmi:type="uml:Generalization" xmi:id="_uLA_4KJiEeOvDey7tVL-vA" general="_juq1cJ_0EeOsxftnH4_MFA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_hAcEEKKmEeOV_5xxC3fMGA" name="jatekMotor" type="_zBDWwKBqEeOCyvmC2BYgOA" association="_hAcrIKKmEeOV_5xxC3fMGA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hAcEEaKmEeOV_5xxC3fMGA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hAcEEqKmEeOV_5xxC3fMGA" value="1"/>
+    </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_w60awKJyEeOV1qKYj6Ytkg" name="teszt">
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OWXycKJ2EeOV1qKYj6Ytkg" name="MessageRecv0" covered="_z7qVkKJyEeOV1qKYj6Ytkg" message="_OWXLYKJ2EeOV1qKYj6Ytkg"/>
@@ -1004,6 +1005,12 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_cCAOcaKWEeOG_JOzRVLs-Q" name="ellensegek" type="_VmWzUKBqEeOCyvmC2BYgOA" association="_cCAOcKKWEeOG_JOzRVLs-Q">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cCAOcqKWEeOG_JOzRVLs-Q" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cCAOc6KWEeOG_JOzRVLs-Q" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hAcrIKKmEeOV_5xxC3fMGA" name="vegzetHegye_jatekMotor_1" memberEnd="_hAcrIaKmEeOV_5xxC3fMGA _hAcEEKKmEeOV_5xxC3fMGA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_hAcrIaKmEeOV_5xxC3fMGA" name="vegzetHegye" type="_pSg_4KJiEeOvDey7tVL-vA" association="_hAcrIKKmEeOV_5xxC3fMGA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hAcrIqKmEeOV_5xxC3fMGA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hAcrI6KmEeOV_5xxC3fMGA" value="1"/>
     </ownedEnd>
   </packagedElement>
 </uml:Model>
