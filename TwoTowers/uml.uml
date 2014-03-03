@@ -200,6 +200,7 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_hUVrkJ_1EeOsxftnH4_MFA" name="bont"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_jDTEIKBrEeOCyvmC2BYgOA" name="lep"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_fduZIKJvEeOV1qKYj6Ytkg" name="meghal"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Ql500J_0EeOsxftnH4_MFA" name="Ember">
     <generalization xmi:type="uml:Generalization" xmi:id="_MmGW8KBuEeOCyvmC2BYgOA" general="_QVNtcJ_0EeOsxftnH4_MFA"/>
@@ -331,8 +332,9 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_toIFIKIpEeOe2ud12PWuVg" name="inditEllenseg">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_4HPvYKIpEeOe2ud12PWuVg" name="ellenseg" type="_QVNtcJ_0EeOsxftnH4_MFA"/>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_kL7NoKJvEeOV1qKYj6Ytkg" name="egyEllensegMeghalt"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_mPaQQKBqEeOCyvmC2BYgOA" name="ellensegek" memberEnd="_mPaQQaBqEeOCyvmC2BYgOA _mPZCIKBqEeOCyvmC2BYgOA">
+  <packagedElement xmi:type="uml:Association" xmi:id="_mPaQQKBqEeOCyvmC2BYgOA" name="ellensegek" memberEnd="_mPaQQaBqEeOCyvmC2BYgOA _mPZCIKBqEeOCyvmC2BYgOA" navigableOwnedEnd="_mPaQQaBqEeOCyvmC2BYgOA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_mPaQQaBqEeOCyvmC2BYgOA" name="" type="_VmWzUKBqEeOCyvmC2BYgOA" association="_mPaQQKBqEeOCyvmC2BYgOA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mPaQQqBqEeOCyvmC2BYgOA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mPaQQ6BqEeOCyvmC2BYgOA" value="1"/>
