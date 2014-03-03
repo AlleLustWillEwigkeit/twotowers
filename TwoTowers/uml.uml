@@ -305,9 +305,7 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_UEweIKJhEeOvDey7tVL-vA" name="sikerult" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
       </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xQ0FoKKCEeOG_JOzRVLs-Q" name="hanyadik">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xQ0FoKKCEeOG_JOzRVLs-Q" name="torony" type="_jKZokKJWEeOH3b4EbaXuNQ"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Pb-8MKJhEeOvDey7tVL-vA" name="akadalyLerak">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_nLzAcKJhEeOvDey7tVL-vA" name="x">
@@ -319,9 +317,7 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_q8_aIKJhEeOvDey7tVL-vA" name="sikerult" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
       </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqFqIKKCEeOG_JOzRVLs-Q" name="hanyadik">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqFqIKKCEeOG_JOzRVLs-Q" name="akadaly" type="_j4onkKJWEeOH3b4EbaXuNQ"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_LlcSMKKSEeOG_JOzRVLs-Q" name="felkovez">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_5J0SIKKWEeOG_JOzRVLs-Q" name="x">
@@ -331,6 +327,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_7wag8KKWEeOG_JOzRVLs-Q" name="v" type="_kff0IKFiEeOmto-uGg6CxA"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_aUYOAKKhEeOV_5xxC3fMGA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_VmWzUKBqEeOCyvmC2BYgOA" name="Ellensegek">
