@@ -653,6 +653,13 @@
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_pbELMKKfEeOcwPP3aiRZZA" name="lekerHatotav"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_prksYKKfEeOcwPP3aiRZZA" name="lekerGyorsasag"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_p6c14KKfEeOcwPP3aiRZZA" name="lekerEleteroSzorzo"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_qM_XYKKfEeOcwPP3aiRZZA" name="lekerTundeEllen"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vEkKUKKfEeOcwPP3aiRZZA" name="lekerEmberEllen"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5Ag2EKKfEeOEx-JyEu-RSA" name="lekerTorpEllen"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_EsZ1cKKgEeOlnN7UdtfJpQ" name="lekerHobbitEllen"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_8sUvEKFjEeOmto-uGg6CxA" name="" client="_QVNtcJ_0EeOsxftnH4_MFA" supplier="_kff0IKFiEeOmto-uGg6CxA"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_j5huYKFkEeOmto-uGg6CxA" name="ko" memberEnd="_j5huYaFkEeOmto-uGg6CxA _j5hHUKFkEeOmto-uGg6CxA">
