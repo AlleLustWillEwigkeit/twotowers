@@ -782,6 +782,14 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZM1PYaJaEeOgD_QoGWHWpA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZM1PYqJaEeOgD_QoGWHWpA" value="1"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_feLwUKJoEeOV1qKYj6Ytkg" name="eletero" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_f2b4QKJoEeOV1qKYj6Ytkg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_f2dGYKJoEeOV1qKYj6Ytkg" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_f2eUgKJoEeOV1qKYj6Ytkg">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_Hm7vsKJaEeOgD_QoGWHWpA" name="palya_torony_1" memberEnd="_Hm7vsaJaEeOgD_QoGWHWpA _Hm7IoKJaEeOgD_QoGWHWpA" navigableOwnedEnd="_Hm7vsaJaEeOgD_QoGWHWpA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_Hm7vsaJaEeOgD_QoGWHWpA" name="palya" type="_P_xFEJ_4EeOI6vxMIpY2eg" association="_Hm7vsKJaEeOgD_QoGWHWpA">

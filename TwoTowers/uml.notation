@@ -1295,6 +1295,10 @@
       </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_j4qcyKJWEeOH3b4EbaXuNQ" type="5029"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_j4rD0KJWEeOH3b4EbaXuNQ" type="7017">
+        <children xmi:type="notation:Shape" xmi:id="_fenOIKJoEeOV1qKYj6Ytkg" type="3012" fontHeight="8" lineColor="0">
+          <element xmi:type="uml:Property" href="uml.uml#_feLwUKJoEeOV1qKYj6Ytkg"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_fenOIaJoEeOV1qKYj6Ytkg"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_j4rD0aJWEeOH3b4EbaXuNQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_j4rD0qJWEeOH3b4EbaXuNQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_j4rD06JWEeOH3b4EbaXuNQ"/>
