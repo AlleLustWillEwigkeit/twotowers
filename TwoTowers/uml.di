@@ -29,7 +29,13 @@
       <emfPageIdentifier href="uml.notation#_NZJcYKJOEeOtKpX18JYhrQ"/>
     </availablePage>
     <availablePage>
-      <emfPageIdentifier href="uml.notation#_xjPssKJyEeOV1qKYj6Ytkg"/>
+      <emfPageIdentifier href="uml.notation#_NfkwgKJ6EeOG_JOzRVLs-Q"/>
+    </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="uml.notation#_OK4XUKJ6EeOG_JOzRVLs-Q"/>
+    </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="uml.notation#_P3BJAKJ6EeOG_JOzRVLs-Q"/>
     </availablePage>
   </pageList>
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
@@ -37,9 +43,6 @@
       <children xsi:type="di:TabFolder">
         <children>
           <emfPageIdentifier href="uml.notation#_FijZEJmGEeOSd-xiGoW2OA"/>
-        </children>
-        <children>
-          <emfPageIdentifier href="uml.notation#_5UOTgJ_yEeOsxftnH4_MFA"/>
         </children>
         <children>
           <emfPageIdentifier href="uml.notation#_QJfCoKF1EeOvYL28MhoMgQ"/>
@@ -63,7 +66,13 @@
           <emfPageIdentifier href="uml.notation#_aT_iQKGKEeO7Z9l2IATJrA"/>
         </children>
         <children>
-          <emfPageIdentifier href="uml.notation#_xjPssKJyEeOV1qKYj6Ytkg"/>
+          <emfPageIdentifier href="uml.notation#_NfkwgKJ6EeOG_JOzRVLs-Q"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="uml.notation#_OK4XUKJ6EeOG_JOzRVLs-Q"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="uml.notation#_P3BJAKJ6EeOG_JOzRVLs-Q"/>
         </children>
       </children>
     </windows>

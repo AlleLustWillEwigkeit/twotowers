@@ -909,4 +909,5 @@
     <message xmi:type="uml:Message" xmi:id="_GnHnwKJ2EeOV1qKYj6Ytkg" name="&lt;&lt;create>>" messageSort="createMessage" receiveEvent="_GnIO0aJ2EeOV1qKYj6Ytkg" sendEvent="_GnIO0KJ2EeOV1qKYj6Ytkg"/>
     <message xmi:type="uml:Message" xmi:id="_OWXLYKJ2EeOV1qKYj6Ytkg" name="Message" messageSort="asynchSignal" receiveEvent="_OWXycKJ2EeOV1qKYj6Ytkg"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_M3998KJ6EeOG_JOzRVLs-Q" name="Interaction1"/>
 </uml:Model>
