@@ -1289,7 +1289,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jKtxoqJWEeOH3b4EbaXuNQ"/>
       </children>
       <element xmi:type="uml:Class" href="uml.uml#_jKZokKJWEeOH3b4EbaXuNQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jKkAoaJWEeOH3b4EbaXuNQ" x="1020" y="468"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jKkAoaJWEeOH3b4EbaXuNQ" x="1098" y="466"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_j4qcwKJWEeOH3b4EbaXuNQ" type="2008" fontHeight="11" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j4qcwqJWEeOH3b4EbaXuNQ" source="ShadowFigure">
@@ -1795,7 +1795,7 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_ZfPOAaJaEeOgD_QoGWHWpA" fontHeight="11"/>
       <element xmi:type="uml:Association" href="uml.uml#_ZfNY06JaEeOgD_QoGWHWpA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZfPOAqJaEeOgD_QoGWHWpA" points="[0, 25, 95, -274]$[0, 299, 95, 0]$[-90, 299, 5, 0]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZfPOAqJaEeOgD_QoGWHWpA" points="[0, 25, 130, -276]$[0, 301, 130, 0]$[-125, 301, 5, 0]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pcNBAKJaEeOgD_QoGWHWpA" id="(0.4745762711864407,0.7692307692307693)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZfcCUKJaEeOgD_QoGWHWpA" id="(0.9800796812749004,0.24880382775119617)"/>
     </edges>

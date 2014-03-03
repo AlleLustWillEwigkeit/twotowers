@@ -74,6 +74,9 @@
         <children>
           <emfPageIdentifier href="uml.notation#_P3BJAKJ6EeOG_JOzRVLs-Q"/>
         </children>
+        <children>
+          <emfPageIdentifier href="uml.notation#_5UOTgJ_yEeOsxftnH4_MFA"/>
+        </children>
       </children>
     </windows>
   </sashModel>
