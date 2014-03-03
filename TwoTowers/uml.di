@@ -28,6 +28,18 @@
     <availablePage>
       <emfPageIdentifier href="uml.notation#_NZJcYKJOEeOtKpX18JYhrQ"/>
     </availablePage>
+<<<<<<< HEAD
+=======
+    <availablePage>
+      <emfPageIdentifier href="uml.notation#_NfkwgKJ6EeOG_JOzRVLs-Q"/>
+    </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="uml.notation#_OK4XUKJ6EeOG_JOzRVLs-Q"/>
+    </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="uml.notation#_P3BJAKJ6EeOG_JOzRVLs-Q"/>
+    </availablePage>
+>>>>>>> esti_lazadas
   </pageList>
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
     <windows>
@@ -36,7 +48,7 @@
           <emfPageIdentifier href="uml.notation#_FijZEJmGEeOSd-xiGoW2OA"/>
         </children>
         <children>
-          <emfPageIdentifier href="uml.notation#_5UOTgJ_yEeOsxftnH4_MFA"/>
+          <emfPageIdentifier href="uml.notation#_QJfCoKF1EeOvYL28MhoMgQ"/>
         </children>
         <children>
           <emfPageIdentifier href="uml.notation#_PS9-EKE4EeO5yac37d71nQ"/>
@@ -48,7 +60,7 @@
           <emfPageIdentifier href="uml.notation#_TARvwKFYEeO5yac37d71nQ"/>
         </children>
         <children>
-          <emfPageIdentifier href="uml.notation#_QJfCoKF1EeOvYL28MhoMgQ"/>
+          <emfPageIdentifier href="uml.notation#_NZJcYKJOEeOtKpX18JYhrQ"/>
         </children>
         <children>
           <emfPageIdentifier href="uml.notation#_5KJC4KJBEeOtKpX18JYhrQ"/>
@@ -57,7 +69,20 @@
           <emfPageIdentifier href="uml.notation#_aT_iQKGKEeO7Z9l2IATJrA"/>
         </children>
         <children>
+<<<<<<< HEAD
           <emfPageIdentifier href="uml.notation#_NZJcYKJOEeOtKpX18JYhrQ"/>
+=======
+          <emfPageIdentifier href="uml.notation#_NfkwgKJ6EeOG_JOzRVLs-Q"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="uml.notation#_OK4XUKJ6EeOG_JOzRVLs-Q"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="uml.notation#_P3BJAKJ6EeOG_JOzRVLs-Q"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="uml.notation#_5UOTgJ_yEeOsxftnH4_MFA"/>
+>>>>>>> esti_lazadas
         </children>
       </children>
     </windows>
