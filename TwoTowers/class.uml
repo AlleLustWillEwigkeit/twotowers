@@ -159,7 +159,7 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_N38sEKUeEeOKINjiiErprA" name="Tuzgolyo">
-    <generalization xmi:type="uml:Generalization" xmi:id="_XNNLQKUeEeOKINjiiErprA" general="_K4sssKUeEeOKINjiiErprA"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_zMhfkKVPEeOj5dkp9Z9Mwg" general="_K4sssKUeEeOKINjiiErprA"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_g4L7cKUhEeOKINjiiErprA" name="megLo">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_g4L7caUhEeOKINjiiErprA" name="kit" type="_AoBjkKUdEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
