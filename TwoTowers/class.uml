@@ -476,7 +476,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4Y5Ls6UsEeOKINjiiErprA" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_IwaMsKUtEeOKINjiiErprA" name="Progrgam">
+  <packagedElement xmi:type="uml:Class" xmi:id="_IwaMsKUtEeOKINjiiErprA" name="Program">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_PPWmEKUtEeOKINjiiErprA" name="jatekmotor" type="_i3pZIKUeEeOKINjiiErprA" association="_PPXNIKUtEeOKINjiiErprA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PPWmEaUtEeOKINjiiErprA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PPWmEqUtEeOKINjiiErprA" value="1"/>
