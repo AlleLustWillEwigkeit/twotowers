@@ -147,8 +147,8 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rj_To6UdEeOKINjiiErprA" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_K4sssKUeEeOKINjiiErprA" clientDependency="_pBbZ0KUpEeOKINjiiErprA" name="Lovedek" isAbstract="true">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_TQbFQKUhEeOKINjiiErprA" name="megLo" isAbstract="true">
+  <packagedElement xmi:type="uml:Class" xmi:id="_K4sssKUeEeOKINjiiErprA" clientDependency="_pBbZ0KUpEeOKINjiiErprA" name="Lovedek">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TQbFQKUhEeOKINjiiErprA" name="megLo">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_YFc6gKUhEeOKINjiiErprA" name="kit" type="_AoBjkKUdEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
   </packagedElement>
@@ -333,6 +333,14 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_CrYhcKUoEeOKINjiiErprA" name="varazsko" type="_4WLXQKUeEeOKINjiiErprA" association="_CrZIgKUoEeOKINjiiErprA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CrYhcaUoEeOKINjiiErprA"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CrYhcqUoEeOKINjiiErprA" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_v83NAKVMEeOxDIefzlskJA" name="eletero" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wNBI4KVMEeOxDIefzlskJA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wNBv8KVMEeOxDIefzlskJA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_wNEMMKVMEeOxDIefzlskJA">
+        <value xsi:nil="true"/>
+      </defaultValue>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_IgxngKUoEeOKINjiiErprA" name="tuzel">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_LWl-EKUoEeOKINjiiErprA" name="celpont" type="_AoBjkKUdEeOKINjiiErprA"/>
