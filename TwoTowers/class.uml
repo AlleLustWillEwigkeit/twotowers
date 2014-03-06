@@ -50,7 +50,7 @@
       </defaultValue>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_OChH4KUfEeOKINjiiErprA" name="lepesigIdo" visibility="private" isUnique="false">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <type xmi:type="uml:Stereotype" href="synthetic:/org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty..umlproperty#xtextLink_::0.3::1::/1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OIM5IKUfEeOKINjiiErprA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OINgMKUfEeOKINjiiErprA" value="1"/>
       <defaultValue xmi:type="uml:LiteralString" xmi:id="_OIOuUKUfEeOKINjiiErprA">
@@ -79,6 +79,7 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_oyfKcKUfEeOKINjiiErprA" name="lep"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_sfTnMKUvEeOyucqR7_HksQ" name="lassit"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_CdvvEKUdEeOKINjiiErprA" name="Ellensegek">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_rj-skKUdEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA" association="_rj_ToKUdEeOKINjiiErprA">
@@ -114,6 +115,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_hJlp8aUgEeOKINjiiErprA" name="sebezTuzgolyo"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_hJmRAKUgEeOKINjiiErprA" name="sebezSzikla"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_hJm4EKUgEeOKINjiiErprA" name="sebezNyil"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_uiEwMKUvEeOyucqR7_HksQ" name="lassit"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Ez8xcKUdEeOKINjiiErprA" name="Torp">
     <generalization xmi:type="uml:Generalization" xmi:id="_OrzAUKUdEeOKINjiiErprA" general="_AoBjkKUdEeOKINjiiErprA"/>
@@ -121,6 +123,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_s0tNQKUgEeOKINjiiErprA" name="sebezSzikla"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_s0tNQaUgEeOKINjiiErprA" name="sebezNyil"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_s0tNQqUgEeOKINjiiErprA" name="sebezDarda"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_u22GUKUvEeOyucqR7_HksQ" name="lassit"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_F_uBAKUdEeOKINjiiErprA" name="Hobbit">
     <generalization xmi:type="uml:Generalization" xmi:id="_PP1hgKUdEeOKINjiiErprA" general="_AoBjkKUdEeOKINjiiErprA"/>
@@ -128,6 +131,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_tSeuYaUgEeOKINjiiErprA" name="sebezSzikla"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_tSfVcKUgEeOKINjiiErprA" name="sebezTuzgolyo"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_tSfVcaUgEeOKINjiiErprA" name="sebezDarda"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vH0hkKUvEeOyucqR7_HksQ" name="lassit"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_G-J_MKUdEeOKINjiiErprA" name="Elf">
     <generalization xmi:type="uml:Generalization" xmi:id="_P0ftwKUdEeOKINjiiErprA" general="_AoBjkKUdEeOKINjiiErprA"/>
@@ -135,6 +139,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ttU3UKUgEeOKINjiiErprA" name="sebezTuzgolyo"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ttU3UaUgEeOKINjiiErprA" name="sebezDarda"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ttVeYKUgEeOKINjiiErprA" name="sebezSzikla"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vW9JwKUvEeOyucqR7_HksQ" name="lassit"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_rj_ToKUdEeOKINjiiErprA" name="Ellen-Ellen" memberEnd="_rj_ToaUdEeOKINjiiErprA _rj-skKUdEeOKINjiiErprA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_rj_ToaUdEeOKINjiiErprA" name="ellensegek" type="_CdvvEKUdEeOKINjiiErprA" association="_rj_ToKUdEeOKINjiiErprA">
