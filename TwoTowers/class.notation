@@ -78,6 +78,10 @@
         <element xmi:type="uml:Operation" href="class.uml#_O3vWgKVdEeOxDIefzlskJA"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_O3xywaVdEeOxDIefzlskJA"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_JbSqAKVfEeOxDIefzlskJA" type="3013" fontName="Segoe UI" lineColor="0">
+        <element xmi:type="uml:Operation" href="class.uml#_JbQNwKVfEeOxDIefzlskJA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JbSqAaVfEeOxDIefzlskJA"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_AosR9qUdEeOKINjiiErprA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_AosR96UdEeOKINjiiErprA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_AosR-KUdEeOKINjiiErprA"/>
@@ -94,7 +98,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Aq0Y4qUdEeOKINjiiErprA"/>
     </children>
     <element xmi:type="uml:Class" href="class.uml#_AoBjkKUdEeOKINjiiErprA"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AojIAaUdEeOKINjiiErprA" x="151" y="-16"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AojIAaUdEeOKINjiiErprA" x="151" y="-27"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_CdxkQKUdEeOKINjiiErprA" type="2008" fontName="Segoe UI" lineColor="0">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CdyyYKUdEeOKINjiiErprA" source="ShadowFigure">

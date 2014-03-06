@@ -90,6 +90,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_sfTnMKUvEeOyucqR7_HksQ" name="lassit"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_lD_ywKVcEeOxDIefzlskJA" name="bonuszol"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_O3vWgKVdEeOxDIefzlskJA" name="modosit"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_JbQNwKVfEeOxDIefzlskJA" name="sebezLovedek"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_CdvvEKUdEeOKINjiiErprA" name="Ellensegek">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_rj-skKUdEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA" association="_rj_ToKUdEeOKINjiiErprA">
