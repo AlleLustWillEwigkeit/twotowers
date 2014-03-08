@@ -198,7 +198,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_19c9oKUkEeOKINjiiErprA" name="inditEllenfeleket"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_2Lic8KUkEeOKINjiiErprA" name="merkozes"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_knoJAKUeEeOKINjiiErprA" name="josagosSzaruman">
+  <packagedElement xmi:type="uml:Class" xmi:id="_knoJAKUeEeOKINjiiErprA" name="JosagosSzaruman">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_QrwzUKUlEeOKINjiiErprA" name="varazsero" visibility="public">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q4Wd0KUlEeOKINjiiErprA" value="1"/>
@@ -433,12 +433,18 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_U4ZlYKbyEeOFb47TKes-QQ" name="lekerUt">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_XqvKIKbyEeOFb47TKes-QQ" name="" type="_tfdsYKUeEeOKINjiiErprA" direction="return"/>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_zxCusKcMEeOFb47TKes-QQ" name="lekerSzomszedok">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z-p5QKcNEeOFb47TKes-QQ" name="szomszedok" type="_UFhgQKUsEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_WNCmYKUsEeOKINjiiErprA" name="EpitesiTerulet">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_qPiEUKUsEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" association="_qPirYKUsEeOKINjiiErprA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qPiEUaUsEeOKINjiiErprA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qPiEUqUsEeOKINjiiErprA" value="1"/>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_v4oSsKcMEeOFb47TKes-QQ" name="minAll">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ykFzYKcMEeOFb47TKes-QQ" name="" type="_UFhgQKUsEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_fVvQQKUsEeOKINjiiErprA" name="palya_palyaElem_1" memberEnd="_fVvQQaUsEeOKINjiiErprA _fVupMKUsEeOKINjiiErprA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_fVvQQaUsEeOKINjiiErprA" name="palya" type="_oAPqoKUeEeOKINjiiErprA" association="_fVvQQKUsEeOKINjiiErprA">

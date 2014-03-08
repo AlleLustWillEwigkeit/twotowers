@@ -1098,6 +1098,10 @@
         <element xmi:type="uml:Operation" href="class.uml#_U4ZlYKbyEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_U4azgabyEeOFb47TKes-QQ"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_zxD80KcMEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
+        <element xmi:type="uml:Operation" href="class.uml#_zxCusKcMEeOFb47TKes-QQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zxD80acMEeOFb47TKes-QQ"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_UFmYwaUsEeOKINjiiErprA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_UFmYwqUsEeOKINjiiErprA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_UFmYw6UsEeOKINjiiErprA"/>
@@ -1134,6 +1138,10 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WNHe5KUsEeOKINjiiErprA"/>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_WNHe5aUsEeOKINjiiErprA" type="7018">
+      <children xmi:type="notation:Shape" xmi:id="_v4pg0KcMEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
+        <element xmi:type="uml:Operation" href="class.uml#_v4oSsKcMEeOFb47TKes-QQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_v4pg0acMEeOFb47TKes-QQ"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_WNHe5qUsEeOKINjiiErprA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_WNHe56UsEeOKINjiiErprA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_WNHe6KUsEeOKINjiiErprA"/>
