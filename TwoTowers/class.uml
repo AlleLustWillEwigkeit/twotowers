@@ -193,10 +193,16 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_r6Ur0KUkEeOKINjiiErprA" name="lerakTornyot">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_FDEEYKbyEeOFb47TKes-QQ" name="hova" type="_UFhgQKUsEeOKINjiiErprA"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_sLKkMKUkEeOKINjiiErprA" name="lerakAkadaly"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_1uxBYKUkEeOKINjiiErprA" name="felkovez"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_sLKkMKUkEeOKINjiiErprA" name="lerakAkadaly">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_3YKw8KcNEeOFb47TKes-QQ" name="hova" type="_UFhgQKUsEeOKINjiiErprA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_1uxBYKUkEeOKINjiiErprA" name="felkovez">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_4-CikKcNEeOFb47TKes-QQ" name="mit" type="_UFhgQKUsEeOKINjiiErprA"/>
+    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_19c9oKUkEeOKINjiiErprA" name="inditEllenfeleket"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_2Lic8KUkEeOKINjiiErprA" name="merkozes"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_SOM_QKcOEeOFb47TKes-QQ" name="ujJatek"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_z36g0KcOEeOFb47TKes-QQ" name="kilepes"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_knoJAKUeEeOKINjiiErprA" name="JosagosSzaruman">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_QrwzUKUlEeOKINjiiErprA" name="varazsero" visibility="public">
@@ -277,6 +283,9 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_qaRmoKUqEeOKINjiiErprA" name="beRegisztralTavonBeluliUtakhoz"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_qx3AMKUqEeOKINjiiErprA" name="kiRegisztralTavonKivuliUtakhoz"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8UH4IKcOEeOFb47TKes-QQ" name="felkovez">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-83cAKcOEeOFb47TKes-QQ" name="mivel" type="_4WLXQKUeEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_tfdsYKUeEeOKINjiiErprA" name="Ut">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_Z7rtQKUqEeOKINjiiErprA" name="ut" type="_tfdsYKUeEeOKINjiiErprA" association="_Z7sUUKUqEeOKINjiiErprA">
@@ -304,6 +313,14 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_QaJsoKUqEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_YNAGgKbuEeOFb47TKes-QQ" name="akadalyomLebomlott"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ACAUkKcOEeOFb47TKes-QQ" name="lerakAkadaly">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CfIeUKcOEeOFb47TKes-QQ" name="mit" type="_0D0KMKUeEeOKINjiiErprA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xC3w4KcPEeOFb47TKes-QQ" name="vanAkadalyRajta">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zu88oKcPEeOFb47TKes-QQ" name="" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_0D0KMKUeEeOKINjiiErprA" clientDependency="_W8DlUKUoEeOKINjiiErprA" name="Akadaly">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_CrYhcKUoEeOKINjiiErprA" name="varazsko" type="_4WLXQKUeEeOKINjiiErprA" association="_CrZIgKUoEeOKINjiiErprA">
@@ -320,6 +337,9 @@
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_IgxngKUoEeOKINjiiErprA" name="tuzel">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_LWl-EKUoEeOKINjiiErprA" name="celpont" type="_AoBjkKUdEeOKINjiiErprA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_A6rzkKcPEeOFb47TKes-QQ" name="felkovez">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CeJxcKcPEeOFb47TKes-QQ" name="mivel" type="_4WLXQKUeEeOKINjiiErprA"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_1W5isKUeEeOKINjiiErprA" name="VegzetHegye">
@@ -436,6 +456,16 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_zxCusKcMEeOFb47TKes-QQ" name="lekerSzomszedok">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z-p5QKcNEeOFb47TKes-QQ" name="szomszedok" type="_UFhgQKUsEeOKINjiiErprA" direction="return"/>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ppB1gKcPEeOFb47TKes-QQ" name="vanUta">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_wU2NQKcPEeOFb47TKes-QQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_sikOcKcPEeOFb47TKes-QQ" name="vanEpitesiTerulete">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vGTWgKcPEeOFb47TKes-QQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_WNCmYKUsEeOKINjiiErprA" name="EpitesiTerulet">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_qPiEUKUsEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" association="_qPirYKUsEeOKINjiiErprA">
@@ -444,6 +474,12 @@
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_v4oSsKcMEeOFb47TKes-QQ" name="minAll">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_ykFzYKcMEeOFb47TKes-QQ" name="" type="_UFhgQKUsEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Mda28KcPEeOFb47TKes-QQ" name="lerakTornyot"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0YaJUKcPEeOFb47TKes-QQ" name="vanToronyRajta">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7AvIMKcPEeOFb47TKes-QQ" name="" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_fVvQQKUsEeOKINjiiErprA" name="palya_palyaElem_1" memberEnd="_fVvQQaUsEeOKINjiiErprA _fVupMKUsEeOKINjiiErprA">
