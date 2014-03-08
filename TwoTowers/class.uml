@@ -177,13 +177,6 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_i3pZIKUeEeOKINjiiErprA" clientDependency="_H75Y4KbVEeOvf9wB14RCwQ" name="Jatekmotor">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_KgbScKUlEeOKINjiiErprA" name="kavicsok" visibility="public" type="_4WLXQKUeEeOKINjiiErprA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KwE4AKUlEeOKINjiiErprA" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KwFfEKUlEeOKINjiiErprA" value="*"/>
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_KwGtMKUlEeOKINjiiErprA">
-        <value xsi:nil="true"/>
-      </defaultValue>
-    </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_-1FBcKUrEeOKINjiiErprA" name="ellensegek" type="_CdvvEKUdEeOKINjiiErprA" association="_-1FogKUrEeOKINjiiErprA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-1FBcaUrEeOKINjiiErprA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-1FBcqUrEeOKINjiiErprA" value="1"/>
@@ -197,12 +190,8 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4Y4koqUsEeOKINjiiErprA" value="1"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_rnX6oKUkEeOKINjiiErprA" name="tick"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_r6Ur0KUkEeOKINjiiErprA" name="lerakTornyot">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gIJ-AKbUEeOvf9wB14RCwQ" name="epitesi" type="_WNCmYKUsEeOKINjiiErprA"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_sLKkMKUkEeOKINjiiErprA" name="lerakAkadaly">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_jCPwkKbUEeOvf9wB14RCwQ" name="epitesi" type="_WNCmYKUsEeOKINjiiErprA"/>
-    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_r6Ur0KUkEeOKINjiiErprA" name="lerakTornyot"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_sLKkMKUkEeOKINjiiErprA" name="lerakAkadaly"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_1uxBYKUkEeOKINjiiErprA" name="felkovez"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_19c9oKUkEeOKINjiiErprA" name="inditEllenfeleket"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_2Lic8KUkEeOKINjiiErprA" name="merkozes"/>
