@@ -282,6 +282,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_IYdHEKUqEeOKINjiiErprA" name="leiratkozik">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_QaJsoKUqEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_YNAGgKbuEeOFb47TKes-QQ" name="akadalyomLebomlott"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_0D0KMKUeEeOKINjiiErprA" clientDependency="_W8DlUKUoEeOKINjiiErprA" name="Akadaly">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_CrYhcKUoEeOKINjiiErprA" name="varazsko" type="_4WLXQKUeEeOKINjiiErprA" association="_CrZIgKUoEeOKINjiiErprA">
@@ -362,7 +363,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z7sUU6UqEeOKINjiiErprA" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_SyiD0KUrEeOKINjiiErprA" name="ut_akadaly_1" memberEnd="_SyiD0aUrEeOKINjiiErprA _SyhcwKUrEeOKINjiiErprA">
+  <packagedElement xmi:type="uml:Association" xmi:id="_SyiD0KUrEeOKINjiiErprA" name="ut_akadaly_1" memberEnd="_SyiD0aUrEeOKINjiiErprA _SyhcwKUrEeOKINjiiErprA" navigableOwnedEnd="_SyiD0aUrEeOKINjiiErprA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_SyiD0aUrEeOKINjiiErprA" name="ut" type="_tfdsYKUeEeOKINjiiErprA" association="_SyiD0KUrEeOKINjiiErprA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SyiD0qUrEeOKINjiiErprA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SyiD06UrEeOKINjiiErprA" value="1"/>
