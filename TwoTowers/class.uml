@@ -226,10 +226,29 @@
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_pWUtAKbwEeOFb47TKes-QQ" name="kivalasztottUt" visibility="public" type="_tfdsYKUeEeOKINjiiErprA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pmcMoKbwEeOFb47TKes-QQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pmczsKbwEeOFb47TKes-QQ" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_pmdawKbwEeOFb47TKes-QQ">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_fwwcgKUlEeOKINjiiErprA" name="varazseroNovel">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_BzuLkKUmEeOKINjiiErprA" name="mennyivel" isUnique="false">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_A_evoKbxEeOFb47TKes-QQ" name="lekerKivalasztottVarazsko">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TYCbUKbxEeOFb47TKes-QQ" type="_4WLXQKUeEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BTURoKbxEeOFb47TKes-QQ" name="lekerKivalasztottTorony">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WEjr8KbxEeOFb47TKes-QQ" type="_sCCFEKUeEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BkLYIKbxEeOFb47TKes-QQ" name="lekerKivalasztottAkadaly">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_a2JLoKbxEeOFb47TKes-QQ" name="" type="_0D0KMKUeEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ONjTcKbxEeOFb47TKes-QQ" name="lekerKivalasztottUt">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_g2T-UKbxEeOFb47TKes-QQ" name="" type="_tfdsYKUeEeOKINjiiErprA" direction="return"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_oAPqoKUeEeOKINjiiErprA" name="Palya">
