@@ -630,11 +630,11 @@
         <element xmi:type="uml:Operation" href="class.uml#_2Lic8KUkEeOKINjiiErprA"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_2LkSIKUkEeOKINjiiErprA"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_SOONYKcOEeOFb47TKes-QQ" type="3013" fontHeight="8" lineColor="0">
+      <children xmi:type="notation:Shape" xmi:id="_SOONYKcOEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
         <element xmi:type="uml:Operation" href="class.uml#_SOM_QKcOEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_SOONYacOEeOFb47TKes-QQ"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_z37u8KcOEeOFb47TKes-QQ" type="3013" fontHeight="8" lineColor="0">
+      <children xmi:type="notation:Shape" xmi:id="_z37u8KcOEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
         <element xmi:type="uml:Operation" href="class.uml#_z36g0KcOEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_z37u8acOEeOFb47TKes-QQ"/>
       </children>
@@ -862,11 +862,11 @@
         <element xmi:type="uml:Operation" href="class.uml#_YNAGgKbuEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_YRRigabuEeOFb47TKes-QQ"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_ACBisKcOEeOFb47TKes-QQ" type="3013" fontHeight="8" lineColor="0">
+      <children xmi:type="notation:Shape" xmi:id="_ACBisKcOEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
         <element xmi:type="uml:Operation" href="class.uml#_ACAUkKcOEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ACBisacOEeOFb47TKes-QQ"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_xC4_AKcPEeOFb47TKes-QQ" type="3013" fontHeight="8" lineColor="0">
+      <children xmi:type="notation:Shape" xmi:id="_xC4_AKcPEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
         <element xmi:type="uml:Operation" href="class.uml#_xC3w4KcPEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_xC4_AacPEeOFb47TKes-QQ"/>
       </children>
@@ -1126,11 +1126,11 @@
         <element xmi:type="uml:Operation" href="class.uml#_zxCusKcMEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_zxD80acMEeOFb47TKes-QQ"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_ppDDoKcPEeOFb47TKes-QQ" type="3013" fontHeight="8" lineColor="0">
+      <children xmi:type="notation:Shape" xmi:id="_ppDDoKcPEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
         <element xmi:type="uml:Operation" href="class.uml#_ppB1gKcPEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ppDDoacPEeOFb47TKes-QQ"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_silckKcPEeOFb47TKes-QQ" type="3013" fontHeight="8" lineColor="0">
+      <children xmi:type="notation:Shape" xmi:id="_silckKcPEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
         <element xmi:type="uml:Operation" href="class.uml#_sikOcKcPEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_silckacPEeOFb47TKes-QQ"/>
       </children>
@@ -1174,11 +1174,11 @@
         <element xmi:type="uml:Operation" href="class.uml#_v4oSsKcMEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_v4pg0acMEeOFb47TKes-QQ"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_MdcFEKcPEeOFb47TKes-QQ" type="3013" fontHeight="8" lineColor="0">
+      <children xmi:type="notation:Shape" xmi:id="_MdcFEKcPEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
         <element xmi:type="uml:Operation" href="class.uml#_Mda28KcPEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_MdcFEacPEeOFb47TKes-QQ"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_0YbXcKcPEeOFb47TKes-QQ" type="3013" fontHeight="8" lineColor="0">
+      <children xmi:type="notation:Shape" xmi:id="_0YbXcKcPEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
         <element xmi:type="uml:Operation" href="class.uml#_0YaJUKcPEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_0YbXcacPEeOFb47TKes-QQ"/>
       </children>

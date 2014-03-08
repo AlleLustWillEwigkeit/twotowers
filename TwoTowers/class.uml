@@ -456,7 +456,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_zxCusKcMEeOFb47TKes-QQ" name="lekerSzomszedok">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z-p5QKcNEeOFb47TKes-QQ" name="szomszedok" type="_UFhgQKUsEeOKINjiiErprA" direction="return"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ppB1gKcPEeOFb47TKes-QQ" name="vanUta">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ppB1gKcPEeOFb47TKes-QQ" name="vanUtja">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_wU2NQKcPEeOFb47TKes-QQ" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
       </ownedParameter>
