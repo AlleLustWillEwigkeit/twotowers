@@ -190,7 +190,9 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4Y4koqUsEeOKINjiiErprA" value="1"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_rnX6oKUkEeOKINjiiErprA" name="tick"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_r6Ur0KUkEeOKINjiiErprA" name="lerakTornyot"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_r6Ur0KUkEeOKINjiiErprA" name="lerakTornyot">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_FDEEYKbyEeOFb47TKes-QQ" name="hova" type="_UFhgQKUsEeOKINjiiErprA"/>
+    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_sLKkMKUkEeOKINjiiErprA" name="lerakAkadaly"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_1uxBYKUkEeOKINjiiErprA" name="felkovez"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_19c9oKUkEeOKINjiiErprA" name="inditEllenfeleket"/>
@@ -425,6 +427,12 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0RrYYabREeOvf9wB14RCwQ" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0RrYYqbREeOvf9wB14RCwQ" value="*"/>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_OXxxAKbyEeOFb47TKes-QQ" name="lekerEpitesiTerulet">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_R2QDAKbyEeOFb47TKes-QQ" name="" type="_WNCmYKUsEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_U4ZlYKbyEeOFb47TKes-QQ" name="lekerUt">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_XqvKIKbyEeOFb47TKes-QQ" name="" type="_tfdsYKUeEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_WNCmYKUsEeOKINjiiErprA" name="EpitesiTerulet">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_qPiEUKUsEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" association="_qPirYKUsEeOKINjiiErprA">
