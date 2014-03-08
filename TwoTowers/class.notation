@@ -1612,7 +1612,7 @@
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_luU_caUrEeOKINjiiErprA" fontName="Segoe UI"/>
     <element xmi:type="uml:Association" href="class.uml#_luRVEKUrEeOKINjiiErprA"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_luU_cqUrEeOKINjiiErprA" points="[17, 106, -733, -115]$[258, 106, -492, -115]$[258, 297, -492, 76]$[671, 297, -79, 76]$[671, 222, -79, 1]$[748, 222, -2, 1]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_luU_cqUrEeOKINjiiErprA" points="[17, 100, -733, -154]$[266, 100, -484, -154]$[266, 317, -484, 63]$[671, 317, -79, 63]$[671, 248, -79, -6]$[748, 248, -2, -6]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lurkwKUrEeOKINjiiErprA" id="(0.8742138364779874,0.3404255319148936)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lusL0KUrEeOKINjiiErprA" id="(0.01020408163265306,0.7482014388489209)"/>
   </edges>
