@@ -176,7 +176,7 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_hWJCwaUhEeOKINjiiErprA" name="kit" type="_AoBjkKUdEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_i3pZIKUeEeOKINjiiErprA" clientDependency="_FCY1IKbVEeOvf9wB14RCwQ _H75Y4KbVEeOvf9wB14RCwQ _OJdHUKbVEeOvf9wB14RCwQ" name="Jatekmotor">
+  <packagedElement xmi:type="uml:Class" xmi:id="_i3pZIKUeEeOKINjiiErprA" clientDependency="_H75Y4KbVEeOvf9wB14RCwQ" name="Jatekmotor">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_KgbScKUlEeOKINjiiErprA" name="kavicsok" visibility="public" type="_4WLXQKUeEeOKINjiiErprA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KwE4AKUlEeOKINjiiErprA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KwFfEKUlEeOKINjiiErprA" value="*"/>
@@ -198,11 +198,9 @@
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_rnX6oKUkEeOKINjiiErprA" name="tick"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_r6Ur0KUkEeOKINjiiErprA" name="lerakTornyot">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_psbmEKbTEeOvf9wB14RCwQ" name="torony" type="_sCCFEKUeEeOKINjiiErprA"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_gIJ-AKbUEeOvf9wB14RCwQ" name="epitesi" type="_WNCmYKUsEeOKINjiiErprA"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_sLKkMKUkEeOKINjiiErprA" name="lerakAkadaly">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ssQ0QKbTEeOvf9wB14RCwQ" name="akadaly" type="_0D0KMKUeEeOKINjiiErprA"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_jCPwkKbUEeOvf9wB14RCwQ" name="epitesi" type="_WNCmYKUsEeOKINjiiErprA"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_1uxBYKUkEeOKINjiiErprA" name="felkovez"/>
@@ -498,7 +496,5 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0Rr_c6bREeOvf9wB14RCwQ" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_FCY1IKbVEeOvf9wB14RCwQ" name="" client="_i3pZIKUeEeOKINjiiErprA" supplier="_sCCFEKUeEeOKINjiiErprA"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_H75Y4KbVEeOvf9wB14RCwQ" name="" client="_i3pZIKUeEeOKINjiiErprA" supplier="_WNCmYKUsEeOKINjiiErprA"/>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_OJdHUKbVEeOvf9wB14RCwQ" name="" client="_i3pZIKUeEeOKINjiiErprA" supplier="_0D0KMKUeEeOKINjiiErprA"/>
 </uml:Model>
