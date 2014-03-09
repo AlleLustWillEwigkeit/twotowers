@@ -485,6 +485,8 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xPMZwKfMEeO64vCks6OQrA" name="legyelUt"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xa8WwKfMEeO64vCks6OQrA" name="legyelEpitesiTerulet"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_WNCmYKUsEeOKINjiiErprA" name="EpitesiTerulet">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_qPiEUKUsEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" association="_qPirYKUsEeOKINjiiErprA">
