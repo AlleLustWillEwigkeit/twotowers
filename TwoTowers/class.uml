@@ -288,7 +288,6 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_m1q-0KUnEeOKINjiiErprA" name="celpont" type="_AoBjkKUdEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_qaRmoKUqEeOKINjiiErprA" name="beRegisztralTavonBeluliUtakhoz"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_qx3AMKUqEeOKINjiiErprA" name="kiRegisztralTavonKivuliUtakhoz"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_8UH4IKcOEeOFb47TKes-QQ" name="felkovez">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_-83cAKcOEeOFb47TKes-QQ" name="mivel" type="_4WLXQKUeEeOKINjiiErprA"/>
     </ownedOperation>
