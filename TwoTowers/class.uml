@@ -105,7 +105,9 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4TEwYqfFEeO64vCks6OQrA" value="1"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_aoKAcKUkEeOKINjiiErprA" name="inditEllenseg">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_kXiP0KUkEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA" isUnique="false"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_kXiP0KUkEeOKINjiiErprA" name="mennyit" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_a6qFsKUkEeOKINjiiErprA" name="egyEllensegMeghalt">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_nUzSMKUkEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA"/>
