@@ -254,9 +254,6 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_A_evoKbxEeOFb47TKes-QQ" name="lekerKivalasztottVarazsko">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_TYCbUKbxEeOFb47TKes-QQ" type="_4WLXQKUeEeOKINjiiErprA" direction="return"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ONjTcKbxEeOFb47TKes-QQ" name="lekerKivalasztottUt">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_g2T-UKbxEeOFb47TKes-QQ" name="" type="_tfdsYKUeEeOKINjiiErprA" direction="return"/>
-    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_oAPqoKUeEeOKINjiiErprA" name="Palya">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_fVupMKUsEeOKINjiiErprA" name="palyaElem" type="_UFhgQKUsEeOKINjiiErprA" aggregation="composite" association="_fVvQQKUsEeOKINjiiErprA">
