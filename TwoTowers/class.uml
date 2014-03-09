@@ -312,6 +312,9 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_IFXL8KUqEeOKINjiiErprA" name="feliratkozik">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_SyDYIKUqEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IYdHEKUqEeOKINjiiErprA" name="leiratkozik">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_QaJsoKUqEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" isUnique="false"/>
+    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_YNAGgKbuEeOFb47TKes-QQ" name="akadalyomLebomlott"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ACAUkKcOEeOFb47TKes-QQ" name="lerakAkadaly"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_xC3w4KcPEeOFb47TKes-QQ" name="vanAkadalyRajta">
