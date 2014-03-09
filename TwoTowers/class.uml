@@ -535,7 +535,6 @@
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_KQ-nkKUtEeOKINjiiErprA" name="ujJatek"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_KedC4KUtEeOKINjiiErprA" name="main" isStatic="true"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_KssTMKUtEeOKINjiiErprA" name="kilepes"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_PPXNIKUtEeOKINjiiErprA" name="progrgam_jatekmotor_1" memberEnd="_PPXNIaUtEeOKINjiiErprA _PPWmEKUtEeOKINjiiErprA" navigableOwnedEnd="_PPXNIaUtEeOKINjiiErprA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_PPXNIaUtEeOKINjiiErprA" name="progrgam" type="_IwaMsKUtEeOKINjiiErprA" association="_PPXNIKUtEeOKINjiiErprA">
