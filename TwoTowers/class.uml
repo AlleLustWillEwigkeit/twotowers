@@ -206,6 +206,8 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_4-CikKcNEeOFb47TKes-QQ" name="mit" type="_UFhgQKUsEeOKINjiiErprA"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_SOM_QKcOEeOFb47TKes-QQ" name="ujJatek"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_OfOiIKfJEeO64vCks6OQrA" name="vereseg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_P71qEKfJEeO64vCks6OQrA" name="gyozelem"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_knoJAKUeEeOKINjiiErprA" name="JosagosSzaruman">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_QrwzUKUlEeOKINjiiErprA" name="varazsero" visibility="public">
