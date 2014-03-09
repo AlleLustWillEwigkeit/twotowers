@@ -318,6 +318,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_FxIy0KfYEeO4Po28d7uuzQ" name="lekerAkadaly">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KRKocKfYEeO4Po28d7uuzQ" type="_0D0KMKUeEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_0D0KMKUeEeOKINjiiErprA" clientDependency="_W8DlUKUoEeOKINjiiErprA" name="Akadaly">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_CrYhcKUoEeOKINjiiErprA" name="varazsko" type="_4WLXQKUeEeOKINjiiErprA" association="_CrZIgKUoEeOKINjiiErprA">
@@ -495,6 +498,9 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_7AvIMKcPEeOFb47TKes-QQ" name="" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
       </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5eD3oKfXEeO4Po28d7uuzQ" name="lekerTorony">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-fr-cKfXEeO4Po28d7uuzQ" type="_sCCFEKUeEeOKINjiiErprA" direction="return"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_fVvQQKUsEeOKINjiiErprA" name="palya_palyaElem_1" memberEnd="_fVvQQaUsEeOKINjiiErprA _fVupMKUsEeOKINjiiErprA">
