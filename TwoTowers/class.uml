@@ -341,6 +341,11 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_A6rzkKcPEeOFb47TKes-QQ" name="felkovez">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_CeJxcKcPEeOFb47TKes-QQ" name="mivel" type="_4WLXQKUeEeOKINjiiErprA"/>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7jpvIKerEeOapLDjGppYqA" name="sebzodik">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-JJxwKerEeOapLDjGppYqA" name="mennyit">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_1W5isKUeEeOKINjiiErprA" name="VegzetHegye">
     <generalization xmi:type="uml:Generalization" xmi:id="_1hUB8KUpEeOKINjiiErprA" general="_tfdsYKUeEeOKINjiiErprA"/>

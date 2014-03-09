@@ -918,6 +918,10 @@
         <element xmi:type="uml:Operation" href="class.uml#_A6rzkKcPEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_A6tBsacPEeOFb47TKes-QQ"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_7jrkUKerEeOapLDjGppYqA" type="3013" fontName="Segoe UI" lineColor="0">
+        <element xmi:type="uml:Operation" href="class.uml#_7jpvIKerEeOapLDjGppYqA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7jrkUaerEeOapLDjGppYqA"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_0D5CsaUeEeOKINjiiErprA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_0D5CsqUeEeOKINjiiErprA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_0D5Cs6UeEeOKINjiiErprA"/>
@@ -934,7 +938,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0EHsMqUeEeOKINjiiErprA"/>
     </children>
     <element xmi:type="uml:Class" href="class.uml#_0D0KMKUeEeOKINjiiErprA"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0D3NgaUeEeOKINjiiErprA" x="955" y="450"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0D3NgaUeEeOKINjiiErprA" x="955" y="440"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_1W8mAKUeEeOKINjiiErprA" type="2008" fontName="Segoe UI" lineColor="0">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1W9NEKUeEeOKINjiiErprA" source="ShadowFigure">
@@ -1494,7 +1498,7 @@
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_W8HPsaUoEeOKINjiiErprA" fontName="Segoe UI"/>
     <element xmi:type="uml:Dependency" href="class.uml#_W8DlUKUoEeOKINjiiErprA"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_W8HPsqUoEeOKINjiiErprA" points="[-10, 11, 684, 428]$[-10, 31, 684, 448]$[-376, 31, 318, 448]$[-376, -60, 318, 357]$[-474, -60, 220, 357]$[-474, -343, 220, 74]$[-693, -343, 1, 74]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_W8HPsqUoEeOKINjiiErprA" points="[-10, 12, 684, 433]$[-10, 24, 684, 445]$[-376, 24, 318, 445]$[-376, -63, 318, 358]$[-474, -63, 220, 358]$[-474, -347, 220, 74]$[-693, -347, 1, 74]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_W8Tc8KUoEeOKINjiiErprA" id="(0.10303030303030303,0.91)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_W8Tc8aUoEeOKINjiiErprA" id="(0.9937106918238994,0.5787234042553191)"/>
   </edges>
