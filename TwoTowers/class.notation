@@ -850,10 +850,6 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0D4bp6UeEeOKINjiiErprA"/>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_0D5CsKUeEeOKINjiiErprA" type="7018">
-      <children xmi:type="notation:Shape" xmi:id="_IgyOkKUoEeOKINjiiErprA" type="3013" fontName="Segoe UI" lineColor="0">
-        <element xmi:type="uml:Operation" href="class.uml#_IgxngKUoEeOKINjiiErprA"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_IgyOkaUoEeOKINjiiErprA"/>
-      </children>
       <children xmi:type="notation:Shape" xmi:id="_A6tBsKcPEeOFb47TKes-QQ" type="3013" fontName="Segoe UI" lineColor="0">
         <element xmi:type="uml:Operation" href="class.uml#_A6rzkKcPEeOFb47TKes-QQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_A6tBsacPEeOFb47TKes-QQ"/>
@@ -968,6 +964,10 @@
         <element xmi:type="uml:Property" href="class.uml#_E49r8KUrEeOKINjiiErprA"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_E4_hIaUrEeOKINjiiErprA"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_OqKsMKfcEeOAdoq2n8nc_g" type="3012" fontName="Segoe UI" lineColor="0">
+        <element xmi:type="uml:Property" href="class.uml#_OpU-sKfcEeOAdoq2n8nc_g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_OqKsMafcEeOAdoq2n8nc_g"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_4WNMeKUeEeOKINjiiErprA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_4WNMeaUeEeOKINjiiErprA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_4WNMeqUeEeOKINjiiErprA"/>
@@ -981,6 +981,10 @@
       <children xmi:type="notation:Shape" xmi:id="_IRLk8KUrEeOKINjiiErprA" type="3013" fontName="Segoe UI" lineColor="0">
         <element xmi:type="uml:Operation" href="class.uml#_IRK94KUrEeOKINjiiErprA"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_IRLk8aUrEeOKINjiiErprA"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_RyBN8KfcEeOAdoq2n8nc_g" type="3013" fontName="Segoe UI" lineColor="0">
+        <element xmi:type="uml:Operation" href="class.uml#_Rx_YwKfcEeOAdoq2n8nc_g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_RyBN8afcEeOAdoq2n8nc_g"/>
       </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_4WNzgaUeEeOKINjiiErprA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_4WNzgqUeEeOKINjiiErprA"/>

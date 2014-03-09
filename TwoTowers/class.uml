@@ -326,9 +326,6 @@
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_IgxngKUoEeOKINjiiErprA" name="tuzel">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LWl-EKUoEeOKINjiiErprA" name="celpont" type="_AoBjkKUdEeOKINjiiErprA"/>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_A6rzkKcPEeOFb47TKes-QQ" name="felkovez">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_CeJxcKcPEeOFb47TKes-QQ" name="mivel" type="_4WLXQKUeEeOKINjiiErprA"/>
     </ownedOperation>
@@ -357,11 +354,24 @@
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_OpU-sKfcEeOAdoq2n8nc_g" name="eleteroSzorzo" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O9GPQKfcEeOAdoq2n8nc_g" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O9IEcKfcEeOAdoq2n8nc_g" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_O9JSkKfcEeOAdoq2n8nc_g">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_oTSMUKUnEeOKINjiiErprA" name="tuzel">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_rrVGMKUnEeOKINjiiErprA" name="celpont" type="_AoBjkKUdEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_IRK94KUrEeOKINjiiErprA" name="lekerHatotavSzorzo">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_K_N4gKUrEeOKINjiiErprA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Rx_YwKfcEeOAdoq2n8nc_g" name="lekerEleteroSzorzo">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_W5kWkKfcEeOAdoq2n8nc_g" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
       </ownedParameter>
     </ownedOperation>
