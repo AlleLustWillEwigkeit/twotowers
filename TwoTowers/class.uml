@@ -316,9 +316,7 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_QaJsoKUqEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_YNAGgKbuEeOFb47TKes-QQ" name="akadalyomLebomlott"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ACAUkKcOEeOFb47TKes-QQ" name="lerakAkadaly">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CfIeUKcOEeOFb47TKes-QQ" name="mit" type="_0D0KMKUeEeOKINjiiErprA"/>
-    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ACAUkKcOEeOFb47TKes-QQ" name="lerakAkadaly"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_xC3w4KcPEeOFb47TKes-QQ" name="vanAkadalyRajta">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_zu88oKcPEeOFb47TKes-QQ" name="" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
