@@ -254,12 +254,6 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_A_evoKbxEeOFb47TKes-QQ" name="lekerKivalasztottVarazsko">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_TYCbUKbxEeOFb47TKes-QQ" type="_4WLXQKUeEeOKINjiiErprA" direction="return"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_BTURoKbxEeOFb47TKes-QQ" name="lekerKivalasztottTorony">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WEjr8KbxEeOFb47TKes-QQ" type="_sCCFEKUeEeOKINjiiErprA" direction="return"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_BkLYIKbxEeOFb47TKes-QQ" name="lekerKivalasztottAkadaly">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_a2JLoKbxEeOFb47TKes-QQ" name="" type="_0D0KMKUeEeOKINjiiErprA" direction="return"/>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ONjTcKbxEeOFb47TKes-QQ" name="lekerKivalasztottUt">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_g2T-UKbxEeOFb47TKes-QQ" name="" type="_tfdsYKUeEeOKINjiiErprA" direction="return"/>
     </ownedOperation>
@@ -459,12 +453,6 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_U4ZlYKbyEeOFb47TKes-QQ" name="lekerUt">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_XqvKIKbyEeOFb47TKes-QQ" name="" type="_tfdsYKUeEeOKINjiiErprA" direction="return"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_zxCusKcMEeOFb47TKes-QQ" name="lekerSzomszedok">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z-p5QKcNEeOFb47TKes-QQ" name="szomszedok" type="_UFhgQKUsEeOKINjiiErprA" direction="return">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MstuYKeXEeOapLDjGppYqA" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ms5UkKeXEeOapLDjGppYqA" value="*"/>
-      </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ppB1gKcPEeOFb47TKes-QQ" name="vanUta">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_wU2NQKcPEeOFb47TKes-QQ" direction="return">
