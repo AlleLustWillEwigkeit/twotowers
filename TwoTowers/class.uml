@@ -49,7 +49,7 @@
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_luQuAKUrEeOKINjiiErprA" name="ut" type="_tfdsYKUeEeOKINjiiErprA" association="_luRVEKUrEeOKINjiiErprA">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_luQuAKUrEeOKINjiiErprA" name="" type="_tfdsYKUeEeOKINjiiErprA" association="_luRVEKUrEeOKINjiiErprA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_luQuAaUrEeOKINjiiErprA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_luQuAqUrEeOKINjiiErprA" value="1"/>
     </ownedAttribute>
@@ -411,7 +411,7 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_luRVEKUrEeOKINjiiErprA" name="ellenseg_ut_1" memberEnd="_luRVEaUrEeOKINjiiErprA _luQuAKUrEeOKINjiiErprA">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_luRVEaUrEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA" association="_luRVEKUrEeOKINjiiErprA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_luRVEaUrEeOKINjiiErprA" name="jelenlegiUt" type="_AoBjkKUdEeOKINjiiErprA" association="_luRVEKUrEeOKINjiiErprA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_luRVEqUrEeOKINjiiErprA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_luRVE6UrEeOKINjiiErprA" value="1"/>
     </ownedEnd>
