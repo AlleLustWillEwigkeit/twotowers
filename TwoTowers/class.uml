@@ -100,6 +100,10 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Gxal4aUsEeOKINjiiErprA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Gxal4qUsEeOKINjiiErprA" value="1"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_4TEwYKfFEeO64vCks6OQrA" name="start" type="_1sNEUKUeEeOKINjiiErprA" association="_4TFXcKfFEeO64vCks6OQrA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4TEwYafFEeO64vCks6OQrA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4TEwYqfFEeO64vCks6OQrA" value="1"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_aoKAcKUkEeOKINjiiErprA" name="inditEllenseg">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_kXiP0KUkEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
@@ -271,7 +275,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8rYG0qUnEeOKINjiiErprA" value="*"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_eh-bkKUtEeOKINjiiErprA" name="alapHatotav" visibility="public">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eyuNUKUtEeOKINjiiErprA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eyu0YKUtEeOKINjiiErprA" value="1"/>
       <defaultValue xmi:type="uml:LiteralString" xmi:id="_eyvbcKUtEeOKINjiiErprA">
@@ -284,7 +288,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_qaRmoKUqEeOKINjiiErprA" name="beRegisztralTavonBeluliUtakhoz"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_qx3AMKUqEeOKINjiiErprA" name="kiRegisztralTavonKivuliUtakhoz"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_8UH4IKcOEeOFb47TKes-QQ" name="felkovez">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-83cAKcOEeOFb47TKes-QQ" name="mivel" type="_4WLXQKUeEeOKINjiiErprA" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-83cAKcOEeOFb47TKes-QQ" name="mivel" type="_4WLXQKUeEeOKINjiiErprA"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_tfdsYKUeEeOKINjiiErprA" name="Ut">
@@ -300,9 +304,6 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3rF1EaUtEeOKINjiiErprA"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3rF1EqUtEeOKINjiiErprA" value="*"/>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_CVbNoKUqEeOKINjiiErprA" name="ramLeptek" visibility="private">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WrPQMKUqEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA" isUnique="false"/>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_HyNmcKUqEeOKINjiiErprA" name="raLep">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_UwhP8KUqEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
@@ -570,6 +571,12 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_3f68gafCEeO64vCks6OQrA" name="jatekmotor" type="_i3pZIKUeEeOKINjiiErprA" association="_3f68gKfCEeO64vCks6OQrA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3f68gqfCEeO64vCks6OQrA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3f68g6fCEeO64vCks6OQrA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_4TFXcKfFEeO64vCks6OQrA" name="ellensegek_start_1" memberEnd="_4TFXcafFEeO64vCks6OQrA _4TEwYKfFEeO64vCks6OQrA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_4TFXcafFEeO64vCks6OQrA" name="ellensegek" type="_CdvvEKUdEeOKINjiiErprA" association="_4TFXcKfFEeO64vCks6OQrA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4TFXcqfFEeO64vCks6OQrA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4TFXc6fFEeO64vCks6OQrA" value="1"/>
     </ownedEnd>
   </packagedElement>
 </uml:Model>
