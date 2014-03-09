@@ -454,7 +454,10 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_XqvKIKbyEeOFb47TKes-QQ" name="" type="_tfdsYKUeEeOKINjiiErprA" direction="return"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_zxCusKcMEeOFb47TKes-QQ" name="lekerSzomszedok">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z-p5QKcNEeOFb47TKes-QQ" name="szomszedok" type="_UFhgQKUsEeOKINjiiErprA" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z-p5QKcNEeOFb47TKes-QQ" name="szomszedok" type="_UFhgQKUsEeOKINjiiErprA" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MstuYKeXEeOapLDjGppYqA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ms5UkKeXEeOapLDjGppYqA" value="*"/>
+      </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ppB1gKcPEeOFb47TKes-QQ" name="vanUta">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_wU2NQKcPEeOFb47TKes-QQ" direction="return">
@@ -464,6 +467,12 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_sikOcKcPEeOFb47TKes-QQ" name="vanEpitesiTerulete">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_vGTWgKcPEeOFb47TKes-QQ" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8RmqAKeaEeOapLDjGppYqA" name="beregisztral">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_kTnKYKebEeOapLDjGppYqA" name="torony" type="_sCCFEKUeEeOKINjiiErprA"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_SrJe4KebEeOapLDjGppYqA" name="tavolsag">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
