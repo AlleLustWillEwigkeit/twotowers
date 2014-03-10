@@ -227,27 +227,6 @@
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_RW7QMKUlEeOKINjiiErprA" name="kivalasztottTorony" visibility="public" type="_sCCFEKUeEeOKINjiiErprA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RfG70KUlEeOKINjiiErprA" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RfHi4KUlEeOKINjiiErprA" value="1"/>
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_RfIJ8KUlEeOKINjiiErprA">
-        <value xsi:nil="true"/>
-      </defaultValue>
-    </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_RmPekKUlEeOKINjiiErprA" name="kivalasztottAkadaly" visibility="public" type="_0D0KMKUeEeOKINjiiErprA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RvrHYKUlEeOKINjiiErprA" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RvuxwKUlEeOKINjiiErprA" value="1"/>
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_Rvwm8KUlEeOKINjiiErprA">
-        <value xsi:nil="true"/>
-      </defaultValue>
-    </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_pWUtAKbwEeOFb47TKes-QQ" name="kivalasztottUt" visibility="public" type="_tfdsYKUeEeOKINjiiErprA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pmcMoKbwEeOFb47TKes-QQ" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pmczsKbwEeOFb47TKes-QQ" value="1"/>
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_pmdawKbwEeOFb47TKes-QQ">
-        <value xsi:nil="true"/>
-      </defaultValue>
-    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_fwwcgKUlEeOKINjiiErprA" name="varazseroNovel">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_BzuLkKUmEeOKINjiiErprA" name="mennyivel" isUnique="false">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
