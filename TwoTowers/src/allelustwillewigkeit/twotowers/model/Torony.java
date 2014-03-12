@@ -15,9 +15,9 @@ import java.util.HashSet;
  */
 public class Torony {
 	/**
-	 * Description of the property ut.
+	 * Description of the property varazsko.
 	 */
-	public HashSet<Ut> ut = new HashSet<Ut>();
+	public HashSet<Varazsko> varazsko = new HashSet<Varazsko>();
 
 	/**
 	 * Description of the property alapHatotav.
@@ -25,14 +25,14 @@ public class Torony {
 	public int alapHatotav = 0;
 
 	/**
-	 * Description of the property varazsko.
-	 */
-	public HashSet<Varazsko> varazsko = new HashSet<Varazsko>();
-
-	/**
 	 * Description of the property epitesiTerulet.
 	 */
 	public EpitesiTerulet epitesiTerulet = null;
+
+	/**
+	 * Description of the property ut.
+	 */
+	public HashSet<Ut> ut = new HashSet<Ut>();
 
 	// Start of user code (user defined attributes for Torony)
 

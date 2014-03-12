@@ -8,7 +8,7 @@ package allelustwillewigkeit.twotowers.model;
 // End of user code
 
 /**
- * Description of Ember.
+ * A törp felelőssége, hogy implementáljon bizonyos lövedék által meghívott metódusokat, úton lévő akadály esetén azt lebontsa(és ne haladjon át addig amíg ez nem sikerül), jelezze, hogy rálépett egy adott útszakaszra, tárolja a saját életerejét, jelezze ha elhalálozik, illetve tárolja, hogy mekkora sebzést mér egy akadályra. 
  * 
  * @author baprof
  */

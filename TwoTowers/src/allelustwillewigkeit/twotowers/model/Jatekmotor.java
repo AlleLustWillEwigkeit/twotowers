@@ -15,14 +15,14 @@ import java.util.HashSet;
  */
 public class Jatekmotor {
 	/**
-	 * Description of the property progrgam.
-	 */
-	public Program progrgam = null;
-
-	/**
 	 * Description of the property ellensegek.
 	 */
 	public Ellensegek ellensegek = null;
+
+	/**
+	 * Description of the property progrgam.
+	 */
+	public Program progrgam = null;
 
 	/**
 	 * Description of the property palya.

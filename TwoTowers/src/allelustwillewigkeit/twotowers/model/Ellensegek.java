@@ -15,19 +15,9 @@ import java.util.HashSet;
  */
 public class Ellensegek {
 	/**
-	 * Description of the property josagosSzaruman.
+	 * Description of the property ellenseg.
 	 */
-	public JosagosSzaruman josagosSzaruman = null;
-
-	/**
-	 * Description of the property start.
-	 */
-	public Start start = null;
-
-	/**
-	 * Description of the property ellensegek.
-	 */
-	public Ellensegek ellensegek = null;
+	public HashSet<Ellenseg> ellenseg = new HashSet<Ellenseg>();
 
 	/**
 	 * Description of the property osszLetszam.
@@ -35,9 +25,19 @@ public class Ellensegek {
 	public int osszLetszam = 0;
 
 	/**
-	 * Description of the property ellenseg.
+	 * Description of the property josagosSzaruman.
 	 */
-	public HashSet<Ellenseg> ellenseg = new HashSet<Ellenseg>();
+	public JosagosSzaruman josagosSzaruman = null;
+
+	/**
+	 * Description of the property ellensegek.
+	 */
+	public Ellensegek ellensegek = null;
+
+	/**
+	 * Description of the property start.
+	 */
+	public Start start = null;
 
 	// Start of user code (user defined attributes for Ellensegek)
 

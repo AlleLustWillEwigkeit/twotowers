@@ -14,6 +14,11 @@ package allelustwillewigkeit.twotowers.model;
  */
 public class EpitesiTerulet {
 	/**
+	 * Description of the property torony.
+	 */
+	public Torony torony = null;
+
+	/**
 	 * Description of the property epitesiTerulet.
 	 */
 	public EpitesiTerulet epitesiTerulet = null;
@@ -22,11 +27,6 @@ public class EpitesiTerulet {
 	 * Description of the property palyaElem.
 	 */
 	public PalyaElem palyaElem = null;
-
-	/**
-	 * Description of the property torony.
-	 */
-	public Torony torony = null;
 
 	// Start of user code (user defined attributes for EpitesiTerulet)
 

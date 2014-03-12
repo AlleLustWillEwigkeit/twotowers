@@ -3,6 +3,7 @@ package allelustwillewigkeit.twotowers.model;
  * 2014, All rights reserved.
  *******************************************************************************/
 
+
 import java.util.HashSet;
 // Start of user code (user defined imports)
 
@@ -15,34 +16,34 @@ import java.util.HashSet;
  */
 public class PalyaElem {
 	/**
-	 * Description of the property palyaElem.
-	 */
-	public PalyaElem palyaElem = null;
-
-	/**
-	 * Description of the property ut.
-	 */
-	public Ut ut = null;
-
-	/**
 	 * Description of the property epitesiTerulet.
 	 */
 	public EpitesiTerulet epitesiTerulet = null;
-
+	
 	/**
 	 * Description of the property szomszedok.
 	 */
 	public HashSet<PalyaElem> szomszedok = new HashSet<PalyaElem>();
-
+	
+	/**
+	 * Description of the property palyaElem.
+	 */
+	public PalyaElem palyaElem = null;
+	
 	/**
 	 * Description of the property beregisztralt.
 	 */
 	public boolean beregisztralt = false;
-
+	
+	/**
+	 * Description of the property ut.
+	 */
+	public Ut ut = null;
+	
 	// Start of user code (user defined attributes for PalyaElem)
-
+	
 	// End of user code
-
+	
 	/**
 	 * The constructor.
 	 */
@@ -51,7 +52,7 @@ public class PalyaElem {
 		super();
 		// End of user code
 	}
-
+	
 	/**
 	 * Description of the method lekerEpitesiTerulet.
 	 * @return 
@@ -62,7 +63,7 @@ public class PalyaElem {
 		return lekerEpitesiTerulet;
 		// End of user code
 	}
-
+	 
 	/**
 	 * Description of the method lekerUt.
 	 * @return 
@@ -73,7 +74,7 @@ public class PalyaElem {
 		return lekerUt;
 		// End of user code
 	}
-
+	 
 	/**
 	 * Description of the method vanUtja.
 	 * @return 
@@ -84,7 +85,7 @@ public class PalyaElem {
 		return vanUtja;
 		// End of user code
 	}
-
+	 
 	/**
 	 * Description of the method vanEpitesiTerulete.
 	 * @return 
@@ -95,7 +96,7 @@ public class PalyaElem {
 		return vanEpitesiTerulete;
 		// End of user code
 	}
-
+	 
 	/**
 	 * Description of the method beregisztral.
 	 * @param torony 
@@ -105,7 +106,7 @@ public class PalyaElem {
 		// Start of user code for method beregisztral
 		// End of user code
 	}
-
+	 
 	/**
 	 * Description of the method legyelUt.
 	 */
@@ -113,7 +114,7 @@ public class PalyaElem {
 		// Start of user code for method legyelUt
 		// End of user code
 	}
-
+	 
 	/**
 	 * Description of the method legyelEpitesiTerulet.
 	 */
@@ -121,9 +122,29 @@ public class PalyaElem {
 		// Start of user code for method legyelEpitesiTerulet
 		// End of user code
 	}
-
+	 
+	/**
+	 * Description of the method addSzomszed.
+	 * @param  
+	 */
+	public void addSzomszed(PalyaElem ) {
+		// Start of user code for method addSzomszed
+		// End of user code
+	}
+	 
 	// Start of user code (user defined methods for PalyaElem)
-
+	
 	// End of user code
+	
+
+	
+
+	
+
+	
+
+	
+
+
 
 }
