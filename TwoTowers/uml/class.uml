@@ -82,6 +82,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nd7tIKoTEeOQrK_bnJU73Q" name="beallitUt">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_qhZeIKoTEeOQrK_bnJU73Q" name="ut" type="_tfdsYKUeEeOKINjiiErprA"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_CdvvEKUdEeOKINjiiErprA" name="Ellensegek">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_rj-skKUdEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA" association="_rj_ToKUdEeOKINjiiErprA">
@@ -293,6 +296,15 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_FxIy0KfYEeO4Po28d7uuzQ" name="lekerAkadaly">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_KRKocKfYEeO4Po28d7uuzQ" type="_0D0KMKUeEeOKINjiiErprA" direction="return"/>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZTfSkKoREeOQrK_bnJU73Q" name="lekerKovUt">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_kZy4oKoREeOQrK_bnJU73Q" type="_tfdsYKUeEeOKINjiiErprA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KGLI8KoTEeOQrK_bnJU73Q" name="beallitKovUt">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Q8-BoKoTEeOQrK_bnJU73Q">
+        <body>beallitKovUt</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TYTboKoTEeOQrK_bnJU73Q" name="ut" type="_tfdsYKUeEeOKINjiiErprA"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_0D0KMKUeEeOKINjiiErprA" clientDependency="_W8DlUKUoEeOKINjiiErprA" name="Akadaly">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_CrYhcKUoEeOKINjiiErprA" name="varazsko" type="_4WLXQKUeEeOKINjiiErprA" association="_CrZIgKUoEeOKINjiiErprA">
@@ -460,6 +472,9 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_xPMZwKfMEeO64vCks6OQrA" name="legyelUt"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_xa8WwKfMEeO64vCks6OQrA" name="legyelEpitesiTerulet"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_XBnEoKoTEeOQrK_bnJU73Q" name="addSzomszed">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bkD8IKoTEeOQrK_bnJU73Q" name="" type="_UFhgQKUsEeOKINjiiErprA"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_WNCmYKUsEeOKINjiiErprA" name="EpitesiTerulet">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_qPiEUKUsEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" association="_qPirYKUsEeOKINjiiErprA">
