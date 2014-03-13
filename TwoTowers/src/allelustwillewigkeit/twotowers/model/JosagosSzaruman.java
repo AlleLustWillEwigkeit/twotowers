@@ -1,4 +1,6 @@
 package allelustwillewigkeit.twotowers.model;
+
+import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 /*******************************************************************************
  * 2014, All rights reserved.
  *******************************************************************************/
@@ -51,8 +53,10 @@ public class JosagosSzaruman {
 	 */
 	public Varazsko lekerKivalasztottVarazsko() {
 		// Start of user code for method lekerKivalasztottVarazsko
-		Varazsko lekerKivalasztottVarazsko = null;
-		return lekerKivalasztottVarazsko;
+		SkeletonController.tabNo();
+		SkeletonController.println("lekerKivalasztottVarazsko");
+		SkeletonController.tabCsokken();
+		return null;
 		// End of user code
 	}
 

@@ -1,4 +1,7 @@
 package allelustwillewigkeit.twotowers.model;
+
+import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
+
 /*******************************************************************************
  * 2014, All rights reserved.
  *******************************************************************************/
@@ -43,12 +46,15 @@ public class EpitesiTerulet {
 
 	/**
 	 * Description of the method minAll.
-	 * @return 
+	 * 
+	 * @return
 	 */
 	public PalyaElem minAll() {
 		// Start of user code for method minAll
-		PalyaElem minAll = null;
-		return minAll;
+		SkeletonController.tabNo();
+		SkeletonController.println("minAll()");
+		SkeletonController.tabCsokken();
+		return new PalyaElem();
 		// End of user code
 	}
 
@@ -57,28 +63,38 @@ public class EpitesiTerulet {
 	 */
 	public void lerakTornyot() {
 		// Start of user code for method lerakTornyot
+		SkeletonController.tabNo();
+		SkeletonController.println("lerakTornyot()");
+		torony = new Torony();
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 
 	/**
 	 * Description of the method vanToronyRajta.
-	 * @return 
+	 * 
+	 * @return
 	 */
 	public boolean vanToronyRajta() {
 		// Start of user code for method vanToronyRajta
-		boolean vanToronyRajta = false;
-		return vanToronyRajta;
+		SkeletonController.tabNo();
+		SkeletonController.println("vanToronyRajta()");
+		SkeletonController.tabCsokken();
+		return true;
 		// End of user code
 	}
 
 	/**
 	 * Description of the method lekerTorony.
-	 * @return 
+	 * 
+	 * @return
 	 */
 	public Torony lekerTorony() {
 		// Start of user code for method lekerTorony
-		Torony lekerTorony = null;
-		return lekerTorony;
+		SkeletonController.tabNo();
+		SkeletonController.println("lekerTorony()");
+		SkeletonController.tabCsokken();
+		return new Torony();
 		// End of user code
 	}
 

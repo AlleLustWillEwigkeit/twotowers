@@ -1,4 +1,7 @@
 package allelustwillewigkeit.twotowers.model;
+
+import allelustwillewigkeit.twotowers.skeleton.*;
+
 /*******************************************************************************
  * 2014, All rights reserved.
  *******************************************************************************/
@@ -41,6 +44,10 @@ public class Program {
 	 */
 	public void ujJatek() {
 		// Start of user code for method ujJatek
+		SkeletonController.tabNo();
+		SkeletonController.println("ujJatek");
+		//Jatekmotor motor = new Jatekmotor();
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 

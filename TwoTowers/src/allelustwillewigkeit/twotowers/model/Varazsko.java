@@ -1,10 +1,13 @@
 package allelustwillewigkeit.twotowers.model;
+
 /*******************************************************************************
  * 2014, All rights reserved.
  *******************************************************************************/
 
 import java.util.HashSet;
 // Start of user code (user defined imports)
+
+import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 // End of user code
 
@@ -44,32 +47,45 @@ public class Varazsko {
 
 	/**
 	 * Description of the method tuzel.
-	 * @param celpont 
+	 * 
+	 * @param celpont
 	 */
 	public void tuzel(Ellenseg celpont) {
 		// Start of user code for method tuzel
+		SkeletonController.tabNo();
+		SkeletonController.println("tuzel(celpont)");
+		for (Lovedek l : lovedek) {
+			celpont.sebezLovedek();
+		}
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 
 	/**
 	 * Description of the method lekerHatotavSzorzo.
-	 * @return 
+	 * 
+	 * @return
 	 */
 	public float lekerHatotavSzorzo() {
 		// Start of user code for method lekerHatotavSzorzo
-		float lekerHatotavSzorzo = 0F;
-		return lekerHatotavSzorzo;
+		SkeletonController.tabNo();
+		SkeletonController.println("lekerHatotavSzorzo()");
+		SkeletonController.tabCsokken();
+		return hatotavSzorzo;
 		// End of user code
 	}
 
 	/**
 	 * Description of the method lekerEleteroSzorzo.
-	 * @return 
+	 * 
+	 * @return
 	 */
 	public float lekerEleteroSzorzo() {
 		// Start of user code for method lekerEleteroSzorzo
-		float lekerEleteroSzorzo = 0F;
-		return lekerEleteroSzorzo;
+		SkeletonController.tabNo();
+		SkeletonController.println("lekerEleteroSzorzo()");
+		SkeletonController.tabCsokken();
+		return eleteroSzorzo;
 		// End of user code
 	}
 

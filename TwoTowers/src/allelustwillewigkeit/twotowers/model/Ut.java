@@ -1,10 +1,16 @@
 package allelustwillewigkeit.twotowers.model;
+
 /*******************************************************************************
  * 2014, All rights reserved.
  *******************************************************************************/
 
+import java.util.ArrayList;
 import java.util.HashSet;
 // Start of user code (user defined imports)
+
+import java.util.List;
+
+import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 // End of user code
 
@@ -27,8 +33,7 @@ public class Ut {
 	/**
 	 * Description of the property ut.
 	 */
-	public HashSet<Ut> ut = new HashSet<Ut>();
-
+	public List<Ut> ut = new ArrayList<Ut>();
 
 	// Start of user code (user defined attributes for Ut)
 
@@ -45,19 +50,30 @@ public class Ut {
 
 	/**
 	 * Description of the method raLep.
-	 * @param ellenseg 
+	 * 
+	 * @param ellenseg
 	 */
 	public void raLep(Ellenseg ellenseg) {
 		// Start of user code for method raLep
+		SkeletonController.tabNo();
+		SkeletonController.println("raLep()");
+		for (Torony t : torony) {
+			t.tuzel(ellenseg);
+		}
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 
 	/**
 	 * Description of the method feliratkozik.
-	 * @param torony 
+	 * 
+	 * @param torony
 	 */
 	public void feliratkozik(Torony torony) {
 		// Start of user code for method feliratkozik
+		SkeletonController.tabNo();
+		SkeletonController.println("feliratkozik(t)");
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 
@@ -74,53 +90,76 @@ public class Ut {
 	 */
 	public void lerakAkadaly() {
 		// Start of user code for method lerakAkadaly
+		SkeletonController.tabNo();
+		SkeletonController.println("lerakAkadaly()");
+		akadaly = new Akadaly();
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 
 	/**
 	 * Description of the method vanAkadalyRajta.
-	 * @return 
+	 * 
+	 * @return
 	 */
 	public boolean vanAkadalyRajta() {
 		// Start of user code for method vanAkadalyRajta
-		boolean vanAkadalyRajta = false;
-		return vanAkadalyRajta;
+		SkeletonController.tabNo();
+		SkeletonController.println("vanAkadalyRajta()");
+		SkeletonController.tabCsokken();
+		return true;
 		// End of user code
 	}
 
 	/**
 	 * Description of the method lekerAkadaly.
-	 * @return 
+	 * 
+	 * @return
 	 */
 	public Akadaly lekerAkadaly() {
 		// Start of user code for method lekerAkadaly
-		Akadaly lekerAkadaly = null;
-		return lekerAkadaly;
+		SkeletonController.tabNo();
+		SkeletonController.println("lekerAkadaly()");
+		SkeletonController.tabCsokken();
+		return new Akadaly();
 		// End of user code
 	}
 
 	/**
 	 * Description of the method lekerKovUt.
-	 * @return 
+	 * 
+	 * @return
 	 */
 	public Ut lekerKovUt() {
 		// Start of user code for method lekerKovUt
-		Ut lekerKovUt = null;
-		return lekerKovUt;
+		SkeletonController.tabNo();
+		SkeletonController.println("lekerKovUt()");
+		SkeletonController.tabCsokken();
+		return new Ut();
 		// End of user code
 	}
 
 	/**
 	 * beallitKovUt
-	 * @param ut 
+	 * 
+	 * @param ut
 	 */
 	public void beallitKovUt(Ut ut) {
 		// Start of user code for method beallitKovUt
+		SkeletonController.tabNo();
+		SkeletonController.println("beallitKovUt(ut)");
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 
 	// Start of user code (user defined methods for Ut)
-
+	public void akadalySebzes(int mennyit) {
+		SkeletonController.tabNo();
+		SkeletonController.println("akadalySebzes()");
+		if (this.vanAkadalyRajta())
+			lekerAkadaly().sebzodik(mennyit);
+		SkeletonController.tabCsokken();
+	}
 	// End of user code
 
 }

@@ -1,10 +1,13 @@
 package allelustwillewigkeit.twotowers.model;
+
 /*******************************************************************************
  * 2014, All rights reserved.
  *******************************************************************************/
 
 import java.util.HashSet;
 // Start of user code (user defined imports)
+
+import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 // End of user code
 
@@ -28,6 +31,8 @@ public class Ellensegek {
 	 * Description of the property josagosSzaruman.
 	 */
 	public JosagosSzaruman josagosSzaruman = null;
+
+	public Jatekmotor jatekMotor = null;
 
 	/**
 	 * Description of the property ellensegek.
@@ -54,7 +59,8 @@ public class Ellensegek {
 
 	/**
 	 * Description of the method inditEllenseg.
-	 * @param mennyit 
+	 * 
+	 * @param mennyit
 	 */
 	public void inditEllenseg(int mennyit) {
 		// Start of user code for method inditEllenseg
@@ -63,10 +69,16 @@ public class Ellensegek {
 
 	/**
 	 * Description of the method egyEllensegMeghalt.
-	 * @param ellenseg 
+	 * 
+	 * @param ellenseg
 	 */
 	public void egyEllensegMeghalt(Ellenseg ellenseg) {
 		// Start of user code for method egyEllensegMeghalt
+		SkeletonController.tabNo();
+		SkeletonController.println("egyEllensegMeghalt(ellenseg)");
+		if (osszLetszam <= 0)
+			jatekMotor.gyozelem();
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 
@@ -75,6 +87,12 @@ public class Ellensegek {
 	 */
 	public void mindLep() {
 		// Start of user code for method mindLep
+		SkeletonController.tabNo();
+		SkeletonController.println("mindLep()");
+		for (Ellenseg e : ellenseg) {
+			e.lep();
+		}
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 

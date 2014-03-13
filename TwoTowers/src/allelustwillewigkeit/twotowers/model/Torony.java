@@ -6,6 +6,8 @@ package allelustwillewigkeit.twotowers.model;
 import java.util.HashSet;
 // Start of user code (user defined imports)
 
+import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
+
 // End of user code
 
 /**
@@ -43,7 +45,8 @@ public class Torony {
 	 */
 	public Torony() {
 		// Start of user code constructor for Torony)
-		super();
+		//super();
+		beRegisztralTavonBeluliUtakhoz();
 		// End of user code
 	}
 
@@ -53,6 +56,12 @@ public class Torony {
 	 */
 	public void tuzel(Ellenseg celpont) {
 		// Start of user code for method tuzel
+		SkeletonController.tabNo();
+		SkeletonController.println("tuzel(celpont)");
+		for(Varazsko v : varazsko){
+			v.tuzel(celpont);
+		}
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 
@@ -61,6 +70,15 @@ public class Torony {
 	 */
 	public void beRegisztralTavonBeluliUtakhoz() {
 		// Start of user code for method beRegisztralTavonBeluliUtakhoz
+		SkeletonController.tabNo();
+		SkeletonController.println("beRegisztralTavonBeluliUtakhoz");
+		PalyaElem pe = epitesiTerulet.minAll();
+		float tavolsag = alapHatotav;
+		for(Varazsko v : varazsko){
+			tavolsag *= v.lekerHatotavSzorzo(); //FIXME
+		}
+		pe.beregisztral(this, (int) tavolsag);
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 
@@ -70,6 +88,9 @@ public class Torony {
 	 */
 	public void felkovez(Varazsko mivel) {
 		// Start of user code for method felkovez
+		SkeletonController.tabNo();
+		SkeletonController.println("felkovez(v)");
+		SkeletonController.tabCsokken();
 		// End of user code
 	}
 
