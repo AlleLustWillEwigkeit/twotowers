@@ -6,6 +6,12 @@ import java.io.InputStreamReader;
 
 public class SkeletonController {
 	private static int tabok = 0;
+	static InputStreamReader isr;
+	static BufferedReader br;
+	static{
+		isr = new InputStreamReader(System.in);
+		br  = new BufferedReader(isr);
+	}
 	public static void tabNo(){
 		tabok++;
 	}
@@ -28,13 +34,21 @@ public class SkeletonController {
 		SkeletonController.kiiro("\n");
 	}
 	
+	public static String readln(){
+		try {
+			return br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	
 	public static boolean kerdezIH(String mihez){//TODO REFACTOR
 		kiiro(mihez);
 		kiiro(" (I/H)\n");
-		InputStreamReader isr = new InputStreamReader(System.in); // Lehet hogy ez az osztálynak kéne eleme legyen, hogy csak egyszer zongorázzuk végig?
-		BufferedReader br = new BufferedReader ( isr );	 // Lehet hogy ez az osztálynak kéne eleme legyen, hogy csak egyszer zongorázzuk végig?
-		try {
-			String eredmeny = br.readLine();
+			String eredmeny = readln();
 			eredmeny.toUpperCase();
 			if(eredmeny.charAt(0) == 'I'){
 				return true;
@@ -46,28 +60,15 @@ public class SkeletonController {
 				kiiro("Nem valid valasz. Probald ujra.\n");
 				kerdezIH(mihez);
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return (Boolean) null; // ha ide ér akkor okozzunk már legalább valami anomáliát, mert itt semmi keresnivalója sincs a függvények.
+			return false;
 		
 	}
 	
 	public static int kerdezEgesz(String mihez){//TODO REFACTOR
 		kiiro(mihez);
 		kiiro(" (egesz)\n");
-		InputStreamReader isr = new InputStreamReader(System.in); // Lehet hogy ez az osztálynak kéne eleme legyen, hogy csak egyszer zongorázzuk végig?
-		BufferedReader br = new BufferedReader ( isr );	 // Lehet hogy ez az osztálynak kéne eleme legyen, hogy csak egyszer zongorázzuk végig?
-		try {
-			String eredmeny = br.readLine();
-			return Integer.parseInt(eredmeny);
-			
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return (Integer) null; // ha ide ér akkor okozzunk már legalább valami anomáliát, mert itt semmi keresnivalója sincs a függvények.
-		
+		String eredmeny = readln();
+		return Integer.parseInt(eredmeny);
 	}
 	
 	public static int kerdezLovedek(String mihez) throws Exception{
