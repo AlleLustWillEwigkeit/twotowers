@@ -32,6 +32,7 @@ public class Darda extends Lovedek {
 	 */
 	public void megLo(Ellenseg kit) {
 		// Start of user code for method megLo
+		kit.sebezDarda();
 		// End of user code
 	}
 

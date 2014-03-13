@@ -32,6 +32,7 @@ public class Tuzgolyo extends Lovedek {
 	 */
 	public void megLo(Ellenseg kit) {
 		// Start of user code for method megLo
+		kit.sebezTuzgolyo();
 		// End of user code
 	}
 

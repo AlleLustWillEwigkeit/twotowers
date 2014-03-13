@@ -32,6 +32,7 @@ public class Lovedek {
 	 */
 	public void megLo(Ellenseg kit) {
 		// Start of user code for method megLo
+		kit.sebezLovedek();
 		// End of user code
 	}
 

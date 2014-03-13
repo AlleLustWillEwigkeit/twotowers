@@ -32,6 +32,7 @@ public class Szikla extends Lovedek {
 	 */
 	public void megLo(Ellenseg kit) {
 		// Start of user code for method megLo
+		kit.sebezSzikla();
 		// End of user code
 	}
 

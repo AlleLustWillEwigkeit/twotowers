@@ -32,6 +32,7 @@ public class Nyil extends Lovedek {
 	 */
 	public void megLo(Ellenseg kit) {
 		// Start of user code for method megLo
+		kit.sebezNyil();
 		// End of user code
 	}
 
