@@ -127,7 +127,7 @@ public class PalyaElem {
 	 * Description of the method addSzomszed.
 	 * @param  
 	 */
-	public void addSzomszed(PalyaElem ) {
+	public void addSzomszed(PalyaElem sz) {
 		// Start of user code for method addSzomszed
 		// End of user code
 	}

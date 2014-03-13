@@ -29,15 +29,6 @@ public class Ut {
 	 */
 	public HashSet<Ut> ut = new HashSet<Ut>();
 
-	/**
-	 * Description of the property ut.
-	 */
-	public HashSet<Ut> ut = new HashSet<Ut>();
-
-	/**
-	 * Description of the property ut.
-	 */
-	public Ut ut = null;
 
 	// Start of user code (user defined attributes for Ut)
 
