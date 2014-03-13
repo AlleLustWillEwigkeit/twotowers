@@ -16,7 +16,7 @@ public class SkeletonController {
 		tabok++;
 	}
 	public static void tabCsokken(){
-		if(tabok < 0) // csak a biztonság kedvéért, igazából nem túl lényeges, a forciklus max nem futna le egyszer sem.
+		if(tabok > 0) // csak a biztonság kedvéért, igazából nem túl lényeges, a forciklus max nem futna le egyszer sem.
 			tabok--;
 	}
 	private static void kiiro(String mit){ // Forráscsere esetére.
@@ -36,6 +36,10 @@ public class SkeletonController {
 	
 	public static String readln(){
 		try {
+//			kiiro("\n");
+			for(int i=0; i!= tabok; i++){
+				SkeletonController.kiiro("\t");
+			}
 			return br.readLine();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -46,7 +50,7 @@ public class SkeletonController {
 
 	
 	public static boolean kerdezIH(String mihez){//TODO REFACTOR
-		kiiro(mihez);
+		print(mihez);
 		kiiro(" (I/H)\n");
 			String eredmeny = readln();
 			eredmeny.toUpperCase();
@@ -65,7 +69,7 @@ public class SkeletonController {
 	}
 	
 	public static int kerdezEgesz(String mihez){//TODO REFACTOR
-		kiiro(mihez);
+		print(mihez);
 		kiiro(" (egesz)\n");
 		String eredmeny = readln();
 		return Integer.parseInt(eredmeny);
