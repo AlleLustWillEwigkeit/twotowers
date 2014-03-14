@@ -16,10 +16,10 @@ public class SkeletonController {
 		tabok++;
 	}
 	public static void tabCsokken(){
-		if(tabok > 0) // csak a biztons�g kedv��rt, igaz�b�l nem t�l l�nyeges, a forciklus max nem futna le egyszer sem.
+		if(tabok > 0) 
 			tabok--;
 	}
-	private static void kiiro(String mit){ // Forr�scsere eset�re.
+	private static void kiiro(String mit){ // Forrascsere esetere.
 		System.out.print(mit);
 	}
 	
@@ -45,14 +45,13 @@ public class SkeletonController {
 			tabber();
 			return br.readLine();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
 	}
 
 	
-	public static boolean kerdezIH(String mihez){//TODO REFACTOR
+	public static boolean kerdezIH(String mihez){
 		print(mihez);
 		kiiro(" (I/H)\n");
 			String eredmeny = readln();
@@ -71,7 +70,7 @@ public class SkeletonController {
 		
 	}
 	
-	public static int kerdezEgesz(String mihez){//TODO REFACTOR
+	public static int kerdezEgesz(String mihez){
 		print(mihez);
 		kiiro(" (egesz)\n");
 		String eredmeny = readln();
