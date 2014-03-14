@@ -3,23 +3,26 @@ package allelustwillewigkeit.twotowers.skeleton;
 public class TeszterClass {
 
 	public static void foo(){
-//		SkeletonController.tabNo();
+		SkeletonController.tabNo();
+		SkeletonController.println("foo");
 		while(SkeletonController.kerdezIH("What are you going to do? STAB ME?")){
 			bar();
 		}
-//		SkeletonController.tabCsokken();
+		SkeletonController.tabCsokken();
 	}
 	
 	public static void bar(){
 		SkeletonController.tabNo();
+		SkeletonController.println("bar");
 		SkeletonController.println("That wasn't a good idea");
 		SkeletonController.tabCsokken();
 	}
 	
 	public static void main(String[] args) {
-//		SkeletonController.tabNo();
+		SkeletonController.tabNo();
+		SkeletonController.println("main");
 		foo();
-//		SkeletonController.tabCsokken();
+		SkeletonController.tabCsokken();
 		
 	}
 

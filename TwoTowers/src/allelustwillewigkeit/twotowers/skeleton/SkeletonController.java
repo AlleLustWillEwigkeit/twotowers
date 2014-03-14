@@ -16,17 +16,23 @@ public class SkeletonController {
 		tabok++;
 	}
 	public static void tabCsokken(){
-		if(tabok > 0) // csak a biztonság kedvéért, igazából nem túl lényeges, a forciklus max nem futna le egyszer sem.
+		if(tabok > 0) // csak a biztonsï¿½g kedvï¿½ï¿½rt, igazï¿½bï¿½l nem tï¿½l lï¿½nyeges, a forciklus max nem futna le egyszer sem.
 			tabok--;
 	}
-	private static void kiiro(String mit){ // Forráscsere esetére.
+	private static void kiiro(String mit){ // Forrï¿½scsere esetï¿½re.
 		System.out.print(mit);
 	}
 	
-	public static void print(String mit){
-		for(int i=0; i!= tabok; i++){
-			SkeletonController.kiiro("\t");
+	private static void tabber(){
+		SkeletonController.kiiro("|");
+		for(int i=0; i < tabok; i++){
+			SkeletonController.kiiro("-");
 		}
+		SkeletonController.kiiro(">");
+	}
+	
+	private static void print(String mit){
+		tabber();
 		SkeletonController.kiiro(mit);
 	}
 	public static void println(String mit){
@@ -36,10 +42,7 @@ public class SkeletonController {
 	
 	public static String readln(){
 		try {
-//			kiiro("\n");
-			for(int i=0; i!= tabok; i++){
-				SkeletonController.kiiro("\t");
-			}
+			tabber();
 			return br.readLine();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
