@@ -7,6 +7,7 @@ public class TeszterClass {
 		SkeletonController.println("foo");
 		while(SkeletonController.kerdezIH("What are you going to do? STAB ME?")){
 			bar();
+			
 		}
 		SkeletonController.tabCsokken();
 	}
@@ -14,7 +15,7 @@ public class TeszterClass {
 	public static void bar(){
 		SkeletonController.tabNo();
 		SkeletonController.println("bar");
-		SkeletonController.println("That wasn't a good idea");
+		SkeletonController.kerdezLovedek("Kérek egy lövedéket!");
 		SkeletonController.tabCsokken();
 	}
 	

@@ -4,6 +4,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import allelustwillewigkeit.twotowers.model.Darda;
+import allelustwillewigkeit.twotowers.model.Lovedek;
+import allelustwillewigkeit.twotowers.model.Nyil;
+import allelustwillewigkeit.twotowers.model.Szikla;
+import allelustwillewigkeit.twotowers.model.Tuzgolyo;
+
 public class SkeletonController {
 	private static int tabok = 0;
 	static InputStreamReader isr;
@@ -77,8 +83,44 @@ public class SkeletonController {
 		return Integer.parseInt(eredmeny);
 	}
 	
-	public static int kerdezLovedek(String mihez) throws Exception{
-		throw new Exception("kerdezLovedek is not implemented yet"); //TODO FIX?
-		
+	public static Lovedek kerdezLovedek(String mihez) {
+		//throw new Exception("kerdezLovedek is not implemented yet"); //TODO FIX?
+		try{
+			println(mihez);
+			println("Adja meg milyen lovedekkel akar loni! Itt a lista:");
+			println("1 - Lövedék");
+			println("2 - Nyíl ");
+			println("3 - Tűzgolyó");
+			println("4 - Szikla");
+			println("5 - Dárda");
+			String valasz = readln();
+			int buzivagyok = Integer.parseInt(valasz);
+			
+			
+			
+			switch(buzivagyok){
+				case 1:
+					return new Lovedek();		
+				case 2:
+					return new Nyil();	
+				case 3:
+					return new Tuzgolyo();
+				case 4:
+					return new Szikla();
+				case 5:
+					return new Darda();
+				default:
+					throw new IllegalArgumentException();
+			}
+
+		}catch(NumberFormatException e){
+			println("A válasz valahol 1-5 között rejlik, számmal írva!");
+			kerdezLovedek(mihez);
+		}catch(IllegalArgumentException e){
+			println("Számot adtál meg, de nem az adott tartományban!");
+			kerdezLovedek(mihez);
+		}
+		return null;
+	
 	}
 }
