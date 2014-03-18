@@ -13,42 +13,67 @@ import allelustwillewigkeit.twotowers.model.Tuzgolyo;
 public class SkeletonController {
 	private static int tabok = 0;
 	static InputStreamReader isr;
+	static final int CONSTANT1 = 4;
 	static BufferedReader br;
-	static{
+	static {
 		isr = new InputStreamReader(System.in);
-		br  = new BufferedReader(isr);
+		br = new BufferedReader(isr);
 	}
-	public static void tabNo(){
-		tabok++;
+
+	public static void nyilJobbra() {
+		kiiro("--->");
 	}
-	public static void tabCsokken(){
-		if(tabok > 0) 
-			tabok--;
+
+	public static void nyilBalra() {
+		kiiro("<---");
 	}
-	private static void kiiro(String mit){ // Forrascsere esetere.
+
+	public static void fuggvenyBelep(String fuggvenyNeve) {
+		behuzas();
+		nyilJobbra();
+		kiiro(fuggvenyNeve);
+		kiiro("\n");
+		tabok += CONSTANT1;
+	}
+
+	public static void fuggvenyKilep(String fuggvenyNeve) {
+		if (tabok > 0) {
+			tabok -= CONSTANT1;
+			behuzas();
+			nyilBalra();
+			kiiro("return from "+ fuggvenyNeve);
+			kiiro("\n");
+
+		} else {
+			kiiro("Valaki úgy lépett ki, hogy nem lépett be!");
+		}
+
+	}
+
+	private static void kiiro(String mit) { // Forrascsere esetere.
 		System.out.print(mit);
 	}
-	
-	private static void tabber(){
-		SkeletonController.kiiro("|");
-		for(int i=0; i < tabok; i++){
-			SkeletonController.kiiro("-");
+
+	private static void behuzas() {
+		for (int i = 0; i < tabok; ++i) {
+			kiiro(" ");
 		}
-		SkeletonController.kiiro(">");
 	}
-	
-	private static void print(String mit){
-		tabber();
+
+	private static void print(String mit) {
+		behuzas();
 		SkeletonController.kiiro(mit);
 	}
-	public static void println(String mit){
+
+	public static void println(String mit) {
+
 		SkeletonController.print(mit);
 		SkeletonController.kiiro("\n");
 	}
-	
-	public static String readln(){
+
+	public static String readln() {
 		try {
-			tabber();
+			behuzas();
 			return br.readLine();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -56,36 +81,33 @@ public class SkeletonController {
 		return null;
 	}
 
-	
-	public static boolean kerdezIH(String mihez){
+	public static boolean kerdezIH(String mihez) { //TODO illenék exceptionöket dobálni, ahelyett hogy újrahívjuk a fgv-t.
 		print(mihez);
 		kiiro(" (I/H)\n");
-			String eredmeny = readln();
-			eredmeny.toUpperCase();
-			if(eredmeny.charAt(0) == 'I'){
-				return true;
-			}
-			else if(eredmeny.charAt(0) == 'H'){
-				return false;
-			}
-			else{
-				kiiro("Nem valid valasz. Probald ujra.\n");
-				kerdezIH(mihez);
-			}
+		String eredmeny;
+		eredmeny = readln();
+		eredmeny = eredmeny.toUpperCase();
+		if (eredmeny.charAt(0) == 'I') {
+			return true;
+		} else if (eredmeny.charAt(0) == 'H') {
 			return false;
-		
+		} else {
+			println("Nem valid valasz. Probald ujra.");
+			kerdezIH(mihez);
+		}
+		return false;
+
 	}
-	
-	public static int kerdezEgesz(String mihez){
+
+	public static int kerdezEgesz(String mihez) {
 		print(mihez);
 		kiiro(" (egesz)\n");
 		String eredmeny = readln();
 		return Integer.parseInt(eredmeny);
 	}
-	
+
 	public static Lovedek kerdezLovedek(String mihez) {
-		//throw new Exception("kerdezLovedek is not implemented yet"); //TODO FIX?
-		try{
+		try {
 			println(mihez);
 			println("Adja meg milyen lovedekkel akar loni! Itt a lista:");
 			println("1 - Lövedék");
@@ -94,33 +116,29 @@ public class SkeletonController {
 			println("4 - Szikla");
 			println("5 - Dárda");
 			String valasz = readln();
-			int buzivagyok = Integer.parseInt(valasz);
-			
-			
-			
-			switch(buzivagyok){
-				case 1:
-					return new Lovedek();		
-				case 2:
-					return new Nyil();	
-				case 3:
-					return new Tuzgolyo();
-				case 4:
-					return new Szikla();
-				case 5:
-					return new Darda();
-				default:
-					throw new IllegalArgumentException();
+			int valaszINT = Integer.parseInt(valasz);
+			switch (valaszINT) {
+			case 1:
+				return new Lovedek();
+			case 2:
+				return new Nyil();
+			case 3:
+				return new Tuzgolyo();
+			case 4:
+				return new Szikla();
+			case 5:
+				return new Darda();
+			default:
+				throw new IllegalArgumentException();
 			}
-
-		}catch(NumberFormatException e){
+		} catch (NumberFormatException e) {
 			println("A válasz valahol 1-5 között rejlik, számmal írva!");
 			kerdezLovedek(mihez);
-		}catch(IllegalArgumentException e){
+		} catch (IllegalArgumentException e) {
 			println("Számot adtál meg, de nem az adott tartományban!");
 			kerdezLovedek(mihez);
 		}
 		return null;
-	
+
 	}
 }

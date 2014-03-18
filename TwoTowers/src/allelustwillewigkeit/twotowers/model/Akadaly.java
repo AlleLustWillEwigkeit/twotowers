@@ -14,9 +14,8 @@ public class Akadaly {
 	}
 
 	public void felkovez(Varazsko mivel) {
-		SkeletonController.tabNo();
-		SkeletonController.println("felkovez(v)");
-		SkeletonController.tabCsokken();
+		SkeletonController.fuggvenyBelep("Akadaly.felkovez");
+		SkeletonController.tabCsokken("Akadaly.felkovez");
 	}
 
 	public void sebzodik(int mennyit) {
