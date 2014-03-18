@@ -28,20 +28,28 @@ public class SkeletonController {
 		kiiro("<---");
 	}
 
-	public static void fuggvenyBelep(String fuggvenyNeve) {
+	public static void fuggvenyBelep() {
 		behuzas();
 		nyilJobbra();
-		kiiro(fuggvenyNeve);
+		
+		StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
+		StackTraceElement e = stacktrace[2];
+		
+		kiiro(e.getClassName() + ":" + e.getMethodName());
 		kiiro("\n");
 		tabok += CONSTANT1;
 	}
 
-	public static void fuggvenyKilep(String fuggvenyNeve) {
+	public static void fuggvenyKilep() {
 		if (tabok > 0) {
 			tabok -= CONSTANT1;
 			behuzas();
 			nyilBalra();
-			kiiro("return from "+ fuggvenyNeve);
+			
+			StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
+			StackTraceElement e = stacktrace[2];
+			
+			kiiro("return from "+ e.getClassName() + ":" + e.getMethodName());
 			kiiro("\n");
 
 		} else {
@@ -81,7 +89,7 @@ public class SkeletonController {
 		return null;
 	}
 
-	public static boolean kerdezIH(String mihez) { //TODO illenék exceptionöket dobálni, ahelyett hogy újrahívjuk a fgv-t.
+	public static boolean kerdezIH(String mihez) { //TODO illen√©k exception√∂ket dob√°lni, ahelyett hogy √∫jrah√≠vjuk a fgv-t.
 		print(mihez);
 		kiiro(" (I/H)\n");
 		String eredmeny;
@@ -92,7 +100,7 @@ public class SkeletonController {
 		} else if (eredmeny.charAt(0) == 'H') {
 			return false;
 		} else {
-			println("Nem valid valasz. Probald ujra.");
+			println("Nem valid válasz. Probáld újra.");
 			kerdezIH(mihez);
 		}
 		return false;
@@ -101,7 +109,7 @@ public class SkeletonController {
 
 	public static int kerdezEgesz(String mihez) {
 		print(mihez);
-		kiiro(" (egesz)\n");
+		kiiro(" (egész)\n");
 		String eredmeny = readln();
 		return Integer.parseInt(eredmeny);
 	}
@@ -109,7 +117,7 @@ public class SkeletonController {
 	public static Lovedek kerdezLovedek(String mihez) {
 		try {
 			println(mihez);
-			println("Adja meg milyen lovedekkel akar loni! Itt a lista:");
+			println("Adja meg milyen lövedékkel akar lőni! Itt a lista:");
 			println("1 - Lövedék");
 			println("2 - Nyíl ");
 			println("3 - Tűzgolyó");

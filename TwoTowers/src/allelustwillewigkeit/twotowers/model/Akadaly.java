@@ -14,7 +14,7 @@ public class Akadaly {
 	}
 
 	public void felkovez(Varazsko mivel) {
-		SkeletonController.fuggvenyBelep("Akadaly.felkovez");
+		SkeletonController.fuggvenyBelep();
 		SkeletonController.tabCsokken("Akadaly.felkovez");
 	}
 
