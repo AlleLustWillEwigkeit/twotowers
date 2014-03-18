@@ -15,7 +15,7 @@ public class Varazsko {
 
 	public void tuzel(Ellenseg celpont) {
 		SkeletonController.tabNo();
-		SkeletonController.println("tuzel(celpont)");
+//		SkeletonController.println("tuzel(celpont)");
 		for (Lovedek l : lovedek) {
 			celpont.sebezLovedek();
 		}
@@ -24,14 +24,14 @@ public class Varazsko {
 
 	public float lekerHatotavSzorzo() {
 		SkeletonController.tabNo();
-		SkeletonController.println("lekerHatotavSzorzo()");
+//		SkeletonController.println("lekerHatotavSzorzo()");
 		SkeletonController.tabCsokken();
 		return hatotavSzorzo;
 	}
 
 	public float lekerEleteroSzorzo() {
 		SkeletonController.tabNo();
-		SkeletonController.println("lekerEleteroSzorzo()");
+//		SkeletonController.println("lekerEleteroSzorzo()");
 		SkeletonController.tabCsokken();
 		return eleteroSzorzo;
 	}

@@ -17,7 +17,7 @@ public class Palya {
 		while (i-- != 0) {
 			PalyaElem pe = new PalyaElem();
 			System.out
-					.println("Mi legyek: Út(u) vagy Építési terület(e)?");
+					.println("Mi legyek: Út(u) vagy Építési terület(e)?"); //TODO erre van már finomabb megoldás.
 			try {
 				int be = System.in.read();
 				if (Integer.toString(be).equals("u"))

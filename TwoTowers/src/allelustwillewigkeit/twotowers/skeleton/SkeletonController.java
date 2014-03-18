@@ -28,19 +28,18 @@ public class SkeletonController {
 		kiiro("<---");
 	}
 
-	public static void fuggvenyBelep() {
+	public static void tabNo() {
 		behuzas();
 		nyilJobbra();
 		
 		StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
 		StackTraceElement e = stacktrace[2];
 		
-		kiiro(e.getClassName() + ":" + e.getMethodName());
-		kiiro("\n");
+		kiiro(e.getClassName() + "::" + e.getMethodName() + "\n" );
 		tabok += CONSTANT1;
 	}
 
-	public static void fuggvenyKilep() {
+	public static void tabCsokken() {
 		if (tabok > 0) {
 			tabok -= CONSTANT1;
 			behuzas();
@@ -49,8 +48,7 @@ public class SkeletonController {
 			StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
 			StackTraceElement e = stacktrace[2];
 			
-			kiiro("return from "+ e.getClassName() + ":" + e.getMethodName());
-			kiiro("\n");
+			kiiro("return from "+ e.getClassName() + "::" + e.getMethodName() + "\n");
 
 		} else {
 			kiiro("Valaki úgy lépett ki, hogy nem lépett be!");
@@ -89,7 +87,7 @@ public class SkeletonController {
 		return null;
 	}
 
-	public static boolean kerdezIH(String mihez) { //TODO illen√©k exception√∂ket dob√°lni, ahelyett hogy √∫jrah√≠vjuk a fgv-t.
+	public static boolean kerdezIH(String mihez) { //TODO illene itt is exceptionos hibakezelést csinálni
 		print(mihez);
 		kiiro(" (I/H)\n");
 		String eredmeny;

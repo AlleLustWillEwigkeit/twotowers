@@ -17,35 +17,35 @@ public class PalyaElem {
 
 	public EpitesiTerulet lekerEpitesiTerulet() {
 		SkeletonController.tabNo();
-		SkeletonController.println("lekerEpitesiTerulet()");
+//		SkeletonController.println("lekerEpitesiTerulet()");
 		SkeletonController.tabCsokken();
 		return null;
 	}
 
 	public Ut lekerUt() {
 		SkeletonController.tabNo();
-		SkeletonController.println("lekerUt()");
+//		SkeletonController.println("lekerUt()");
 		SkeletonController.tabCsokken();
 		return null;
 	}
 
 	public boolean vanUtja() {
 		SkeletonController.tabNo();
-		SkeletonController.println("vamUtja()");
+//		SkeletonController.println("vamUtja()");
 		SkeletonController.tabCsokken();
 		return true;
 	}
 
 	public boolean vanEpitesiTerulete() {
 		SkeletonController.tabNo();
-		SkeletonController.println("vanEpitesiTerulete()");
+//		SkeletonController.println("vanEpitesiTerulete()");
 		SkeletonController.tabCsokken();
 		return true;
 	}
 
 	public void beregisztral(Torony torony, int tavolsag) {
 		SkeletonController.tabNo();
-		SkeletonController.println("beregisztral(t,n)");
+//		SkeletonController.println("beregisztral(t,n)");
 		if (tavolsag == 0)
 			return;
 		if (this.vanUtja() == true)
@@ -58,16 +58,16 @@ public class PalyaElem {
 
 	public void legyelUt() {
 		SkeletonController.tabNo();
-		SkeletonController.println("legyelUt()");
+//		SkeletonController.println("legyelUt()");
 		SkeletonController.tabCsokken();
 	}
 
 	public void legyelEpitesiTerulet() {
 		SkeletonController.tabNo();
-		SkeletonController.println("legyelEpitesiTerulet()");
+//		SkeletonController.println("legyelEpitesiTerulet()");
 		SkeletonController.tabCsokken();
 	}
 
-	public void addSzomszed(PalyaElem sz) {
+	public void addSzomszed(PalyaElem sz) { //TODO ide kéne vmi
 	}
 }

@@ -11,11 +11,14 @@ public class JosagosSzaruman {
 	}
 
 	public void varazseroNovel(int mennyivel) {
+		SkeletonController.tabNo();
+		varazsero += mennyivel;
+		SkeletonController.tabCsokken();
 	}
 
 	public Varazsko lekerKivalasztottVarazsko() {
 		SkeletonController.tabNo();
-		SkeletonController.println("lekerKivalasztottVarazsko");
+//		SkeletonController.println("lekerKivalasztottVarazsko");
 		SkeletonController.tabCsokken();
 		return null;
 	}

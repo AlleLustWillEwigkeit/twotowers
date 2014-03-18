@@ -12,10 +12,12 @@ public class Program {
 
 	public void ujJatek() {
 		SkeletonController.tabNo();
-		SkeletonController.println("ujJatek");
+//		SkeletonController.println("ujJatek");
 		SkeletonController.tabCsokken();
 	}
 
 	public static void main() {
+		SkeletonController.tabNo();
+		SkeletonController.tabCsokken();
 	}
 }

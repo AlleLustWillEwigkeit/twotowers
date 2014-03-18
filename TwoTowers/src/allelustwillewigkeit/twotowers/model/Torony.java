@@ -16,7 +16,7 @@ public class Torony {
 
 	public void tuzel(Ellenseg celpont) {
 		SkeletonController.tabNo();
-		SkeletonController.println("tuzel(celpont)");
+//		SkeletonController.println("tuzel(celpont)");
 		for (Varazsko v : varazsko) {
 			v.tuzel(celpont);
 		}
@@ -25,7 +25,7 @@ public class Torony {
 
 	public void beRegisztralTavonBeluliUtakhoz() {
 		SkeletonController.tabNo();
-		SkeletonController.println("beRegisztralTavonBeluliUtakhoz");
+//		SkeletonController.println("beRegisztralTavonBeluliUtakhoz");
 		PalyaElem pe = epitesiTerulet.minAll();
 		float tavolsag = alapHatotav;
 		for (Varazsko v : varazsko) {

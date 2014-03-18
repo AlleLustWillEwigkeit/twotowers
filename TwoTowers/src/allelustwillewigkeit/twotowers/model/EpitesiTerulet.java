@@ -13,28 +13,28 @@ public class EpitesiTerulet {
 
 	public PalyaElem minAll() {
 		SkeletonController.tabNo();
-		SkeletonController.println("minAll()");
+//		SkeletonController.println("minAll()");
 		SkeletonController.tabCsokken();
 		return new PalyaElem();
 	}
 
 	public void lerakTornyot() {
 		SkeletonController.tabNo();
-		SkeletonController.println("lerakTornyot()");
+//		SkeletonController.println("lerakTornyot()");
 		torony = new Torony();
 		SkeletonController.tabCsokken();
 	}
 
 	public boolean vanToronyRajta() {
 		SkeletonController.tabNo();
-		SkeletonController.println("vanToronyRajta()");
+//		SkeletonController.println("vanToronyRajta()");
 		SkeletonController.tabCsokken();
 		return true;
 	}
 
 	public Torony lekerTorony() {
 		SkeletonController.tabNo();
-		SkeletonController.println("lekerTorony()");
+//		SkeletonController.println("lekerTorony()");
 		SkeletonController.tabCsokken();
 		return new Torony();
 	}

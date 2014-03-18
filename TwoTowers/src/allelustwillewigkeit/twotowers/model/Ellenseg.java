@@ -27,18 +27,18 @@ public abstract class Ellenseg {
 		return akadalySebzes;
 	}
 
-	public void lep() {
+	public void lep() { //TODO döntés hogy a kövire lépjünk az hol a picsában van?
 		SkeletonController.tabNo();
-		SkeletonController.println("lep()");
+//		SkeletonController.println("lep()");
 		Ut u = ut.lekerKovUt();
 		u.raLep(this);
 		u.akadalySebzes(sebzes);
 		SkeletonController.tabCsokken();
 	}
 
-	public void sebezLovedek() {
+	public void sebezLovedek() { 
 		SkeletonController.tabNo();
-		SkeletonController.println("sebezLovedek()");
+//		SkeletonController.println("sebezLovedek()");
 		int mennyire = 1;
 		eleteroAllit(mennyire);
 		float ee = eleteroLeker();
@@ -50,14 +50,14 @@ public abstract class Ellenseg {
 
 	public void eleteroAllit(int mennyire) {
 		SkeletonController.tabNo();
-		SkeletonController.println("eleteroAllit(mennyire)");
+//		SkeletonController.println("eleteroAllit(mennyire)");
 		eletero = mennyire;
 		SkeletonController.tabCsokken();
 	}
 
 	public float eleteroLeker() {
 		SkeletonController.tabNo();
-		SkeletonController.println("eleteroLeker()");
+//		SkeletonController.println("eleteroLeker()");
 		SkeletonController.tabCsokken();
 		return eletero;
 	}

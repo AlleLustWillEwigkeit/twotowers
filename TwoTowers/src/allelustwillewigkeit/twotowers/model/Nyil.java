@@ -1,5 +1,7 @@
 package allelustwillewigkeit.twotowers.model;
 
+import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
+
 public class Nyil extends Lovedek {
 	public Nyil() {
 		super();
@@ -7,6 +9,8 @@ public class Nyil extends Lovedek {
 
 	@Override
 	public void megLo(Ellenseg kit) {
+		SkeletonController.tabNo();
 		kit.sebezNyil();
+		SkeletonController.tabCsokken();
 	}
 }

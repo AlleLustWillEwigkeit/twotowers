@@ -17,19 +17,23 @@ public class Ellensegek {
 	}
 
 	public void inditEllenseg(int mennyit) {
+		SkeletonController.tabNo();
+		//TODO;
+		SkeletonController.tabCsokken();
+	
 	}
 
 	public void egyEllensegMeghalt(Ellenseg ellenseg) {
 		SkeletonController.tabNo();
-		SkeletonController.println("egyEllensegMeghalt(ellenseg)");
-		if (osszLetszam <= 0)
+//		SkeletonController.println("egyEllensegMeghalt(ellenseg)");
+		if (osszLetszam <= 0) //TODO Nem a kedves felhasználó dönt???????????????????????
 			jatekMotor.gyozelem();
 		SkeletonController.tabCsokken();
 	}
 
 	public void mindLep() {
 		SkeletonController.tabNo();
-		SkeletonController.println("mindLep()");
+//		SkeletonController.println("mindLep()");
 		for (Ellenseg e : ellenseg) {
 			e.lep();
 		}

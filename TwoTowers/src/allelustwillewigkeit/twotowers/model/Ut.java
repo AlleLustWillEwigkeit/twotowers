@@ -18,7 +18,7 @@ public class Ut {
 
 	public void raLep(Ellenseg ellenseg) {
 		SkeletonController.tabNo();
-		SkeletonController.println("raLep()");
+//		SkeletonController.println("raLep()");
 		for (Torony t : torony) {
 			t.tuzel(ellenseg);
 		}
@@ -27,7 +27,7 @@ public class Ut {
 
 	public void feliratkozik(Torony torony) {
 		SkeletonController.tabNo();
-		SkeletonController.println("feliratkozik(t)");
+//		SkeletonController.println("feliratkozik(t)");
 		SkeletonController.tabCsokken();
 	}
 
@@ -36,42 +36,42 @@ public class Ut {
 
 	public void lerakAkadaly() {
 		SkeletonController.tabNo();
-		SkeletonController.println("lerakAkadaly()");
+//		SkeletonController.println("lerakAkadaly()");
 		akadaly = new Akadaly();
 		SkeletonController.tabCsokken();
 	}
 
 	public boolean vanAkadalyRajta() {
 		SkeletonController.tabNo();
-		SkeletonController.println("vanAkadalyRajta()");
+//		SkeletonController.println("vanAkadalyRajta()");
 		SkeletonController.tabCsokken();
 		return true;
 	}
 
 	public Akadaly lekerAkadaly() {
 		SkeletonController.tabNo();
-		SkeletonController.println("lekerAkadaly()");
+//		SkeletonController.println("lekerAkadaly()");
 		SkeletonController.tabCsokken();
-		return new Akadaly();
+		return new Akadaly(); //TODO NEW??????
 	}
 
 	public Ut lekerKovUt() {
 		SkeletonController.tabNo();
-		SkeletonController.println("lekerKovUt()");
+//		SkeletonController.println("lekerKovUt()");
 		SkeletonController.tabCsokken();
-		return new Ut();
+		return new Ut(); // TODO NEW???????????,,,,,,
 	}
 
 	public void beallitKovUt(Ut ut) {
 		SkeletonController.tabNo();
-		SkeletonController.println("beallitKovUt(ut)");
+//		SkeletonController.println("beallitKovUt(ut)");
 		SkeletonController.tabCsokken();
 	}
 
 	public void akadalySebzes(int mennyit) {
 		SkeletonController.tabNo();
-		SkeletonController.println("akadalySebzes()");
-		if (this.vanAkadalyRajta())
+//		SkeletonController.println("akadalySebzes()");
+		if (this.vanAkadalyRajta()) 
 			lekerAkadaly().sebzodik(mennyit);
 		SkeletonController.tabCsokken();
 	}

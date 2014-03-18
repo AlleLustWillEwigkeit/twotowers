@@ -17,20 +17,20 @@ public class Jatekmotor {
 
 	public void tick() {
 		SkeletonController.tabNo();
-		SkeletonController.println("tick()");
+//		SkeletonController.println("tick()");
 		SkeletonController.tabCsokken();
 	}
 
 	public void lerakTornyot(PalyaElem hova) {
 		SkeletonController.tabNo();
-		SkeletonController.println("lerakTornyot(pe)");
+//		SkeletonController.println("lerakTornyot(pe)");
 		hova.lekerEpitesiTerulet().lerakTornyot();
 		SkeletonController.tabCsokken();
 	}
 
 	public void lerakAkadaly(PalyaElem hova) {
 		SkeletonController.tabNo();
-		SkeletonController.println("lerakAkadaly(pe)");
+//		SkeletonController.println("lerakAkadaly(pe)");
 		Ut u = hova.lekerUt();
 		u.lerakAkadaly();
 		SkeletonController.tabCsokken();
@@ -38,7 +38,7 @@ public class Jatekmotor {
 
 	public void felkovez(PalyaElem mit) {
 		SkeletonController.tabNo();
-		SkeletonController.println("felkovez(p)");
+//		SkeletonController.println("felkovez(p)");
 		Varazsko v = josagosSzaruman.lekerKivalasztottVarazsko();
 		if (mit.vanEpitesiTerulete()) {
 			EpitesiTerulet et = mit.lekerEpitesiTerulet();
@@ -59,7 +59,7 @@ public class Jatekmotor {
 
 	public void ujJatek() {
 		SkeletonController.tabNo();
-		SkeletonController.println("ujJatek()");
+//		SkeletonController.println("ujJatek()");
 		Palya p = new Palya();
 		p.ujPalya();
 		JosagosSzaruman jsz = new JosagosSzaruman();
@@ -73,13 +73,13 @@ public class Jatekmotor {
 
 	public void vereseg() {
 		SkeletonController.tabNo();
-		SkeletonController.println("vereseg()");
+//		SkeletonController.println("vereseg()");
 		SkeletonController.tabCsokken();
 	}
 
 	public void gyozelem() {
 		SkeletonController.tabNo();
-		SkeletonController.println("gyozelem()");
+//		SkeletonController.println("gyozelem()");
 		SkeletonController.tabCsokken();
 	}
 }

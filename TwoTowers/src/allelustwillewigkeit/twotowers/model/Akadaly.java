@@ -14,16 +14,17 @@ public class Akadaly {
 	}
 
 	public void felkovez(Varazsko mivel) {
-		SkeletonController.fuggvenyBelep();
-		SkeletonController.tabCsokken("Akadaly.felkovez");
+		SkeletonController.tabNo();
+//		SkeletonController.println("felkovez(v)");
+		SkeletonController.tabCsokken();
 	}
 
 	public void sebzodik(int mennyit) {
 		SkeletonController.tabNo();
-		SkeletonController.println("sebzodik(mennyit)");
-		for (Varazsko v : varazsko) {
-			v.lekerEleteroSzorzo();
-		}
+//		SkeletonController.println("sebzodik(mennyit)");
+//		for (Varazsko v : varazsko) {
+//			v.lekerEleteroSzorzo();
+//		}
 		SkeletonController.tabCsokken();
 	}
 }
