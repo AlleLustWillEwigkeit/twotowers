@@ -17,7 +17,7 @@ public class Ellensegek {
 	public Ellensegek(Jatekmotor jm) {
 		super();
 		SkeletonController.tabNo();
-		SkeletonController.println("<<create>> Akadaly");
+		SkeletonController.println("<<create>> Ellensegek");
 		jatekMotor = jm;
 		SkeletonController.tabCsokken();
 		
