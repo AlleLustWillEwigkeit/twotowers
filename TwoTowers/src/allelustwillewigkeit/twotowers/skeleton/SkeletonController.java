@@ -158,33 +158,40 @@ public class SkeletonController {
 			System.out
 					.println("Kérem a lejátszandó use-case számát! A lehetőségek:");
 			System.out.println("0. Kilépés a skeleton programból");
-			System.out.println("1. Akadály lerakás");
-			System.out.println("2. Győzelem");
-			System.out.println("3. Lépés");
-			System.out.println("4. Lövés");
-			System.out.println("5. Torony lerakás");
-			System.out.println("6. Varázskő lerakás");
+			System.out.println("1. Lépés");
+			System.out.println("2. Lövés");
+			System.out.println("3. Akadály lerakása");
+			System.out.println("4. Torony lerakás");
+			System.out.println("5. Varázskő lerakás");
+			System.out.println("6. Győzelem");
 			System.out.println("7. Vereség");
+			/* Lépés
+Lövés
+Akadály lerakása
+Torony lerakása
+Varázskő lerakása
+Győzelem
+Vereség*/
 			try {
 				int c = System.in.read();
 				switch (c) {
 				case 1:
-					UCAkadalyLerak();
-					break;
-				case 2:
-					UCGyozelem();
-					break;
-				case 3:
 					UCLepes();
 					break;
-				case 4:
+				case 2:
 					UCLoves();
 					break;
-				case 5:
+				case 3:
+					UCAkadalyLerak();
+					break;
+				case 4:
 					UCToronyLerak();
 					break;
-				case 6:
+				case 5:
 					UCVarazskoLerak();
+					break;
+				case 6:
+					UCGyozelem();
 					break;
 				case 7:
 					UCVereseg();
