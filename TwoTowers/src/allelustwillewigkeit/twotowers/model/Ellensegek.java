@@ -26,7 +26,7 @@ public class Ellensegek {
 	public void egyEllensegMeghalt(Ellenseg ellenseg) {
 		SkeletonController.tabNo();
 //		SkeletonController.println("egyEllensegMeghalt(ellenseg)");
-		if (osszLetszam <= 0) //TODO Nem a kedves felhasználó dönt???????????????????????
+		if (SkeletonController.kerdezIH("Elfogyott minden ellenfél?")) 
 			jatekMotor.gyozelem();
 		SkeletonController.tabCsokken();
 	}
