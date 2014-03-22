@@ -3,8 +3,8 @@ package allelustwillewigkeit.twotowers.model;
 import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Elf extends Ellenseg {
-	public Elf() {
-		super();
+	public Elf(Ut start) {
+		super(start);
 		SkeletonController.tabNo();
 		SkeletonController.println("<<create>> Elf");
 		SkeletonController.tabCsokken();

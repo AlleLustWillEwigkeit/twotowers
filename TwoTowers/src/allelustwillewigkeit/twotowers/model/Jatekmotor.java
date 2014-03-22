@@ -66,7 +66,8 @@ public class Jatekmotor {
 		Palya p = new Palya();
 		p.ujPalya();
 		JosagosSzaruman jsz = new JosagosSzaruman();
-		Ellensegek e = new Ellensegek(this);
+		Start st = new Start();
+		Ellensegek e = new Ellensegek(this,st);
 		int i = 3;
 		while (i-- != 0) {
 			tick();

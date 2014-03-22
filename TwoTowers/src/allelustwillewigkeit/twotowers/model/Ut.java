@@ -48,7 +48,10 @@ public class Ut {
 		SkeletonController.tabNo();
 //		SkeletonController.println("vanAkadalyRajta()");
 		SkeletonController.tabCsokken();
-		return true;
+		if(akadaly == null)
+			return false;
+		else
+			return true;
 	}
 
 	public Akadaly lekerAkadaly() {

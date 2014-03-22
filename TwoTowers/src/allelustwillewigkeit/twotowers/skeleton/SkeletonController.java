@@ -13,6 +13,7 @@ import allelustwillewigkeit.twotowers.model.Jatekmotor;
 import allelustwillewigkeit.twotowers.model.Lovedek;
 import allelustwillewigkeit.twotowers.model.Nyil;
 import allelustwillewigkeit.twotowers.model.PalyaElem;
+import allelustwillewigkeit.twotowers.model.Start;
 import allelustwillewigkeit.twotowers.model.Szikla;
 import allelustwillewigkeit.twotowers.model.Torony;
 import allelustwillewigkeit.twotowers.model.Tuzgolyo;
@@ -211,17 +212,15 @@ public class SkeletonController {
 	public static void UCLepes() {
 		println("ee");
 		Jatekmotor jm = new Jatekmotor();
-		Ellensegek e = new Ellensegek(jm);
-		Ellenseg e1 = new Ember();
-		Ellenseg e2 = new Ember();
-		Ellenseg e3 = new Ember();
 		Ut u1 = new Ut();
 		Ut u2 = new Ut();
 		u1.beallitKovUt(u2);
 		u2.beallitKovUt(u1);
-		e.ellenseg.add(e1);
-		e.ellenseg.add(e2);
-		e.ellenseg.add(e3);
+		Start st = new Start();
+		st.beallitKovUt(u1);
+		
+		Ellensegek e = new Ellensegek(jm,st);
+		e.inditEllenseg(3);
 		e.mindLep();
 	}
 
@@ -234,7 +233,7 @@ public class SkeletonController {
 		v.lovedek.add(l);
 		t.varazsko.add(v);
 		u.torony.add(t);
-		Ellenseg e = new Ember();
+		Ellenseg e = new Ember(u);
 		u.raLep(e);
 	}
 
@@ -260,16 +259,19 @@ public class SkeletonController {
 
 	public static void UCGyozelem() {
 		Jatekmotor jm = new Jatekmotor();
-		Ellensegek ellen = new Ellensegek(jm);
-		Ellenseg e = new Ember();
+		Start st = new Start();
+		Ellensegek ellen = new Ellensegek(jm,st);
+		Ellenseg e = new Ember(st);
 		ellen.ellenseg.add(e);
 		ellen.egyEllensegMeghalt(e);
 	}
 
 	public static void UCVereseg() {
+
+		Start st = new Start();
 		Jatekmotor jm = new Jatekmotor();
 		VegzetHegye vh = new VegzetHegye(jm);
-		Ellenseg e = new Ember();
+		Ellenseg e = new Ember(st);
 		vh.raLep(e);
 	}
 

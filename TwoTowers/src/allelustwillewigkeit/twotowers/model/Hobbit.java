@@ -3,8 +3,8 @@ package allelustwillewigkeit.twotowers.model;
 import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Hobbit extends Ellenseg {
-	public Hobbit() {
-		super();
+	public Hobbit(Ut start) {
+		super(start);
 		SkeletonController.tabNo();
 		SkeletonController.println("<<create>> Hobbit");
 		SkeletonController.tabCsokken();

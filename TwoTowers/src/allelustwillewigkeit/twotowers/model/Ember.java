@@ -3,8 +3,8 @@ package allelustwillewigkeit.twotowers.model;
 import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Ember extends Ellenseg {
-	public Ember() {
-		super();
+	public Ember(Ut start) {
+		super(start);
 		SkeletonController.tabNo();
 		SkeletonController.println("<<create>> Ember");
 		SkeletonController.tabCsokken();

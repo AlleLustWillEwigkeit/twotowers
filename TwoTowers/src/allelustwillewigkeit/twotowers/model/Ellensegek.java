@@ -14,9 +14,10 @@ public class Ellensegek {
 	public Ellensegek ellensegek = null;
 	public Start start = null;
 
-	public Ellensegek(Jatekmotor jm) {
+	public Ellensegek(Jatekmotor jm, Start st) {
 		super();
 		SkeletonController.tabNo();
+		start = st;
 		SkeletonController.println("<<create>> Ellensegek");
 		jatekMotor = jm;
 		SkeletonController.tabCsokken();
@@ -25,6 +26,10 @@ public class Ellensegek {
 
 	public void inditEllenseg(int mennyit) {
 		SkeletonController.tabNo();
+		for(int i=0; i<mennyit; i++){
+			Ember e = new Ember(start);
+			this.ellenseg.add(e);
+		}
 		//TODO Imádkozzunk, hogy ez nem fut le.
 		SkeletonController.tabCsokken();
 	
