@@ -52,14 +52,14 @@ public class Ut {
 		SkeletonController.tabNo();
 //		SkeletonController.println("lekerAkadaly()");
 		SkeletonController.tabCsokken();
-		return new Akadaly(); //TODO NEW??????
+		return akadaly; 
 	}
 
 	public Ut lekerKovUt() {
 		SkeletonController.tabNo();
 //		SkeletonController.println("lekerKovUt()");
 		SkeletonController.tabCsokken();
-		return new Ut(); // TODO NEW???????????,,,,,,
+		return ut.get(0);
 	}
 
 	public void beallitKovUt(Ut ut) {
