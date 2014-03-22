@@ -113,9 +113,8 @@ public class SkeletonController {
 			return false;
 		} else {
 			println("Nem valid válasz. Probáld újra.");
-			kerdezIH(mihez);
+			return kerdezIH(mihez);
 		}
-		return false;
 
 	}
 
