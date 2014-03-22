@@ -13,7 +13,7 @@ public abstract class Ellenseg {
 	public Ellenseg() {
 		super();
 		SkeletonController.tabNo();
-		SkeletonController.println("<<create>> Akadaly");
+		SkeletonController.println("<<create>> Ellenseg");
 		SkeletonController.tabCsokken();
 	}
 
