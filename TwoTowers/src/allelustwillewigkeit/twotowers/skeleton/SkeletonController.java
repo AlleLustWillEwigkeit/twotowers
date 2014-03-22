@@ -5,10 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import allelustwillewigkeit.twotowers.model.Darda;
+import allelustwillewigkeit.twotowers.model.Elf;
 import allelustwillewigkeit.twotowers.model.Ellenseg;
 import allelustwillewigkeit.twotowers.model.Ellensegek;
 import allelustwillewigkeit.twotowers.model.Ember;
 import allelustwillewigkeit.twotowers.model.EpitesiTerulet;
+import allelustwillewigkeit.twotowers.model.Hobbit;
 import allelustwillewigkeit.twotowers.model.Jatekmotor;
 import allelustwillewigkeit.twotowers.model.Lovedek;
 import allelustwillewigkeit.twotowers.model.Nyil;
@@ -16,6 +18,7 @@ import allelustwillewigkeit.twotowers.model.PalyaElem;
 import allelustwillewigkeit.twotowers.model.Start;
 import allelustwillewigkeit.twotowers.model.Szikla;
 import allelustwillewigkeit.twotowers.model.Torony;
+import allelustwillewigkeit.twotowers.model.Torp;
 import allelustwillewigkeit.twotowers.model.Tuzgolyo;
 import allelustwillewigkeit.twotowers.model.Ut;
 import allelustwillewigkeit.twotowers.model.Varazsko;
@@ -153,12 +156,43 @@ public class SkeletonController {
 			}
 		} catch (NumberFormatException e) {
 			println("A válasz valahol 1-5 között rejlik, számmal írva!");
-			kerdezLovedek(mihez);
+			return kerdezLovedek(mihez);
 		} catch (IllegalArgumentException e) {
 			println("Számot adtál meg, de nem az adott tartományban!");
-			kerdezLovedek(mihez);
+			return kerdezLovedek(mihez);
 		}
-		return null;
+
+	}
+	
+	public static Ellenseg kerdezEllenseg(String mihez, Ut ut, Ellensegek el) {
+		try {
+			println(mihez);
+			println("Adja meg milyen ellenségre akar lőni! Itt a lista:");
+			println("1 - Ember");
+			println("2 - Tunde ");
+			println("3 - Torp");
+			println("4 - Hobbit");
+			String valasz = readln();
+			int valaszINT = Integer.parseInt(valasz);
+			switch (valaszINT) {
+			case 1:
+				return new Ember(ut,el);
+			case 2:
+				return new Elf(ut,el);
+			case 3:
+				return new Torp(ut,el);
+			case 4:
+				return new Hobbit(ut,el);
+			default:
+				throw new IllegalArgumentException();
+			}
+		} catch (NumberFormatException e) {
+			println("A válasz valahol 1-2 között rejlik, számmal írva!");
+			return kerdezEllenseg(mihez,ut, el);
+		} catch (IllegalArgumentException e) {
+			println("Számot adtál meg, de nem az adott tartományban!");
+			return kerdezEllenseg(mihez, ut, el);
+		}
 
 	}
 
@@ -225,15 +259,16 @@ public class SkeletonController {
 	}
 
 	public static void UCLoves() {
-		Jatekmotor jm = new Jatekmotor();
+		//Jatekmotor jm = new Jatekmotor();
 		Ut u = new Ut();
 		Torony t = new Torony();
 		Varazsko v = new Varazsko();
-		Lovedek l = new Darda();
+		Lovedek l = kerdezLovedek("");
+		
 		v.lovedek.add(l);
 		t.varazsko.add(v);
 		u.torony.add(t);
-		Ellenseg e = new Ember(u);
+		Ellenseg e = kerdezEllenseg("",u,null);
 		u.raLep(e);
 	}
 
@@ -261,7 +296,7 @@ public class SkeletonController {
 		Jatekmotor jm = new Jatekmotor();
 		Start st = new Start();
 		Ellensegek ellen = new Ellensegek(jm,st);
-		Ellenseg e = new Ember(st);
+		Ellenseg e = new Ember(st,ellen);
 		ellen.ellenseg.add(e);
 		ellen.egyEllensegMeghalt(e);
 	}
@@ -270,8 +305,9 @@ public class SkeletonController {
 
 		Start st = new Start();
 		Jatekmotor jm = new Jatekmotor();
+		Ellensegek ellen = new Ellensegek(jm,st);
 		VegzetHegye vh = new VegzetHegye(jm);
-		Ellenseg e = new Ember(st);
+		Ellenseg e = new Ember(st,ellen);
 		vh.raLep(e);
 	}
 

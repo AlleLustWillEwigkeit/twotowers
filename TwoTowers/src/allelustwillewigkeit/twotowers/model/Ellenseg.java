@@ -10,9 +10,10 @@ public abstract class Ellenseg {
 	public Ellensegek ellensegek = null;
 	private int sebzes = 0;
 
-	public Ellenseg(Ut start) {
+	public Ellenseg(Ut start, Ellensegek ellens) {
 		super();
-		ut=start;
+		this.ut=start;
+		this.ellensegek = ellens;
 		SkeletonController.tabNo();
 		SkeletonController.println("<<create>> Ellenseg");
 		SkeletonController.tabCsokken();

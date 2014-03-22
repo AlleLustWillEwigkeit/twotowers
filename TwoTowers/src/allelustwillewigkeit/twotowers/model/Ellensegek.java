@@ -27,7 +27,7 @@ public class Ellensegek {
 	public void inditEllenseg(int mennyit) {
 		SkeletonController.tabNo();
 		for(int i=0; i<mennyit; i++){
-			Ember e = new Ember(start);
+			Ember e = new Ember(start,this);
 			this.ellenseg.add(e);
 		}
 		//TODO Imádkozzunk, hogy ez nem fut le.

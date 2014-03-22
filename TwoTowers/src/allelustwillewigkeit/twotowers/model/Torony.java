@@ -13,8 +13,8 @@ public class Torony {
 	public Torony() {
 		super();		
 		SkeletonController.tabNo();
-		SkeletonController.println("<<create>> Akadaly");
-		beRegisztralTavonBeluliUtakhoz();
+		SkeletonController.println("<<create>> Torony");
+		//beRegisztralTavonBeluliUtakhoz();
 		SkeletonController.tabCsokken();
 	}
 
