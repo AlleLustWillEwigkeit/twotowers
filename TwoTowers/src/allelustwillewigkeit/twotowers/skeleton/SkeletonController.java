@@ -8,9 +8,11 @@ import allelustwillewigkeit.twotowers.model.Darda;
 import allelustwillewigkeit.twotowers.model.Ellenseg;
 import allelustwillewigkeit.twotowers.model.Ellensegek;
 import allelustwillewigkeit.twotowers.model.Ember;
+import allelustwillewigkeit.twotowers.model.EpitesiTerulet;
 import allelustwillewigkeit.twotowers.model.Jatekmotor;
 import allelustwillewigkeit.twotowers.model.Lovedek;
 import allelustwillewigkeit.twotowers.model.Nyil;
+import allelustwillewigkeit.twotowers.model.PalyaElem;
 import allelustwillewigkeit.twotowers.model.Szikla;
 import allelustwillewigkeit.twotowers.model.Torony;
 import allelustwillewigkeit.twotowers.model.Tuzgolyo;
@@ -237,13 +239,23 @@ public class SkeletonController {
 	}
 
 	public void UCToronyLerak() {
+		Jatekmotor jm = new Jatekmotor();
+		PalyaElem pe = new PalyaElem();
+		EpitesiTerulet e = new EpitesiTerulet();
+		pe.epitesiTerulet = e;
+		jm.lerakTornyot(pe);
 	}
 
 	public void UCAkadalyLerak() {
+		Jatekmotor jm = new Jatekmotor();
+		PalyaElem pe = new PalyaElem();
+		Ut u = new Ut();
+		pe.ut = u;
+		jm.lerakAkadaly(pe);
 	}
 
 	public void UCVarazskoLerak() {
-
+		
 	}
 
 	public void UCGyozelem() {
