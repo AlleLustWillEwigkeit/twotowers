@@ -161,7 +161,7 @@ public class SkeletonController {
 
 	}
 
-	public void mainMenu() {
+	public static void mainMenu() {
 		boolean doexit = false;
 		while (!doexit) {
 			System.out
@@ -174,9 +174,8 @@ public class SkeletonController {
 			System.out.println("5. Varázskő lerakás");
 			System.out.println("6. Győzelem");
 			System.out.println("7. Vereség");
-			try {
-				int c = System.in.read();
-				switch (c) {
+			SkeletonController.readln();
+				switch (Integer.parseInt(SkeletonController.readln())) {
 				case 1:
 					UCLepes();
 					break;
@@ -205,14 +204,12 @@ public class SkeletonController {
 					System.out.println("Érvénytelen bemenet.");
 					break;
 				}
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
+			
 		}
-	}
+	
 
-	public void UCLepes() {
+	public static void UCLepes() {
 		Jatekmotor jm = new Jatekmotor();
 		Ellensegek e = new Ellensegek(jm);
 		Ellenseg e1 = new Ember();
@@ -224,7 +221,7 @@ public class SkeletonController {
 		e.mindLep();
 	}
 
-	public void UCLoves() {
+	public static void UCLoves() {
 		Jatekmotor jm = new Jatekmotor();
 		Ut u = new Ut();
 		Torony t = new Torony();
@@ -237,7 +234,7 @@ public class SkeletonController {
 		u.raLep(e);
 	}
 
-	public void UCToronyLerak() {
+	public static void UCToronyLerak() {
 		Jatekmotor jm = new Jatekmotor();
 		PalyaElem pe = new PalyaElem();
 		EpitesiTerulet e = new EpitesiTerulet();
@@ -245,7 +242,7 @@ public class SkeletonController {
 		jm.lerakTornyot(pe);
 	}
 
-	public void UCAkadalyLerak() {
+	public static void UCAkadalyLerak() {
 		Jatekmotor jm = new Jatekmotor();
 		PalyaElem pe = new PalyaElem();
 		Ut u = new Ut();
@@ -253,11 +250,11 @@ public class SkeletonController {
 		jm.lerakAkadaly(pe);
 	}
 
-	public void UCVarazskoLerak() {
-		
+	public static void UCVarazskoLerak() {
+		//TODO IMplement
 	}
 
-	public void UCGyozelem() {
+	public static void UCGyozelem() {
 		Jatekmotor jm = new Jatekmotor();
 		Ellensegek ellen = new Ellensegek(jm);
 		Ellenseg e = new Ember();
@@ -265,7 +262,7 @@ public class SkeletonController {
 		ellen.egyEllensegMeghalt(e);
 	}
 
-	public void UCVereseg() {
+	public static void UCVereseg() {
 		Jatekmotor jm = new Jatekmotor();
 		VegzetHegye vh = new VegzetHegye(jm);
 		Ellenseg e = new Ember();
