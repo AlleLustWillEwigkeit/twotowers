@@ -27,12 +27,20 @@ public abstract class Ellenseg {
 		return akadalySebzes;
 	}
 
-	public void lep() { //TODO döntés hogy a kövire lépjünk az hol a picsában van?
+	public void lep() {
 		SkeletonController.tabNo();
 //		SkeletonController.println("lep()");
-		Ut u = ut.lekerKovUt();
-		u.raLep(this);
-		u.akadalySebzes(sebzes);
+
+		if(SkeletonController.kerdezIH("Léphetek már?(H esetén maradok")){
+			Ut next = ut.lekerKovUt();
+			this.ut = next;
+			next.raLep(this);
+			next.akadalySebzes(sebzes);
+		} else {
+			this.ut.raLep(this);
+			this.ut.akadalySebzes(sebzes);
+		}
+		
 		SkeletonController.tabCsokken();
 	}
 
