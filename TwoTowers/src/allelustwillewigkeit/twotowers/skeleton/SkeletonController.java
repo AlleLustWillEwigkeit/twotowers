@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import allelustwillewigkeit.twotowers.model.Darda;
+import allelustwillewigkeit.twotowers.model.Ellenseg;
+import allelustwillewigkeit.twotowers.model.Ellensegek;
+import allelustwillewigkeit.twotowers.model.Ember;
+import allelustwillewigkeit.twotowers.model.Jatekmotor;
 import allelustwillewigkeit.twotowers.model.Lovedek;
 import allelustwillewigkeit.twotowers.model.Nyil;
 import allelustwillewigkeit.twotowers.model.Szikla;
@@ -165,13 +169,6 @@ public class SkeletonController {
 			System.out.println("5. Varázskő lerakás");
 			System.out.println("6. Győzelem");
 			System.out.println("7. Vereség");
-			/* Lépés
-Lövés
-Akadály lerakása
-Torony lerakása
-Varázskő lerakása
-Győzelem
-Vereség*/
 			try {
 				int c = System.in.read();
 				switch (c) {
@@ -226,6 +223,11 @@ Vereség*/
 	}
 
 	public void UCGyozelem() {
+		Jatekmotor jm = new Jatekmotor();
+		Ellensegek ellen = new Ellensegek(jm);
+		Ellenseg e = new Ember();
+		ellen.ellenseg.add(e);
+		ellen.egyEllensegMeghalt(e);
 	}
 
 	public void UCVereseg() {
