@@ -5,6 +5,9 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 public class Elf extends Ellenseg {
 	public Elf() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Elf");
+		SkeletonController.tabCsokken();
 	}
 
 	@Override

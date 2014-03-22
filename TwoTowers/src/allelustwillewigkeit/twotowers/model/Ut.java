@@ -14,6 +14,9 @@ public class Ut {
 
 	public Ut() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Ut");
+		SkeletonController.tabCsokken();
 	}
 
 	public void raLep(Ellenseg ellenseg) {

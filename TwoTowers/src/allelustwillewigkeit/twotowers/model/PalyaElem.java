@@ -14,6 +14,9 @@ public class PalyaElem {
 
 	public PalyaElem() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> PalyaElem");
+		SkeletonController.tabCsokken();
 	}
 
 	public EpitesiTerulet lekerEpitesiTerulet() {

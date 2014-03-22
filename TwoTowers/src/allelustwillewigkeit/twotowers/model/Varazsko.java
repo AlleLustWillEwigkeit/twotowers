@@ -12,6 +12,9 @@ public class Varazsko {
 
 	public Varazsko() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Varazsko");
+		SkeletonController.tabCsokken();
 	}
 
 	public void tuzel(Ellenseg celpont) {

@@ -11,7 +11,11 @@ public class Torony {
 	public HashSet<Ut> ut = new HashSet<Ut>();
 
 	public Torony() {
+		super();		
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Akadaly");
 		beRegisztralTavonBeluliUtakhoz();
+		SkeletonController.tabCsokken();
 	}
 
 	public void tuzel(Ellenseg celpont) {

@@ -13,6 +13,9 @@ public class Jatekmotor {
 
 	public Jatekmotor() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> JatekMotor");
+		SkeletonController.tabCsokken();
 	}
 
 	public void tick() {

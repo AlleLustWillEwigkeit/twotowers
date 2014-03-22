@@ -16,12 +16,16 @@ public class Ellensegek {
 
 	public Ellensegek(Jatekmotor jm) {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Akadaly");
 		jatekMotor = jm;
+		SkeletonController.tabCsokken();
+		
 	}
 
 	public void inditEllenseg(int mennyit) {
 		SkeletonController.tabNo();
-		//TODO;
+		//TODO Imádkozzunk, hogy ez nem fut le.
 		SkeletonController.tabCsokken();
 	
 	}

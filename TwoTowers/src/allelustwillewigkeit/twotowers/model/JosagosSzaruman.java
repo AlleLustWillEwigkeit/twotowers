@@ -8,6 +8,9 @@ public class JosagosSzaruman {
 
 	public JosagosSzaruman() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Josagos Szaruman");
+		SkeletonController.tabCsokken();
 	}
 
 	public void varazseroNovel(int mennyivel) {

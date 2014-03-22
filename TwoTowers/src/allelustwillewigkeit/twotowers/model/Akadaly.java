@@ -11,6 +11,9 @@ public class Akadaly {
 
 	public Akadaly() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Akadaly");
+		SkeletonController.tabCsokken();
 	}
 
 	public void felkovez(Varazsko mivel) {

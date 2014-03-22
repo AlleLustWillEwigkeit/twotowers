@@ -10,6 +10,9 @@ public class Palya {
 
 	public Palya() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Palya");
+		SkeletonController.tabCsokken();
 	}
 
 	//Once a Dummy, always a dummy.

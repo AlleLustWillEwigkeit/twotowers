@@ -9,6 +9,9 @@ public class EpitesiTerulet {
 
 	public EpitesiTerulet() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> EpitesiTerulet");
+		SkeletonController.tabCsokken();
 	}
 
 	public PalyaElem minAll() {

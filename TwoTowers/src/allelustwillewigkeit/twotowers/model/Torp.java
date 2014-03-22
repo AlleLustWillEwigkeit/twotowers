@@ -5,6 +5,9 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 public class Torp extends Ellenseg {
 	public Torp() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Torp");
+		SkeletonController.tabCsokken();
 	}
 
 	@Override

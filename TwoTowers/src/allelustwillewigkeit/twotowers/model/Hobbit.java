@@ -5,6 +5,9 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 public class Hobbit extends Ellenseg {
 	public Hobbit() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Hobbit");
+		SkeletonController.tabCsokken();
 	}
 
 	@Override

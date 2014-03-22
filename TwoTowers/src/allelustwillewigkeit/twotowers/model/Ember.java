@@ -5,6 +5,9 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 public class Ember extends Ellenseg {
 	public Ember() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Ember");
+		SkeletonController.tabCsokken();
 	}
 
 	@Override

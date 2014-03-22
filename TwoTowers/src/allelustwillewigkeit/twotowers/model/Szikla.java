@@ -5,6 +5,9 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 public class Szikla extends Lovedek {
 	public Szikla() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Szikla");
+		SkeletonController.tabCsokken();
 	}
 
 	@Override

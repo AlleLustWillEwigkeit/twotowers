@@ -12,6 +12,9 @@ public abstract class Ellenseg {
 
 	public Ellenseg() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Akadaly");
+		SkeletonController.tabCsokken();
 	}
 
 	public abstract void sebezNyil();

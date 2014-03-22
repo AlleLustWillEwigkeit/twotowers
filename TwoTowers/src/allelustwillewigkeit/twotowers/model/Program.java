@@ -8,6 +8,9 @@ public class Program {
 
 	public Program() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Akadaly");
+		SkeletonController.tabCsokken();
 	}
 
 	public void ujJatek() {

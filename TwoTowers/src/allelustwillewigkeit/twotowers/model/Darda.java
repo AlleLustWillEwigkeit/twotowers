@@ -5,6 +5,9 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 public class Darda extends Lovedek {
 	public Darda() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Darda");
+		SkeletonController.tabCsokken();
 	}
 
 	@Override

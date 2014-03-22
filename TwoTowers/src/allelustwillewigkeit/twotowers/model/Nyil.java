@@ -5,6 +5,9 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 public class Nyil extends Lovedek {
 	public Nyil() {
 		super();
+		SkeletonController.tabNo();
+		SkeletonController.println("<<create>> Nyil");
+		SkeletonController.tabCsokken();
 	}
 
 	@Override
