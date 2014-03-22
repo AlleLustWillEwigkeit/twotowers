@@ -228,6 +228,8 @@ public class SkeletonController {
 		Ut u = new Ut();
 		Torony t = new Torony();
 		Varazsko v = new Varazsko();
+		Lovedek l = new Darda();
+		v.lovedek.add(l);
 		t.varazsko.add(v);
 		u.torony.add(t);
 		Ellenseg e = new Ember();
