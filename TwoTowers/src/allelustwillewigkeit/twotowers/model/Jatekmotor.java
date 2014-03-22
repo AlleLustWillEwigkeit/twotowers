@@ -57,11 +57,11 @@ public class Jatekmotor {
 		SkeletonController.tabCsokken();
 	}
 
-	public void ujJatek() {
+	public void ujJatek(int melyikUseCase) {
 		SkeletonController.tabNo();
 //		SkeletonController.println("ujJatek()");
 		Palya p = new Palya();
-		p.ujPalya();
+		p.ujPalya(melyikUseCase);
 		JosagosSzaruman jsz = new JosagosSzaruman();
 		Ellensegek e = new Ellensegek();
 		int i = 3;
