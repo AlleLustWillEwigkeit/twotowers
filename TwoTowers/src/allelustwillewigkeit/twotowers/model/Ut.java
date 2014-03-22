@@ -68,6 +68,9 @@ public class Ut {
 	public void beallitKovUt(Ut ut) {
 		SkeletonController.tabNo();
 //		SkeletonController.println("beallitKovUt(ut)");
+		if( !this.ut.contains(ut)){
+			this.ut.add(ut);
+		}
 		SkeletonController.tabCsokken();
 	}
 

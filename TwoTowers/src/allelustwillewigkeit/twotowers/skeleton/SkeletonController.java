@@ -215,6 +215,10 @@ public class SkeletonController {
 		Ellenseg e1 = new Ember();
 		Ellenseg e2 = new Ember();
 		Ellenseg e3 = new Ember();
+		Ut u1 = new Ut();
+		Ut u2 = new Ut();
+		u1.beallitKovUt(u2);
+		u2.beallitKovUt(u1);
 		e.ellenseg.add(e1);
 		e.ellenseg.add(e2);
 		e.ellenseg.add(e3);
