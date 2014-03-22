@@ -1,11 +1,12 @@
 package allelustwillewigkeit.twotowers.model;
 
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Varazsko {
-	public HashSet<Lovedek> lovedek = new HashSet<Lovedek>();
+	public List<Lovedek> lovedek = new ArrayList<Lovedek>();
 	public float hatotavSzorzo = 0F;
 	public float eleteroSzorzo = 0F;
 

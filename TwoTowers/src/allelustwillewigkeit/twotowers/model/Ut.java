@@ -9,7 +9,7 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Ut {
 	public Akadaly akadaly = null;
-	public HashSet<Torony> torony = new HashSet<Torony>();
+	public List<Torony> torony = new ArrayList<Torony>();
 	public List<Ut> ut = new ArrayList<Ut>();
 
 	public Ut() {

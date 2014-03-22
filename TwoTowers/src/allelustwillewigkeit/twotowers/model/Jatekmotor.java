@@ -62,8 +62,9 @@ public class Jatekmotor {
 //		SkeletonController.println("ujJatek()");
 		Palya p = new Palya();
 		p.ujPalya(melyikUseCase);
+		Jatekmotor jm = new Jatekmotor();
 		JosagosSzaruman jsz = new JosagosSzaruman();
-		Ellensegek e = new Ellensegek();
+		Ellensegek e = new Ellensegek(jm);
 		int i = 3;
 		while (i-- != 0) {
 			tick();
