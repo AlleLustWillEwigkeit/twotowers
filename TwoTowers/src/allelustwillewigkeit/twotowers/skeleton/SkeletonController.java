@@ -164,17 +164,16 @@ public class SkeletonController {
 	public static void mainMenu() {
 		boolean doexit = false;
 		while (!doexit) {
-			System.out
-					.println("Kérem a lejátszandó use-case számát! A lehetőségek:");
-			System.out.println("0. Kilépés a skeleton programból");
-			System.out.println("1. Lépés");
-			System.out.println("2. Lövés");
-			System.out.println("3. Akadály lerakása");
-			System.out.println("4. Torony lerakás");
-			System.out.println("5. Varázskő lerakás");
-			System.out.println("6. Győzelem");
-			System.out.println("7. Vereség");
-			SkeletonController.readln();
+			println("Kérem a lejátszandó use-case számát! A lehetőségek:");
+			println("0. Kilépés a skeleton programból");
+			println("1. Lépés");
+			println("2. Lövés");
+			println("3. Akadály lerakása");
+			println("4. Torony lerakás");
+			println("5. Varázskő lerakás");
+			println("6. Győzelem");
+			println("7. Vereség");
+			//SkeletonController.readln();
 				switch (Integer.parseInt(SkeletonController.readln())) {
 				case 1:
 					UCLepes();
@@ -210,6 +209,7 @@ public class SkeletonController {
 	
 
 	public static void UCLepes() {
+		println("ee");
 		Jatekmotor jm = new Jatekmotor();
 		Ellensegek e = new Ellensegek(jm);
 		Ellenseg e1 = new Ember();
