@@ -147,4 +147,22 @@ public class SkeletonController {
 		return null;
 
 	}
+	
+	public static void mainMenu(){}
+	
+	public void UCLepes(){}
+	
+	public void UCLoves(){}
+	
+	public void UCToronyLerak(){}
+	
+	public void UCAkadalyLerak(){}
+	
+	public void UCVarazskoLerak(){}
+	
+	public void UCGyozelem(){}
+	
+	public void UCVereseg(){}
+	
+	
 }
