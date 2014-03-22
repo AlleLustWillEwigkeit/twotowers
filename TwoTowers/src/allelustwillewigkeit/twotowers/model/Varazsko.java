@@ -18,7 +18,7 @@ public class Varazsko {
 		SkeletonController.tabNo();
 //		SkeletonController.println("tuzel(celpont)");
 		for (Lovedek l : lovedek) {
-			celpont.sebezLovedek();
+			l.megLo(celpont);
 		}
 		SkeletonController.tabCsokken();
 	}
