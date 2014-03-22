@@ -31,11 +31,11 @@ public class SkeletonController {
 	public static void tabNo() {
 		behuzas();
 		nyilJobbra();
-		
+
 		StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
 		StackTraceElement e = stacktrace[2];
-		
-		kiiro(e.getClassName() + "::" + e.getMethodName() + "\n" );
+
+		kiiro(e.getClassName() + "::" + e.getMethodName() + "\n");
 		tabok += CONSTANT1;
 	}
 
@@ -44,11 +44,13 @@ public class SkeletonController {
 			tabok -= CONSTANT1;
 			behuzas();
 			nyilBalra();
-			
-			StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
+
+			StackTraceElement[] stacktrace = Thread.currentThread()
+					.getStackTrace();
 			StackTraceElement e = stacktrace[2];
-			
-			kiiro("return from "+ e.getClassName() + "::" + e.getMethodName() + "\n");
+
+			kiiro("return from " + e.getClassName() + "::" + e.getMethodName()
+					+ "\n");
 
 		} else {
 			kiiro("Valaki úgy lépett ki, hogy nem lépett be!");
@@ -87,7 +89,9 @@ public class SkeletonController {
 		return null;
 	}
 
-	public static boolean kerdezIH(String mihez) { //TODO illene itt is exceptionos hibakezelést csinálni
+	public static boolean kerdezIH(String mihez) { // TODO illene itt is
+													// exceptionos hibakezelést
+													// csinálni
 		print(mihez);
 		kiiro(" (I/H)\n");
 		String eredmeny;
@@ -147,22 +151,84 @@ public class SkeletonController {
 		return null;
 
 	}
-	
-	public static void mainMenu(){}
-	
-	public void UCLepes(){}
-	
-	public void UCLoves(){}
-	
-	public void UCToronyLerak(){}
-	
-	public void UCAkadalyLerak(){}
-	
-	public void UCVarazskoLerak(){}
-	
-	public void UCGyozelem(){}
-	
-	public void UCVereseg(){}
-	
-	
+
+	public void mainMenu() {
+		boolean doexit = false;
+		while (!doexit) {
+			System.out
+					.println("Kérem a lejátszandó use-case számát! A lehetőségek:");
+			System.out.println("0. Kilépés a skeleton programból");
+			System.out.println("1. Lépés");
+			System.out.println("2. Lövés");
+			System.out.println("3. Akadály lerakása");
+			System.out.println("4. Torony lerakás");
+			System.out.println("5. Varázskő lerakás");
+			System.out.println("6. Győzelem");
+			System.out.println("7. Vereség");
+			/* Lépés
+Lövés
+Akadály lerakása
+Torony lerakása
+Varázskő lerakása
+Győzelem
+Vereség*/
+			try {
+				int c = System.in.read();
+				switch (c) {
+				case 1:
+					UCLepes();
+					break;
+				case 2:
+					UCLoves();
+					break;
+				case 3:
+					UCAkadalyLerak();
+					break;
+				case 4:
+					UCToronyLerak();
+					break;
+				case 5:
+					UCVarazskoLerak();
+					break;
+				case 6:
+					UCGyozelem();
+					break;
+				case 7:
+					UCVereseg();
+					break;
+				case 0:
+					doexit = true;
+					break;
+				default:
+					System.out.println("Érvénytelen bemenet.");
+					break;
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public void UCLepes() {
+	}
+
+	public void UCLoves() {
+	}
+
+	public void UCToronyLerak() {
+	}
+
+	public void UCAkadalyLerak() {
+	}
+
+	public void UCVarazskoLerak() {
+	}
+
+	public void UCGyozelem() {
+	}
+
+	public void UCVereseg() {
+	}
+
 }
