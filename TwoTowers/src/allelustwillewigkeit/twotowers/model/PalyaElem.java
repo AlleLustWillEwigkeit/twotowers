@@ -1,12 +1,13 @@
 package allelustwillewigkeit.twotowers.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class PalyaElem {
 	public EpitesiTerulet epitesiTerulet = null;
-	public HashSet<PalyaElem> szomszedok = new HashSet<PalyaElem>();
+	public ArrayList<PalyaElem> szomszedok = new ArrayList<PalyaElem>();
 	public PalyaElem palyaElem = null;
 	public boolean beregisztralt = false;
 	public Ut ut = null;
@@ -19,28 +20,38 @@ public class PalyaElem {
 		SkeletonController.tabNo();
 //		SkeletonController.println("lekerEpitesiTerulet()");
 		SkeletonController.tabCsokken();
-		return null;
+		return epitesiTerulet;
 	}
 
 	public Ut lekerUt() {
 		SkeletonController.tabNo();
 //		SkeletonController.println("lekerUt()");
 		SkeletonController.tabCsokken();
-		return null;
+		return ut;
 	}
 
 	public boolean vanUtja() {
 		SkeletonController.tabNo();
 //		SkeletonController.println("vamUtja()");
-		SkeletonController.tabCsokken();
-		return true;
+		if(ut!=null){
+			SkeletonController.tabCsokken();
+			return true;
+		} else {
+			SkeletonController.tabCsokken();
+			return false;
+		}
 	}
 
 	public boolean vanEpitesiTerulete() {
 		SkeletonController.tabNo();
 //		SkeletonController.println("vanEpitesiTerulete()");
-		SkeletonController.tabCsokken();
-		return true;
+		if(epitesiTerulet!=null){
+			SkeletonController.tabCsokken();
+			return true;
+		} else {
+			SkeletonController.tabCsokken();
+			return false;
+		}
 	}
 
 	public void beregisztral(Torony torony, int tavolsag) {
@@ -59,15 +70,24 @@ public class PalyaElem {
 	public void legyelUt() {
 		SkeletonController.tabNo();
 //		SkeletonController.println("legyelUt()");
+		Ut rarakando = new Ut();
+		this.ut = rarakando;
 		SkeletonController.tabCsokken();
 	}
 
 	public void legyelEpitesiTerulet() {
 		SkeletonController.tabNo();
 //		SkeletonController.println("legyelEpitesiTerulet()");
+		EpitesiTerulet rarakando = new EpitesiTerulet();
+		this.epitesiTerulet = rarakando;
 		SkeletonController.tabCsokken();
 	}
 
-	public void addSzomszed(PalyaElem sz) { //TODO ide kéne vmi
+	public void addSzomszed(PalyaElem sz) {
+		if(!szomszedok.contains(sz)){
+				szomszedok.add(sz);
+				sz.addSzomszed(this);
+		}
+		
 	}
 }
