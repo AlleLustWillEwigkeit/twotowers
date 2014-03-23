@@ -1,8 +1,6 @@
 package allelustwillewigkeit.twotowers.model;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-
 import java.util.List;
 
 import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
@@ -12,6 +10,9 @@ public class Ut {
 	public List<Torony> torony = new ArrayList<Torony>();
 	public List<Ut> ut = new ArrayList<Ut>();
 
+	/**
+	 * Az út konstruktora
+	 */
 	public Ut() {
 		super();
 		SkeletonController.tabNo();
@@ -19,66 +20,101 @@ public class Ut {
 		SkeletonController.tabCsokken();
 	}
 
+	/** Void raLep
+	 * Minden tonyának szól, hogy tüzeljen a célpontra
+	 * @param Ellenseg ellenseg
+	 */
 	public void raLep(Ellenseg ellenseg) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("raLep()");
 		for (Torony t : torony) {
 			t.tuzel(ellenseg);
 		}
 		SkeletonController.tabCsokken();
 	}
 
+	/** Void feliratkozik
+	 * Ha a torony még nincs alistában, akkor felveszi oda
+	 * @param Torony torony
+	 */
 	public void feliratkozik(Torony torony) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("feliratkozik(t)");
+		if( !this.torony.contains(torony)){
+			this.torony.add(torony);
+		}
 		SkeletonController.tabCsokken();
 	}
 
+	/** Void akadalyomLebomlott
+	 *  Az akadályát törli.
+	 */
 	public void akadalyomLebomlott() {
+		SkeletonController.tabNo();
+		this.akadaly = null;
+		SkeletonController.tabCsokken();
 	}
 
+	/** Void lerakAkadaly
+	 * Létrehoz egy új akadályt, és felveszi a referenciáját.
+	 */
 	public void lerakAkadaly() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("lerakAkadaly()");
-		akadaly = new Akadaly();
+		this.akadaly = new Akadaly(this);
 		SkeletonController.tabCsokken();
 	}
 
+	/** boolean vanAkadalyRajta
+	 * Igazzal tér vissza, ha van akadály rajta, máskülönben hamissal
+	 * @return boolean
+	 */
 	public boolean vanAkadalyRajta() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("vanAkadalyRajta()");
 		SkeletonController.tabCsokken();
 		return (akadaly != null);
 	}
 
+	/** Akadaly lekerAkadaly
+	 * Az akadály referenciájával tér vissza, vagy nullal, ha nincs rajta akadály.
+	 * @return Akadaly
+	 */
 	public Akadaly lekerAkadaly() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("lekerAkadaly()");
 		SkeletonController.tabCsokken();
-		return akadaly; 
+		return this.akadaly; 
 	}
 
+	/** Ut lekerKovUt
+	 * Az első nála ismert úttal tér vissza, vagy ha a tároló üres, akkor nullal.
+	 * @return Ut
+	 */
 	public Ut lekerKovUt() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("lekerKovUt()");
 		SkeletonController.tabCsokken();
-		return ut.get(0);
+		if(this.ut.isEmpty())
+			return null;
+		else
+			return this.ut.get(0);
 	}
 
+	/** Void beallitKovUt
+	 * Hozzáadja a paraméterül kapott utat a listához, ha még nincs benne.
+	 * @param ut
+	 */
 	public void beallitKovUt(Ut ut) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("beallitKovUt(ut)");
 		if( !this.ut.contains(ut)){
 			this.ut.add(ut);
 		}
 		SkeletonController.tabCsokken();
 	}
 
+	/** void akadalySebzes
+	 * Sebzi a rajta lévő akadályt, ha van.
+	 * @param int mennyit
+	 */
 	public void akadalySebzes(int mennyit) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("akadalySebzes()");
 		if (this.vanAkadalyRajta()) 
-			lekerAkadaly().sebzodik(mennyit);
+			this.lekerAkadaly().sebzodik(mennyit);
 		SkeletonController.tabCsokken();
 	}
 }

@@ -9,25 +9,33 @@ public class Akadaly {
 	public HashSet<Varazsko> varazsko = new HashSet<Varazsko>();
 	public Ut ut = null;
 
-	public Akadaly() {
+	/** Az akadály konstruktora
+	 * @param Ut u
+	 */
+	public Akadaly(Ut u) {
 		super();
+		this.ut = u;
 		SkeletonController.tabNo();
 		SkeletonController.println("<<create>> Akadaly");
 		SkeletonController.tabCsokken();
 	}
 
+	/** void felkovez
+	 * Felveszi a paraméterül kapott varászkő referenciáját
+	 * @param Varazsko mivel
+	 */
 	public void felkovez(Varazsko mivel) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("felkovez(v)");
+		this.varazsko.add(mivel);
 		SkeletonController.tabCsokken();
 	}
 
+	/** void sebzodik
+	 * Levonja a paraméterül kapott értéket az életerejéből.
+	 * @param int mennyit
+	 */
 	public void sebzodik(int mennyit) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("sebzodik(mennyit)");
-//		for (Varazsko v : varazsko) {
-//			v.lekerEleteroSzorzo();
-//		}
 		SkeletonController.tabCsokken();
 	}
 }

@@ -3,6 +3,9 @@ package allelustwillewigkeit.twotowers.model;
 import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Darda extends Lovedek {
+	/**
+	 * A dárda konstruktora
+	 */
 	public Darda() {
 		super();
 		SkeletonController.tabNo();
@@ -10,6 +13,10 @@ public class Darda extends Lovedek {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void megLo
+	 * Meghívja a paraméterül kapott ellenségen, a sebzési függvényt.
+	 * @param Ellenseg kit
+	 */
 	@Override
 	public void megLo(Ellenseg kit) {
 		SkeletonController.tabNo();

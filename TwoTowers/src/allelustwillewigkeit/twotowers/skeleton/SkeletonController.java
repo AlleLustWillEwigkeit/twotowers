@@ -292,7 +292,6 @@ public class SkeletonController {
 	}
 
 	public static void UCVarazskoLerak() {
-		//TODO IMplement
 		Jatekmotor jm = new Jatekmotor(new JosagosSzaruman());
 		PalyaElem pe = new PalyaElem();
 		
@@ -301,7 +300,7 @@ public class SkeletonController {
 		pe.epitesiTerulet = e;
 		
 		Ut u = new Ut();
-		u.akadaly = new Akadaly();
+		u.akadaly = new Akadaly(u);
 		pe.ut = u;
 		
 		jm.felkovez(pe);
