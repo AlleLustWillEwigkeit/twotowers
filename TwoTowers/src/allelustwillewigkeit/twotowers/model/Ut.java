@@ -26,7 +26,7 @@ public class Ut {
 	 */
 	public void raLep(Ellenseg ellenseg) {
 		SkeletonController.tabNo();
-		for (Torony t : torony) {
+		for (Torony t : this.torony) {
 			t.tuzel(ellenseg);
 		}
 		SkeletonController.tabCsokken();
@@ -69,7 +69,7 @@ public class Ut {
 	public boolean vanAkadalyRajta() {
 		SkeletonController.tabNo();
 		SkeletonController.tabCsokken();
-		return (akadaly != null);
+		return (this.akadaly != null);
 	}
 
 	/** Akadaly lekerAkadaly

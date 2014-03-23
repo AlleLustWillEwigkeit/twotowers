@@ -17,26 +17,35 @@ public class Varazsko {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void tuzel
+	 * Minden lövedékének szól, hogy lője meg a célpontot
+	 * @param Ellenseg celpont
+	 */
 	public void tuzel(Ellenseg celpont) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("tuzel(celpont)");
-		for (Lovedek l : lovedek) {
+		for (Lovedek l : this.lovedek) {
 			l.megLo(celpont);
 		}
 		SkeletonController.tabCsokken();
 	}
 
+	/** float lekerHatotavSzorzo
+	 * Visszatér a hatótávszorzóval
+	 * @return float
+	 */
 	public float lekerHatotavSzorzo() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("lekerHatotavSzorzo()");
 		SkeletonController.tabCsokken();
-		return hatotavSzorzo;
+		return this.hatotavSzorzo;
 	}
-
+	
+	/** float lekerEleteroSzorzo
+	 * Visszatér az életerőszorzóval
+	 * @return float
+	 */
 	public float lekerEleteroSzorzo() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("lekerEleteroSzorzo()");
 		SkeletonController.tabCsokken();
-		return eleteroSzorzo;
+		return this.eleteroSzorzo;
 	}
 }

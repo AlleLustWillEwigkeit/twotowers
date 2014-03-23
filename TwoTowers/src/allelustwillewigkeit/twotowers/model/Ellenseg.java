@@ -10,6 +10,10 @@ public abstract class Ellenseg {
 	public Ellensegek ellensegek = null;
 	private int sebzes = 0;
 
+	/** Az ellenség konstruktora
+	 * @param Ut start
+	 * @param Ellensegek ellens
+	 */
 	public Ellenseg(Ut start, Ellensegek ellens) {
 		super();
 		this.ut=start;
@@ -19,28 +23,45 @@ public abstract class Ellenseg {
 		SkeletonController.tabCsokken();
 	}
 
+	/** abstract void sebezNyil
+	 * Nyíl sebzés
+	 */
 	public abstract void sebezNyil();
-
+	
+	/** abstract void sebezTuzgolyo
+	 * Tűzgolyó sebzés
+	 */
 	public abstract void sebezTuzgolyo();
 
+	/** abstract void sebezDarda
+	 * Dárda sebzés
+	 */
 	public abstract void sebezDarda();
 
+	/** abstract void sebezSzikla
+	 * Szikla sebzés
+	 */
 	public abstract void sebezSzikla();
 
+	/** int akadalySebzes
+	 * Visszatér, hogy mennyit sebez az akadályra.
+	 * @return int
+	 */
 	public int akadalySebzes() {
 		int akadalySebzes = 0;
 		return akadalySebzes;
 	}
 
+	/** void lep
+	 * A következő útra lép, ha tud.
+	 */
 	public void lep() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("lep()");
 
-		if(SkeletonController.kerdezIH("Léphetek már?(H esetén maradok")){
-			Ut next = ut.lekerKovUt();
-			this.ut = next;
-			next.raLep(this);
-			next.akadalySebzes(sebzes);
+		if(SkeletonController.kerdezIH("Léphetek már?(H esetén maradok")){ 
+			this.ut = this.ut.lekerKovUt();
+			this.ut.raLep(this);
+			this.ut.akadalySebzes(sebzes);
 		} else {
 			this.ut.raLep(this);
 			this.ut.akadalySebzes(sebzes);
@@ -49,9 +70,11 @@ public abstract class Ellenseg {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void sebezLovedek
+	 * Lövedék sebzés
+	 */
 	public void sebezLovedek() { 
 		SkeletonController.tabNo();
-//		SkeletonController.println("sebezLovedek()");
 		int mennyire = 1;
 		eleteroAllit(mennyire);
 		float ee = eleteroLeker();
@@ -61,20 +84,33 @@ public abstract class Ellenseg {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void eleteroAllit
+	 * Beállítja az életerőt, az adott értékre.
+	 * @param int mennyire
+	 */
 	public void eleteroAllit(int mennyire) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("eleteroAllit(mennyire)");
-		eletero = mennyire;
+		this.eletero = mennyire;
 		SkeletonController.tabCsokken();
 	}
 
+	/** float eleteroLeker
+	 * Visszatér az életerővel
+	 * @return float
+	 */
 	public float eleteroLeker() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("eleteroLeker()");
 		SkeletonController.tabCsokken();
-		return eletero;
+		return this.eletero;
 	}
 
+	/**void beallitUt
+	 * Beállítja az út referenciáját az paraméterül kapottra.
+	 * @param Ut ut
+	 */
 	public void beallitUt(Ut ut) {
+		SkeletonController.tabNo();
+		this.ut = ut;
+		SkeletonController.tabCsokken();
 	}
 }

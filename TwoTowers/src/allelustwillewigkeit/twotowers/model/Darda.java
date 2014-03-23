@@ -14,7 +14,7 @@ public class Darda extends Lovedek {
 	}
 
 	/** void megLo
-	 * Meghívja a paraméterül kapott ellenségen, a sebzési függvényt.
+	 * Meglövi az ellenfelet.
 	 * @param Ellenseg kit
 	 */
 	@Override

@@ -4,8 +4,11 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Program {
 	public Jatekmotor jatekmotor = null;
-	public Program progrgam = null;
+	public Program program = null;
 
+	/**
+	 * A program konstruktora
+	 */
 	public Program() {
 		super();
 		SkeletonController.tabNo();
@@ -13,12 +16,17 @@ public class Program {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void ujJatek
+	 * Új játékot indít
+	 */
 	public void ujJatek() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("ujJatek");
 		SkeletonController.tabCsokken();
 	}
 
+	/** static void main
+	 * Itt van a program induló pontja
+	 */
 	public static void main() {
 		SkeletonController.tabNo();
 		SkeletonController.tabCsokken();

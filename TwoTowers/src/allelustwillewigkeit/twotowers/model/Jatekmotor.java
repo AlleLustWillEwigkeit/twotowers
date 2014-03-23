@@ -11,6 +11,9 @@ public class Jatekmotor {
 	public JosagosSzaruman josagosSzaruman = null;
 	public HashSet<Varazsko> kavicsok = new HashSet<Varazsko>();
 
+	/** A játékmotor konstruktora
+	 * @param JosagosSzaruman jsz
+	 */
 	public Jatekmotor(JosagosSzaruman jsz) {
 		super();
 		SkeletonController.tabNo();
@@ -19,30 +22,40 @@ public class Jatekmotor {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void tick
+	 * Szimulál egy időegységet.
+	 */
 	public void tick() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("tick()");
 		SkeletonController.tabCsokken();
 	}
 
+	/** void lerakTornyot
+	 * Lerak egy tornyot egy adott pályaelemre.
+	 * @param PalyaElem hova
+	 */
 	public void lerakTornyot(PalyaElem hova) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("lerakTornyot(pe)");
 		hova.lekerEpitesiTerulet().lerakTornyot();
 		SkeletonController.tabCsokken();
 	}
 
+	/** void lerakAkadaly
+	 * Lerak egy akadályt egy adott pályaelemre.
+	 * @param PalyaElem hova
+	 */
 	public void lerakAkadaly(PalyaElem hova) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("lerakAkadaly(pe)");
-		Ut u = hova.lekerUt();
-		u.lerakAkadaly();
+		hova.lekerUt().lerakAkadaly();
 		SkeletonController.tabCsokken();
 	}
 
+	/** void felkovez
+	 * Az adott pályaelem-nek szól, hogy kövezze fel a rajta lévő tornyot, vagy akadályt.
+	 * @param PalyaElem mit
+	 */
 	public void felkovez(PalyaElem mit) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("felkovez(p)");
 		Varazsko v = josagosSzaruman.lekerKivalasztottVarazsko();
 		if (mit.vanEpitesiTerulete()) {
 			EpitesiTerulet et = mit.lekerEpitesiTerulet();
@@ -61,30 +74,36 @@ public class Jatekmotor {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void ujJatek
+	 * Új játékot indít
+	 */
 	public void ujJatek() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("ujJatek()");
-		Palya p = new Palya();
-		p.ujPalya();
-		JosagosSzaruman jsz = new JosagosSzaruman();
+		/*this.palya = new Palya();
+		this.palya.ujPalya();
+		this.josagosSzaruman = new JosagosSzaruman();
 		Start st = new Start();
 		Ellensegek e = new Ellensegek(this,st);
 		int i = 3;
 		while (i-- != 0) {
 			tick();
-		}
+		}*/
 		SkeletonController.tabCsokken();
 	}
 
+	/** void vereseg
+	 * Vereség történt.
+	 */
 	public void vereseg() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("vereseg()");
 		SkeletonController.tabCsokken();
 	}
 
+	/** void gyozelem
+	 * Győzelem történt.
+	 */
 	public void gyozelem() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("gyozelem()");
 		SkeletonController.tabCsokken();
 	}
 }

@@ -1,13 +1,15 @@
 package allelustwillewigkeit.twotowers.model;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Palya {
 	public ArrayList<PalyaElem> palyaElem = new ArrayList<PalyaElem>();
 
+	/**
+	 * A pálya konstruktora
+	 */
 	public Palya() {
 		super();
 		SkeletonController.tabNo();
@@ -15,10 +17,11 @@ public class Palya {
 		SkeletonController.tabCsokken();
 	}
 
-	//Once a Dummy, always a dummy.
+	/** void ujPalya
+	 * Létrehoz egy pálya összeállítást.
+	 */
 	public void ujPalya() {
 		SkeletonController.tabNo();
 		SkeletonController.tabCsokken();
-		return;
 	}
 }

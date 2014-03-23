@@ -3,6 +3,10 @@ package allelustwillewigkeit.twotowers.model;
 import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Torp extends Ellenseg {
+	/** A törp konstruktora
+	 * @param start
+	 * @param ellens
+	 */
 	public Torp(Ut start, Ellensegek ellens) {
 		super(start,ellens);
 		SkeletonController.tabNo();
@@ -10,13 +14,16 @@ public class Torp extends Ellenseg {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void sebezTuzgolyo
+	 * Sebzi magát a megfelelő métrékben
+	 */
 	@Override
 	public void sebezTuzgolyo() {
 		SkeletonController.tabNo();
-		if(ellensegek != null){
+		if(this.ellensegek != null){
 			if (SkeletonController
 					.kerdezIH("Torp vagyok. Eltalalt egy Tuzgolyo. Meghaltam?")) {
-				ellensegek.egyEllensegMeghalt(this);
+				this.ellensegek.egyEllensegMeghalt(this);
 			}
 		}else{
 			SkeletonController.println("Torp vagyok. Eltalalt egy Tuzgolyo.");
@@ -24,13 +31,16 @@ public class Torp extends Ellenseg {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void sebezSzikla
+	 * Sebzi magát a megfelelő métrékben
+	 */
 	@Override
 	public void sebezSzikla() {
 		SkeletonController.tabNo();
-		if(ellensegek != null){
+		if(this.ellensegek != null){
 			if (SkeletonController
 					.kerdezIH("Torp vagyok. Eltalalt egy Szikla. Meghaltam?")) {
-				ellensegek.egyEllensegMeghalt(this);
+				this.ellensegek.egyEllensegMeghalt(this);
 			}
 		}else{
 			SkeletonController.println("Torp vagyok. Eltalalt egy Szikla.");
@@ -38,13 +48,16 @@ public class Torp extends Ellenseg {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void sebezNyil
+	 * Sebzi magát a megfelelő métrékben
+	 */
 	@Override
 	public void sebezNyil() {
 		SkeletonController.tabNo();
-		if(ellensegek != null){
+		if(this.ellensegek != null){
 			if (SkeletonController
 					.kerdezIH("Torp vagyok. Eltalalt egy Nyil. Meghaltam?")) {
-				ellensegek.egyEllensegMeghalt(this);
+				this.ellensegek.egyEllensegMeghalt(this);
 			}
 		}else{
 			SkeletonController.println("Torp vagyok. Eltalalt egy Nyil.");
@@ -52,13 +65,16 @@ public class Torp extends Ellenseg {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void sebezDarda
+	 * Sebzi magát a megfelelő métrékben
+	 */
 	@Override
 	public void sebezDarda() {
 		SkeletonController.tabNo();
-		if(ellensegek != null){
+		if(this.ellensegek != null){
 			if (SkeletonController
 					.kerdezIH("Torp vagyok. Eltalalt egy Darda. Meghaltam?")) {
-				ellensegek.egyEllensegMeghalt(this);
+				this.ellensegek.egyEllensegMeghalt(this);
 			}
 		}else{
 			SkeletonController.println("Torp vagyok. Eltalalt egy Darda.");

@@ -7,6 +7,9 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
  * Ez az osztály arra szolgál, hogy megkülönböztessük a kezdő utat.
  */
 public class Start extends Ut {
+	/**
+	 * A start konstruktora
+	 */
 	public Start() {
 		super();
 		SkeletonController.tabNo();

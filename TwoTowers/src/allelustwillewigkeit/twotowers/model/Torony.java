@@ -10,6 +10,9 @@ public class Torony {
 	public EpitesiTerulet epitesiTerulet = null;
 	public HashSet<Ut> ut = new HashSet<Ut>();
 
+	/**
+	 * A torony konstruktora
+	 */
 	public Torony() {
 		super();		
 		SkeletonController.tabNo();
@@ -18,30 +21,44 @@ public class Torony {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void tuzel
+	 * Minden varászkövének szól, hogy tüzeljen a célpontra
+	 * @param Ellenseg celpont
+	 */
 	public void tuzel(Ellenseg celpont) {
 		SkeletonController.tabNo();
-//		SkeletonController.println("tuzel(celpont)");
-		for (Varazsko v : varazsko) {
+		for (Varazsko v : this.varazsko) {
 			v.tuzel(celpont);
 		}
 		SkeletonController.tabCsokken();
 	}
 
+	/** void beRegisztralTavonBeluliUtakhoz
+	 * Szól az őt tároló pályaelemnek, hogy beregisztrálna az utakhoz, a megfelelő hatótávon.
+	 */
 	public void beRegisztralTavonBeluliUtakhoz() {
 		SkeletonController.tabNo();
-//		SkeletonController.println("beRegisztralTavonBeluliUtakhoz");
+		
 		PalyaElem pe = epitesiTerulet.minAll();
 		float tavolsag = alapHatotav;
 		for (Varazsko v : varazsko) {
 			tavolsag *= v.lekerHatotavSzorzo();
 		}
 		pe.beregisztral(this, (int) tavolsag);
+		
 		SkeletonController.tabCsokken();
 	}
 
+	/** void felkovez
+	 * Ha még nincs rajta a paraméterül kapott varászkő, akkor felveszi
+	 * @param Varazsko mivel
+	 */
 	public void felkovez(Varazsko mivel) {
 		SkeletonController.tabNo();
-		//SkeletonController.println("felkovez(v)");
+		
+		if(!this.varazsko.contains(mivel))
+			this.varazsko.add(mivel);
+		
 		SkeletonController.tabCsokken();
 	}
 }

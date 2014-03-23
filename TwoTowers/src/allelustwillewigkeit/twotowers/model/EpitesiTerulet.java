@@ -32,7 +32,7 @@ public class EpitesiTerulet {
 	 */
 	public void lerakTornyot() {
 		SkeletonController.tabNo();
-		torony = new Torony();
+		this.torony = new Torony();
 		SkeletonController.tabCsokken();
 	}
 
@@ -43,7 +43,7 @@ public class EpitesiTerulet {
 	public boolean vanToronyRajta() {
 		SkeletonController.tabNo();
 		SkeletonController.tabCsokken();
-		return (torony != null);
+		return (this.torony != null);
 	}
 
 	/** Torony lekerTorony
@@ -53,6 +53,6 @@ public class EpitesiTerulet {
 	public Torony lekerTorony() {
 		SkeletonController.tabNo();
 		SkeletonController.tabCsokken();
-		return torony;
+		return this.torony;
 	}
 }

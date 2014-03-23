@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 
 import allelustwillewigkeit.twotowers.model.Akadaly;
 import allelustwillewigkeit.twotowers.model.Darda;
-import allelustwillewigkeit.twotowers.model.Elf;
 import allelustwillewigkeit.twotowers.model.Ellenseg;
 import allelustwillewigkeit.twotowers.model.Ellensegek;
 import allelustwillewigkeit.twotowers.model.Ember;
@@ -22,6 +21,7 @@ import allelustwillewigkeit.twotowers.model.Szikla;
 import allelustwillewigkeit.twotowers.model.Torony;
 import allelustwillewigkeit.twotowers.model.Torp;
 import allelustwillewigkeit.twotowers.model.Tuzgolyo;
+import allelustwillewigkeit.twotowers.model.Tunde;
 import allelustwillewigkeit.twotowers.model.Ut;
 import allelustwillewigkeit.twotowers.model.Varazsko;
 import allelustwillewigkeit.twotowers.model.VegzetHegye;
@@ -182,7 +182,7 @@ public class SkeletonController {
 			case 1:
 				return new Ember(ut,el);
 			case 2:
-				return new Elf(ut,el);
+				return new Tunde(ut,el);
 			case 3:
 				return new Torp(ut,el);
 			case 4:

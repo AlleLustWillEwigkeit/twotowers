@@ -6,6 +6,9 @@ public class JosagosSzaruman {
 	public int varazsero = 0;
 	public Varazsko kivalasztottVarazsko = null;
 
+	/**
+	 * A jóságos szarumán konstruktora
+	 */
 	public JosagosSzaruman() {
 		super();
 		SkeletonController.tabNo();
@@ -13,18 +16,26 @@ public class JosagosSzaruman {
 		SkeletonController.tabCsokken();
 	}
 
+	/** void varazseroNovel
+	 * Növeli a varázserejét a megadott mértékben
+	 * @param int mennyivel
+	 */
 	public void varazseroNovel(int mennyivel) {
 		SkeletonController.tabNo();
-		varazsero += mennyivel;
+		this.varazsero += mennyivel;
 		SkeletonController.tabCsokken();
 	}
 
+	/** Varazsko lekerKivalasztottVarazsko
+	 * Visszaadja a kiválasztott varászkövet. Ha nincs, létrehoz egyet.
+	 * @return Varazsko
+	 */
 	public Varazsko lekerKivalasztottVarazsko() {
 		SkeletonController.tabNo();
-		if(kivalasztottVarazsko == null){
-			kivalasztottVarazsko = new Varazsko();
+		if(this.kivalasztottVarazsko == null){
+			this.kivalasztottVarazsko = new Varazsko();
 		}
 		SkeletonController.tabCsokken();
-		return kivalasztottVarazsko;
+		return this.kivalasztottVarazsko;
 	}
 }
