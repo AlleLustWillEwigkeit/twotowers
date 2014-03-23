@@ -4,7 +4,6 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class EpitesiTerulet {
 	public Torony torony = null;
-	public EpitesiTerulet epitesiTerulet = null; // TODO: Dávid: ez minek?
 	public PalyaElem palyaElem = null;
 
 	/**
