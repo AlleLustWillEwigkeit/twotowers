@@ -8,8 +8,15 @@ public class VegzetHegye extends Ut {
 	public VegzetHegye(Jatekmotor jm) {
 		super();
 		SkeletonController.tabNo();
-		SkeletonController.println("<<create>> Akadaly");
+		SkeletonController.println("<<create>> VegzetHegye");
 		jatekmotor = jm;
+		SkeletonController.tabCsokken();
+	}
+	
+	public void raLep(Ellenseg ellenseg) {
+		SkeletonController.tabNo();
+		//SkeletonController.println("raLep()");
+		jatekmotor.vereseg();
 		SkeletonController.tabCsokken();
 	}
 }

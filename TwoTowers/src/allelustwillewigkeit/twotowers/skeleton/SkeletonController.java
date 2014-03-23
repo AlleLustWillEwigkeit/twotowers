@@ -302,12 +302,10 @@ public class SkeletonController {
 	}
 
 	public static void UCVereseg() {
-
-		Start st = new Start();
 		Jatekmotor jm = new Jatekmotor();
-		Ellensegek ellen = new Ellensegek(jm,st);
 		VegzetHegye vh = new VegzetHegye(jm);
-		Ellenseg e = new Ember(st,ellen);
+		Ellensegek ellen = new Ellensegek(jm,null);
+		Ellenseg e = new Ember(null,ellen);
 		vh.raLep(e);
 	}
 
