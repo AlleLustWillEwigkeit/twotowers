@@ -248,7 +248,6 @@ public class SkeletonController {
 	
 
 	public static void UCLepes() {
-		println("ee");
 		Jatekmotor jm = new Jatekmotor(null);
 		Ut u1 = new Ut();
 		Ut u2 = new Ut();
