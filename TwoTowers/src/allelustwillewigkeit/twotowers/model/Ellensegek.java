@@ -38,7 +38,6 @@ public class Ellensegek {
 			Ember e = new Ember(start,this);
 			this.ellenseg.add(e);
 		}
-		//TODO Imádkozzunk, hogy ez nem fut le. | Dávid: Miért is?
 		SkeletonController.tabCsokken();
 	}
 
