@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import allelustwillewigkeit.twotowers.model.Akadaly;
 import allelustwillewigkeit.twotowers.model.Darda;
 import allelustwillewigkeit.twotowers.model.Elf;
 import allelustwillewigkeit.twotowers.model.Ellenseg;
@@ -12,6 +13,7 @@ import allelustwillewigkeit.twotowers.model.Ember;
 import allelustwillewigkeit.twotowers.model.EpitesiTerulet;
 import allelustwillewigkeit.twotowers.model.Hobbit;
 import allelustwillewigkeit.twotowers.model.Jatekmotor;
+import allelustwillewigkeit.twotowers.model.JosagosSzaruman;
 import allelustwillewigkeit.twotowers.model.Lovedek;
 import allelustwillewigkeit.twotowers.model.Nyil;
 import allelustwillewigkeit.twotowers.model.PalyaElem;
@@ -103,19 +105,21 @@ public class SkeletonController {
 		return null;
 	}
 
-	public static boolean kerdezIH(String mihez) { // TODO illene itt is
-													// exceptionos hibakezelést
-													// csinálni
-		print(mihez);
-		kiiro(" (I/H)\n");
-		String eredmeny;
-		eredmeny = readln();
-		eredmeny = eredmeny.toUpperCase();
-		if (eredmeny.charAt(0) == 'I') {
-			return true;
-		} else if (eredmeny.charAt(0) == 'H') {
-			return false;
-		} else {
+	public static boolean kerdezIH(String mihez) {
+		try{
+			print(mihez);
+			kiiro(" (I/H)\n");
+			String eredmeny;
+			eredmeny = readln().toUpperCase();
+			switch(eredmeny.charAt(0)){
+				case 'I':
+					return true;
+				case 'H':
+					return false;
+				default: 
+					throw new IllegalArgumentException();
+			}
+		}catch(IllegalArgumentException e){
 			println("Nem valid válasz. Probáld újra.");
 			return kerdezIH(mihez);
 		}
@@ -245,7 +249,7 @@ public class SkeletonController {
 
 	public static void UCLepes() {
 		println("ee");
-		Jatekmotor jm = new Jatekmotor();
+		Jatekmotor jm = new Jatekmotor(null);
 		Ut u1 = new Ut();
 		Ut u2 = new Ut();
 		u1.beallitKovUt(u2);
@@ -273,7 +277,7 @@ public class SkeletonController {
 	}
 
 	public static void UCToronyLerak() {
-		Jatekmotor jm = new Jatekmotor();
+		Jatekmotor jm = new Jatekmotor(null);
 		PalyaElem pe = new PalyaElem();
 		EpitesiTerulet e = new EpitesiTerulet();
 		pe.epitesiTerulet = e;
@@ -281,7 +285,7 @@ public class SkeletonController {
 	}
 
 	public static void UCAkadalyLerak() {
-		Jatekmotor jm = new Jatekmotor();
+		Jatekmotor jm = new Jatekmotor(null);
 		PalyaElem pe = new PalyaElem();
 		Ut u = new Ut();
 		pe.ut = u;
@@ -290,10 +294,22 @@ public class SkeletonController {
 
 	public static void UCVarazskoLerak() {
 		//TODO IMplement
+		Jatekmotor jm = new Jatekmotor(new JosagosSzaruman());
+		PalyaElem pe = new PalyaElem();
+		
+		EpitesiTerulet e = new EpitesiTerulet();
+		e.torony = new Torony();
+		pe.epitesiTerulet = e;
+		
+		Ut u = new Ut();
+		u.akadaly = new Akadaly();
+		pe.ut = u;
+		
+		jm.felkovez(pe);
 	}
 
 	public static void UCGyozelem() {
-		Jatekmotor jm = new Jatekmotor();
+		Jatekmotor jm = new Jatekmotor(null);
 		Start st = new Start();
 		Ellensegek ellen = new Ellensegek(jm,st);
 		Ellenseg e = new Ember(st,ellen);
@@ -302,7 +318,7 @@ public class SkeletonController {
 	}
 
 	public static void UCVereseg() {
-		Jatekmotor jm = new Jatekmotor();
+		Jatekmotor jm = new Jatekmotor(null);
 		VegzetHegye vh = new VegzetHegye(jm);
 		Ellensegek ellen = new Ellensegek(jm,null);
 		Ellenseg e = new Ember(null,ellen);

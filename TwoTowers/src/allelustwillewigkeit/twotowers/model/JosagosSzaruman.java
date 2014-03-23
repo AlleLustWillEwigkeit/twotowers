@@ -22,7 +22,10 @@ public class JosagosSzaruman {
 	public Varazsko lekerKivalasztottVarazsko() {
 		SkeletonController.tabNo();
 //		SkeletonController.println("lekerKivalasztottVarazsko");
+		if(kivalasztottVarazsko == null){
+			kivalasztottVarazsko = new Varazsko();
+		}
 		SkeletonController.tabCsokken();
-		return null;
+		return kivalasztottVarazsko;
 	}
 }

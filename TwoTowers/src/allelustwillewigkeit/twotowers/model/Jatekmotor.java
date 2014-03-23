@@ -11,9 +11,10 @@ public class Jatekmotor {
 	public JosagosSzaruman josagosSzaruman = null;
 	public HashSet<Varazsko> kavicsok = new HashSet<Varazsko>();
 
-	public Jatekmotor() {
+	public Jatekmotor(JosagosSzaruman jsz) {
 		super();
 		SkeletonController.tabNo();
+		this.josagosSzaruman = jsz;
 		SkeletonController.println("<<create>> JatekMotor");
 		SkeletonController.tabCsokken();
 	}

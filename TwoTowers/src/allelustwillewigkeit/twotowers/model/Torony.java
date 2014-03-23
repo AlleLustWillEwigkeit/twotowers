@@ -41,7 +41,7 @@ public class Torony {
 
 	public void felkovez(Varazsko mivel) {
 		SkeletonController.tabNo();
-		SkeletonController.println("felkovez(v)");
+		//SkeletonController.println("felkovez(v)");
 		SkeletonController.tabCsokken();
 	}
 }

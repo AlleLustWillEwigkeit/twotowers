@@ -4,7 +4,7 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class EpitesiTerulet {
 	public Torony torony = null;
-	public EpitesiTerulet epitesiTerulet = null;
+	public EpitesiTerulet epitesiTerulet = null; // TODO: ez minek?
 	public PalyaElem palyaElem = null;
 
 	public EpitesiTerulet() {
@@ -32,13 +32,13 @@ public class EpitesiTerulet {
 		SkeletonController.tabNo();
 //		SkeletonController.println("vanToronyRajta()");
 		SkeletonController.tabCsokken();
-		return true;
+		return (torony != null);
 	}
 
 	public Torony lekerTorony() {
 		SkeletonController.tabNo();
 //		SkeletonController.println("lekerTorony()");
 		SkeletonController.tabCsokken();
-		return new Torony();
+		return torony;
 	}
 }
