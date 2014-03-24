@@ -11,7 +11,7 @@ public class Ut {
 	public List<Ut> ut = new ArrayList<Ut>();
 
 	/**
-	 * Az út konstruktora
+	 * Az ut konstruktora
 	 */
 	public Ut() {
 		super();
@@ -21,7 +21,7 @@ public class Ut {
 	}
 
 	/** Void raLep
-	 * Minden tonyának szól, hogy tüzeljen a célpontra
+	 * Minden tonyanak szol, hogy tuzeljen a celpontra
 	 * @param Ellenseg ellenseg
 	 */
 	public void raLep(Ellenseg ellenseg) {
@@ -33,7 +33,7 @@ public class Ut {
 	}
 
 	/** Void feliratkozik
-	 * Ha a torony még nincs alistában, akkor felveszi oda
+	 * Ha a torony meg nincs alistaban, akkor felveszi oda
 	 * @param Torony torony
 	 */
 	public void feliratkozik(Torony torony) {
@@ -45,7 +45,7 @@ public class Ut {
 	}
 
 	/** Void akadalyomLebomlott
-	 *  Az akadályát törli.
+	 *  Az akadalyat torli.
 	 */
 	public void akadalyomLebomlott() {
 		SkeletonController.tabNo();
@@ -54,7 +54,7 @@ public class Ut {
 	}
 
 	/** Void lerakAkadaly
-	 * Létrehoz egy új akadályt, és felveszi a referenciáját.
+	 * Letrehoz egy uj akadalyt, es felveszi a referenciajat.
 	 */
 	public void lerakAkadaly() {
 		SkeletonController.tabNo();
@@ -63,7 +63,7 @@ public class Ut {
 	}
 
 	/** boolean vanAkadalyRajta
-	 * Igazzal tér vissza, ha van akadály rajta, máskülönben hamissal
+	 * Igazzal ter vissza, ha van akadaly rajta, maskulonben hamissal
 	 * @return boolean
 	 */
 	public boolean vanAkadalyRajta() {
@@ -73,7 +73,7 @@ public class Ut {
 	}
 
 	/** Akadaly lekerAkadaly
-	 * Az akadály referenciájával tér vissza, vagy nullal, ha nincs rajta akadály.
+	 * Az akadaly referenciajaval ter vissza, vagy nullal, ha nincs rajta akadaly.
 	 * @return Akadaly
 	 */
 	public Akadaly lekerAkadaly() {
@@ -83,7 +83,7 @@ public class Ut {
 	}
 
 	/** Ut lekerKovUt
-	 * Az első nála ismert úttal tér vissza, vagy ha a tároló üres, akkor nullal.
+	 * Az elso nala ismert uttal ter vissza, vagy ha a tarolo ures, akkor nullal.
 	 * @return Ut
 	 */
 	public Ut lekerKovUt() {
@@ -96,7 +96,7 @@ public class Ut {
 	}
 
 	/** Void beallitKovUt
-	 * Hozzáadja a paraméterül kapott utat a listához, ha még nincs benne.
+	 * Hozzaadja a parameterul kapott utat a listahoz, ha meg nincs benne.
 	 * @param ut
 	 */
 	public void beallitKovUt(Ut ut) {
@@ -108,7 +108,7 @@ public class Ut {
 	}
 
 	/** void akadalySebzes
-	 * Sebzi a rajta lévő akadályt, ha van.
+	 * Sebzi a rajta levo akadalyt, ha van.
 	 * @param int mennyit
 	 */
 	public void akadalySebzes(int mennyit) {

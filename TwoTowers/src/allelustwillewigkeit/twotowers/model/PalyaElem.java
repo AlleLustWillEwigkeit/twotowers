@@ -12,7 +12,7 @@ public class PalyaElem {
 	public Ut ut = null;
 
 	/**
-	 * A pályaelem konstruktora
+	 * A palyaelem konstruktora
 	 */
 	public PalyaElem() {
 		super();
@@ -22,7 +22,7 @@ public class PalyaElem {
 	}
 
 	/** EpitesiTerulet lekerEpitesiTerulet
-	 * Visszatér a rajta lévő építési terület referenciájával
+	 * Visszater a rajta levo epitesi terulet referenciajaval
 	 * @return EpitesiTerulet
 	 */
 	public EpitesiTerulet lekerEpitesiTerulet() {
@@ -32,7 +32,7 @@ public class PalyaElem {
 	}
 	
 	/** Ut lekerUt
-	 * Visszatér a rajta lévő út referenciájával
+	 * Visszater a rajta levo ut referenciajaval
 	 * @return Ut
 	 */
 	public Ut lekerUt() {
@@ -42,7 +42,7 @@ public class PalyaElem {
 	}
 
 	/** boolean vanUtja
-	 * Igazzal tér vissza, ha van rajta út, különben hamissal.
+	 * Igazzal ter vissza, ha van rajta ut, kulonben hamissal.
 	 * @return boolean
 	 */
 	public boolean vanUtja() {
@@ -52,7 +52,7 @@ public class PalyaElem {
 	}
 	
 	/** boolean vanEpitesiTerulete
-	 * Igazzal tér vissza, ha van rajta építési terület, különben hamissal.
+	 * Igazzal ter vissza, ha van rajta epitesi terulet, kulonben hamissal.
 	 * @return boolean
 	 */
 	public boolean vanEpitesiTerulete() {
@@ -62,8 +62,8 @@ public class PalyaElem {
 	}
 
 	/** void beregisztral
-	 * Minden szomszédjánál rekurzívan beregisztrálja a paraméterül kapott tornyot, ha
-	 * az adott szomszédon van út. Mindezt a megadott hatótávig csinálja.
+	 * Minden szomszedjanal rekurzivan beregisztralja a parameterul kapott tornyot, ha
+	 * az adott szomszedon van ut. Mindezt a megadott hatotavig csinalja.
 	 * @param Torony torony
 	 * @param int tavolsag
 	 */
@@ -79,19 +79,19 @@ public class PalyaElem {
 		if (this.vanUtja() == true)
 			this.lekerUt().feliratkozik(torony);
 		
-		this.beregisztralt = true; //Ne kelljen még egyszer fölöslegesen figyelni őt.
+		this.beregisztralt = true; //Ne kelljen meg egyszer foloslegesen figyelni ot.
 		
 		for (PalyaElem pe : szomszedok) {
 			pe.beregisztral(torony, tavolsag--);
 		}
 		
-		this.beregisztralt = false; // Takarítás, hogy más is fel tudjon iratkozni hozzá.
+		this.beregisztralt = false; // Takaritas, hogy mas is fel tudjon iratkozni hozza.
 		
 		SkeletonController.tabCsokken();
 	}
 
 	/** void legyelUt
-	 * Létrehoz egy utat magára.
+	 * Letrehoz egy utat magara.
 	 */
 	public void legyelUt() {
 		SkeletonController.tabNo();
@@ -100,7 +100,7 @@ public class PalyaElem {
 	}
 
 	/** void legyelEpitesiTerulet
-	 * Létrehoz egy építési területet magára.
+	 * Letrehoz egy epitesi teruletet magara.
 	 */
 	public void legyelEpitesiTerulet() {
 		SkeletonController.tabNo();
@@ -109,7 +109,7 @@ public class PalyaElem {
 	}
 
 	/** void addSzomszed
-	 * Hozzáadja a paraméterül kapott szomszédot, ha még nincs a listában.
+	 * Hozzaadja a parameterul kapott szomszedot, ha meg nincs a listaban.
 	 * @param PalyaElem sz
 	 */
 	public void addSzomszed(PalyaElem sz) {

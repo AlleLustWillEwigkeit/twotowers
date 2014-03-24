@@ -7,7 +7,7 @@ public class EpitesiTerulet {
 	public PalyaElem palyaElem = null;
 
 	/**
-	 * Ez az építési terület konstruktora
+	 * Ez az epitesi terulet konstruktora
 	 */
 	public EpitesiTerulet() {
 		super();
@@ -17,7 +17,7 @@ public class EpitesiTerulet {
 	}
 
 	/** PalyaElem minAll
-	 * Visszaadja a pályaelemet, amin áll.
+	 * Visszaadja a palyaelemet, amin all.
 	 * @return PalyaElem
 	 */
 	public PalyaElem minAll() {
@@ -27,7 +27,7 @@ public class EpitesiTerulet {
 	}
 
 	/** void lerakTornyot
-	 * Létrehoz egy új tornyot, és felveszi a referenciáját. 
+	 * Letrehoz egy uj tornyot, es felveszi a referenciajat. 
 	 */
 	public void lerakTornyot() {
 		SkeletonController.tabNo();
@@ -36,7 +36,7 @@ public class EpitesiTerulet {
 	}
 
 	/** boolean vanToronyRajta
-	 * Igazat ad, ha van rajta torony, különben hamisat
+	 * Igazat ad, ha van rajta torony, kulonben hamisat
 	 * @return boolean
 	 */
 	public boolean vanToronyRajta() {
@@ -46,7 +46,7 @@ public class EpitesiTerulet {
 	}
 
 	/** Torony lekerTorony
-	 * Visszatér a torony referenciájával.
+	 * Visszater a torony referenciajaval.
 	 * @return
 	 */
 	public Torony lekerTorony() {

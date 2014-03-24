@@ -11,7 +11,7 @@ public class Jatekmotor {
 	public JosagosSzaruman josagosSzaruman = null;
 	public HashSet<Varazsko> kavicsok = new HashSet<Varazsko>();
 
-	/** A játékmotor konstruktora
+	/** A jatekmotor konstruktora
 	 * @param JosagosSzaruman jsz
 	 */
 	public Jatekmotor(JosagosSzaruman jsz) {
@@ -23,7 +23,7 @@ public class Jatekmotor {
 	}
 
 	/** void tick
-	 * Szimulál egy időegységet.
+	 * Szimulal egy idoegyseget.
 	 */
 	public void tick() {
 		SkeletonController.tabNo();
@@ -31,7 +31,7 @@ public class Jatekmotor {
 	}
 
 	/** void lerakTornyot
-	 * Lerak egy tornyot egy adott pályaelemre.
+	 * Lerak egy tornyot egy adott palyaelemre.
 	 * @param PalyaElem hova
 	 */
 	public void lerakTornyot(PalyaElem hova) {
@@ -41,7 +41,7 @@ public class Jatekmotor {
 	}
 
 	/** void lerakAkadaly
-	 * Lerak egy akadályt egy adott pályaelemre.
+	 * Lerak egy akadalyt egy adott palyaelemre.
 	 * @param PalyaElem hova
 	 */
 	public void lerakAkadaly(PalyaElem hova) {
@@ -51,7 +51,7 @@ public class Jatekmotor {
 	}
 
 	/** void felkovez
-	 * Az adott pályaelem-nek szól, hogy kövezze fel a rajta lévő tornyot, vagy akadályt.
+	 * Az adott palyaelem-nek szol, hogy kovezze fel a rajta levo tornyot, vagy akadalyt.
 	 * @param PalyaElem mit
 	 */
 	public void felkovez(PalyaElem mit) {
@@ -75,7 +75,7 @@ public class Jatekmotor {
 	}
 
 	/** void ujJatek
-	 * Új játékot indít
+	 * uj jatekot indit
 	 */
 	public void ujJatek() {
 		SkeletonController.tabNo();
@@ -92,7 +92,7 @@ public class Jatekmotor {
 	}
 
 	/** void vereseg
-	 * Vereség történt.
+	 * Vereseg tortent.
 	 */
 	public void vereseg() {
 		SkeletonController.tabNo();
@@ -100,7 +100,7 @@ public class Jatekmotor {
 	}
 
 	/** void gyozelem
-	 * Győzelem történt.
+	 * Gyozelem tortent.
 	 */
 	public void gyozelem() {
 		SkeletonController.tabNo();

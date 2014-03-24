@@ -13,7 +13,7 @@ public class Ellensegek {
 	public Ellensegek ellensegek = null;
 	public Start start = null;
 
-	/** Ez ellenségek konstruktora
+	/** Ez ellensegek konstruktora
 	 * @param Jatekmotor jm
 	 * @param Start st
 	 */
@@ -29,7 +29,7 @@ public class Ellensegek {
 	}
 
 	/** void inditEllenseg
-	 * Létrehoz annyi ellenségek, amennyit paraméterül kapott.
+	 * Letrehoz annyi ellensegek, amennyit parameterul kapott.
 	 * @param int mennyit
 	 */
 	public void inditEllenseg(int mennyit) {
@@ -42,8 +42,8 @@ public class Ellensegek {
 	}
 
 	/** void egyEllensegMeghalt
-	 * Kiszedi a paraméterül kapott ellenséget a listájából. 
-	 * Ha elfogyott az összes, akkor szól a játékmotornak, hogy gőzelem van.
+	 * Kiszedi a parameterul kapott ellenseget a listajabol. 
+	 * Ha elfogyott az osszes, akkor szol a jatekmotornak, hogy gozelem van.
 	 * 
 	 * @param ellenseg
 	 */
@@ -52,14 +52,14 @@ public class Ellensegek {
 		if(this.ellenseg.contains(ellenseg))
 			this.ellenseg.remove(ellenseg);
 		
-		if (SkeletonController.kerdezIH("Elfogyott minden ellenfél?")) 
+		if (SkeletonController.kerdezIH("Elfogyott minden ellenfel?")) 
 			this.jatekMotor.gyozelem();
 		
 		SkeletonController.tabCsokken();
 	}
 
 	/** void mindLep
-	 * Minden ellenségnek szól, hogy lépjen.
+	 * Minden ellensegnek szol, hogy lepjen.
 	 */
 	public void mindLep() {
 		SkeletonController.tabNo();

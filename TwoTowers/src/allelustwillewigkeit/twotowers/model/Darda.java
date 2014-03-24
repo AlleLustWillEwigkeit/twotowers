@@ -4,7 +4,7 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Darda extends Lovedek {
 	/**
-	 * A dárda konstruktora
+	 * A darda konstruktora
 	 */
 	public Darda() {
 		super();
@@ -14,7 +14,7 @@ public class Darda extends Lovedek {
 	}
 
 	/** void megLo
-	 * Meglövi az ellenfelet.
+	 * Meglovi az ellenfelet.
 	 * @param Ellenseg kit
 	 */
 	@Override

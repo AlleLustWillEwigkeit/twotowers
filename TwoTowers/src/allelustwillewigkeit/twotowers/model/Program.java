@@ -17,7 +17,7 @@ public class Program {
 	}
 
 	/** void ujJatek
-	 * Új játékot indít
+	 * uj jatekot indit
 	 */
 	public void ujJatek() {
 		SkeletonController.tabNo();
@@ -25,7 +25,7 @@ public class Program {
 	}
 
 	/** static void main
-	 * Itt van a program induló pontja
+	 * Itt van a program indulo pontja
 	 */
 	public static void main() {
 		SkeletonController.tabNo();

@@ -18,7 +18,7 @@ public class Varazsko {
 	}
 
 	/** void tuzel
-	 * Minden lövedékének szól, hogy lője meg a célpontot
+	 * Minden lovedekenek szol, hogy loje meg a celpontot
 	 * @param Ellenseg celpont
 	 */
 	public void tuzel(Ellenseg celpont) {
@@ -30,7 +30,7 @@ public class Varazsko {
 	}
 
 	/** float lekerHatotavSzorzo
-	 * Visszatér a hatótávszorzóval
+	 * Visszater a hatotavszorzoval
 	 * @return float
 	 */
 	public float lekerHatotavSzorzo() {
@@ -40,7 +40,7 @@ public class Varazsko {
 	}
 	
 	/** float lekerEleteroSzorzo
-	 * Visszatér az életerőszorzóval
+	 * Visszater az eleteroszorzoval
 	 * @return float
 	 */
 	public float lekerEleteroSzorzo() {

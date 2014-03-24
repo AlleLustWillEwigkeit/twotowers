@@ -22,7 +22,7 @@ public class Torony {
 	}
 
 	/** void tuzel
-	 * Minden varászkövének szól, hogy tüzeljen a célpontra
+	 * Minden varaszkovenek szol, hogy tuzeljen a celpontra
 	 * @param Ellenseg celpont
 	 */
 	public void tuzel(Ellenseg celpont) {
@@ -34,7 +34,7 @@ public class Torony {
 	}
 
 	/** void beRegisztralTavonBeluliUtakhoz
-	 * Szól az őt tároló pályaelemnek, hogy beregisztrálna az utakhoz, a megfelelő hatótávon.
+	 * Szol az ot tarolo palyaelemnek, hogy beregisztralna az utakhoz, a megfelelo hatotavon.
 	 */
 	public void beRegisztralTavonBeluliUtakhoz() {
 		SkeletonController.tabNo();
@@ -50,7 +50,7 @@ public class Torony {
 	}
 
 	/** void felkovez
-	 * Ha még nincs rajta a paraméterül kapott varászkő, akkor felveszi
+	 * Ha meg nincs rajta a parameterul kapott varaszko, akkor felveszi
 	 * @param Varazsko mivel
 	 */
 	public void felkovez(Varazsko mivel) {

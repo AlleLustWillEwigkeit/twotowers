@@ -5,7 +5,7 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 public class VegzetHegye extends Ut {
 	public Jatekmotor jatekmotor = null;
 
-	/** VégzetHegye konstruktora
+	/** VegzetHegye konstruktora
 	 * @param JatekMotor jm
 	 */
 	public VegzetHegye(Jatekmotor jm) {
@@ -17,8 +17,8 @@ public class VegzetHegye extends Ut {
 	}
 	
 	/** void raLep
-	 * Ez a metódus felüldefiniálja az útét
-	 * Szól a játékmotornak, hogy vereség van.
+	 * Ez a metodus feluldefinialja az utet
+	 * Szol a jatekmotornak, hogy vereseg van.
 	 * 
 	 * @param Ellenseg ellenseg
 	 */

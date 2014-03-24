@@ -4,7 +4,7 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Lovedek {
 	/**
-	 * A lövedék konstruktora
+	 * A lovedek konstruktora
 	 */
 	public Lovedek() {
 		super();
@@ -14,7 +14,7 @@ public class Lovedek {
 	}
 
 	/** void megLo
-	 * Meglövi az ellenfelet.
+	 * Meglovi az ellenfelet.
 	 * @param Ellenseg kit
 	 */
 	public void megLo(Ellenseg kit) {

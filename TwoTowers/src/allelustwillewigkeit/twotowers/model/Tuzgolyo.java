@@ -4,7 +4,7 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Tuzgolyo extends Lovedek {
 	/**
-	 * A tűzgolyó konstruktora
+	 * A tuzgolyo konstruktora
 	 */
 	public Tuzgolyo() {
 		super();
@@ -14,7 +14,7 @@ public class Tuzgolyo extends Lovedek {
 	}
 
 	/** void megLo
-	 * Meglövi az ellenfelet.
+	 * Meglovi az ellenfelet.
 	 * @param Ellenseg kit
 	 */
 	@Override

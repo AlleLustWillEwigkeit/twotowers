@@ -3,7 +3,7 @@ package allelustwillewigkeit.twotowers.model;
 import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Torp extends Ellenseg {
-	/** A törp konstruktora
+	/** A torp konstruktora
 	 * @param start
 	 * @param ellens
 	 */
@@ -15,7 +15,7 @@ public class Torp extends Ellenseg {
 	}
 
 	/** void sebezTuzgolyo
-	 * Sebzi magát a megfelelő métrékben
+	 * Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezTuzgolyo() {
@@ -32,7 +32,7 @@ public class Torp extends Ellenseg {
 	}
 
 	/** void sebezSzikla
-	 * Sebzi magát a megfelelő métrékben
+	 * Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezSzikla() {
@@ -49,7 +49,7 @@ public class Torp extends Ellenseg {
 	}
 
 	/** void sebezNyil
-	 * Sebzi magát a megfelelő métrékben
+	 * Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezNyil() {
@@ -66,7 +66,7 @@ public class Torp extends Ellenseg {
 	}
 
 	/** void sebezDarda
-	 * Sebzi magát a megfelelő métrékben
+	 * Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezDarda() {

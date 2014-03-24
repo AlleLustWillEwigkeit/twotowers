@@ -119,7 +119,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_EHn28KUdEeOKINjiiErprA" name="Ember">
     <ownedComment xmi:type="uml:Comment" xmi:id="_eM7rkKUgEeOKINjiiErprA">
-      <body>A törp felelőssége, hogy implementáljon bizonyos lövedék által meghívott metódusokat, úton lévő akadály esetén azt lebontsa(és ne haladjon át addig amíg ez nem sikerül), jelezze, hogy rálépett egy adott útszakaszra, tárolja a saját életerejét, jelezze ha elhalálozik, illetve tárolja, hogy mekkora sebzést mér egy akadályra. </body>
+      <body>A torp felelossege, hogy implementaljon bizonyos lovedek altal meghivott metodusokat, uton levo akadaly eseten azt lebontsa(es ne haladjon at addig amig ez nem sikerul), jelezze, hogy ralepett egy adott utszakaszra, tarolja a sajat eleterejet, jelezze ha elhalalozik, illetve tarolja, hogy mekkora sebzest mer egy akadalyra. </body>
     </ownedComment>
     <generalization xmi:type="uml:Generalization" xmi:id="_N7F8IKUdEeOKINjiiErprA" general="_AoBjkKUdEeOKINjiiErprA"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_hJlp8KUgEeOKINjiiErprA" name="sebezDarda"/>

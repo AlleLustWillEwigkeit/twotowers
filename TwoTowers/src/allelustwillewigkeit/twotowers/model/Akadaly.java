@@ -9,7 +9,7 @@ public class Akadaly {
 	public HashSet<Varazsko> varazsko = new HashSet<Varazsko>();
 	public Ut ut = null;
 
-	/** Az akadály konstruktora
+	/** Az akadaly konstruktora
 	 * @param Ut u
 	 */
 	public Akadaly(Ut u) {
@@ -21,7 +21,7 @@ public class Akadaly {
 	}
 
 	/** void felkovez
-	 * Felveszi a paraméterül kapott varászkő referenciáját
+	 * Felveszi a parameterul kapott varaszko referenciajat
 	 * @param Varazsko mivel
 	 */
 	public void felkovez(Varazsko mivel) {
@@ -31,7 +31,7 @@ public class Akadaly {
 	}
 
 	/** void sebzodik
-	 * Levonja a paraméterül kapott értéket az életerejéből.
+	 * Levonja a parameterul kapott erteket az eleterejebol.
 	 * @param int mennyit
 	 */
 	public void sebzodik(int mennyit) {

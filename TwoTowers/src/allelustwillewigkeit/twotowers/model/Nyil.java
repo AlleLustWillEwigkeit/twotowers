@@ -4,7 +4,7 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 public class Nyil extends Lovedek {
 	/**
-	 * A nyíl konstruktora
+	 * A nyil konstruktora
 	 */
 	public Nyil() {
 		super();
@@ -14,7 +14,7 @@ public class Nyil extends Lovedek {
 	}
 
 	/** void megLo
-	 * Meglövi az ellenfelet.
+	 * Meglovi az ellenfelet.
 	 * @param Ellenseg kit
 	 */
 	@Override

@@ -15,7 +15,7 @@ public class Ember extends Ellenseg {
 	}
 
 	/** void sebezDarda
-	 * Sebzi magát a megfelelő métrékben
+	 * Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezDarda() {
@@ -32,7 +32,7 @@ public class Ember extends Ellenseg {
 	}
 
 	/** void sebezTuzgolyo
-	 * Sebzi magát a megfelelő métrékben
+	 * Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezTuzgolyo() {
@@ -50,7 +50,7 @@ public class Ember extends Ellenseg {
 	}
 
 	/** void sebezSzikla
-	 * Sebzi magát a megfelelő métrékben
+	 * Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezSzikla() {
@@ -68,7 +68,7 @@ public class Ember extends Ellenseg {
 	}
 
 	/** void sebezNyil
-	 * Sebzi magát a megfelelő métrékben
+	 * Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezNyil() {

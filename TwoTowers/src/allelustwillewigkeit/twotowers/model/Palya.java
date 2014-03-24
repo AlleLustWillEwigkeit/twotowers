@@ -8,7 +8,7 @@ public class Palya {
 	public ArrayList<PalyaElem> palyaElem = new ArrayList<PalyaElem>();
 
 	/**
-	 * A pálya konstruktora
+	 * A palya konstruktora
 	 */
 	public Palya() {
 		super();
@@ -18,7 +18,7 @@ public class Palya {
 	}
 
 	/** void ujPalya
-	 * Létrehoz egy pálya összeállítást.
+	 * Letrehoz egy palya osszeallitast.
 	 */
 	public void ujPalya() {
 		SkeletonController.tabNo();

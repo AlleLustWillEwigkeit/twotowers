@@ -4,7 +4,7 @@ import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
 
 /**
  * Start class
- * Ez az osztály arra szolgál, hogy megkülönböztessük a kezdő utat.
+ * Ez az osztaly arra szolgal, hogy megkulonboztessuk a kezdo utat.
  */
 public class Start extends Ut {
 	/**

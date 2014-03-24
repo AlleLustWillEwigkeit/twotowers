@@ -10,7 +10,7 @@ public abstract class Ellenseg {
 	public Ellensegek ellensegek = null;
 	private int sebzes = 0;
 
-	/** Az ellenség konstruktora
+	/** Az ellenseg konstruktora
 	 * @param Ut start
 	 * @param Ellensegek ellens
 	 */
@@ -24,27 +24,27 @@ public abstract class Ellenseg {
 	}
 
 	/** abstract void sebezNyil
-	 * Nyíl sebzés
+	 * Nyil sebzes
 	 */
 	public abstract void sebezNyil();
 	
 	/** abstract void sebezTuzgolyo
-	 * Tűzgolyó sebzés
+	 * Tuzgolyo sebzes
 	 */
 	public abstract void sebezTuzgolyo();
 
 	/** abstract void sebezDarda
-	 * Dárda sebzés
+	 * Darda sebzes
 	 */
 	public abstract void sebezDarda();
 
 	/** abstract void sebezSzikla
-	 * Szikla sebzés
+	 * Szikla sebzes
 	 */
 	public abstract void sebezSzikla();
 
 	/** int akadalySebzes
-	 * Visszatér, hogy mennyit sebez az akadályra.
+	 * Visszater, hogy mennyit sebez az akadalyra.
 	 * @return int
 	 */
 	public int akadalySebzes() {
@@ -53,12 +53,12 @@ public abstract class Ellenseg {
 	}
 
 	/** void lep
-	 * A következő útra lép, ha tud.
+	 * A kovetkezo utra lep, ha tud.
 	 */
 	public void lep() {
 		SkeletonController.tabNo();
 
-		if(SkeletonController.kerdezIH("Léphetek már?(H esetén maradok")){ 
+		if(SkeletonController.kerdezIH("Lephetek mar?(H eseten maradok")){ 
 			this.ut = this.ut.lekerKovUt();
 			this.ut.raLep(this);
 			this.ut.akadalySebzes(sebzes);
@@ -71,7 +71,7 @@ public abstract class Ellenseg {
 	}
 
 	/** void sebezLovedek
-	 * Lövedék sebzés
+	 * Lovedek sebzes
 	 */
 	public void sebezLovedek() { 
 		SkeletonController.tabNo();
@@ -85,7 +85,7 @@ public abstract class Ellenseg {
 	}
 
 	/** void eleteroAllit
-	 * Beállítja az életerőt, az adott értékre.
+	 * Beallitja az eleterot, az adott ertekre.
 	 * @param int mennyire
 	 */
 	public void eleteroAllit(int mennyire) {
@@ -95,7 +95,7 @@ public abstract class Ellenseg {
 	}
 
 	/** float eleteroLeker
-	 * Visszatér az életerővel
+	 * Visszater az eleterovel
 	 * @return float
 	 */
 	public float eleteroLeker() {
@@ -105,7 +105,7 @@ public abstract class Ellenseg {
 	}
 
 	/**void beallitUt
-	 * Beállítja az út referenciáját az paraméterül kapottra.
+	 * Beallitja az ut referenciajat az parameterul kapottra.
 	 * @param Ut ut
 	 */
 	public void beallitUt(Ut ut) {

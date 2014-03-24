@@ -69,7 +69,7 @@ public class SkeletonController {
 					+ "\n");
 
 		} else {
-			kiiro("Valaki úgy lépett ki, hogy nem lépett be!");
+			kiiro("Valaki ugy lepett ki, hogy nem lepett be!");
 		}
 
 	}
@@ -120,7 +120,7 @@ public class SkeletonController {
 				throw new IllegalArgumentException();
 			}
 		} catch (IllegalArgumentException e) {
-			println("Nem valid válasz. Probáld újra.");
+			println("Nem valid valasz. Probald ujra.");
 			return kerdezIH(mihez);
 		}
 
@@ -128,7 +128,7 @@ public class SkeletonController {
 
 	public static int kerdezEgesz(String mihez) {
 		print(mihez);
-		kiiro(" (egész)\n");
+		kiiro(" (egesz)\n");
 		String eredmeny = readln();
 		return Integer.parseInt(eredmeny);
 	}
@@ -136,12 +136,12 @@ public class SkeletonController {
 	public static Lovedek kerdezLovedek(String mihez) {
 		try {
 			println(mihez);
-			println("Adja meg milyen lövedékkel akar lőni! Itt a lista:");
-			println("1 - Lövedék");
-			println("2 - Nyíl ");
-			println("3 - Tűzgolyó");
+			println("Adja meg milyen lovedekkel akar loni! Itt a lista:");
+			println("1 - Lovedek");
+			println("2 - Nyil ");
+			println("3 - Tuzgolyo");
 			println("4 - Szikla");
-			println("5 - Dárda");
+			println("5 - Darda");
 			String valasz = readln();
 			int valaszINT = Integer.parseInt(valasz);
 			switch (valaszINT) {
@@ -159,10 +159,10 @@ public class SkeletonController {
 				throw new IllegalArgumentException();
 			}
 		} catch (NumberFormatException e) {
-			println("A válasz valahol 1-5 között rejlik, számmal írva!");
+			println("A valasz valahol 1-5 kozott rejlik, szammal irva!");
 			return kerdezLovedek(mihez);
 		} catch (IllegalArgumentException e) {
-			println("Számot adtál meg, de nem az adott tartományban!");
+			println("Szamot adtal meg, de nem az adott tartomanyban!");
 			return kerdezLovedek(mihez);
 		}
 
@@ -171,7 +171,7 @@ public class SkeletonController {
 	public static Ellenseg kerdezEllenseg(String mihez, Ut ut, Ellensegek el) {
 		try {
 			println(mihez);
-			println("Adja meg milyen ellenségre akar lőni! Itt a lista:");
+			println("Adja meg milyen ellensegre akar loni! Itt a lista:");
 			println("1 - Ember");
 			println("2 - Tunde ");
 			println("3 - Torp");
@@ -191,10 +191,10 @@ public class SkeletonController {
 				throw new IllegalArgumentException();
 			}
 		} catch (NumberFormatException e) {
-			println("A válasz valahol 1-2 között rejlik, számmal írva!");
+			println("A valasz valahol 1-2 kozott rejlik, szammal irva!");
 			return kerdezEllenseg(mihez, ut, el);
 		} catch (IllegalArgumentException e) {
-			println("Számot adtál meg, de nem az adott tartományban!");
+			println("Szamot adtal meg, de nem az adott tartomanyban!");
 			return kerdezEllenseg(mihez, ut, el);
 		}
 
@@ -203,44 +203,49 @@ public class SkeletonController {
 	public static void mainMenu() {
 		boolean doexit = false;
 		while (!doexit) {
-			println("Kérem a lejátszandó use-case számát! A lehetőségek:");
-			println("0. Kilépés a skeleton programból");
-			println("1. Lépés");
-			println("2. Lövés");
-			println("3. Akadály lerakása");
-			println("4. Torony lerakás");
-			println("5. Varázskő lerakás");
-			println("6. Győzelem");
-			println("7. Vereség");
-			// SkeletonController.readln();
-			switch (Integer.parseInt(SkeletonController.readln())) {
-			case 1:
-				UCLepes();
-				break;
-			case 2:
-				UCLoves();
-				break;
-			case 3:
-				UCAkadalyLerak();
-				break;
-			case 4:
-				UCToronyLerak();
-				break;
-			case 5:
-				UCVarazskoLerak();
-				break;
-			case 6:
-				UCGyozelem();
-				break;
-			case 7:
-				UCVereseg();
-				break;
-			case 0:
-				doexit = true;
-				break;
-			default:
-				System.out.println("Érvénytelen bemenet.");
-				break;
+			println("Kerem a lejatszando use-case szamat! A lehetosegek:");
+			println("0. Kilepes a skeleton programbol");
+			println("1. Lepes");
+			println("2. Loves");
+			println("3. Akadaly lerakasa");
+			println("4. Torony lerakas");
+			println("5. Varazsko lerakas");
+			println("6. Gyozelem");
+			println("7. Vereseg");
+			try {
+				switch (Integer.parseInt(SkeletonController.readln())) {
+					case 1:
+						UCLepes();
+						break;
+					case 2:
+						UCLoves();
+						break;
+					case 3:
+						UCAkadalyLerak();
+						break;
+					case 4:
+						UCToronyLerak();
+						break;
+					case 5:
+						UCVarazskoLerak();
+						break;
+					case 6:
+						UCGyozelem();
+						break;
+					case 7:
+						UCVereseg();
+						break;
+					case 0:
+						doexit = true;
+						break;
+					default:
+						System.out.println("ervenytelen bemenet.");
+						break;
+				}
+			} catch (NumberFormatException e) {
+				println("A valasz valahol 1-7 kozott rejlik, szammal irva!");
+			} catch (IllegalArgumentException e) {
+				println("Szamot adtal meg, de nem az adott tartomanyban!");
 			}
 		}
 
@@ -257,7 +262,7 @@ public class SkeletonController {
 
 		Ellensegek e = new Ellensegek(jm, st);
 		e.inditEllenseg(3);
-		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 		e.mindLep();
 	}
 
@@ -272,7 +277,7 @@ public class SkeletonController {
 		t.varazsko.add(v);
 		u.torony.add(t);
 		Ellenseg e = kerdezEllenseg("", u, null);
-		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 		u.raLep(e);
 	}
 
@@ -281,7 +286,7 @@ public class SkeletonController {
 		PalyaElem pe = new PalyaElem();
 		EpitesiTerulet e = new EpitesiTerulet();
 		pe.epitesiTerulet = e;
-		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 		jm.lerakTornyot(pe);
 	}
 
@@ -290,7 +295,7 @@ public class SkeletonController {
 		PalyaElem pe = new PalyaElem();
 		Ut u = new Ut();
 		pe.ut = u;
-		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 		jm.lerakAkadaly(pe);
 	}
 
@@ -305,7 +310,7 @@ public class SkeletonController {
 		Ut u = new Ut();
 		u.akadaly = new Akadaly(u);
 		pe.ut = u;
-		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 		jm.felkovez(pe);
 	}
 
@@ -315,7 +320,7 @@ public class SkeletonController {
 		Ellensegek ellen = new Ellensegek(jm, st);
 		Ellenseg e = new Ember(st, ellen);
 		ellen.ellenseg.add(e);
-		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 		ellen.egyEllensegMeghalt(e);
 	}
 
@@ -324,7 +329,7 @@ public class SkeletonController {
 		VegzetHegye vh = new VegzetHegye(jm);
 		Ellensegek ellen = new Ellensegek(jm, null);
 		Ellenseg e = new Ember(null, ellen);
-		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 		vh.raLep(e);
 	}
 

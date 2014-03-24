@@ -7,7 +7,7 @@ public class JosagosSzaruman {
 	public Varazsko kivalasztottVarazsko = null;
 
 	/**
-	 * A jóságos szarumán konstruktora
+	 * A josagos szaruman konstruktora
 	 */
 	public JosagosSzaruman() {
 		super();
@@ -17,7 +17,7 @@ public class JosagosSzaruman {
 	}
 
 	/** void varazseroNovel
-	 * Növeli a varázserejét a megadott mértékben
+	 * Noveli a varazserejet a megadott mertekben
 	 * @param int mennyivel
 	 */
 	public void varazseroNovel(int mennyivel) {
@@ -27,7 +27,7 @@ public class JosagosSzaruman {
 	}
 
 	/** Varazsko lekerKivalasztottVarazsko
-	 * Visszaadja a kiválasztott varászkövet. Ha nincs, létrehoz egyet.
+	 * Visszaadja a kivalasztott varaszkovet. Ha nincs, letrehoz egyet.
 	 * @return Varazsko
 	 */
 	public Varazsko lekerKivalasztottVarazsko() {
