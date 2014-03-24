@@ -112,18 +112,20 @@ public class SkeletonController {
 			String eredmeny;
 			eredmeny = readln().toUpperCase();
 			switch (eredmeny.charAt(0)) {
-			case 'I':
-				return true;
-			case 'H':
-				return false;
-			default:
-				throw new IllegalArgumentException();
+				case 'I':
+					return true;
+				case 'H':
+					return false;
+				default:
+					throw new IllegalArgumentException();
 			}
 		} catch (IllegalArgumentException e) {
 			println("Nem valid valasz. Probald ujra.");
 			return kerdezIH(mihez);
+		} catch (StringIndexOutOfBoundsException e) {
+			println("Nem valid valasz. Probald ujra.");
+			return kerdezIH(mihez);
 		}
-
 	}
 
 	public static int kerdezEgesz(String mihez) {
