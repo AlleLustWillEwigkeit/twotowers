@@ -203,45 +203,52 @@ public class SkeletonController {
 	public static void mainMenu() {
 		boolean doexit = false;
 		while (!doexit) {
-			println("Kérem a lejátszandó use-case számát! A lehetőségek:");
-			println("0. Kilépés a skeleton programból");
-			println("1. Lépés");
-			println("2. Lövés");
-			println("3. Akadály lerakása");
-			println("4. Torony lerakás");
-			println("5. Varázskő lerakás");
-			println("6. Győzelem");
-			println("7. Vereség");
-			// SkeletonController.readln();
-			switch (Integer.parseInt(SkeletonController.readln())) {
-			case 1:
-				UCLepes();
-				break;
-			case 2:
-				UCLoves();
-				break;
-			case 3:
-				UCAkadalyLerak();
-				break;
-			case 4:
-				UCToronyLerak();
-				break;
-			case 5:
-				UCVarazskoLerak();
-				break;
-			case 6:
-				UCGyozelem();
-				break;
-			case 7:
-				UCVereseg();
-				break;
-			case 0:
-				doexit = true;
-				break;
-			default:
-				System.out.println("Érvénytelen bemenet.");
-				break;
+			try{
+				println("Kérem a lejátszandó use-case számát! A lehetőségek:");
+				println("0. Kilépés a skeleton programból");
+				println("1. Lépés");
+				println("2. Lövés");
+				println("3. Akadály lerakása");
+				println("4. Torony lerakás");
+				println("5. Varázskő lerakás");
+				println("6. Győzelem");
+				println("7. Vereség");
+				
+				switch (Integer.parseInt(SkeletonController.readln())) {
+				case 1:
+					UCLepes();
+					break;
+				case 2:
+					UCLoves();
+					break;
+				case 3:
+					UCAkadalyLerak();
+					break;
+				case 4:
+					UCToronyLerak();
+					break;
+				case 5:
+					UCVarazskoLerak();
+					break;
+				case 6:
+					UCGyozelem();
+					break;
+				case 7:
+					UCVereseg();
+					break;
+				case 0:
+					doexit = true;
+					break;
+				default:
+					println("Érvénytelen bemenet.");
+					break;
+				}
+			} catch (NumberFormatException e) {
+				println("A válasz valahol 0-7 között rejlik, számmal írva!");
+			} catch (IllegalArgumentException e) {
+				println("Számot adtál meg, de nem az adott tartományban!");
 			}
+			
 		}
 
 	}
