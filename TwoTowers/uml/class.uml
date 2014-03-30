@@ -82,6 +82,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_c2EGELg2EeOPOagBRJFpig" name="sebezSzelo"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_CdvvEKUdEeOKINjiiErprA" name="Ellensegek">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_rj-skKUdEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA" association="_rj_ToKUdEeOKINjiiErprA">
@@ -113,6 +114,9 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_nUzSMKUkEeOKINjiiErprA" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_bMA7cKUkEeOKINjiiErprA" name="mindLep"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gk9ZsLg2EeOPOagBRJFpig" name="egyEllensegSzetszakit">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_kZO8kLg2EeOPOagBRJFpig" name="ellenseg" type="_AoBjkKUdEeOKINjiiErprA"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_EHn28KUdEeOKINjiiErprA" name="Ember">
     <ownedComment xmi:type="uml:Comment" xmi:id="_eM7rkKUgEeOKINjiiErprA">
@@ -263,6 +267,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fVupMqUsEeOKINjiiErprA" value="*"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_bsmcAKfBEeO64vCks6OQrA" name="ujPalya"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_6IO1ELg1EeOPOagBRJFpig" name="tick"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_sCCFEKUeEeOKINjiiErprA" clientDependency="_jgWMUKUoEeOKINjiiErprA" name="Torony">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_8rYG0KUnEeOKINjiiErprA" name="varazsko" type="_4WLXQKUeEeOKINjiiErprA" association="_8rYt4KUnEeOKINjiiErprA">
@@ -284,6 +289,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_8UH4IKcOEeOFb47TKes-QQ" name="felkovez">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_-83cAKcOEeOFb47TKes-QQ" name="mivel" type="_4WLXQKUeEeOKINjiiErprA"/>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_oUsiALg1EeOPOagBRJFpig" name="tick"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_tfdsYKUeEeOKINjiiErprA" name="Ut">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_Z7rtQKUqEeOKINjiiErprA" name="ut" type="_tfdsYKUeEeOKINjiiErprA" association="_Z7sUUKUqEeOKINjiiErprA">
@@ -336,6 +342,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BZ8IILg2EeOPOagBRJFpig" name="tick"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_1W5isKUeEeOKINjiiErprA" name="VegzetHegye">
     <generalization xmi:type="uml:Generalization" xmi:id="_1hUB8KUpEeOKINjiiErprA" general="_tfdsYKUeEeOKINjiiErprA"/>
@@ -364,6 +371,14 @@
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_uxowQLg1EeOPOagBRJFpig" name="duration" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vT5v0Lg1EeOPOagBRJFpig" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vT6W4Lg1EeOPOagBRJFpig" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_vT7lALg1EeOPOagBRJFpig">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_oTSMUKUnEeOKINjiiErprA" name="tuzel">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_rrVGMKUnEeOKINjiiErprA" name="celpont" type="_AoBjkKUdEeOKINjiiErprA" isUnique="false"/>
     </ownedOperation>
@@ -377,6 +392,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_1EgcgLg1EeOPOagBRJFpig" name="tick"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_wNvhcKUnEeOKINjiiErprA" name="varazsko_lovedek_1" memberEnd="_wNvhcaUnEeOKINjiiErprA _wNu6YKUnEeOKINjiiErprA">
     <ownedEnd xmi:type="uml:Property" xmi:id="_wNvhcaUnEeOKINjiiErprA" name="varazsko" type="_4WLXQKUeEeOKINjiiErprA" association="_wNvhcKUnEeOKINjiiErprA">
@@ -481,6 +497,7 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_xPMZwKfMEeO64vCks6OQrA" name="legyelUt"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_xa8WwKfMEeO64vCks6OQrA" name="legyelEpitesiTerulet"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8rCwELg1EeOPOagBRJFpig" name="tick"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_WNCmYKUsEeOKINjiiErprA" name="EpitesiTerulet">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_qPiEUKUsEeOKINjiiErprA" name="torony" type="_sCCFEKUeEeOKINjiiErprA" association="_qPirYKUsEeOKINjiiErprA">
@@ -578,5 +595,11 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4TFXcqfFEeO64vCks6OQrA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4TFXc6fFEeO64vCks6OQrA" value="1"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_H1pAQLg2EeOPOagBRJFpig" name="Szelo">
+    <generalization xmi:type="uml:Generalization" xmi:id="_TLFOgLg2EeOPOagBRJFpig" general="_K4sssKUeEeOKINjiiErprA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KMPrQLg2EeOPOagBRJFpig" name="megLo">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_N73-sLg2EeOPOagBRJFpig" name="kit" type="_AoBjkKUdEeOKINjiiErprA"/>
+    </ownedOperation>
   </packagedElement>
 </uml:Model>
