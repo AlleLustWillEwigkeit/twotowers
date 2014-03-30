@@ -13,53 +13,60 @@ public class Ellensegek {
 	public Ellensegek ellensegek = null;
 	public Start start = null;
 
-	/** Ez ellenségek konstruktora
-	 * @param Jatekmotor jm
-	 * @param Start st
+	/**
+	 * Ez ellenségek konstruktora
+	 * 
+	 * @param Jatekmotor
+	 *            jm
+	 * @param Start
+	 *            st
 	 */
 	public Ellensegek(Jatekmotor jm, Start st) {
 		super();
-		
+
 		SkeletonController.tabNo();
 		this.start = st;
 		this.jatekMotor = jm;
-		
+
 		SkeletonController.println("<<create>> Ellensegek");
 		SkeletonController.tabCsokken();
 	}
 
-	/** void inditEllenseg
-	 * Létrehoz annyi ellenségek, amennyit paraméterül kapott.
+	/**
+	 * void inditEllenseg Létrehoz annyi ellenségek, amennyit paraméterül
+	 * kapott.
+	 * 
 	 * @param int mennyit
 	 */
 	public void inditEllenseg(int mennyit) {
 		SkeletonController.tabNo();
-		for(int i=0; i<mennyit; i++){
-			Ember e = new Ember(start,this);
+		for (int i = 0; i < mennyit; i++) {
+			Ember e = new Ember(start, this);
 			this.ellenseg.add(e);
 		}
 		SkeletonController.tabCsokken();
 	}
 
-	/** void egyEllensegMeghalt
-	 * Kiszedi a paraméterül kapott ellenséget a listájából. 
-	 * Ha elfogyott az összes, akkor szól a játékmotornak, hogy gőzelem van.
+	/**
+	 * void egyEllensegMeghalt Kiszedi a paraméterül kapott ellenséget a
+	 * listájából. Ha elfogyott az összes, akkor szól a játékmotornak, hogy
+	 * gőzelem van.
 	 * 
 	 * @param ellenseg
 	 */
 	public void egyEllensegMeghalt(Ellenseg ellenseg) {
 		SkeletonController.tabNo();
-		if(this.ellenseg.contains(ellenseg))
+		if (this.ellenseg.contains(ellenseg))
 			this.ellenseg.remove(ellenseg);
-		
-		if (SkeletonController.kerdezIH("Elfogyott minden ellenfél?")) 
+
+		if (SkeletonController.kerdezIH("Elfogyott minden ellenfél?"))
 			this.jatekMotor.gyozelem();
-		
+
 		SkeletonController.tabCsokken();
 	}
 
-	/** void mindLep
-	 * Minden ellenségnek szól, hogy lépjen.
+	/**
+	 * void mindLep Minden ellenségnek szól, hogy lépjen.
 	 */
 	public void mindLep() {
 		SkeletonController.tabNo();
@@ -67,5 +74,22 @@ public class Ellensegek {
 			e.lep();
 		}
 		SkeletonController.tabCsokken();
+	}
+
+	/**
+	 * int lekerHanyEllensegVanMeg Megmondja hány ellenség spawnolható még
+	 */
+	public int lekerHanyEllensegVanMeg() {
+		return osszLetszam;
+	}
+
+	/**
+	 * void allitHanyEllensegVanMeg Beállítja hány ellenséget spawnoljon még a
+	 * közeljövőben a játék.
+	 * 
+	 * @param: ertek amire állítjuk.
+	 */
+	public void allitHanyEllensegVanMeg(int ertek) {
+		osszLetszam = ertek;
 	}
 }
