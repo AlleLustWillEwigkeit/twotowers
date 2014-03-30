@@ -106,20 +106,20 @@ public class SkeletonController {
 	}
 
 	public static boolean kerdezIH(String mihez) {
-		try{
+		try {
 			print(mihez);
 			kiiro(" (I/H)\n");
 			String eredmeny;
 			eredmeny = readln().toUpperCase();
-			switch(eredmeny.charAt(0)){
-				case 'I':
-					return true;
-				case 'H':
-					return false;
-				default: 
-					throw new IllegalArgumentException();
+			switch (eredmeny.charAt(0)) {
+			case 'I':
+				return true;
+			case 'H':
+				return false;
+			default:
+				throw new IllegalArgumentException();
 			}
-		}catch(IllegalArgumentException e){
+		} catch (IllegalArgumentException e) {
 			println("Nem valid válasz. Probáld újra.");
 			return kerdezIH(mihez);
 		}
@@ -167,7 +167,7 @@ public class SkeletonController {
 		}
 
 	}
-	
+
 	public static Ellenseg kerdezEllenseg(String mihez, Ut ut, Ellensegek el) {
 		try {
 			println(mihez);
@@ -180,19 +180,19 @@ public class SkeletonController {
 			int valaszINT = Integer.parseInt(valasz);
 			switch (valaszINT) {
 			case 1:
-				return new Ember(ut,el);
+				return new Ember(ut, el);
 			case 2:
-				return new Tunde(ut,el);
+				return new Tunde(ut, el);
 			case 3:
-				return new Torp(ut,el);
+				return new Torp(ut, el);
 			case 4:
-				return new Hobbit(ut,el);
+				return new Hobbit(ut, el);
 			default:
 				throw new IllegalArgumentException();
 			}
 		} catch (NumberFormatException e) {
 			println("A válasz valahol 1-2 között rejlik, számmal írva!");
-			return kerdezEllenseg(mihez,ut, el);
+			return kerdezEllenseg(mihez, ut, el);
 		} catch (IllegalArgumentException e) {
 			println("Számot adtál meg, de nem az adott tartományban!");
 			return kerdezEllenseg(mihez, ut, el);
@@ -203,16 +203,17 @@ public class SkeletonController {
 	public static void mainMenu() {
 		boolean doexit = false;
 		while (!doexit) {
-			println("Kérem a lejátszandó use-case számát! A lehetőségek:");
-			println("0. Kilépés a skeleton programból");
-			println("1. Lépés");
-			println("2. Lövés");
-			println("3. Akadály lerakása");
-			println("4. Torony lerakás");
-			println("5. Varázskő lerakás");
-			println("6. Győzelem");
-			println("7. Vereség");
-			//SkeletonController.readln();
+			try{
+				println("Kérem a lejátszandó use-case számát! A lehetőségek:");
+				println("0. Kilépés a skeleton programból");
+				println("1. Lépés");
+				println("2. Lövés");
+				println("3. Akadály lerakása");
+				println("4. Torony lerakás");
+				println("5. Varázskő lerakás");
+				println("6. Győzelem");
+				println("7. Vereség");
+				
 				switch (Integer.parseInt(SkeletonController.readln())) {
 				case 1:
 					UCLepes();
@@ -239,13 +240,18 @@ public class SkeletonController {
 					doexit = true;
 					break;
 				default:
-					System.out.println("Érvénytelen bemenet.");
+					println("Érvénytelen bemenet.");
 					break;
 				}
+			} catch (NumberFormatException e) {
+				println("A válasz valahol 0-7 között rejlik, számmal írva!");
+			} catch (IllegalArgumentException e) {
+				println("Számot adtál meg, de nem az adott tartományban!");
 			}
 			
 		}
-	
+
+	}
 
 	public static void UCLepes() {
 		Jatekmotor jm = new Jatekmotor(null);
@@ -255,23 +261,25 @@ public class SkeletonController {
 		u2.beallitKovUt(u1);
 		Start st = new Start();
 		st.beallitKovUt(u1);
-		
-		Ellensegek e = new Ellensegek(jm,st);
+
+		Ellensegek e = new Ellensegek(jm, st);
 		e.inditEllenseg(3);
+		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
 		e.mindLep();
 	}
 
 	public static void UCLoves() {
-		//Jatekmotor jm = new Jatekmotor();
+		// Jatekmotor jm = new Jatekmotor();
 		Ut u = new Ut();
 		Torony t = new Torony();
 		Varazsko v = new Varazsko();
 		Lovedek l = kerdezLovedek("");
-		
+
 		v.lovedek.add(l);
 		t.varazsko.add(v);
 		u.torony.add(t);
-		Ellenseg e = kerdezEllenseg("",u,null);
+		Ellenseg e = kerdezEllenseg("", u, null);
+		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
 		u.raLep(e);
 	}
 
@@ -280,6 +288,7 @@ public class SkeletonController {
 		PalyaElem pe = new PalyaElem();
 		EpitesiTerulet e = new EpitesiTerulet();
 		pe.epitesiTerulet = e;
+		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
 		jm.lerakTornyot(pe);
 	}
 
@@ -288,38 +297,41 @@ public class SkeletonController {
 		PalyaElem pe = new PalyaElem();
 		Ut u = new Ut();
 		pe.ut = u;
+		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
 		jm.lerakAkadaly(pe);
 	}
 
 	public static void UCVarazskoLerak() {
 		Jatekmotor jm = new Jatekmotor(new JosagosSzaruman());
 		PalyaElem pe = new PalyaElem();
-		
+
 		EpitesiTerulet e = new EpitesiTerulet();
 		e.torony = new Torony();
 		pe.epitesiTerulet = e;
-		
+
 		Ut u = new Ut();
 		u.akadaly = new Akadaly(u);
 		pe.ut = u;
-		
+		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
 		jm.felkovez(pe);
 	}
 
 	public static void UCGyozelem() {
 		Jatekmotor jm = new Jatekmotor(null);
 		Start st = new Start();
-		Ellensegek ellen = new Ellensegek(jm,st);
-		Ellenseg e = new Ember(st,ellen);
+		Ellensegek ellen = new Ellensegek(jm, st);
+		Ellenseg e = new Ember(st, ellen);
 		ellen.ellenseg.add(e);
+		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
 		ellen.egyEllensegMeghalt(e);
 	}
 
 	public static void UCVereseg() {
 		Jatekmotor jm = new Jatekmotor(null);
 		VegzetHegye vh = new VegzetHegye(jm);
-		Ellensegek ellen = new Ellensegek(jm,null);
-		Ellenseg e = new Ember(null,ellen);
+		Ellensegek ellen = new Ellensegek(jm, null);
+		Ellenseg e = new Ember(null, ellen);
+		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
 		vh.raLep(e);
 	}
 
