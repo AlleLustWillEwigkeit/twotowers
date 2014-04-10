@@ -1,61 +1,70 @@
 package allelustwillewigkeit.twotowers.model;
 
-import java.util.HashSet;
-
-import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Jatekmotor {
-	public Ellensegek ellensegek = null;
-	public Program progrgam = null;
-	public Palya palya = null;
-	public JosagosSzaruman josagosSzaruman = null;
-	public HashSet<Varazsko> kavicsok = new HashSet<Varazsko>();
+	protected Ellensegek ellensegek = null;
+	protected Program program = null;
+	protected Palya palya = null;
+	protected JosagosSzaruman josagosSzaruman = null;
+	protected List<Varazsko> kavicsok = new ArrayList<Varazsko>();
+	protected int jatekallas = 0;
 
-	/** A játékmotor konstruktora
-	 * @param JosagosSzaruman jsz
+	/**
+	 * A játékmotor konstruktora
+	 * 
+	 * @param JosagosSzaruman
+	 *            jsz
 	 */
-	public Jatekmotor(JosagosSzaruman jsz) {
-		super();
-		SkeletonController.tabNo();
-		this.josagosSzaruman = jsz;
-		SkeletonController.println("<<create>> JatekMotor");
-		SkeletonController.tabCsokken();
+	public Jatekmotor(Ellensegek _ellensegek, JosagosSzaruman _josagosSzaruman,
+			Palya _palya, Program _program) {
+		this.josagosSzaruman = _josagosSzaruman;
+		this.palya = _palya;
+		this.program = _program;
+		this.ellensegek = _ellensegek;
+
 	}
 
-	/** void tick
-	 * Szimulál egy időegységet.
+	public Jatekmotor(Object object) {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * void tick Szimulál egy időegységet.
 	 */
 	public void tick() {
-		SkeletonController.tabNo();
-		SkeletonController.tabCsokken();
+		
 	}
 
-	/** void lerakTornyot
-	 * Lerak egy tornyot egy adott pályaelemre.
-	 * @param PalyaElem hova
+	/**
+	 * void lerakTornyot Lerak egy tornyot egy adott pályaelemre.
+	 * 
+	 * @param PalyaElem
+	 *            hova
 	 */
 	public void lerakTornyot(PalyaElem hova) {
-		SkeletonController.tabNo();
 		hova.lekerEpitesiTerulet().lerakTornyot();
-		SkeletonController.tabCsokken();
 	}
 
-	/** void lerakAkadaly
-	 * Lerak egy akadályt egy adott pályaelemre.
-	 * @param PalyaElem hova
+	/**
+	 * void lerakAkadaly Lerak egy akadályt egy adott pályaelemre.
+	 * 
+	 * @param PalyaElem
+	 *            hova
 	 */
 	public void lerakAkadaly(PalyaElem hova) {
-		SkeletonController.tabNo();
 		hova.lekerUt().lerakAkadaly();
-		SkeletonController.tabCsokken();
 	}
 
-	/** void felkovez
-	 * Az adott pályaelem-nek szól, hogy kövezze fel a rajta lévő tornyot, vagy akadályt.
-	 * @param PalyaElem mit
+	/**
+	 * void felkovez Az adott pályaelem-nek szól, hogy kövezze fel a rajta lévő
+	 * tornyot, vagy akadályt.
+	 * 
+	 * @param PalyaElem
+	 *            mit
 	 */
 	public void felkovez(PalyaElem mit) {
-		SkeletonController.tabNo();
 		Varazsko v = josagosSzaruman.lekerKivalasztottVarazsko();
 		if (mit.vanEpitesiTerulete()) {
 			EpitesiTerulet et = mit.lekerEpitesiTerulet();
@@ -71,39 +80,40 @@ public class Jatekmotor {
 				a.felkovez(v);
 			}
 		}
-		SkeletonController.tabCsokken();
 	}
 
-	/** void ujJatek
-	 * Új játékot indít
+	/**
+	 * void ujJatek Új játékot indít
 	 */
 	public void ujJatek() {
-		SkeletonController.tabNo();
-		/*this.palya = new Palya();
+		this.palya = new Palya();
 		this.palya.ujPalya();
 		this.josagosSzaruman = new JosagosSzaruman();
 		Start st = new Start();
-		Ellensegek e = new Ellensegek(this,st);
-		int i = 3;
-		while (i-- != 0) {
+		this.ellensegek = new Ellensegek(this, st, 1000);
+		while (jatekallas == 0) {
 			tick();
-		}*/
-		SkeletonController.tabCsokken();
+		}
+		if (jatekallas < 0) {
+			System.out.println("Vereség!");
+			System.exit(0);
+		} else if (jatekallas > 0) {
+			System.out.println("Győzelem!");
+			System.exit(0);
+		}
 	}
 
-	/** void vereseg
-	 * Vereség történt.
+	/**
+	 * void vereseg Vereség történt.
 	 */
 	public void vereseg() {
-		SkeletonController.tabNo();
-		SkeletonController.tabCsokken();
+		jatekallas = -666;
 	}
 
-	/** void gyozelem
-	 * Győzelem történt.
+	/**
+	 * void gyozelem Győzelem történt.
 	 */
 	public void gyozelem() {
-		SkeletonController.tabNo();
-		SkeletonController.tabCsokken();
+		jatekallas = 1337;
 	}
 }

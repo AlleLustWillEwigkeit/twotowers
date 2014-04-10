@@ -1,18 +1,18 @@
 package allelustwillewigkeit.twotowers.model;
 
-public class Hobbit extends Ellenseg {
+public class Elf extends Ellenseg {
 	/**
-	 * A hobbit konstruktora
+	 * A tünde konstruktora
 	 * 
 	 * @param start
 	 * @param ellens
 	 */
-	public Hobbit(Ut start, Ellensegek ellens) {
+	public Elf(Ut start, Ellensegek ellens) { // FIXME
 		super(start, ellens);
-		sebzes = 60;
-		lepesigIdo = 200;
-		eletero = 300;
-		sebesseg = 15;
+		sebzes = 20;
+		lepesigIdo = 100;
+		eletero = 100;
+		sebesseg = 30;
 	}
 
 	/**

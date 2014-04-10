@@ -1,84 +1,66 @@
 package allelustwillewigkeit.twotowers.model;
 
-import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
-
 public class Torp extends Ellenseg {
-	/** A törp konstruktora
+	/**
+	 * A törp konstruktora
+	 * 
 	 * @param start
 	 * @param ellens
 	 */
-	public Torp(Ut start, Ellensegek ellens) {
-		super(start,ellens);
-		SkeletonController.tabNo();
-		SkeletonController.println("<<create>> Torp");
-		SkeletonController.tabCsokken();
+	public Torp(Ut start, Ellensegek ellens) { // FIXME
+		super(start, ellens);
+		sebzes = 20;
+		lepesigIdo = 100;
+		eletero = 100;
+		sebesseg = 30;
 	}
 
-	/** void sebezTuzgolyo
-	 * Sebzi magát a megfelelő métrékben
-	 */
-	@Override
-	public void sebezTuzgolyo() {
-		SkeletonController.tabNo();
-		if(this.ellensegek != null){
-			if (SkeletonController
-					.kerdezIH("Torp vagyok. Eltalalt egy Tuzgolyo. Meghaltam?")) {
-				this.ellensegek.egyEllensegMeghalt(this);
-			}
-		}else{
-			SkeletonController.println("Torp vagyok. Eltalalt egy Tuzgolyo.");
-		}
-		SkeletonController.tabCsokken();
-	}
-
-	/** void sebezSzikla
-	 * Sebzi magát a megfelelő métrékben
-	 */
-	@Override
-	public void sebezSzikla() {
-		SkeletonController.tabNo();
-		if(this.ellensegek != null){
-			if (SkeletonController
-					.kerdezIH("Torp vagyok. Eltalalt egy Szikla. Meghaltam?")) {
-				this.ellensegek.egyEllensegMeghalt(this);
-			}
-		}else{
-			SkeletonController.println("Torp vagyok. Eltalalt egy Szikla.");
-		}
-		SkeletonController.tabCsokken();
-	}
-
-	/** void sebezNyil
-	 * Sebzi magát a megfelelő métrékben
+	/**
+	 * void sebezNyil Sebzi magát a megfelelő métrékben
 	 */
 	@Override
 	public void sebezNyil() {
-		SkeletonController.tabNo();
-		if(this.ellensegek != null){
-			if (SkeletonController
-					.kerdezIH("Torp vagyok. Eltalalt egy Nyil. Meghaltam?")) {
-				this.ellensegek.egyEllensegMeghalt(this);
-			}
-		}else{
-			SkeletonController.println("Torp vagyok. Eltalalt egy Nyil.");
+		eletero -= 10;// TODO//FIXME
+		if (eletero <= 0) {
+			tar.egyEllensegMeghalt(this);
 		}
-		SkeletonController.tabCsokken();
 	}
 
-	/** void sebezDarda
-	 * Sebzi magát a megfelelő métrékben
+	@Override
+	public void sebezLovedek() {
+		eletero -= 8;// TODO//FIXME
+		if (eletero <= 0) {
+			tar.egyEllensegMeghalt(this);
+		}
+	}
+
+	/**
+	 * void sebezTuzgolyo Sebzi magát a megfelelő métrékben
+	 */
+	@Override
+	public void sebezTuzgolyo() {
+		eletero -= 5;// TODO//FIXME
+		if (eletero <= 0) {
+			tar.egyEllensegMeghalt(this);
+		}
+	}
+
+	/**
+	 * void sebezDarda Sebzi magát a megfelelő métrékben
 	 */
 	@Override
 	public void sebezDarda() {
-		SkeletonController.tabNo();
-		if(this.ellensegek != null){
-			if (SkeletonController
-					.kerdezIH("Torp vagyok. Eltalalt egy Darda. Meghaltam?")) {
-				this.ellensegek.egyEllensegMeghalt(this);
-			}
-		}else{
-			SkeletonController.println("Torp vagyok. Eltalalt egy Darda.");
+		eletero -= 5;// TODO//FIXME
+		if (eletero <= 0) {
+			tar.egyEllensegMeghalt(this);
 		}
-		SkeletonController.tabCsokken();
+	}
+
+	@Override
+	public void sebezSzikla() {
+		eletero -= 20;// TODO//FIXME
+		if (eletero <= 0) {
+			tar.egyEllensegMeghalt(this);
+		}
 	}
 }

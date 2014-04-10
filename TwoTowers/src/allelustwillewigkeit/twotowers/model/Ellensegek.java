@@ -3,48 +3,39 @@ package allelustwillewigkeit.twotowers.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
-
 public class Ellensegek {
-	public List<Ellenseg> ellenseg = new ArrayList<Ellenseg>();
-	public int osszLetszam = 0;
-	public JosagosSzaruman josagosSzaruman = null;
-	public Jatekmotor jatekMotor = null;
-	public Ellensegek ellensegek = null;
-	public Start start = null;
+	protected List<Ellenseg> ellensegek = new ArrayList<Ellenseg>();
+	protected int osszLetszam = 0;
+	protected JosagosSzaruman josagosSzaruman = null;
+	protected Jatekmotor jatekMotor = null;
+	protected Start kezdohely = null;
 
 	/**
 	 * Ez ellenségek konstruktora
 	 * 
 	 * @param Jatekmotor
-	 *            jm
+	 *            _jatekmotor
 	 * @param Start
-	 *            st
+	 *            _start
+	 * @param int _osszletszam
 	 */
+	public Ellensegek(Jatekmotor _jatekmotor, Start _kezdohely, int _osszletszam) {
+		this.kezdohely = _kezdohely;
+		this.jatekMotor = _jatekmotor;
+		this.osszLetszam = _osszletszam;
+	}
+
 	public Ellensegek(Jatekmotor jm, Start st) {
-		super();
-
-		SkeletonController.tabNo();
-		this.start = st;
-		this.jatekMotor = jm;
-
-		SkeletonController.println("<<create>> Ellensegek");
-		SkeletonController.tabCsokken();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * void inditEllenseg Létrehoz annyi ellenségek, amennyit paraméterül
-	 * kapott.
+	 * void inditEllenseg az adott ellenséget leteszi a kezdőhelyre
 	 * 
 	 * @param int mennyit
 	 */
-	public void inditEllenseg(int mennyit) {
-		SkeletonController.tabNo();
-		for (int i = 0; i < mennyit; i++) {
-			Ember e = new Ember(start, this);
-			this.ellenseg.add(e);
-		}
-		SkeletonController.tabCsokken();
+	public void inditEllenseg(Ellenseg e) {
+		e.beallitUt(kezdohely);
 	}
 
 	/**
@@ -55,25 +46,23 @@ public class Ellensegek {
 	 * @param ellenseg
 	 */
 	public void egyEllensegMeghalt(Ellenseg ellenseg) {
-		SkeletonController.tabNo();
-		if (this.ellenseg.contains(ellenseg))
-			this.ellenseg.remove(ellenseg);
+		if (this.ellensegek.contains(ellenseg)) {
+			this.ellensegek.remove(ellenseg);
+			osszLetszam--;
+		}
 
-		if (SkeletonController.kerdezIH("Elfogyott minden ellenfél?"))
+		if (osszLetszam == 0) {
 			this.jatekMotor.gyozelem();
-
-		SkeletonController.tabCsokken();
+		}
 	}
 
 	/**
 	 * void mindLep Minden ellenségnek szól, hogy lépjen.
 	 */
 	public void mindLep() {
-		SkeletonController.tabNo();
-		for (Ellenseg e : this.ellenseg) {
+		for (Ellenseg e : this.ellensegek) {
 			e.lep();
 		}
-		SkeletonController.tabCsokken();
 	}
 
 	/**
@@ -91,5 +80,10 @@ public class Ellensegek {
 	 */
 	public void allitHanyEllensegVanMeg(int ertek) {
 		osszLetszam = ertek;
+	}
+
+	public void inditEllenseg(int i) {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -1,64 +1,61 @@
 package allelustwillewigkeit.twotowers.model;
 
-import java.util.HashSet;
-
-import allelustwillewigkeit.twotowers.skeleton.SkeletonController;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Torony {
-	public HashSet<Varazsko> varazsko = new HashSet<Varazsko>();
-	public int alapHatotav = 0;
-	public EpitesiTerulet epitesiTerulet = null;
-	public HashSet<Ut> ut = new HashSet<Ut>();
+	protected List<Varazsko> kovek = new ArrayList<Varazsko>();
+	public int alapHatotav;
+	protected EpitesiTerulet minAll = null;
+	protected List<Ut> kikhezRegisztraltamFel = new ArrayList<Ut>();
 
 	/**
 	 * A torony konstruktora
 	 */
 	public Torony() {
-		super();		
-		SkeletonController.tabNo();
-		SkeletonController.println("<<create>> Torony");
-		//beRegisztralTavonBeluliUtakhoz();
-		SkeletonController.tabCsokken();
+		alapHatotav = 5;
+		beRegisztralTavonBeluliUtakhoz(this, alapHatotav);
 	}
 
-	/** void tuzel
-	 * Minden varászkövének szól, hogy tüzeljen a célpontra
-	 * @param Ellenseg celpont
+	/**
+	 * void tuzel Minden varászkövének szól, hogy tüzeljen a célpontra
+	 * 
+	 * @param Ellenseg
+	 *            celpont
 	 */
 	public void tuzel(Ellenseg celpont) {
-		SkeletonController.tabNo();
-		for (Varazsko v : this.varazsko) {
+		for (Varazsko v : this.kovek) {
 			v.tuzel(celpont);
 		}
-		SkeletonController.tabCsokken();
 	}
 
-	/** void beRegisztralTavonBeluliUtakhoz
-	 * Szól az őt tároló pályaelemnek, hogy beregisztrálna az utakhoz, a megfelelő hatótávon.
+	/**
+	 * void beRegisztralTavonBeluliUtakhoz Szól az őt tároló pályaelemnek, hogy
+	 * beregisztrálna az utakhoz, a megfelelő hatótávon.
 	 */
-	public void beRegisztralTavonBeluliUtakhoz() {
-		SkeletonController.tabNo();
-		
-		PalyaElem pe = epitesiTerulet.minAll();
-		float tavolsag = alapHatotav;
-		for (Varazsko v : varazsko) {
-			tavolsag *= v.lekerHatotavSzorzo();
-		}
-		pe.beregisztral(this, (int) tavolsag);
-		
-		SkeletonController.tabCsokken();
+	public void beRegisztralTavonBeluliUtakhoz(Torony t, int tavolsag) {// TODO
+		// PalyaElem pe = minAll.minAll();
+		// if (pe.beregisztralt || tavolsag == 0)
+		// return;
+		// for (Varazsko v : kovek) {
+		// tavolsag *= v.lekerHatotavSzorzo();
+		// }
+		// pe.beregisztral(this, tavolsag--);
 	}
 
-	/** void felkovez
-	 * Ha még nincs rajta a paraméterül kapott varászkő, akkor felveszi
-	 * @param Varazsko mivel
+	/**
+	 * void felkovez Ha még nincs rajta a paraméterül kapott varászkő, akkor
+	 * felkövezi vele
+	 * 
+	 * @param Varazsko
+	 *            mivel
 	 */
 	public void felkovez(Varazsko mivel) {
-		SkeletonController.tabNo();
-		
-		if(!this.varazsko.contains(mivel))
-			this.varazsko.add(mivel);
-		
-		SkeletonController.tabCsokken();
+		if (!this.kovek.contains(mivel))
+			this.kovek.add(mivel);
+	}
+
+	public void kiregisztral() {// TODO
+
 	}
 }
