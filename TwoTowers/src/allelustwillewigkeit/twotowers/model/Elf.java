@@ -7,11 +7,15 @@ public class Elf extends Ellenseg {
 	 * @param start
 	 * @param ellens
 	 */
-	public Elf(Ut start, Ellensegek ellens) { // FIXME
+	public Elf(Ut start, Ellensegek ellens, int szint) throws Exception { // FIXME
 		super(start, ellens);
-		sebzes = 20;
-		sebesseg = lepesigIdo = 100;
-		eletero = 100;
+		
+		if((szint < 0) || (szint > 5))
+			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
+		
+		eletero = 20 + 10*(szint);
+		sebzes = 2 + 1*(szint);
+		sebesseg = lepesigIdo = 1;
 	}
 
 	/**

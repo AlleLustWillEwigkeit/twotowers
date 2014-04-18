@@ -92,7 +92,7 @@ public class Ellensegek {
 			osszLetszam = ertek;
 	}
 
-	public void inditEllenseg(int i) {
+	public void inditEllenseg(int i, int szint) throws Exception {
 		// TODO Auto-generated method stub
 		if(i <=0 ) return;
 		
@@ -105,16 +105,16 @@ public class Ellensegek {
 			int raceRandom = (int)(Math.random()*4);
 			switch(raceRandom){
 				case 0:
-					e = new Ember(kezdohely,this);
+					e = new Ember(kezdohely,this,szint);
 					break;
 				case 1:
-					e = new Torp(kezdohely,this);
+					e = new Torp(kezdohely,this,szint);
 					break;
 				case 2:
-					e = new Hobbit(kezdohely,this);
+					e = new Hobbit(kezdohely,this,szint);
 					break;
 				case 3:
-					e = new Elf(kezdohely,this);
+					e = new Elf(kezdohely,this,szint);
 					break;
 			}
 			

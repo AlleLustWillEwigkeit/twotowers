@@ -7,12 +7,15 @@ public class Torp extends Ellenseg {
 	 * @param start
 	 * @param ellens
 	 */
-	public Torp(Ut start, Ellensegek ellens) { // FIXME
+	public Torp(Ut start, Ellensegek ellens, int szint) throws Exception { // FIXME
 		super(start, ellens);
-		sebzes = 20;
-		lepesigIdo = 100;
-		eletero = 100;
-		sebesseg = 30;
+		
+		if((szint < 0) || (szint > 5))
+			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
+
+		eletero = 20*(szint+1);
+		sebzes = 2*(szint+1);
+		sebesseg = lepesigIdo = 1;
 	}
 
 	/**
