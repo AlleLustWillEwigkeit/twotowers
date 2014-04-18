@@ -3,7 +3,7 @@ package allelustwillewigkeit.twotowers.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Akadaly {
+public class Akadaly implements Varazskovezheto{
 	protected float eletero = 0;
 	protected List<Varazsko> varazsko = new ArrayList<Varazsko>();
 	protected Ut ut = null;
@@ -31,6 +31,7 @@ public class Akadaly {
 		if(mivel == null)
 			throw new NullPointerException();
 		
+		mivel.beallitTarolo(this);
 		this.varazsko.add(mivel);
 	}
 
@@ -54,5 +55,13 @@ public class Akadaly {
 		if(eletero <= 0){ //meghalás
 			ut.akadalyomLebomlott();
 		}
+	}
+
+	@Override
+	public void lejarVarazsko(Varazsko v) {
+		// TODO Auto-generated method stub
+		if(!this.varazsko.contains(v)) return;
+		
+		this.varazsko.remove(v);
 	}
 }

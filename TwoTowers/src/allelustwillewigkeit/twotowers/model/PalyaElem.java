@@ -64,6 +64,9 @@ public class PalyaElem {
 	 */
 	public void beregisztral(Torony torony, int tavolsag) {
 
+		if(torony == null)
+			return; 
+		
 		if (this.beregisztralt)
 			return;
 

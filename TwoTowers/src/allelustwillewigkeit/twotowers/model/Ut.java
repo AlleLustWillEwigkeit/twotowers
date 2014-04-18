@@ -37,6 +37,7 @@ public class Ut {
 		
 		if (!this.torony.contains(torony)) {
 			this.torony.add(torony);
+			torony.utBeregisztralt(this);
 		}
 	}
 

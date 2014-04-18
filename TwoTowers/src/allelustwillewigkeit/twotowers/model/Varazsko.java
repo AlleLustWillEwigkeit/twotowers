@@ -8,6 +8,7 @@ public class Varazsko {
 	protected float hatotavSzorzo = 0F;
 	protected float eleteroSzorzo = 0F;
 	protected int duration;
+	protected Varazskovezheto tarolo;
 
 	public Varazsko(float _eleteroSzorzo, float _hatotavSzorzo, int _duration) {
 		eleteroSzorzo = _eleteroSzorzo;
@@ -17,6 +18,10 @@ public class Varazsko {
 
 	public Varazsko() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	public void beallitTarolo(Varazskovezheto t){
+		this.tarolo = t;
 	}
 
 	/**
@@ -55,6 +60,19 @@ public class Varazsko {
 
 	public void hozzaadLovedek(Lovedek l) {
 		this.lovedek.add(l);
+	}
+	
+	public void tick(){
+		if(duration == -1) return;
+		
+		duration--;
+		if(duration <= 0){
+			duration = 0;
+			
+			if(this.tarolo != null){
+				this.tarolo.lejarVarazsko(this);
+			}
+		}
 	}
 
 }
