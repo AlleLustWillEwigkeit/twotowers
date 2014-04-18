@@ -8,7 +8,7 @@ public class Jatekmotor {
 	protected Program program = null;
 	protected Palya palya = null;
 	protected JosagosSzaruman josagosSzaruman = null;
-	protected List<Varazsko> kavicsok = new ArrayList<Varazsko>();
+	protected List<Varazsko> kavicsok = new ArrayList<Varazsko>(); //TODO: ez itt minek? Neki kell tudnia a lehetséges kő összeállításokról? Nem a JSZ-nek?
 	protected int jatekallas = 0;
 
 	/**
@@ -23,7 +23,7 @@ public class Jatekmotor {
 		this.palya = _palya;
 		this.program = _program;
 		this.ellensegek = _ellensegek;
-
+		this.jatekallas = 0;
 	}
 
 
@@ -31,6 +31,8 @@ public class Jatekmotor {
 	 * void tick Szimulál egy időegységet.
 	 */
 	public void tick() {
+		if(this.jatekallas != 0) return;
+		
 		this.ellensegek.mindLep();
 		this.palya.tick();
 	}
@@ -42,6 +44,8 @@ public class Jatekmotor {
 	 *            hova
 	 */
 	public void lerakTornyot(PalyaElem hova) {
+		if(this.jatekallas != 0) return;
+		
 		hova.lekerEpitesiTerulet().lerakTornyot();
 	}
 
@@ -52,6 +56,8 @@ public class Jatekmotor {
 	 *            hova
 	 */
 	public void lerakAkadaly(PalyaElem hova) {
+		if(this.jatekallas != 0) return;
+		
 		hova.lekerUt().lerakAkadaly();
 	}
 
@@ -63,6 +69,8 @@ public class Jatekmotor {
 	 *            mit
 	 */
 	public void felkovez(PalyaElem mit) {
+		if(this.jatekallas != 0) return;
+		
 		Varazsko v = josagosSzaruman.lekerKivalasztottVarazsko();
 		if (mit.vanEpitesiTerulete()) {
 			EpitesiTerulet et = mit.lekerEpitesiTerulet();
@@ -83,7 +91,7 @@ public class Jatekmotor {
 	/**
 	 * void ujJatek Új játékot indít
 	 */
-	public void ujJatek() {
+	public void ujJatek() { //TODO: ez valószínűleg nem jó implementáció... While ciklus a modelben????
 		this.palya = new Palya();
 		this.palya.ujPalya();
 		this.josagosSzaruman = new JosagosSzaruman(1000);
@@ -105,6 +113,8 @@ public class Jatekmotor {
 	 * void vereseg Vereség történt.
 	 */
 	public void vereseg() {
+		if(this.jatekallas != 0) return;
+		
 		jatekallas = -666;
 	}
 
@@ -112,6 +122,8 @@ public class Jatekmotor {
 	 * void gyozelem Győzelem történt.
 	 */
 	public void gyozelem() {
+		if(this.jatekallas != 0) return;
+		
 		jatekallas = 1337;
 	}
 }

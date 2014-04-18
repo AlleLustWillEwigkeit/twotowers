@@ -36,4 +36,36 @@ public class JosagosSzaruman {
 	public void beallitKivalasztottVarazsko(Varazsko erre) {
 		kivalasztottVarazsko = erre;
 	}
+	
+	public void beallitKivalasztottVarazsko(int VarazskoDictID){
+		switch(VarazskoDictID){
+			case 0:
+				this.kivalasztottVarazsko = new Varazsko(1,1,-1);
+				this.kivalasztottVarazsko.hozzaadLovedek(new Lovedek());
+				break;
+			case 1:
+				this.kivalasztottVarazsko = new Varazsko(1.5f,1.5f,-1);
+				this.kivalasztottVarazsko.hozzaadLovedek(new Nyil());
+				break;
+			case 2:
+				this.kivalasztottVarazsko = new Varazsko(2,1.1f,-1);
+				this.kivalasztottVarazsko.hozzaadLovedek(new Darda());
+				break;
+			case 3:
+				this.kivalasztottVarazsko = new Varazsko(2,2,-1);
+				this.kivalasztottVarazsko.hozzaadLovedek(new Tuzgolyo());
+				break;
+			case 4:
+				this.kivalasztottVarazsko = new Varazsko(2,0.8f,-1);
+				this.kivalasztottVarazsko.hozzaadLovedek(new Szikla());
+				break;
+			case 5:
+				this.kivalasztottVarazsko = new Varazsko(2,0.5f,-1);
+				this.kivalasztottVarazsko.hozzaadLovedek(new Szelo());
+				break;
+			case 6:
+				this.kivalasztottVarazsko = new Varazsko(0.5f,1,10);
+				break;
+		}
+	}
 }
