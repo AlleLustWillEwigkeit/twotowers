@@ -7,12 +7,28 @@ public class Hobbit extends Ellenseg {
 	 * @param start
 	 * @param ellens
 	 */
-	public Hobbit(Ut start, Ellensegek ellens) {
+	public Hobbit(Ut start, Ellensegek ellens, int szint) throws Exception {
 		super(start, ellens);
-		sebzes = 60;
-		lepesigIdo = 200;
-		eletero = 300;
-		sebesseg = 15;
+		
+		if((szint < 0) || (szint > 5))
+			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
+		
+		eletero = 5*(szint);
+		sebesseg = lepesigIdo = 1;
+		switch(szint){
+			case 1:
+			case 2:
+			case 3:
+				sebzes = 1;
+				break;
+			case 4:
+				sebzes = 2;
+				break;
+			case 5:
+				sebzes = 3;
+				break;
+		}
+		
 	}
 
 	/**

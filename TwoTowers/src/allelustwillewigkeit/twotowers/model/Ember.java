@@ -7,12 +7,15 @@ public class Ember extends Ellenseg {
 	 * @param start
 	 * @param ellens
 	 */
-	public Ember(Ut start, Ellensegek ellens) {
+	public Ember(Ut start, Ellensegek ellens, int szint) throws Exception{
 		super(start, ellens);
-		sebzes = 40;
-		lepesigIdo = 150;
-		eletero = 200;
-		sebesseg = 20;
+		
+		if((szint < 0) || (szint > 5))
+			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
+
+		eletero = 20*szint;
+		sebzes = 2*szint;
+		sebesseg = lepesigIdo = 1;
 	}
 
 	/**
