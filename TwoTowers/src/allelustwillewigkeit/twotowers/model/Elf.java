@@ -46,7 +46,7 @@ public class Elf extends Ellenseg {
 	}
 
 	/**
-	 * void sebezDarda Sebzi magát a megfelelő métrékben
+	 * void sebezDarda Sebzi magát a megfelelő mértékben
 	 */
 	@Override
 	public void sebezDarda() {

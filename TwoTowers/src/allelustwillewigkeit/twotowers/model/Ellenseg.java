@@ -1,5 +1,7 @@
 package allelustwillewigkeit.twotowers.model;
 
+import java.awt.List;
+
 public abstract class Ellenseg {
 	protected int lepesigIdo = 0;
 	protected int sebesseg = 0;
@@ -57,7 +59,8 @@ public abstract class Ellenseg {
 	public void lep() {
 		lepesigIdo--;
 		if (lepesigIdo == 0) {
-			Ut kov = ut.lekerKovUtak().get(RANDOM);
+			List<Ut> lehetosegek = ut.lekerKovUtak();
+			Ut kov = null;
 			if (kov.lekerAkadaly() == null)
 				kov.raLep(this);
 			else

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Akadaly {
-	protected int eletero = 0;
+	protected int eletero = 0; //TODO Ez tutira rossz, sehol sincs használva
 	protected List<Varazsko> varazsko = new ArrayList<Varazsko>();
 	protected Ut ut = null;
 
@@ -33,7 +33,7 @@ public class Akadaly {
 	 * 
 	 * @param int mennyit
 	 */
-	public void sebzodik(int mennyit) {
+	public void sebzodik(int mennyit) { //TODO meg is kéne halnia, meg ilyesmi.
 		eletero -= mennyit;
 	}
 }

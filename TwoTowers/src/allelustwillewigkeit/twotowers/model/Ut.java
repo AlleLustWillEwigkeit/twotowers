@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Ut {
 	protected Akadaly akadaly = null;
-	protected List<Torony> torony = new ArrayList<Torony>();
+	protected List<Torony> torony = new ArrayList<Torony>(); //TODO de jó lenne ha beregisztráltnak hívnák vagy vhogy értelmesen
 	protected List<Ut> ut = new ArrayList<Ut>();
 
 	/**
