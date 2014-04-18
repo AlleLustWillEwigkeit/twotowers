@@ -9,6 +9,7 @@ public abstract class Ellenseg {
 	protected Ut ut = null;
 	protected Ellensegek tar = null;
 	protected int sebzes = 0;
+	protected int varazseroNovel = 0;
 
 	/**
 	 * Az ellenség konstruktora

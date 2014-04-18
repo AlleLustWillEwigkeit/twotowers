@@ -88,7 +88,7 @@ public class Jatekmotor {
 	public void ujJatek() {
 		this.palya = new Palya();
 		this.palya.ujPalya();
-		this.josagosSzaruman = new JosagosSzaruman();
+		this.josagosSzaruman = new JosagosSzaruman(1000);
 		Start st = new Start();
 		this.ellensegek = new Ellensegek(this, st, 1000);
 		while (jatekallas == 0) {

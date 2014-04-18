@@ -12,10 +12,11 @@ public class Ember extends Ellenseg {
 		
 		if((szint < 0) || (szint > 5))
 			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
-
-		eletero = 20*szint;
-		sebzes = 2*szint;
-		sebesseg = lepesigIdo = 1;
+		
+		this.varazseroNovel = 10;
+		this.eletero = 20*szint;
+		this.sebzes = 2*szint;
+		this.sebesseg = this.lepesigIdo = 1;
 	}
 
 	/**

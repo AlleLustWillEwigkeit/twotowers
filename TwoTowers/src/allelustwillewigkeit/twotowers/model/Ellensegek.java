@@ -58,6 +58,7 @@ public class Ellensegek {
 		
 		if (this.ellensegek.contains(ellenseg)) {
 			this.ellensegek.remove(ellenseg);
+			this.josagosSzaruman.varazseroNovel(ellenseg.varazseroNovel);
 		}
 
 		if ((osszLetszam <= 0) && (this.ellensegek.size() == 0)) {

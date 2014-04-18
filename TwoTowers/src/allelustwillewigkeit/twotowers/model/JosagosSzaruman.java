@@ -1,13 +1,15 @@
 package allelustwillewigkeit.twotowers.model;
 
 public class JosagosSzaruman {
-	protected int varazsero = 1000; // TODO//FIXME
+	protected int maxVarazsero = 0;
+	protected int varazsero = 0; // TODO//FIXME
 	protected Varazsko kivalasztottVarazsko = null;
 
 	/**
 	 * A jóságos szarumán konstruktora
 	 */
-	public JosagosSzaruman() {
+	public JosagosSzaruman(int maxVarazsero) {
+		this.varazsero = this.maxVarazsero = maxVarazsero;
 	}
 
 	/**
@@ -17,6 +19,8 @@ public class JosagosSzaruman {
 	 */
 	public void varazseroNovel(int mennyivel) {
 		this.varazsero += mennyivel;
+		if(this.varazsero > this.maxVarazsero)
+			this.varazsero = this.maxVarazsero;
 	}
 
 	/**

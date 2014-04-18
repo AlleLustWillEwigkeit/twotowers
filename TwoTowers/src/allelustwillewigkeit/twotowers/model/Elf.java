@@ -13,9 +13,10 @@ public class Elf extends Ellenseg {
 		if((szint < 0) || (szint > 5))
 			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
 		
-		eletero = 20 + 10*(szint);
-		sebzes = 2 + 1*(szint);
-		sebesseg = lepesigIdo = 1;
+		this.varazseroNovel = 10;
+		this.eletero = 20 + 10*(szint);
+		this.sebzes = 2 + 1*(szint);
+		this.sebesseg = this.lepesigIdo = 1;
 	}
 
 	/**

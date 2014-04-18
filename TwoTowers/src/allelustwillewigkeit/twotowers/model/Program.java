@@ -8,7 +8,7 @@ public class Program {
 	 */
 	public Program() {
 		jatekmotor = new Jatekmotor(new Ellensegek(jatekmotor, new Start(),
-				1000), new JosagosSzaruman(), new Palya(), this);
+				1000), new JosagosSzaruman(1000), new Palya(), this);
 	}
 
 	/**

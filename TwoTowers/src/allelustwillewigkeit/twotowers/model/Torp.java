@@ -13,9 +13,10 @@ public class Torp extends Ellenseg {
 		if((szint < 0) || (szint > 5))
 			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
 
-		eletero = 20*(szint+1);
-		sebzes = 2*(szint+1);
-		sebesseg = lepesigIdo = 1;
+		this.varazseroNovel = 10;
+		this.eletero = 20*(szint+1);
+		this.sebzes = 2*(szint+1);
+		this.sebesseg = this.lepesigIdo = 1;
 	}
 
 	/**

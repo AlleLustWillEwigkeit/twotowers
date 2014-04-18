@@ -13,19 +13,20 @@ public class Hobbit extends Ellenseg {
 		if((szint < 0) || (szint > 5))
 			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
 		
-		eletero = 5*(szint);
-		sebesseg = lepesigIdo = 1;
+		this.varazseroNovel = 10;
+		this.eletero = 5*(szint);
+		this.sebesseg = this.lepesigIdo = 1;
 		switch(szint){
 			case 1:
 			case 2:
 			case 3:
-				sebzes = 1;
+				this.sebzes = 1;
 				break;
 			case 4:
-				sebzes = 2;
+				this.sebzes = 2;
 				break;
 			case 5:
-				sebzes = 3;
+				this.sebzes = 3;
 				break;
 		}
 		
