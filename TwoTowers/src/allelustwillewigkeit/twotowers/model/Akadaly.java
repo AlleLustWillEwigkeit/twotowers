@@ -56,6 +56,12 @@ public class Akadaly implements Varazskovezheto{
 			ut.akadalyomLebomlott();
 		}
 	}
+	
+	public void tick(){
+		for (Varazsko v : this.varazsko) {
+			v.tick();
+		}
+	}
 
 	@Override
 	public void lejarVarazsko(Varazsko v) {
