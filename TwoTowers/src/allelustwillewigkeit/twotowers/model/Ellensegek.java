@@ -124,4 +124,16 @@ public class Ellensegek {
 		}
 		
 	}
+	
+	public void egyEllensegSzetszakit(Ellenseg ellenseg){
+		if(this.osszLetszam <= 0) return;
+		
+		try{
+			Ellenseg clone = ellenseg.Szetszakit();
+			this.ellensegek.add(clone);
+			this.osszLetszam--;
+		}catch(Exception e){
+			//TODO: exception handling
+		}
+	}
 }

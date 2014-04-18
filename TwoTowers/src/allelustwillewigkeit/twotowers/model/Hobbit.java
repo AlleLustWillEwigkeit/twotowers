@@ -8,7 +8,7 @@ public class Hobbit extends Ellenseg {
 	 * @param ellens
 	 */
 	public Hobbit(Ut start, Ellensegek ellens, int szint) throws Exception {
-		super(start, ellens);
+		super(start, ellens,szint);
 		
 		if((szint < 0) || (szint > 5))
 			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
@@ -79,5 +79,13 @@ public class Hobbit extends Ellenseg {
 		if (eletero <= 0) {
 			tar.egyEllensegMeghalt(this);
 		}
+	}
+	
+	@Override
+	public Ellenseg Szetszakit() throws Exception {
+		this.eleteroAllit(eletero / 2);
+		Ellenseg clone = new Hobbit(this.ut,this.tar,this.szint);
+		clone.eleteroAllit(this.eletero);
+		return clone;
 	}
 }

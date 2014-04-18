@@ -26,9 +26,6 @@ public class Jatekmotor {
 
 	}
 
-	public Jatekmotor(Object object) {
-		// TODO Auto-generated constructor stub
-	}
 
 	/**
 	 * void tick Szimulál egy időegységet.

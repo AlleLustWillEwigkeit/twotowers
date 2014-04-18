@@ -10,6 +10,7 @@ public abstract class Ellenseg {
 	protected Ellensegek tar = null;
 	protected int sebzes = 0;
 	protected int varazseroNovel = 0;
+	protected int szint = 1;
 
 	/**
 	 * Az ellenség konstruktora
@@ -19,16 +20,26 @@ public abstract class Ellenseg {
 	 * @param Ellensegek
 	 *            ellens
 	 */
-	public Ellenseg(Ut start, Ellensegek ellens) {
+	public Ellenseg(Ut start, Ellensegek ellens, int szint) {
 		super();
 		this.ut = start;
 		this.tar = ellens;
+		this.szint = szint;
 	}
+	
+	public abstract Ellenseg Szetszakit() throws Exception;
 
 	/**
 	 * abstract void sebezNyil Nyíl sebzés
 	 */
 	public abstract void sebezNyil();
+	
+	/**
+	 * abstract void sebezSzelo Szelő sebzés
+	 */
+	public void sebezSzelo(){
+		tar.egyEllensegSzetszakit(this);
+	}
 
 	/**
 	 * abstract void sebezTuzgolyo Tűzgolyó sebzés
@@ -85,7 +96,7 @@ public abstract class Ellenseg {
 	 * 
 	 * @param int mennyire
 	 */
-	public void eleteroAllit(int mennyire) {
+	public void eleteroAllit(float mennyire) {
 		if(mennyire >= 0)
 			this.eletero = mennyire;
 	}

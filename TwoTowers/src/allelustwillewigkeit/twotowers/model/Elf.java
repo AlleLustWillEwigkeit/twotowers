@@ -8,7 +8,7 @@ public class Elf extends Ellenseg {
 	 * @param ellens
 	 */
 	public Elf(Ut start, Ellensegek ellens, int szint) throws Exception { // FIXME
-		super(start, ellens);
+		super(start, ellens,szint);
 		
 		if((szint < 0) || (szint > 5))
 			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
@@ -67,4 +67,13 @@ public class Elf extends Ellenseg {
 			tar.egyEllensegMeghalt(this);
 		}
 	}
+
+	@Override
+	public Ellenseg Szetszakit() throws Exception {
+		this.eleteroAllit(eletero / 2);
+		Ellenseg clone = new Elf(this.ut,this.tar,this.szint);
+		clone.eleteroAllit(this.eletero);
+		return clone;
+	}
+
 }
