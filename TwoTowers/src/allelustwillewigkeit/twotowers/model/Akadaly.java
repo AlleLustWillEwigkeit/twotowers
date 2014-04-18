@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Akadaly {
-	protected int eletero = 0; //TODO Ez tutira rossz, sehol sincs használva
+	protected float eletero = 0;
 	protected List<Varazsko> varazsko = new ArrayList<Varazsko>();
 	protected Ut ut = null;
 
@@ -14,7 +14,10 @@ public class Akadaly {
 	 * @param Ut
 	 *            u
 	 */
-	public Akadaly(Ut u) {
+	public Akadaly(Ut u) throws NullPointerException {
+		if(u == null)
+			throw new NullPointerException();
+		
 		this.ut = u;
 	}
 
@@ -24,7 +27,10 @@ public class Akadaly {
 	 * @param Varazsko
 	 *            mivel
 	 */
-	public void felkovez(Varazsko mivel) {
+	public void felkovez(Varazsko mivel) throws NullPointerException {
+		if(mivel == null)
+			throw new NullPointerException();
+		
 		this.varazsko.add(mivel);
 	}
 
@@ -33,7 +39,20 @@ public class Akadaly {
 	 * 
 	 * @param int mennyit
 	 */
-	public void sebzodik(int mennyit) { //TODO meg is kéne halnia, meg ilyesmi.
-		eletero -= mennyit;
+	public void sebzodik(float mennyit) {
+		if(mennyit <= 0)
+			return;
+		
+		float szorzo = 0.0f;
+		
+		for(Varazsko v : varazsko){
+			szorzo += v.lekerEleteroSzorzo();
+		}
+		
+		eletero -= mennyit / szorzo;
+		
+		if(eletero <= 0){ //meghalás
+			ut.akadalyomLebomlott();
+		}
 	}
 }

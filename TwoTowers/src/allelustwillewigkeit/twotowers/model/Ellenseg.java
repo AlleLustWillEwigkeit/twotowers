@@ -1,6 +1,6 @@
 package allelustwillewigkeit.twotowers.model;
 
-import java.awt.List;
+import java.util.List;
 
 public abstract class Ellenseg {
 	protected int lepesigIdo = 0;
@@ -58,13 +58,19 @@ public abstract class Ellenseg {
 	 */
 	public void lep() {
 		lepesigIdo--;
-		if (lepesigIdo == 0) {
+		if (lepesigIdo <= 0) {
+			lepesigIdo = sebesseg;
+			
 			List<Ut> lehetosegek = ut.lekerKovUtak();
-			Ut kov = null;
-			if (kov.lekerAkadaly() == null)
-				kov.raLep(this);
-			else
+			Ut kov = lehetosegek.get((int)(Math.random()*lehetosegek.size()));
+			
+			if (kov.lekerAkadaly() == null){
+				this.beallitUt(kov);
+			}else{
 				kov.akadalySebzes(sebzes);
+			}
+			
+			ut.raLep(this);
 		}
 	}
 
@@ -79,7 +85,8 @@ public abstract class Ellenseg {
 	 * @param int mennyire
 	 */
 	public void eleteroAllit(int mennyire) {
-		this.eletero = mennyire;
+		if(mennyire >= 0)
+			this.eletero = mennyire;
 	}
 
 	/**

@@ -10,9 +10,8 @@ public class Elf extends Ellenseg {
 	public Elf(Ut start, Ellensegek ellens) { // FIXME
 		super(start, ellens);
 		sebzes = 20;
-		lepesigIdo = 100;
+		sebesseg = lepesigIdo = 100;
 		eletero = 100;
-		sebesseg = 30;
 	}
 
 	/**

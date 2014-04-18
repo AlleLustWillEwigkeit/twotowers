@@ -33,13 +33,18 @@ public class Ut {
 	 *            torony
 	 */
 	public void feliratkozik(Torony torony) {
+		if(torony == null) return;
+		
 		if (!this.torony.contains(torony)) {
 			this.torony.add(torony);
 		}
 	}
 
 	public void leiratkozik(Torony t) {
-		this.torony.remove(torony);
+		if(t == null) return;
+		
+		if(this.torony.contains(t))
+			this.torony.remove(t);
 	}
 
 	/**
@@ -93,6 +98,8 @@ public class Ut {
 	 * @param ut
 	 */
 	public void beallitKovUt(Ut ut) {
+		if(ut == null) return;
+		
 		if (!this.ut.contains(ut)) {
 			this.ut.add(ut);
 		}
@@ -103,7 +110,8 @@ public class Ut {
 	 * 
 	 * @param int mennyit
 	 */
-	public void akadalySebzes(int mennyit) {
-		this.akadaly.sebzodik(mennyit);
+	public void akadalySebzes(float mennyit) {
+		if(this.vanAkadalyRajta() && (mennyit > 0))
+			this.akadaly.sebzodik(mennyit);
 	}
 }

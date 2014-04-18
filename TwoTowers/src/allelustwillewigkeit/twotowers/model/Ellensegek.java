@@ -35,7 +35,15 @@ public class Ellensegek {
 	 * @param int mennyit
 	 */
 	public void inditEllenseg(Ellenseg e) {
-		e.beallitUt(kezdohely);
+		if(e == null) return;
+		
+		if(this.osszLetszam <= 0) return;
+		
+		if(!this.ellensegek.contains(e)){
+			e.beallitUt(kezdohely);
+			this.ellensegek.add(e);
+			this.osszLetszam--;
+		}
 	}
 
 	/**
@@ -46,12 +54,13 @@ public class Ellensegek {
 	 * @param ellenseg
 	 */
 	public void egyEllensegMeghalt(Ellenseg ellenseg) {
+		if(ellenseg == null) return;
+		
 		if (this.ellensegek.contains(ellenseg)) {
 			this.ellensegek.remove(ellenseg);
-			osszLetszam--;
 		}
 
-		if (osszLetszam == 0) {
+		if ((osszLetszam <= 0) && (this.ellensegek.size() == 0)) {
 			this.jatekMotor.gyozelem();
 		}
 	}
@@ -79,11 +88,39 @@ public class Ellensegek {
 	 * @param: ertek amire állítjuk.
 	 */
 	public void allitHanyEllensegVanMeg(int ertek) {
-		osszLetszam = ertek;
+		if(ertek < 0) return;
+			osszLetszam = ertek;
 	}
 
 	public void inditEllenseg(int i) {
 		// TODO Auto-generated method stub
+		if(i <=0 ) return;
+		
+		if(this.osszLetszam <= 0) return;
+		
+		if(this.osszLetszam <= i) i = this.osszLetszam;
+		
+		for(int x=0;x<i;x++){
+			Ellenseg e = null;
+			int raceRandom = (int)(Math.random()*4);
+			switch(raceRandom){
+				case 0:
+					e = new Ember(kezdohely,this);
+					break;
+				case 1:
+					e = new Torp(kezdohely,this);
+					break;
+				case 2:
+					e = new Hobbit(kezdohely,this);
+					break;
+				case 3:
+					e = new Elf(kezdohely,this);
+					break;
+			}
+			
+			this.ellensegek.add(e);
+			this.osszLetszam--;
+		}
 		
 	}
 }
