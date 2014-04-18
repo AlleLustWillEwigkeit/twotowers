@@ -119,4 +119,22 @@ public class PalyaElem {
 	public List<PalyaElem> lekerSzomszedok() {
 		return szomszedok;
 	}
+	
+	public void tick(){
+		if(this.vanEpitesiTerulete()){
+			EpitesiTerulet e = this.lekerEpitesiTerulet();
+			if(e.vanToronyRajta()){
+				Torony t = e.lekerTorony();
+				t.tick();
+			}
+		}
+		
+		if(this.vanUtja()){
+			Ut u = this.lekerUt();
+			if(u.vanAkadalyRajta()){
+				Akadaly a = u.lekerAkadaly();
+				a.tick();
+			}
+		}
+	}
 }

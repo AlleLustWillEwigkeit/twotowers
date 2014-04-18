@@ -34,7 +34,8 @@ public class Jatekmotor {
 	 * void tick Szimulál egy időegységet.
 	 */
 	public void tick() {
-		
+		this.ellensegek.mindLep();
+		this.palya.tick();
 	}
 
 	/**

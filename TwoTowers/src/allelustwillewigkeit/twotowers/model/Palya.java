@@ -11,6 +11,12 @@ public class Palya {
 	 */
 	public Palya() {
 	}
+	
+	public void tick(){
+		for(PalyaElem p : this.palyaElem){
+			p.tick();
+		}
+	}
 
 	/**
 	 * void ujPalya Létrehoz egy pálya összeállítást.
