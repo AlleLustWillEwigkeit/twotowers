@@ -4,16 +4,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import org.omg.CORBA.Environment;
+
 import allelustwillewigkeit.twotowers.model.*;
 
 public class PrototypeController {
-	static final int MAXVARAZSERO = 1000;
-	static boolean palyaszerkeszt;
-	static Palya palya;
-	static Jatekmotor motor;
-	static Ellensegek ellen;
-	static Program program;
-	static JosagosSzaruman szaruman;
+	private static final int MAXVARAZSERO = 1000;
+	private static boolean palyaszerkeszt;
+	private static Palya palya;
+	private static Jatekmotor motor;
+	private static Ellensegek ellen;
+	private static Program program;
+	private static JosagosSzaruman szaruman;
 
 	public static void main(String[] args) throws IOException {
 		InputStreamReader ir = new InputStreamReader(System.in);
@@ -64,8 +66,8 @@ public class PrototypeController {
 					hobbitIndit(cmd);
 					break;
 
-				case "TundeIndit":
-					tundeIndit(cmd);
+				case "ElfIndit":
+					elfIndit(cmd);
 					break;
 
 				case "TorpIndit":
@@ -73,7 +75,7 @@ public class PrototypeController {
 					break;
 
 				case "KilistazMap":
-					kilistazMap(cmd);
+					kilistazMap();
 					break;
 
 				case "Tick":
@@ -131,52 +133,85 @@ public class PrototypeController {
 				case "UtOsszekapcsol":
 					utOsszekapcsol(cmd);
 					break;
-
+				default:
+					System.out.println("Érvénytelen parancs!");
 				}
 			}
 		}
 	}
 
 	private static void utOsszekapcsol(String[] cmd) {
-		int egyesID = Integer.parseInt(cmd[1]);
-		int kettesID = Integer.parseInt(cmd[2]);
-		PalyaElem pe1 = palya.lekerPalyaElemIDvel(egyesID);
-		PalyaElem pe2 = palya.lekerPalyaElemIDvel(kettesID);
-		pe1.lekerUt().beallitKovUt(pe2.lekerUt());
-		System.out.println("A két út összelinkelődött" + egyesID + "->"
-				+ kettesID);
+		if (palyaszerkeszt) {
+			int egyesID = Integer.parseInt(cmd[1]);
+			int kettesID = Integer.parseInt(cmd[2]);
+			PalyaElem pe1 = palya.lekerPalyaElemIDvel(egyesID);
+			PalyaElem pe2 = palya.lekerPalyaElemIDvel(kettesID);
+			if (pe1 != null && pe2 != null) {
+				pe1.lekerUt().beallitKovUt(pe2.lekerUt());
+				System.out.println("A két út összelinkelődött" + egyesID + "->"
+						+ kettesID);
+			} else
+				System.out.println("Nincs ilyen pályaelem!");
+		} else
+			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
+
 	}
 
 	private static void vegzetHegyeLerak(String[] cmd) {
-		int palyaElemID = Integer.parseInt(cmd[1]);
-		PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-		pe.legyelVegzetHegye(motor);
-		System.out.println("A végzet hegyének lerakása sikerült" + palyaElemID
-				+ "-ra");
+		if (palyaszerkeszt) {
+			int palyaElemID = Integer.parseInt(cmd[1]);
+			PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
+			if (pe != null) {
+				pe.legyelVegzetHegye(motor);
+				System.out.println("A végzet hegyének lerakása sikerült"
+						+ palyaElemID + "-ra");
+			} else
+				System.out.println("Nincs ilyen pályaelem!");
+		} else
+			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
 	}
 
 	private static void startLerak(String[] cmd) {
-
-		int palyaElemID = Integer.parseInt(cmd[1]);
-		PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-		pe.legyelStart();
-		System.out.println("A start lerakása sikerült" + palyaElemID + "-re");
+		if (palyaszerkeszt) {
+			int palyaElemID = Integer.parseInt(cmd[1]);
+			PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
+			if (pe != null) {
+				pe.legyelStart();
+				System.out.println("A start lerakása sikerült" + palyaElemID
+						+ "-re");
+			} else
+				System.out.println("Nincs ilyen pályaelem!");
+		} else
+			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
 	}
 
 	private static void utLerak(String[] cmd) {
+		if (palyaszerkeszt) {
+			int palyaElemID = Integer.parseInt(cmd[1]);
+			PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
+			if (pe != null) {
+				pe.legyelUt();
+				System.out.println("Az út lerakása sikerült " + palyaElemID
+						+ "-re");
+			} else
+				System.out.println("Nincs ilyen pályaelem!");
+		} else
+			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
 
-		int palyaElemID = Integer.parseInt(cmd[1]);
-		PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-		pe.legyelUt();
-		System.out.println("Az út lerakása sikerült " + palyaElemID + "-re");
 	}
 
 	private static void epitesiTeruletLerak(String[] cmd) {
-
-		int palyaElemID = Integer.parseInt(cmd[1]);
-		PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-		pe.legyelEpitesiTerulet();
-		System.out.println("Építési terület létrejött " + palyaElemID + "-on");
+		if (palyaszerkeszt) {
+			int palyaElemID = Integer.parseInt(cmd[1]);
+			PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
+			if (pe != null) {
+				pe.legyelEpitesiTerulet();
+				System.out.println("Építési terület létrejött " + palyaElemID
+						+ "-on");
+			} else
+				System.out.println("Nincs ilyen pályaelem!");
+		} else
+			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
 	}
 
 	// private static void palyaElemOsszekapcsol(String[] cmd) {
@@ -186,11 +221,13 @@ public class PrototypeController {
 	// }
 
 	private static void palyaElemKeszit(String[] cmd) {
-
-		int palyaElemID = Integer.parseInt(cmd[1]);
-		PalyaElem pe = new PalyaElem(palyaElemID);
-		palya.hozzaAdPalyahoz(pe);
-		System.out.println("A pályaelem elkészült" + palyaElemID + "-vel");
+		if (palyaszerkeszt) {
+			int palyaElemID = Integer.parseInt(cmd[1]);
+			PalyaElem pe = new PalyaElem(palyaElemID);
+			palya.hozzaAdPalyahoz(pe);
+			System.out.println("A pályaelem elkészült" + palyaElemID + "-vel");
+		} else
+			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
 	}
 
 	private static void palyaSzerkeszt(String[] cmd) {
@@ -221,100 +258,160 @@ public class PrototypeController {
 	}
 
 	private static void show(String[] cmd) {
-
 		String muvelet = cmd[1];
+		switch (muvelet) {
+		case "map":
+			kilistazMap();
+			break;
+		case "ellensegek":
+			kilistazEllensegek();
+			break;
+		default:
+			System.out.println("Érvénytelen paraméter!");
+		}
+
 	}
 
 	private static void elkodosit(String[] cmd) {
 
 		int palyaElemID = Integer.parseInt(cmd[1]);
-		PalyaElem pe = new PalyaElem(palyaElemID);
+		PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 		pe.lekerEpitesiTerulet().lekerTorony().elkodosit();
 		System.out.println("A torony elködösítése sikeres" + palyaElemID
 				+ "-en.");
 	}
 
 	private static void lekerHanyEllensegVanMeg(String[] cmd) {
-
+		System.out.println("Ennyi ellenség van még:"
+				+ ellen.lekerHanyEllensegVanMeg());
 	}
 
 	private static void allitHanyEllensegVanMeg(String[] cmd) {
 
 		int ertek = Integer.parseInt(cmd[1]);
+		ellen.allitHanyEllensegVanMeg(ertek);
+		System.out
+				.println(ertek + "-re beállítva a hátralevő ellenségek száma");
 	}
 
 	private static void tick(String[] cmd) {
-
-		int hanyszor = Integer.parseInt(cmd[1]);
+		int tmp;
+		int hanyszor = tmp = Integer.parseInt(cmd[1]);
+		while (--hanyszor != 0) {
+			motor.tick();
+		}
+		System.out.println(tmp + "lépés megtörtént");
 	}
 
-	private static void kilistazMap(String[] cmd) {
+	private static void kilistazMap() {
 
 	}
 
 	private static void torpIndit(String[] cmd) {
 
-		int intSzint = Integer.parseInt(cmd[1]);
-		int intDarab = Integer.parseInt(cmd[2]);
+		int szint = Integer.parseInt(cmd[1]);
+		int darab = Integer.parseInt(cmd[2]);
+		for (int i = 0; i < darab; i++) {
+			Torp t = new Torp(START_IDE_VALAHOGY, ellen, szint);
+			ellen.inditEllenseg(t);
+		}
 	}
 
-	private static void tundeIndit(String[] cmd) {
+	private static void elfIndit(String[] cmd) {
 
-		int intSzint = Integer.parseInt(cmd[1]);
-		int intDarab = Integer.parseInt(cmd[2]);
+		int szint = Integer.parseInt(cmd[1]);
+		int darab = Integer.parseInt(cmd[2]);
+		for (int i = 0; i < darab; i++) {
+			Elf e = new Elf(START_IDE_VALAHOGY, ellen, szint);
+			ellen.inditEllenseg(e);
+		}
 	}
 
 	private static void hobbitIndit(String[] cmd) {
 
-		int intSzint = Integer.parseInt(cmd[1]);
-		int intDarab = Integer.parseInt(cmd[2]);
+		int szint = Integer.parseInt(cmd[1]);
+		int darab = Integer.parseInt(cmd[2]);
+		for (int i = 0; i < darab; i++) {
+			Hobbit h = new Hobbit(START_IDE_VALAHOGY, ellen, szint);
+			ellen.inditEllenseg(h);
+		}
 	}
 
 	private static void emberIndit(String[] cmd) {
 
-		int intSzint = Integer.parseInt(cmd[1]);
-		int intDarab = Integer.parseInt(cmd[2]);
+		int szint = Integer.parseInt(cmd[1]);
+		int darab = Integer.parseInt(cmd[2]);
+		for (int i = 0; i < darab; i++) {
+			Ember e = new Ember(START_IDE_VALAHOGY, ellen, szint);
+			ellen.inditEllenseg(e);
+		}
 	}
 
 	private static void hullamIndit(String[] cmd) {
-
-		int intSzint = Integer.parseInt(cmd[1]);
+		// TODO
+		int szint = Integer.parseInt(cmd[1]);
 		int kezdoID = Integer.parseInt(cmd[2]);
 	}
 
 	private static void hullamOsszetetelRandom(String[] cmd) {
-
+		// TODO
 		String muvelet = cmd[1];
 	}
 
 	private static void varazskoListaz(String[] cmd) {
-
+		// mit listáz? egy kollekciót? a varázskó "szótárat"?
 	}
 
 	private static void varazskoLerak(String[] cmd) {
-
 		int palyaElemID = Integer.parseInt(cmd[1]);
 		int varazskoDictID = Integer.parseInt(cmd[2]);
-		int varazskoID = Integer.parseInt(cmd[3]);
-
+		PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
+		if (pe != null) {
+			EpitesiTerulet e = pe.lekerEpitesiTerulet();
+			if (e != null) {
+				Torony t = e.lekerTorony();
+				if (t != null) {
+					Varazsko v = new Varazsko(varazskoDictID);
+					t.felkovez(v);
+					System.out.println("A varázskő lerakása sikeres"
+							+ palyaElemID + "-ra");
+				} else
+					System.out.println("Itt nincs torony!");
+			} else
+				System.out.println("Itt nincs építési terület, így torony se!");
+		} else
+			System.out.println("Nincs ilyen pályaelem!");
 	}
 
 	private static void akadalyLerak(String[] cmd) {
-
 		int palyaElemID = Integer.parseInt(cmd[1]);
-		int akadalyID = Integer.parseInt(cmd[2]);
-
+		PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
+		if (pe != null) {
+			Ut u = pe.lekerUt();
+			if (u != null) {
+				u.lerakAkadaly();
+			} else
+				System.out.println("Itt nincs út!");
+		} else
+			System.out.println("Nincs ilyen pályaelem!");
 	}
 
 	private static void toronyLerak(String[] cmd) {
 
 		int palyaElemID = Integer.parseInt(cmd[1]);
-		int toronyID = Integer.parseInt(cmd[2]);
-
+		PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
+		if (pe != null) {
+			EpitesiTerulet e = pe.lekerEpitesiTerulet();
+			if (e != null) {
+				e.lerakTornyot();
+			} else
+				System.out.println("Itt nincs építési terület!");
+		} else
+			System.out.println("Nincs ilyen pályaelem!");
 	}
 
 	private static void fajlbaIr(String[] cmd) {
-
+		// TODO
 		String muvelet = cmd[1];
 		String utvonal = null;
 		if (cmd.length == 3) {
@@ -323,8 +420,15 @@ public class PrototypeController {
 	}
 
 	private static void betoltUtasitasok(String[] cmd) {
-
 		String utvonal = cmd[1];
 	}
 
+	private static void kilistazEllensegek() {
+		System.out.println("ellensegek:");
+		for (Ellenseg tmp : ellen.lekerLista()) {
+			System.out.println("ellensegid " + tmp.lekerid() + ", ellenseghp"
+					+ tmp.eleteroLeker() + ", utid" + tmp.lekerut() + ", speed"
+					+ tmp.lekersebesseg());
+		}
+	}
 }

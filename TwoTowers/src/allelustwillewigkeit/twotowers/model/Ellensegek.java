@@ -9,6 +9,7 @@ public class Ellensegek {
 	protected JosagosSzaruman josagosSzaruman = null;
 	protected Jatekmotor jatekMotor = null;
 	protected Start kezdohely = null;
+	protected int id = 0;
 
 	/**
 	 * Ez ellenségek konstruktora
@@ -93,7 +94,7 @@ public class Ellensegek {
 	}
 
 	public void inditEllenseg(int i, int szint) throws Exception {
-		// TODO Auto-generated method stub
+		// TODO
 		if (i <= 0)
 			return;
 
@@ -134,7 +135,7 @@ public class Ellensegek {
 		try {
 			Ellenseg clone = ellenseg.Szetszakit();
 			this.ellensegek.add(clone);
-			this.osszLetszam--;
+			this.osszLetszam--;// FIXME Miért?
 		} catch (Exception e) {
 			// TODO: exception handling
 		}
@@ -142,5 +143,13 @@ public class Ellensegek {
 
 	public void beallitKezdohely(Start _kezdohely) {
 		this.kezdohely = _kezdohely;
+	}
+
+	public List<Ellenseg> lekerLista() {
+		return ellensegek;
+	}
+
+	public int nextID() {
+		return id++;
 	}
 }

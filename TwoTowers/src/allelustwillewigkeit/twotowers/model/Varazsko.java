@@ -16,8 +16,47 @@ public class Varazsko {
 		duration = _duration;
 	}
 
-	public Varazsko() {
-		// TODO Auto-generated constructor stub
+	public Varazsko(int varazskoDictID) {
+		switch (varazskoDictID) {
+		case 0:
+			eleteroSzorzo = 1;
+			hatotavSzorzo = 1;
+			duration = -1;
+			break;
+		case 1:
+			eleteroSzorzo = 1.5;
+			hatotavSzorzo = 1.5;
+			duration = -1;
+			break;
+		case 2:
+			eleteroSzorzo = 2;
+			hatotavSzorzo = 1.1;
+			duration = -1;
+			break;
+		case 3:
+			eleteroSzorzo = 2;
+			hatotavSzorzo = 2;
+			duration = -1;
+			break;
+		case 4:
+			eleteroSzorzo = 2;
+			hatotavSzorzo = 0.8;
+			duration = -1;
+			break;
+		case 5:
+			eleteroSzorzo = 2;
+			hatotavSzorzo = 0.8;
+			duration = -1;
+			break;
+		case 6:
+			eleteroSzorzo = 1;
+			hatotavSzorzo = 0.5;
+			duration = 10;
+			break;
+		default:
+			System.out.println("Ilyen varázskő nincs!");
+			break;
+		}
 	}
 
 	public void beallitTarolo(Varazskovezheto t) {
@@ -39,7 +78,7 @@ public class Varazsko {
 	/**
 	 * float lekerHatotavSzorzo Visszatér a hatótávszorzóval
 	 * 
-	 * @return float
+	 * @return double
 	 */
 	public double lekerHatotavSzorzo() {
 		return this.hatotavSzorzo;
@@ -48,7 +87,7 @@ public class Varazsko {
 	/**
 	 * float lekerEleteroSzorzo Visszatér az életerőszorzóval
 	 * 
-	 * @return float
+	 * @return double
 	 */
 	public double lekerEleteroSzorzo() {
 		return this.eleteroSzorzo;

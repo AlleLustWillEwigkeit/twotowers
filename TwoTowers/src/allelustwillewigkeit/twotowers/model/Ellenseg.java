@@ -11,6 +11,7 @@ public abstract class Ellenseg {
 	protected int sebzes = 0;
 	protected int varazseroNovel = 0;
 	protected int szint = 1;
+	protected int id;
 
 	/**
 	 * Az ellenség konstruktora
@@ -21,23 +22,23 @@ public abstract class Ellenseg {
 	 *            ellens
 	 */
 	public Ellenseg(Ut start, Ellensegek ellens, int szint) {
-		super();
 		this.ut = start;
 		this.tar = ellens;
 		this.szint = szint;
+		this.id = tar.nextID();
 	}
-	
+
 	public abstract Ellenseg Szetszakit() throws Exception;
 
 	/**
 	 * abstract void sebezNyil Nyíl sebzés
 	 */
 	public abstract void sebezNyil();
-	
+
 	/**
 	 * abstract void sebezSzelo Szelő sebzés
 	 */
-	public void sebezSzelo(){
+	public void sebezSzelo() {
 		tar.egyEllensegSzetszakit(this);
 	}
 
@@ -72,16 +73,17 @@ public abstract class Ellenseg {
 		lepesigIdo--;
 		if (lepesigIdo <= 0) {
 			lepesigIdo = sebesseg;
-			
+
 			List<Ut> lehetosegek = ut.lekerKovUtak();
-			Ut kov = lehetosegek.get((int)(Math.random()*lehetosegek.size()));
-			
-			if (kov.lekerAkadaly() == null){
+			Ut kov = lehetosegek
+					.get((int) (Math.random() * lehetosegek.size()));
+
+			if (kov.lekerAkadaly() == null) {
 				this.beallitUt(kov);
-			}else{
+			} else {
 				kov.akadalySebzes(sebzes);
 			}
-			
+
 			ut.raLep(this);
 		}
 	}
@@ -97,7 +99,7 @@ public abstract class Ellenseg {
 	 * @param int mennyire
 	 */
 	public void eleteroAllit(float mennyire) {
-		if(mennyire >= 0)
+		if (mennyire >= 0)
 			this.eletero = mennyire;
 	}
 
@@ -118,5 +120,17 @@ public abstract class Ellenseg {
 	 */
 	public void beallitUt(Ut ut) {
 		this.ut = ut;
+	}
+
+	public int lekerid() {
+		return id;
+	}
+
+	public int lekersebesseg() {
+		return sebesseg;
+	}
+
+	public Ut lekerut() {
+		return ut;
 	}
 }
