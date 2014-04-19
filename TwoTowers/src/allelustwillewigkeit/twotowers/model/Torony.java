@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Torony implements Varazskovezheto {
 	protected List<Varazsko> kovek = new ArrayList<Varazsko>();
-	public int alapHatotav;
+	protected int alapHatotav;
+	protected int alapTuzGyorsasag;
 	protected EpitesiTerulet minAll = null;
 	protected List<Ut> kikhezRegisztraltamFel = new ArrayList<Ut>();
 
@@ -13,7 +14,9 @@ public class Torony implements Varazskovezheto {
 	 * A torony konstruktora
 	 */
 	public Torony() {
-		alapHatotav = 5;
+		kovek.add(new Varazsko(0));
+		alapHatotav = 8;
+		alapTuzGyorsasag = 1;
 		this.beRegisztralTavonBeluliUtakhoz();
 	}
 
@@ -43,7 +46,7 @@ public class Torony implements Varazskovezheto {
 		if (alapHatotav <= 0)
 			return;
 
-		float hatotav = alapHatotav;
+		double hatotav = alapHatotav;
 		for (Varazsko v : kovek) {
 			hatotav *= v.lekerHatotavSzorzo();
 		}
@@ -107,5 +110,9 @@ public class Torony implements Varazskovezheto {
 
 	public void elkodosit() {
 		kovek.add(new Varazsko(6));
+	}
+
+	public List<Varazsko> lekerVarazskovek() {
+		return kovek;
 	}
 }

@@ -48,7 +48,7 @@ public class PrototypeController {
 					break;
 
 				case "VarazskoListaz":
-					varazskoListaz(cmd);
+					varazskoListaz();
 					break;
 
 				case "HullamRandom":
@@ -148,6 +148,7 @@ public class PrototypeController {
 			PalyaElem pe1 = palya.lekerPalyaElemIDvel(egyesID);
 			PalyaElem pe2 = palya.lekerPalyaElemIDvel(kettesID);
 			if (pe1 != null && pe2 != null) {
+				pe1.addSzomszed(pe2); // FIXME ha nem kell
 				pe1.lekerUt().beallitKovUt(pe2.lekerUt());
 				System.out.println("A két út összelinkelődött" + egyesID + "->"
 						+ kettesID);
@@ -215,11 +216,22 @@ public class PrototypeController {
 			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
 	}
 
-	// private static void palyaElemOsszekapcsol(String[] cmd) {
-	//
-	// int palyaElemID1 = Integer.parseInt(cmd[1]);
-	// int palyaElemID2 = Integer.parseInt(cmd[2]);
-	// }
+	private static void palyaElemOsszekapcsol(String[] cmd) {
+
+		if (palyaszerkeszt) {
+			int egyesID = Integer.parseInt(cmd[1]);
+			int kettesID = Integer.parseInt(cmd[2]);
+			PalyaElem pe1 = palya.lekerPalyaElemIDvel(egyesID);
+			PalyaElem pe2 = palya.lekerPalyaElemIDvel(kettesID);
+			if (pe1 != null && pe2 != null) {
+				pe1.addSzomszed(pe2);
+				System.out.println("A két pályaelem összelinkelődött" + egyesID
+						+ "->" + kettesID);
+			} else
+				System.out.println("Nincs ilyen pályaelem!");
+		} else
+			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
+	}
 
 	private static void palyaElemKeszit(String[] cmd) {
 		if (palyaszerkeszt) {
@@ -283,6 +295,15 @@ public class PrototypeController {
 			default:
 				System.out.println("FAILSAFE: Gáz van, ilyet nem kéne látnod!");
 			}
+		case "varazskovek":
+			varazskoListaz();
+			break;
+		case "tornyok":
+			kilistaztornyok();
+			break;
+		case "utak":
+			kilistazutak();
+			break;
 		default:
 			System.out.println("Érvénytelen paraméter!");
 		}
@@ -401,8 +422,22 @@ public class PrototypeController {
 		}
 	}
 
-	private static void varazskoListaz(String[] cmd) {
-		// mit listáz? egy kollekciót? a varázskó "szótárat"?
+	private static void varazskoListaz() {
+		System.out.println("varazskovek:");
+		EpitesiTerulet e;
+		for (PalyaElem tmp : palya.lekerlista()) {
+			System.out.print("palyaelemid:" + tmp.lekerID());
+			if ((e = tmp.lekerEpitesiTerulet()) != null) {
+				if (e.vanToronyRajta()) {
+					Torony t = e.lekerTorony();
+					for (Varazsko v : t.lekerVarazskovek()) {
+						System.out.print("toronyid: " + tmp.lekerID()
+								+ " varazskoid: " + v.lekerid() + " duration: "
+								+ v.lekerDuration());
+					}
+				}
+			}
+		}
 	}
 
 	private static void varazskoLerak(String[] cmd) {
@@ -416,8 +451,9 @@ public class PrototypeController {
 				if (t != null) {
 					Varazsko v = new Varazsko(varazskoDictID);
 					t.felkovez(v);
-					System.out.println("A varázskő lerakása sikeres"
-							+ palyaElemID + "-ra");
+					System.out.println("A " + varazskoDictID
+							+ "-VarazskoDictID varázskő lerakása sikeres"
+							+ v.lekerid() + "VarazskoID-vel.");
 				} else
 					System.out.println("Itt nincs torony!");
 			} else
@@ -473,5 +509,35 @@ public class PrototypeController {
 					+ tmp.eleteroLeker() + ", utid" + tmp.lekerut() + ", speed"
 					+ tmp.lekersebesseg());
 		}
+	}
+
+	private static void kilistaztornyok() {
+		System.out.println("tornyok:");
+		EpitesiTerulet e;
+		for (PalyaElem tmp : palya.lekerlista()) {
+			System.out.print("palyaelemid:" + tmp.lekerID());
+			if ((e = tmp.lekerEpitesiTerulet()) != null) {
+				System.out.print(" epitesi terulet");
+				if (e.vanToronyRajta()) {
+					System.out.print(" toronnyal");
+				}
+			}
+		}
+
+	}
+
+	private static void kilistazutak() {
+		System.out.println("utak:");
+		Ut u;
+		for (PalyaElem tmp : palya.lekerlista()) {
+			System.out.print("palyaelemid:" + tmp.lekerID());
+			if ((u = tmp.lekerUt()) != null) {
+				System.out.print(" ut");
+				if (u.vanAkadalyRajta()) {
+					System.out.print(" akadállyal");
+				}
+			}
+		}
+
 	}
 }
