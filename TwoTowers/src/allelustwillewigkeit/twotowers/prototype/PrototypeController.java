@@ -266,6 +266,20 @@ public class PrototypeController {
 		case "ellensegek":
 			kilistazEllensegek();
 			break;
+		case "allapot":
+			switch (motor.lekerallapot()) {
+			case 0:
+				System.out.println("Még folyik a mérkőzés!");
+				break;
+			case 1337:
+				System.out.println("Győzelem!");
+				break;
+			case -666:
+				System.out.println("Vereség");
+				break;
+			default:
+				System.out.println("FAILSAFE: Gáz van, ilyet nem kéne látnod!");
+			}
 		default:
 			System.out.println("Érvénytelen paraméter!");
 		}
@@ -420,10 +434,12 @@ public class PrototypeController {
 	}
 
 	private static void betoltUtasitasok(String[] cmd) {
+		// TODO
 		String utvonal = cmd[1];
 	}
 
 	private static void kilistazEllensegek() {
+		// TODO
 		System.out.println("ellensegek:");
 		for (Ellenseg tmp : ellen.lekerLista()) {
 			System.out.println("ellensegid " + tmp.lekerid() + ", ellenseghp"

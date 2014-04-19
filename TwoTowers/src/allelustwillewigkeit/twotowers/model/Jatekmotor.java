@@ -32,9 +32,6 @@ public class Jatekmotor {
 	 * void tick Szimulál egy időegységet.
 	 */
 	public void tick() {
-		if (this.jatekallas != 0)
-			return;
-
 		this.ellensegek.mindLep();
 		this.palya.tick();
 	}
@@ -46,9 +43,6 @@ public class Jatekmotor {
 	 *            hova
 	 */
 	public void lerakTornyot(PalyaElem hova) {
-		if (this.jatekallas != 0)
-			return;
-
 		hova.lekerEpitesiTerulet().lerakTornyot();
 	}
 
@@ -59,9 +53,6 @@ public class Jatekmotor {
 	 *            hova
 	 */
 	public void lerakAkadaly(PalyaElem hova) {
-		if (this.jatekallas != 0)
-			return;
-
 		hova.lekerUt().lerakAkadaly();
 	}
 
@@ -73,9 +64,6 @@ public class Jatekmotor {
 	 *            mit
 	 */
 	public void felkovez(PalyaElem mit) {
-		if (this.jatekallas != 0)
-			return;
-
 		Varazsko v = josagosSzaruman.lekerKivalasztottVarazsko();
 		if (mit.vanEpitesiTerulete()) {
 			EpitesiTerulet et = mit.lekerEpitesiTerulet();
@@ -119,9 +107,6 @@ public class Jatekmotor {
 	 * void vereseg Vereség történt.
 	 */
 	public void vereseg() {
-		if (this.jatekallas != 0)
-			return;
-
 		jatekallas = -666;
 	}
 
@@ -129,9 +114,11 @@ public class Jatekmotor {
 	 * void gyozelem Győzelem történt.
 	 */
 	public void gyozelem() {
-		if (this.jatekallas != 0)
-			return;
-
 		jatekallas = 1337;
+	}
+
+	/** int lekerallapot: visszatér a játék állapotával **/
+	public int lekerallapot() {
+		return jatekallas;
 	}
 }
