@@ -111,9 +111,9 @@ public class PrototypeController {
 					palyaElemKeszit(cmd);
 					break;
 
-				// case "PalyaElemOsszekapcsol":
-				// palyaElemOsszekapcsol(cmd);
-				// break;
+				case "PalyaElemOsszekapcsol":
+					palyaElemOsszekapcsol(cmd);
+					break;
 
 				case "EpitesiTeruletLerak":
 					epitesiTeruletLerak(cmd);
@@ -217,7 +217,6 @@ public class PrototypeController {
 	}
 
 	private static void palyaElemOsszekapcsol(String[] cmd) {
-
 		if (palyaszerkeszt) {
 			int egyesID = Integer.parseInt(cmd[1]);
 			int kettesID = Integer.parseInt(cmd[2]);
