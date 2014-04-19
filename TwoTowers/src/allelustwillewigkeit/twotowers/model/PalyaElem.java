@@ -8,11 +8,13 @@ public class PalyaElem {
 	protected List<PalyaElem> szomszedok = new ArrayList<PalyaElem>();
 	protected boolean beregisztralt = false;
 	protected Ut ut = null;
+	protected int palyaElemID;
 
 	/**
 	 * A pályaelem konstruktora
 	 */
-	public PalyaElem() {
+	public PalyaElem(int _palyaElemID) {
+		this.palyaElemID = _palyaElemID;
 	}
 
 	/**
@@ -64,9 +66,9 @@ public class PalyaElem {
 	 */
 	public void beregisztral(Torony torony, int tavolsag) {
 
-		if(torony == null)
-			return; 
-		
+		if (torony == null)
+			return;
+
 		if (this.beregisztralt)
 			return;
 
@@ -96,6 +98,20 @@ public class PalyaElem {
 	}
 
 	/**
+	 * void legyelStart Létrehoz egy kezdőhelyet magára.
+	 */
+	public void legyelStart() {
+		this.ut = new Start();
+	}
+
+	/**
+	 * void legyelStart Létrehoz egy kezdőhelyet magára.
+	 */
+	public void legyelVegzetHegye(Jatekmotor _jm) {
+		this.ut = new VegzetHegye(_jm);
+	}
+
+	/**
 	 * void legyelEpitesiTerulet Létrehoz egy építési területet magára.
 	 */
 	public void legyelEpitesiTerulet() {
@@ -119,22 +135,26 @@ public class PalyaElem {
 	public List<PalyaElem> lekerSzomszedok() {
 		return szomszedok;
 	}
-	
-	public void tick(){
-		if(this.vanEpitesiTerulete()){
+
+	public void tick() {
+		if (this.vanEpitesiTerulete()) {
 			EpitesiTerulet e = this.lekerEpitesiTerulet();
-			if(e.vanToronyRajta()){
+			if (e.vanToronyRajta()) {
 				Torony t = e.lekerTorony();
 				t.tick();
 			}
 		}
-		
-		if(this.vanUtja()){
+
+		if (this.vanUtja()) {
 			Ut u = this.lekerUt();
-			if(u.vanAkadalyRajta()){
+			if (u.vanAkadalyRajta()) {
 				Akadaly a = u.lekerAkadaly();
 				a.tick();
 			}
 		}
+	}
+
+	public int lekerID() {
+		return palyaElemID;
 	}
 }

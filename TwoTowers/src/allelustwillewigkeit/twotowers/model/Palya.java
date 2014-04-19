@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Palya {
-	public List<PalyaElem> palyaElem = new ArrayList<PalyaElem>();
+	protected List<PalyaElem> palyaElem = new ArrayList<PalyaElem>();
 
 	/**
 	 * A pálya konstruktora
 	 */
 	public Palya() {
 	}
-	
-	public void tick(){
-		for(PalyaElem p : this.palyaElem){
+
+	public void tick() {
+		for (PalyaElem p : this.palyaElem) {
 			p.tick();
 		}
 	}
@@ -22,5 +22,17 @@ public class Palya {
 	 * void ujPalya Létrehoz egy pálya összeállítást.
 	 */
 	public void ujPalya() { // TODO
+	}
+
+	public void hozzaAdPalyahoz(PalyaElem _pe) {
+		palyaElem.add(_pe);
+	}
+
+	public PalyaElem lekerPalyaElemIDvel(int _palyaElemID) {
+		for (PalyaElem p : this.palyaElem) {
+			if (p.lekerID() == _palyaElemID)
+				return p;
+		}
+		return null;
 	}
 }

@@ -102,4 +102,8 @@ public class Torony implements Varazskovezheto{
 		
 		this.kovek.remove(v);
 	}
+
+	public void elkodosit() {
+		kovek.add(new Varazsko(1, 0.5, 10));
+	}
 }

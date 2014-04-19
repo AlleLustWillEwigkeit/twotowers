@@ -19,14 +19,9 @@ public class Ellensegek {
 	 *            _start
 	 * @param int _osszletszam
 	 */
-	public Ellensegek(Jatekmotor _jatekmotor, Start _kezdohely, int _osszletszam) {
-		this.kezdohely = _kezdohely;
+	public Ellensegek(Jatekmotor _jatekmotor, int _osszletszam) {
 		this.jatekMotor = _jatekmotor;
 		this.osszLetszam = _osszletszam;
-	}
-
-	public Ellensegek(Jatekmotor jm, Start st) {
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -35,11 +30,13 @@ public class Ellensegek {
 	 * @param int mennyit
 	 */
 	public void inditEllenseg(Ellenseg e) {
-		if(e == null) return;
-		
-		if(this.osszLetszam <= 0) return;
-		
-		if(!this.ellensegek.contains(e)){
+		if (e == null)
+			return;
+
+		if (this.osszLetszam <= 0)
+			return;
+
+		if (!this.ellensegek.contains(e)) {
 			e.beallitUt(kezdohely);
 			this.ellensegek.add(e);
 			this.osszLetszam--;
@@ -54,8 +51,9 @@ public class Ellensegek {
 	 * @param ellenseg
 	 */
 	public void egyEllensegMeghalt(Ellenseg ellenseg) {
-		if(ellenseg == null) return;
-		
+		if (ellenseg == null)
+			return;
+
 		if (this.ellensegek.contains(ellenseg)) {
 			this.ellensegek.remove(ellenseg);
 			this.josagosSzaruman.varazseroNovel(ellenseg.varazseroNovel);
@@ -89,51 +87,60 @@ public class Ellensegek {
 	 * @param: ertek amire állítjuk.
 	 */
 	public void allitHanyEllensegVanMeg(int ertek) {
-		if(ertek < 0) return;
-			osszLetszam = ertek;
+		if (ertek < 0)
+			return;
+		osszLetszam = ertek;
 	}
 
 	public void inditEllenseg(int i, int szint) throws Exception {
 		// TODO Auto-generated method stub
-		if(i <=0 ) return;
-		
-		if(this.osszLetszam <= 0) return;
-		
-		if(this.osszLetszam <= i) i = this.osszLetszam;
-		
-		for(int x=0;x<i;x++){
+		if (i <= 0)
+			return;
+
+		if (this.osszLetszam <= 0)
+			return;
+
+		if (this.osszLetszam <= i)
+			i = this.osszLetszam;
+
+		for (int x = 0; x < i; x++) {
 			Ellenseg e = null;
-			int raceRandom = (int)(Math.random()*4);
-			switch(raceRandom){
-				case 0:
-					e = new Ember(kezdohely,this,szint);
-					break;
-				case 1:
-					e = new Torp(kezdohely,this,szint);
-					break;
-				case 2:
-					e = new Hobbit(kezdohely,this,szint);
-					break;
-				case 3:
-					e = new Elf(kezdohely,this,szint);
-					break;
+			int raceRandom = (int) (Math.random() * 4);
+			switch (raceRandom) {
+			case 0:
+				e = new Ember(kezdohely, this, szint);
+				break;
+			case 1:
+				e = new Torp(kezdohely, this, szint);
+				break;
+			case 2:
+				e = new Hobbit(kezdohely, this, szint);
+				break;
+			case 3:
+				e = new Elf(kezdohely, this, szint);
+				break;
 			}
-			
+
 			this.ellensegek.add(e);
 			this.osszLetszam--;
 		}
-		
+
 	}
-	
-	public void egyEllensegSzetszakit(Ellenseg ellenseg){
-		if(this.osszLetszam <= 0) return;
-		
-		try{
+
+	public void egyEllensegSzetszakit(Ellenseg ellenseg) {
+		if (this.osszLetszam <= 0)
+			return;
+
+		try {
 			Ellenseg clone = ellenseg.Szetszakit();
 			this.ellensegek.add(clone);
 			this.osszLetszam--;
-		}catch(Exception e){
-			//TODO: exception handling
+		} catch (Exception e) {
+			// TODO: exception handling
 		}
+	}
+
+	public void beallitKezdohely(Start _kezdohely) {
+		this.kezdohely = _kezdohely;
 	}
 }

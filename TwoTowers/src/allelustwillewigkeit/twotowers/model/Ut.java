@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Ut {
 	protected Akadaly akadaly = null;
-	protected List<Torony> torony = new ArrayList<Torony>(); //TODO de jó lenne ha beregisztráltnak hívnák vagy vhogy értelmesen
-	protected List<Ut> ut = new ArrayList<Ut>();
+	protected List<Torony> beregisztraltak = new ArrayList<Torony>();
+	protected List<Ut> szomszedok = new ArrayList<Ut>();
 
 	/**
 	 * Az út konstruktora
@@ -21,7 +21,7 @@ public class Ut {
 	 *            ellenseg
 	 */
 	public void raLep(Ellenseg ellenseg) {
-		for (Torony t : this.torony) {
+		for (Torony t : this.beregisztraltak) {
 			t.tuzel(ellenseg);
 		}
 	}
@@ -33,19 +33,21 @@ public class Ut {
 	 *            torony
 	 */
 	public void feliratkozik(Torony torony) {
-		if(torony == null) return;
-		
-		if (!this.torony.contains(torony)) {
-			this.torony.add(torony);
+		if (torony == null)
+			return;
+
+		if (!this.beregisztraltak.contains(torony)) {
+			this.beregisztraltak.add(torony);
 			torony.utBeregisztralt(this);
 		}
 	}
 
 	public void leiratkozik(Torony t) {
-		if(t == null) return;
-		
-		if(this.torony.contains(t))
-			this.torony.remove(t);
+		if (t == null)
+			return;
+
+		if (this.beregisztraltak.contains(t))
+			this.beregisztraltak.remove(t);
 	}
 
 	/**
@@ -89,7 +91,7 @@ public class Ut {
 	 * @return Ut
 	 */
 	public List<Ut> lekerKovUtak() {
-		return ut;
+		return szomszedok;
 	}
 
 	/**
@@ -99,10 +101,11 @@ public class Ut {
 	 * @param ut
 	 */
 	public void beallitKovUt(Ut ut) {
-		if(ut == null) return;
-		
-		if (!this.ut.contains(ut)) {
-			this.ut.add(ut);
+		if (ut == null)
+			return;
+
+		if (!this.szomszedok.contains(ut)) {
+			this.szomszedok.add(ut);
 		}
 	}
 
@@ -112,7 +115,7 @@ public class Ut {
 	 * @param int mennyit
 	 */
 	public void akadalySebzes(float mennyit) {
-		if(this.vanAkadalyRajta() && (mennyit > 0))
+		if (this.vanAkadalyRajta() && (mennyit > 0))
 			this.akadaly.sebzodik(mennyit);
 	}
 }

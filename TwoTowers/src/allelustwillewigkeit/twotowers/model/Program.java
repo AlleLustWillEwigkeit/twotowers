@@ -7,8 +7,8 @@ public class Program {
 	 * A program konstruktora
 	 */
 	public Program() {
-		jatekmotor = new Jatekmotor(new Ellensegek(jatekmotor, new Start(),
-				1000), new JosagosSzaruman(1000), new Palya(), this);
+		// jatekmotor = new Jatekmotor(new Ellensegek(jatekmotor, new Start(),
+		// 1000), new JosagosSzaruman(1000), new Palya(), this);
 	}
 
 	/**
