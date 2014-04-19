@@ -16,6 +16,7 @@ public class PrototypeController {
 	private static Ellensegek ellen;
 	private static Program program;
 	private static JosagosSzaruman szaruman;
+	private static boolean random;
 
 	public static void main(String[] args) throws IOException {
 		InputStreamReader ir = new InputStreamReader(System.in);
@@ -50,7 +51,7 @@ public class PrototypeController {
 					varazskoListaz(cmd);
 					break;
 
-				case "HullamOSszetetelRandom":
+				case "HullamRandom":
 					hullamOsszetetelRandom(cmd);
 					break;
 
@@ -254,6 +255,8 @@ public class PrototypeController {
 		program = new Program();
 		motor = new Jatekmotor(ellen, szaruman, palya, program);
 		ellen = new Ellensegek(motor, 0);
+		palyaszerkeszt = false;
+		random = false;
 		System.out.println("A reset sikerült.");
 	}
 
@@ -287,7 +290,6 @@ public class PrototypeController {
 	}
 
 	private static void elkodosit(String[] cmd) {
-
 		int palyaElemID = Integer.parseInt(cmd[1]);
 		PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 		pe.lekerEpitesiTerulet().lekerTorony().elkodosit();
@@ -301,7 +303,6 @@ public class PrototypeController {
 	}
 
 	private static void allitHanyEllensegVanMeg(String[] cmd) {
-
 		int ertek = Integer.parseInt(cmd[1]);
 		ellen.allitHanyEllensegVanMeg(ertek);
 		System.out
@@ -318,46 +319,65 @@ public class PrototypeController {
 	}
 
 	private static void kilistazMap() {
-
+		System.out.println("a palya:");
+		Ut u;
+		EpitesiTerulet e;
+		for (PalyaElem tmp : palya.lekerlista()) {
+			System.out.print("palyaelemid:" + tmp.lekerID());
+			if ((u = tmp.lekerUt()) != null) {
+				System.out.print(" ut");
+				if (u.vanAkadalyRajta()) {
+					System.out.print(" akadállyal");
+				}
+			} else if ((e = tmp.lekerEpitesiTerulet()) != null) {
+				System.out.print(" epitesi terulet");
+				if (e.vanToronyRajta()) {
+					System.out.print(" toronnyal");
+				}
+			}
+		}
 	}
 
 	private static void torpIndit(String[] cmd) {
-
 		int szint = Integer.parseInt(cmd[1]);
 		int darab = Integer.parseInt(cmd[2]);
 		for (int i = 0; i < darab; i++) {
 			Torp t = new Torp(START_IDE_VALAHOGY, ellen, szint);
 			ellen.inditEllenseg(t);
+			System.out.println(darab + "ellenség elkészült!");
 		}
 	}
 
 	private static void elfIndit(String[] cmd) {
-
 		int szint = Integer.parseInt(cmd[1]);
 		int darab = Integer.parseInt(cmd[2]);
 		for (int i = 0; i < darab; i++) {
 			Elf e = new Elf(START_IDE_VALAHOGY, ellen, szint);
 			ellen.inditEllenseg(e);
+			System.out.println(darab + "ellenség elkészült!");
+
 		}
 	}
 
 	private static void hobbitIndit(String[] cmd) {
-
 		int szint = Integer.parseInt(cmd[1]);
 		int darab = Integer.parseInt(cmd[2]);
 		for (int i = 0; i < darab; i++) {
 			Hobbit h = new Hobbit(START_IDE_VALAHOGY, ellen, szint);
 			ellen.inditEllenseg(h);
+			System.out.println(darab + "ellenség elkészült!");
+
 		}
 	}
 
 	private static void emberIndit(String[] cmd) {
-
 		int szint = Integer.parseInt(cmd[1]);
 		int darab = Integer.parseInt(cmd[2]);
 		for (int i = 0; i < darab; i++) {
 			Ember e = new Ember(START_IDE_VALAHOGY, ellen, szint);
 			ellen.inditEllenseg(e);
+			System.out.println(darab + "ellenség elkészült!");
+
 		}
 	}
 
@@ -368,8 +388,17 @@ public class PrototypeController {
 	}
 
 	private static void hullamOsszetetelRandom(String[] cmd) {
-		// TODO
 		String muvelet = cmd[1];
+		switch (muvelet) {
+		case "ki":
+			random = false;
+			break;
+		case "be":
+			random = true;
+			break;
+		default:
+			System.out.println("Érvénytelen paraméter");
+		}
 	}
 
 	private static void varazskoListaz(String[] cmd) {
@@ -411,7 +440,6 @@ public class PrototypeController {
 	}
 
 	private static void toronyLerak(String[] cmd) {
-
 		int palyaElemID = Integer.parseInt(cmd[1]);
 		PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 		if (pe != null) {
@@ -439,7 +467,6 @@ public class PrototypeController {
 	}
 
 	private static void kilistazEllensegek() {
-		// TODO
 		System.out.println("ellensegek:");
 		for (Ellenseg tmp : ellen.lekerLista()) {
 			System.out.println("ellensegid " + tmp.lekerid() + ", ellenseghp"

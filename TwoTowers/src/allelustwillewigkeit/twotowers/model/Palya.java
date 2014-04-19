@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Palya {
-	protected List<PalyaElem> palyaElem = new ArrayList<PalyaElem>();
+	protected List<PalyaElem> palya = new ArrayList<PalyaElem>();
 
 	/**
 	 * A pálya konstruktora
@@ -13,7 +13,7 @@ public class Palya {
 	}
 
 	public void tick() {
-		for (PalyaElem p : this.palyaElem) {
+		for (PalyaElem p : this.palya) {
 			p.tick();
 		}
 	}
@@ -25,14 +25,18 @@ public class Palya {
 	}
 
 	public void hozzaAdPalyahoz(PalyaElem _pe) {
-		palyaElem.add(_pe);
+		palya.add(_pe);
 	}
 
 	public PalyaElem lekerPalyaElemIDvel(int _palyaElemID) {
-		for (PalyaElem p : this.palyaElem) {
+		for (PalyaElem p : this.palya) {
 			if (p.lekerID() == _palyaElemID)
 				return p;
 		}
 		return null;
+	}
+
+	public List<PalyaElem> lekerlista() {
+		return palya;
 	}
 }
