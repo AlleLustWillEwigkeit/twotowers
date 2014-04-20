@@ -552,17 +552,53 @@ public class PrototypeController {
 	}
 
 	private static void varazskoLerak(String[] cmd) {
+		int palyaElemID, varazskodictID, varazskoID;
+		PalyaElem palyaElem;
+
 		try {
-			int palyaElemID = Integer.parseInt(cmd[1]);
-			int varazskoDictID = Integer.parseInt(cmd[2]);
-			PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-			EpitesiTerulet e = pe.lekerEpitesiTerulet();
-			Torony t = e.lekerTorony();
-			Varazsko v = new Varazsko(varazskoDictID);
-			t.felkovez(v);
-			kiir("A " + varazskoDictID
-					+ "-VarazskoDictID varázskő lerakása sikeres" + v.lekerID()
-					+ "VarazskoID-vel.");
+			palyaElemID = Integer.parseInt(cmd[1]);
+			palyaElem = palya.lekerPalyaElemIDvel(palyaElemID);
+			if (palyaElem == null)
+				throw new Exception();
+		} catch (Exception e) {
+			kiir("A varázskő lerakása sikertelen, a PalyaElemID nem létezik.");
+			return;
+		}
+
+		try {
+			varazskodictID = Integer.parseInt(cmd[2]);
+			if (varazskodictID < 0)
+				throw new Exception("A VarazskoDictID: " + cmd[2] + " hibás");
+		} catch (Exception e) {
+			kiir(e.getMessage());
+			return;
+		}
+
+		try {
+			varazskoID = Integer.parseInt(cmd[3]);
+			if (varazskoID < 0)
+				throw new Exception("A VarazskoID: " + cmd[3] + " hibás.");
+			if (!palyaElem.vanEpitesiTerulete()) {
+				if (!palyaElem.vanUtja()) {
+					throw new Exception(
+							"A varázskő lerakása sikertelen, a PalyaElemID nem építési terület toronnyal, és nem út akadállyal.");
+				}
+				Ut u = palyaElem.lekerUt();
+				if (!u.vanAkadalyRajta()) {
+					throw new Exception(
+							"A varázskő lerakása sikertelen, a PalyaElemID nem építési terület toronnyal, és nem út akadállyal.");
+				}
+				u.lekerAkadaly().felkovez(
+						new Varazsko(varazskodictID, varazskoID));
+			}
+			EpitesiTerulet et = palyaElem.lekerEpitesiTerulet();
+			if (!et.vanToronyRajta()) {
+				throw new Exception(
+						"A varázskő lerakása sikertelen, a PalyaElemID nem építési terület toronnyal, és nem út akadállyal.");
+			}
+			et.lekerTorony().felkovez(new Varazsko(varazskodictID, varazskoID));
+			kiir("A varázskő lerakása sikeres" + palyaElemID + "-re"
+					+ varazskoID + "-vel");
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
@@ -644,23 +680,27 @@ public class PrototypeController {
 			String utvonal = cmd[1];
 			f = new File(utvonal);
 			o = new BufferedWriter(new FileWriter(f));
+			kiir("Az [utvonal] helyre a naplózás megkezdődött.");
 		} catch (Exception e) {
-			kiir(e.getMessage());
+			kiir("Az [utvonal] helyre kezdődő naplózás sikertelen (valószínűleg nincs jogosultsága a szoftvernek oda írnia)");
 		}
 	}
 
 	private static void betoltUtasitasok(String[] cmd) {
+
+		String utvonal = cmd[1];
 		try {
-			String utvonal = cmd[1];
 			File f1 = new File(utvonal);
+
 			BufferedReader br = new BufferedReader(new FileReader(f1));
 			String s;
+			kiir("A fájl betöltése sikeres");
 			while ((s = br.readLine()) != null) {
 				ertelmez(s);
 			}
 			br.close();
 		} catch (Exception e) {
-			kiir(e.getMessage());
+			kiir("A fájl betöltése sikertelen. (Valószínűleg A fájl nem található, vagy nincs olvasási jog.) ");
 		}
 	}
 
