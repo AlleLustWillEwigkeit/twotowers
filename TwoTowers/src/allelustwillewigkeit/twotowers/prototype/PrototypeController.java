@@ -225,11 +225,16 @@ public class PrototypeController {
 		if (palyaszerkeszt) {
 			try {
 				int palyaElemID = Integer.parseInt(cmd[1]);
+				if (palyaElemID < 0)
+					throw new Exception(
+							"A PályaElemID nem egy pozitív egész szám.");
 				int utID = Integer.parseInt(cmd[2]);
-
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
+				if (pe == null)
+					throw new Exception("A PályaElemID nem egy pályaelemé.");
 				pe.legyelUt(utID);
-				kiir("Az út lerakása sikerült " + palyaElemID + "-re");
+				kiir("Az út lerakása sikerült " + palyaElemID + "-re" + utID
+						+ "-vel");
 			} catch (Exception e) {
 				kiir(e.getMessage());
 			}
@@ -576,11 +581,11 @@ public class PrototypeController {
 		try {// FIXME
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
-			int id = Integer.parseInt(cmd[3]); //TODO DOKUMENTÁCIÓ CHECK
+			int id = Integer.parseInt(cmd[3]); // TODO DOKUMENTÁCIÓ CHECK
 			if (random) {
-				for(int i=0; i!= darab; i++){
-					int tipus = (int) (Math.random()*4);
-					switch(tipus){
+				for (int i = 0; i != darab; i++) {
+					int tipus = (int) (Math.random() * 4);
+					switch (tipus) {
 					case 0:
 						ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
 						break;
@@ -596,43 +601,39 @@ public class PrototypeController {
 					}
 				}
 
-				
-			} else { //if nem random	
-				for(int i=0; i!= darab; i++)
+			} else { // if nem random
+				for (int i = 0; i != darab; i++)
 					ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
-					
+
 			}
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
 	}
 
-	public static void ezMostMiAPicsa(String[] cmd) throws Exception{ //TODO @HegyiBálint #SWAG
-		int szint = Integer.parseInt(cmd[1]); 
-		int id =  Integer.parseInt(cmd[2]);
-		final int[][] konstansok = new int[][]{
-				  { 0, 0, 1, 0},
-				  { 1, 0, 1, 0},
-				  { 2, 1, 2, 1},
-				  { 3, 2, 3, 2},
-				  { 4, 3, 5, 4}
-			};
-			
-			for(int i = 0; i!= konstansok[szint][0]; i++){
-				ellen.inditEllenseg(new Ember(start,ellen, 1, id++));
-			}
-			for(int i = 0; i!= konstansok[szint][0]; i++){
-				ellen.inditEllenseg(new Torp(start,ellen, 1, id++));
-			}
-			for(int i = 0; i!= konstansok[szint][0]; i++){
-				ellen.inditEllenseg(new Hobbit(start,ellen, 1, id++));
-			}
-			for(int i = 0; i!= konstansok[szint][0]; i++){
-				ellen.inditEllenseg(new Elf(start,ellen, 1, id++));
-			}		
-	
+	public static void ezMostMiAPicsa(String[] cmd) throws Exception { // TODO
+																		// @HegyiBálint
+																		// #SWAG
+		int szint = Integer.parseInt(cmd[1]);
+		int id = Integer.parseInt(cmd[2]);
+		final int[][] konstansok = new int[][] { { 0, 0, 1, 0 },
+				{ 1, 0, 1, 0 }, { 2, 1, 2, 1 }, { 3, 2, 3, 2 }, { 4, 3, 5, 4 } };
+
+		for (int i = 0; i != konstansok[szint][0]; i++) {
+			ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
+		}
+		for (int i = 0; i != konstansok[szint][0]; i++) {
+			ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
+		}
+		for (int i = 0; i != konstansok[szint][0]; i++) {
+			ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
+		}
+		for (int i = 0; i != konstansok[szint][0]; i++) {
+			ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
+		}
+
 	}
-	
+
 	private static void hullamOsszetetelRandom(String[] cmd) {
 		try {
 			String muvelet = cmd[1];
