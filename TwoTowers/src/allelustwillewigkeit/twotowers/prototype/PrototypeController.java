@@ -55,7 +55,7 @@ public class PrototypeController {
 
 	private static void ertelmez(String _cmd) {
 		String[] cmd = _cmd.split(" ");
-		if (cmd != null && cmd.length != 0) {
+		if (cmd != null && _cmd.length() != 0 && _cmd.startsWith("//") == false) {
 			switch (cmd[0]) {
 			case "BetoltUtasitasok":
 				betoltUtasitasok(cmd);
