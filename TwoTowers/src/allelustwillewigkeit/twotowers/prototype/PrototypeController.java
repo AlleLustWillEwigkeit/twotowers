@@ -210,7 +210,7 @@ public class PrototypeController {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				pe.legyelStart();
-				start = (Start) pe.lekerUt();// FIXME
+				start = pe.lekerStart();// FIXME
 				kiir("A start lerakása sikerült" + palyaElemID + "-re");
 			} catch (Exception e) {
 				kiir(e.getMessage());
@@ -607,9 +607,10 @@ public class PrototypeController {
 		try {
 			kiir("ellensegek:");
 			for (Ellenseg tmp : ellen.lekerLista()) {
-				kiir("ellensegid " + tmp.lekerid() + ", ellenseghp"
-						+ tmp.eleteroLeker() + ", utid" + tmp.lekerut()
-						+ ", speed" + tmp.lekersebesseg());
+				kiir("ellensegid: " + tmp.lekerid() + " ellenseghp: "
+						+ tmp.eleteroLeker() + " utid: "
+						+ tmp.lekerut().lekerPalyaelem().lekerID() + " speed: "
+						+ tmp.lekersebesseg());
 			}
 		} catch (Exception e) {
 			kiir(e.getMessage());

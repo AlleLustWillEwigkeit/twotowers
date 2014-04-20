@@ -124,4 +124,11 @@ public class Ut {
 		if (this.vanAkadalyRajta() && (mennyit > 0))
 			this.akadaly.sebzodik(mennyit);
 	}
+
+	public PalyaElem lekerPalyaelem() throws NullPointerException {
+		if (palyaElem != null)
+			return palyaElem;
+		throw new NullPointerException(
+				"Kellemetlen, de az úthoz nem tartozik pályaelem...ez nem kéne történjen...");
+	}
 }

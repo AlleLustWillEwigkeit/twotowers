@@ -130,7 +130,9 @@ public abstract class Ellenseg {
 		return sebesseg;
 	}
 
-	public Ut lekerut() {
-		return ut;
+	public Ut lekerut() throws NullPointerException {
+		if (ut != null)
+			return ut;
+		throw new NullPointerException("Nincs utam!");
 	}
 }
