@@ -115,8 +115,8 @@ public class PalyaElem {
 	/**
 	 * void legyelStart Létrehoz egy kezdőhelyet magára.
 	 */
-	public void legyelVegzetHegye(Jatekmotor _jm) {
-		this.ut = new VegzetHegye(_jm, this);
+	public void legyelVegzetHegye(Jatekmotor _jm, int _id) {
+		this.ut = new VegzetHegye(_jm, this, _id);
 	}
 
 	/**
