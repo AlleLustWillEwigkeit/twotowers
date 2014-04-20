@@ -505,10 +505,31 @@ public class PrototypeController {
 		try {// FIXME
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
+			int id = Integer.parseInt(cmd[3]); //TODO DOKUMENTÁCIÓ CHECK
 			if (random) {
-				ellen.inditEllenseg(darab, szint);
-			} else {
-				ellen.inditEllenseg(new Ember(start, ellen, szint));
+				for(int i=0; i!= darab; i++){
+					int tipus = (int) (Math.random()*4);
+					switch(tipus){
+					case 0:
+						ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
+						break;
+					case 1:
+						ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
+						break;
+					case 2:
+						ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
+						break;
+					case 3:
+						ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
+						break;
+					}
+				}
+
+				
+			} else { //if nem random	
+				for(int i=0; i!= darab; i++)
+					ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
+					
 			}
 		} catch (Exception e) {
 			kiir(e.getMessage());
