@@ -78,12 +78,12 @@ public abstract class Ellenseg {
 			Ut kov = lehetosegek
 					.get((int) (Math.random() * lehetosegek.size()));
 
-			if (kov.lekerAkadaly() == null) {
-				this.beallitUt(kov);
-			} else {
+			try {
+				kov.lekerAkadaly();
 				kov.akadalySebzes(sebzes);
+			} catch (NullPointerException ex) {
+				this.beallitUt(kov);
 			}
-
 			ut.raLep(this);
 		}
 	}

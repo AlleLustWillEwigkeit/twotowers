@@ -305,8 +305,8 @@ public class PrototypeController {
 			palya = new Palya();
 			szaruman = new JosagosSzaruman(MAXVARAZSERO);
 			program = new Program();
-			motor = new Jatekmotor(ellen, szaruman, palya, program);
 			ellen = new Ellensegek(motor, 1000, start);
+			motor = new Jatekmotor(ellen, szaruman, palya, program);
 			palyaszerkeszt = false;
 			random = false;
 			fileba = false;
@@ -394,7 +394,8 @@ public class PrototypeController {
 		try {
 			int tmp;
 			int hanyszor = tmp = Integer.parseInt(cmd[1]);
-			while (--hanyszor != 0) {
+			while (hanyszor != 0) {
+				hanyszor--;
 				motor.tick();
 			}
 			kiir(tmp + "lépés megtörtént");
@@ -428,7 +429,6 @@ public class PrototypeController {
 				kiir(ex.getMessage());
 			}
 		}
-
 	}
 
 	private static void torpIndit(String[] cmd) {
