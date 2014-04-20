@@ -1,12 +1,29 @@
 package allelustwillewigkeit.twotowers.prototype;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import org.omg.CORBA.Environment;
-
-import allelustwillewigkeit.twotowers.model.*;
+import allelustwillewigkeit.twotowers.model.Elf;
+import allelustwillewigkeit.twotowers.model.Ellenseg;
+import allelustwillewigkeit.twotowers.model.Ellensegek;
+import allelustwillewigkeit.twotowers.model.Ember;
+import allelustwillewigkeit.twotowers.model.EpitesiTerulet;
+import allelustwillewigkeit.twotowers.model.Hobbit;
+import allelustwillewigkeit.twotowers.model.Jatekmotor;
+import allelustwillewigkeit.twotowers.model.JosagosSzaruman;
+import allelustwillewigkeit.twotowers.model.Palya;
+import allelustwillewigkeit.twotowers.model.PalyaElem;
+import allelustwillewigkeit.twotowers.model.Program;
+import allelustwillewigkeit.twotowers.model.Start;
+import allelustwillewigkeit.twotowers.model.Torony;
+import allelustwillewigkeit.twotowers.model.Torp;
+import allelustwillewigkeit.twotowers.model.Ut;
+import allelustwillewigkeit.twotowers.model.Varazsko;
 
 public class PrototypeController {
 	private static final int MAXVARAZSERO = 1000;
@@ -16,8 +33,11 @@ public class PrototypeController {
 	private static Ellensegek ellen;
 	private static Program program;
 	private static JosagosSzaruman szaruman;
+	private static Start start;
 	private static boolean random = false;
 	private static boolean fileba = false;
+	private static File f;
+	private static BufferedWriter o;
 
 	public static void main(String[] args) throws IOException {
 		InputStreamReader ir = new InputStreamReader(System.in);
@@ -26,124 +46,129 @@ public class PrototypeController {
 		try {
 			while (true) {
 				s = br.readLine();
-				String[] cmd = s.split(" ");
-				if (cmd != null && cmd.length != 0) {
-					switch (cmd[0]) {
-					case "BetoltUtasitasok":
-						betoltUtasitasok(cmd);
-						break;
-
-					case "FajlbaIR":
-						fajlbaIr(cmd);
-						break;
-
-					case "ToronyLerak":
-						toronyLerak(cmd);
-						break;
-
-					case "AkadalyLerak":
-						akadalyLerak(cmd);
-						break;
-
-					case "VarazskoLerak":
-						varazskoLerak(cmd);
-						break;
-
-					case "VarazskoListaz":
-						varazskoListaz();
-						break;
-
-					case "HullamRandom":
-						hullamOsszetetelRandom(cmd);
-						break;
-
-					case "HullamIndit":
-						hullamIndit(cmd);
-						break;
-
-					case "EmberIndit":
-						emberIndit(cmd);
-						break;
-
-					case "HobbitIndit":
-						hobbitIndit(cmd);
-						break;
-
-					case "ElfIndit":
-						elfIndit(cmd);
-						break;
-
-					case "TorpIndit":
-						torpIndit(cmd);
-						break;
-
-					case "KilistazMap":
-						kilistazMap();
-						break;
-
-					case "Tick":
-						tick(cmd);
-						break;
-
-					case "AllitHanyEllensegVanMeg":
-						allitHanyEllensegVanMeg(cmd);
-						break;
-
-					case "LekerHanyEllensegVanMeg":
-						lekerHanyEllensegVanMeg(cmd);
-						break;
-
-					case "Elkodosit":
-						elkodosit(cmd);
-						break;
-
-					case "Show":
-						show(cmd);
-						break;
-
-					case "Reset":
-						reset(cmd);
-						break;
-
-					case "PalyaSzerkeszt":
-						palyaSzerkeszt(cmd);
-						break;
-
-					case "PalyaElemKeszit":
-						palyaElemKeszit(cmd);
-						break;
-
-					case "PalyaElemOsszekapcsol":
-						palyaElemOsszekapcsol(cmd);
-						break;
-
-					case "EpitesiTeruletLerak":
-						epitesiTeruletLerak(cmd);
-						break;
-
-					case "UtLerak":
-						utLerak(cmd);
-						break;
-
-					case "StartLerak":
-						startLerak(cmd);
-						break;
-
-					case "VegzetHegyeLerak":
-						vegzetHegyeLerak(cmd);
-						break;
-
-					case "UtOsszekapcsol":
-						utOsszekapcsol(cmd);
-						break;
-					default:
-						kiir("Érvénytelen parancs!");
-					}
-				}
+				ertelmez(s);
 			}
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
+	}
+
+	private static void ertelmez(String _cmd) {
+		String[] cmd = _cmd.split(" ");
+		if (cmd != null && cmd.length != 0) {
+			switch (cmd[0]) {
+			case "BetoltUtasitasok":
+				betoltUtasitasok(cmd);
+				break;
+
+			case "FajlbaIR":
+				fajlbaIr(cmd);
+				break;
+
+			case "ToronyLerak":
+				toronyLerak(cmd);
+				break;
+
+			case "AkadalyLerak":
+				akadalyLerak(cmd);
+				break;
+
+			case "VarazskoLerak":
+				varazskoLerak(cmd);
+				break;
+
+			case "VarazskoListaz":
+				varazskoListaz();
+				break;
+
+			case "HullamRandom":
+				hullamOsszetetelRandom(cmd);
+				break;
+
+			case "HullamIndit":
+				hullamIndit(cmd);
+				break;
+
+			case "EmberIndit":
+				emberIndit(cmd);
+				break;
+
+			case "HobbitIndit":
+				hobbitIndit(cmd);
+				break;
+
+			case "ElfIndit":
+				elfIndit(cmd);
+				break;
+
+			case "TorpIndit":
+				torpIndit(cmd);
+				break;
+
+			case "KilistazMap":
+				kilistazMap();
+				break;
+
+			case "Tick":
+				tick(cmd);
+				break;
+
+			case "AllitHanyEllensegVanMeg":
+				allitHanyEllensegVanMeg(cmd);
+				break;
+
+			case "LekerHanyEllensegVanMeg":
+				lekerHanyEllensegVanMeg(cmd);
+				break;
+
+			case "Elkodosit":
+				elkodosit(cmd);
+				break;
+
+			case "Show":
+				show(cmd);
+				break;
+
+			case "Reset":
+				reset(cmd);
+				break;
+
+			case "PalyaSzerkeszt":
+				palyaSzerkeszt(cmd);
+				break;
+
+			case "PalyaElemKeszit":
+				palyaElemKeszit(cmd);
+				break;
+
+			case "PalyaElemOsszekapcsol":
+				palyaElemOsszekapcsol(cmd);
+				break;
+
+			case "EpitesiTeruletLerak":
+				epitesiTeruletLerak(cmd);
+				break;
+
+			case "UtLerak":
+				utLerak(cmd);
+				break;
+
+			case "StartLerak":
+				startLerak(cmd);
+				break;
+
+			case "VegzetHegyeLerak":
+				vegzetHegyeLerak(cmd);
+				break;
+
+			case "UtOsszekapcsol":
+				utOsszekapcsol(cmd);
+				break;
+			default:
+				kiir("Érvénytelen parancs!");
+			}
+		}
+
 	}
 
 	private static void utOsszekapcsol(String[] cmd) {
@@ -185,6 +210,7 @@ public class PrototypeController {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				pe.legyelStart();
+				start = (Start) pe.lekerUt();// FIXME
 				kiir("A start lerakása sikerült" + palyaElemID + "-re");
 			} catch (Exception e) {
 				kiir(e.getMessage());
@@ -378,7 +404,6 @@ public class PrototypeController {
 	}
 
 	private static void kilistazMap() {
-
 		kiir("a palya:");
 		Ut u;
 		EpitesiTerulet e;
@@ -411,7 +436,7 @@ public class PrototypeController {
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
 			for (int i = 0; i < darab; i++) {
-				Torp t = new Torp(START_IDE_VALAHOGY, ellen, szint);
+				Torp t = new Torp(start, ellen, szint);
 				ellen.inditEllenseg(t);
 				kiir(darab + "ellenség elkészült!");
 			}
@@ -425,7 +450,7 @@ public class PrototypeController {
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
 			for (int i = 0; i < darab; i++) {
-				Elf e = new Elf(START_IDE_VALAHOGY, ellen, szint);
+				Elf e = new Elf(start, ellen, szint);
 				ellen.inditEllenseg(e);
 				kiir(darab + "ellenség elkészült!");
 			}
@@ -439,7 +464,7 @@ public class PrototypeController {
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
 			for (int i = 0; i < darab; i++) {
-				Hobbit h = new Hobbit(START_IDE_VALAHOGY, ellen, szint);
+				Hobbit h = new Hobbit(start, ellen, szint);
 				ellen.inditEllenseg(h);
 				kiir(darab + "ellenség elkészült!");
 			}
@@ -453,7 +478,7 @@ public class PrototypeController {
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
 			for (int i = 0; i < darab; i++) {
-				Ember e = new Ember(START_IDE_VALAHOGY, ellen, szint);
+				Ember e = new Ember(start, ellen, szint);
 				ellen.inditEllenseg(e);
 				kiir(darab + "ellenség elkészült!");
 			}
@@ -463,10 +488,14 @@ public class PrototypeController {
 	}
 
 	private static void hullamIndit(String[] cmd) {
-		// TODO
-		try {
+		try {// FIXME
 			int szint = Integer.parseInt(cmd[1]);
-			int kezdoID = Integer.parseInt(cmd[2]);
+			int darab = Integer.parseInt(cmd[2]);
+			if (random) {
+				ellen.inditEllenseg(darab, szint);
+			} else {
+				ellen.inditEllenseg(new Ember(start, ellen, szint));
+			}
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
@@ -549,22 +578,26 @@ public class PrototypeController {
 	}
 
 	private static void fajlbaIr(String[] cmd) {
-		// TODO
 		try {
-			String muvelet = cmd[1];
-			String utvonal = null;
-			if (cmd.length == 3) {
-				utvonal = cmd[2];
-			}
+			fileba = true;
+			String utvonal = cmd[1];
+			f = new File(utvonal);
+			o = new BufferedWriter(new FileWriter(f));
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
 	}
 
 	private static void betoltUtasitasok(String[] cmd) {
-		// TODO
 		try {
 			String utvonal = cmd[1];
+			File f1 = new File(utvonal);
+			BufferedReader br = new BufferedReader(new FileReader(f1));
+			String s;
+			while ((s = br.readLine()) != null) {
+				ertelmez(s);
+			}
+			br.close();
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
@@ -622,7 +655,11 @@ public class PrototypeController {
 		System.out.print(_str);
 		System.out.println();
 		if (fileba) {
-			// TODO fileba is kivezet
+			try {
+				o.write(_str);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
 		}
 	}
 }

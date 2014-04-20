@@ -137,7 +137,6 @@ public class Ellensegek {
 			this.ellensegek.add(clone);
 			this.osszLetszam--;// FIXME Miért?
 		} catch (Exception e) {
-			// TODO: exception handling
 		}
 	}
 
