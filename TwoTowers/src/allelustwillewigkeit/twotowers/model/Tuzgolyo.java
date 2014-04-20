@@ -1,11 +1,11 @@
 package allelustwillewigkeit.twotowers.model;
 
-
 public class Tuzgolyo extends Lovedek {
 	/**
 	 * A tűzgolyó konstruktora
 	 */
-	public Tuzgolyo() {
+	public Tuzgolyo(int _id) {
+		super(_id);
 	}
 
 	/**

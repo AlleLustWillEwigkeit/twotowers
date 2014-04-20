@@ -51,4 +51,9 @@ public class EpitesiTerulet {
 					"Nincs torony az építési területen! ID:"
 							+ palyaElem.lekerID());
 	}
+
+	public int lekerID() {
+		// TODO Auto-generated method stub
+		return id;
+	}
 }

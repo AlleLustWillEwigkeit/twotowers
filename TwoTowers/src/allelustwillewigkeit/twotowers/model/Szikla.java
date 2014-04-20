@@ -1,11 +1,11 @@
 package allelustwillewigkeit.twotowers.model;
 
-
 public class Szikla extends Lovedek {
 	/**
 	 * A szikla konstruktora
 	 */
-	public Szikla() {
+	public Szikla(int _id) {
+		super(_id);
 	}
 
 	/**

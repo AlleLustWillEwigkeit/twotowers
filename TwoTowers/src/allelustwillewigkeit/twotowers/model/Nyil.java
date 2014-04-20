@@ -1,11 +1,11 @@
 package allelustwillewigkeit.twotowers.model;
 
-
 public class Nyil extends Lovedek {
 	/**
 	 * A nyíl konstruktora
 	 */
-	public Nyil() {
+	public Nyil(int _id) {
+		super(_id);
 	}
 
 	/**

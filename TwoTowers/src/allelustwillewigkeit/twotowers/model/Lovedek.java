@@ -1,10 +1,13 @@
 package allelustwillewigkeit.twotowers.model;
 
 public class Lovedek {
+	int id;
+
 	/**
 	 * A lövedék konstruktora
 	 */
-	public Lovedek() {
+	public Lovedek(int _id) {
+		this.id = _id;
 	}
 
 	/**
@@ -15,5 +18,9 @@ public class Lovedek {
 	 */
 	public void megLo(Ellenseg kit) {
 		kit.sebezLovedek();
+	}
+
+	public int lekerID() {
+		return id;
 	}
 }

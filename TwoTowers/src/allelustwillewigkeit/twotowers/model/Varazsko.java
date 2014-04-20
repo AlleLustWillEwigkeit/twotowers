@@ -107,6 +107,12 @@ public class Varazsko {
 		this.lovedek.add(l);
 	}
 
+	public List<Lovedek> lekerLovedekek() {
+		if (lovedek != null)
+			return lovedek;
+		throw new NullPointerException("Nincs lövedék, az gáz!");
+	}
+
 	public void tick() {
 		if (duration == -1)
 			return;

@@ -1,11 +1,12 @@
 package allelustwillewigkeit.twotowers.model;
 
-public class Szelo extends Lovedek{
-	
-	public Szelo(){
-		
+public class Szelo extends Lovedek {
+
+	public Szelo(int _id) {
+		super(_id);
+
 	}
-	
+
 	/**
 	 * void megLo Meglövi az ellenfelet.
 	 * 
