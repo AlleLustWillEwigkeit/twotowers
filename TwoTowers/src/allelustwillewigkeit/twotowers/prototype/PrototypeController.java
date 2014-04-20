@@ -717,28 +717,17 @@ public class PrototypeController {
 	}
 
 	private static void varazskoLerak(String[] cmd) {
-		int palyaElemID, varazskodictID, varazskoID;
-		PalyaElem palyaElem;
 		try {
+			int palyaElemID, varazskodictID, varazskoID;
+			PalyaElem palyaElem;
 			palyaElemID = Integer.parseInt(cmd[1]);
 			palyaElem = palya.lekerPalyaElemIDvel(palyaElemID);
 			if (palyaElem == null)
-				throw new Exception();
-		} catch (Exception e) {
-			kiir("A varázskő lerakása sikertelen, a PalyaElemID nem létezik.");
-			return;
-		}
-
-		try {
+				throw new Exception(
+						"A varázskő lerakása sikertelen, a PalyaElemID nem létezik.");
 			varazskodictID = Integer.parseInt(cmd[2]);
 			if (varazskodictID < 0)
 				throw new Exception("A VarazskoDictID: " + cmd[2] + " hibás");
-		} catch (Exception e) {
-			kiir(e.getMessage());
-			return;
-		}
-
-		try {
 			varazskoID = Integer.parseInt(cmd[3]);
 			if (varazskoID < 0)
 				throw new Exception("A VarazskoID: " + cmd[3] + " hibás.");
@@ -769,68 +758,56 @@ public class PrototypeController {
 	}
 
 	private static void akadalyLerak(String[] cmd) {
-		int palyaElemID, akadalyID;
-		PalyaElem palyaElem;
-
 		try {
+			int palyaElemID, akadalyID;
+			PalyaElem palyaElem;
 			palyaElemID = Integer.parseInt(cmd[1]);
+			if (palyaElemID < 0)
+				throw new Exception("A PalyaElemID nem egy pozitív egész szám");
 			palyaElem = palya.lekerPalyaElemIDvel(palyaElemID);
 			if (palyaElem == null)
-				throw new Exception();
-		} catch (Exception e) {
-			kiir("A PalyaElemID nem egy pályaelemé");
-			return;
-		}
-
-		try {
+				throw new Exception(
+						"Az akadály lerakása sikertelen, a PalyaElemID nem létezik.");
 			akadalyID = Integer.parseInt(cmd[2]);
 			if (akadalyID < 0)
-				throw new Exception();
-		} catch (Exception e) {
-			kiir("Az AkadalyElemID nem egy pozitív egész szám");
-			return;
-		}
-
-		try {
-			if (!palyaElem.vanUtja()) {
-				throw new Exception("Az adott PalyaElemID-n nincs út");
-			}
+				throw new Exception("Az AkadalyID nem egy pozitív egész szám");
+			if (!palyaElem.vanUtja())
+				throw new Exception(
+						"Az akadály lerakása sikertelen, a PalyaElemID nem Út");
 			Ut u = palyaElem.lekerUt();
+			if (u.vanAkadalyRajta())
+				throw new Exception("Az akadály lerakása sikertelen, a"
+						+ palyaElemID + "-n már van egy akadály.");
 			u.lerakAkadaly(akadalyID);
-			kiir("Az akadály lerakása sikeres " + palyaElemID + "-re");
+			kiir("Az akadály lerakása sikeres " + palyaElemID + "-re"
+					+ akadalyID + "-vel");
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
 	}
 
 	private static void toronyLerak(String[] cmd) {
-		int palyaElemID, toronyID;
-		PalyaElem palyaElem;
-
 		try {
+			int palyaElemID, toronyID;
+			PalyaElem palyaElem;
 			palyaElemID = Integer.parseInt(cmd[1]);
+			if (palyaElemID < 0)
+				throw new Exception("A PalyaElemID nem egy pozitív egész szám");
 			palyaElem = palya.lekerPalyaElemIDvel(palyaElemID);
 			if (palyaElem == null)
-				throw new Exception("A PalyaElemID nem egy pályaelemé");
-		} catch (Exception e) {
-			kiir(e.getMessage());
-			return;
-		}
-
-		try {
+				throw new Exception(
+						"A torony lerakása sikertelen, a PalyaElemID nem létezik");
 			toronyID = Integer.parseInt(cmd[2]);
 			if (toronyID < 0)
 				throw new Exception("A ToronyID nem egy pozitív egész szám");
-		} catch (Exception e) {
-			kiir(e.getMessage());
-			return;
-		}
-
-		try {
 			if (!palyaElem.vanEpitesiTerulete())
 				throw new Exception(
 						"A torony lerakása sikertelen, a PalyaElemID nem építési terület");
-			palyaElem.lekerEpitesiTerulet().lerakTornyot(toronyID);
+			EpitesiTerulet et = palyaElem.lekerEpitesiTerulet();
+			if (et.vanToronyRajta())
+				throw new Exception(
+						"A torony lerakása sikertelen, a PalyaElemID-n már van egy torony.");
+			et.lerakTornyot(toronyID);
 			kiir("A torony lerakása sikeres " + palyaElemID + "-re " + toronyID
 					+ "-vel.");
 		} catch (Exception e) {
