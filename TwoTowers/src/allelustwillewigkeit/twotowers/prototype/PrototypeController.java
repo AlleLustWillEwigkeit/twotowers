@@ -386,27 +386,32 @@ public class PrototypeController {
 	}
 
 	private static void kilistazMap() {
-		try {
-			System.out.println("a palya:");
-			Ut u;
-			EpitesiTerulet e;
-			for (PalyaElem tmp : palya.lekerlista()) {
-				System.out.print("palyaelemid:" + tmp.lekerID());
-				if ((u = tmp.lekerUt()) != null) {
-					System.out.print(" ut");
-					if (u.vanAkadalyRajta()) {
-						System.out.print(" akadállyal");
-					}
-				} else if ((e = tmp.lekerEpitesiTerulet()) != null) {
-					System.out.print(" epitesi terulet");
-					if (e.vanToronyRajta()) {
-						System.out.print(" toronnyal");
-					}
+
+		System.out.println("a palya:");
+		Ut u;
+		EpitesiTerulet e;
+		for (PalyaElem tmp : palya.lekerlista()) {
+			System.out.print("palyaelemid:" + tmp.lekerID());
+			try {
+				u = tmp.lekerUt();
+				System.out.print(" ut");
+				if (u.vanAkadalyRajta()) {
+					System.out.print(" akadállyal");
 				}
+			} catch (Exception ex) {
+				System.out.println(ex.getMessage());
 			}
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			try {
+				e = tmp.lekerEpitesiTerulet();
+				System.out.print(" epitesi terulet");
+				if (e.vanToronyRajta()) {
+					System.out.print(" toronnyal");
+				}
+			} catch (Exception ex) {
+				System.out.println(ex.getMessage());
+			}
 		}
+
 	}
 
 	private static void torpIndit(String[] cmd) {
@@ -467,8 +472,12 @@ public class PrototypeController {
 
 	private static void hullamIndit(String[] cmd) {
 		// TODO
-		int szint = Integer.parseInt(cmd[1]);
-		int kezdoID = Integer.parseInt(cmd[2]);
+		try {
+			int szint = Integer.parseInt(cmd[1]);
+			int kezdoID = Integer.parseInt(cmd[2]);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 	private static void hullamOsszetetelRandom(String[] cmd) {
@@ -551,16 +560,24 @@ public class PrototypeController {
 
 	private static void fajlbaIr(String[] cmd) {
 		// TODO
-		String muvelet = cmd[1];
-		String utvonal = null;
-		if (cmd.length == 3) {
-			utvonal = cmd[2];
+		try {
+			String muvelet = cmd[1];
+			String utvonal = null;
+			if (cmd.length == 3) {
+				utvonal = cmd[2];
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
 	}
 
 	private static void betoltUtasitasok(String[] cmd) {
 		// TODO
-		String utvonal = cmd[1];
+		try {
+			String utvonal = cmd[1];
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 	private static void kilistazEllensegek() {
@@ -582,13 +599,13 @@ public class PrototypeController {
 			EpitesiTerulet e;
 			for (PalyaElem tmp : palya.lekerlista()) {
 				System.out.print("palyaelemid:" + tmp.lekerID());
-				if ((e = tmp.lekerEpitesiTerulet()) != null) {
-					System.out.print(" epitesi terulet");
-					if (e.vanToronyRajta()) {
-						System.out.print(" toronnyal");
-					}
+				e = tmp.lekerEpitesiTerulet();
+				System.out.print(" epitesi terulet");
+				if (e.vanToronyRajta()) {
+					System.out.print(" toronnyal");
 				}
 			}
+
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -600,11 +617,10 @@ public class PrototypeController {
 			Ut u;
 			for (PalyaElem tmp : palya.lekerlista()) {
 				System.out.print("palyaelemid:" + tmp.lekerID());
-				if ((u = tmp.lekerUt()) != null) {
-					System.out.print(" ut");
-					if (u.vanAkadalyRajta()) {
-						System.out.print(" akadállyal");
-					}
+				u = tmp.lekerUt();
+				System.out.print(" ut");
+				if (u.vanAkadalyRajta()) {
+					System.out.print(" akadállyal");
 				}
 			}
 		} catch (Exception e) {
