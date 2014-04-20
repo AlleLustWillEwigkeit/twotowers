@@ -306,7 +306,7 @@ public class PrototypeController {
 			szaruman = new JosagosSzaruman(MAXVARAZSERO);
 			program = new Program();
 			motor = new Jatekmotor(ellen, szaruman, palya, program);
-			ellen = new Ellensegek(motor, 0);
+			ellen = new Ellensegek(motor, 1000);
 			palyaszerkeszt = false;
 			random = false;
 			fileba = false;
