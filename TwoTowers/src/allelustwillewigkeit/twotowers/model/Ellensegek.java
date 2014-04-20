@@ -94,7 +94,7 @@ public class Ellensegek {
 	}
 
 	public void inditEllenseg(int i, int szint, int _id) throws Exception {
-		// TODO
+		// TODO EZ KURVASZAR MERT SZÉTRANDOMOZZA AMIKOR NEM IS KELLENE
 		if (i <= 0)
 			return;
 
