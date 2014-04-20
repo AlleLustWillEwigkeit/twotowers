@@ -42,8 +42,8 @@ public class Jatekmotor {
 	 * @param PalyaElem
 	 *            hova
 	 */
-	public void lerakTornyot(PalyaElem hova) {
-		hova.lekerEpitesiTerulet().lerakTornyot();
+	public void lerakTornyot(PalyaElem hova, int _id) {
+		hova.lekerEpitesiTerulet().lerakTornyot(_id);
 	}
 
 	/**

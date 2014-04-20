@@ -176,17 +176,36 @@ public class PrototypeController {
 		if (palyaszerkeszt) {
 			try {
 				int egyesID = Integer.parseInt(cmd[1]);
+				if (egyesID < 0)
+					throw new Exception(
+							"Az UtID_Honnan nem egy pozitív egész szám.");
 				int kettesID = Integer.parseInt(cmd[2]);
+				if (kettesID < 0)
+					throw new Exception(
+							"Az UtID_Hova nem egy pozitív egész szám.");
 				PalyaElem pe1 = palya.lekerPalyaElemIDvel(egyesID);
+				if (pe1 == null)
+					throw new Exception(
+							"Az PalyaElemID_Honnan nem egy PalyaElemID");
 				PalyaElem pe2 = palya.lekerPalyaElemIDvel(kettesID);
-				pe1.addSzomszed(pe2); // FIXME ha nem kell
-				pe1.lekerUt().beallitKovUt(pe2.lekerUt());
+				if (pe2 == null)
+					throw new Exception(
+							"Az PalyaElemID_Hova nem egy PalyaElemID");
+				Ut honnan = pe1.lekerUt();
+				if (honnan == null)
+					throw new Exception("Nincs út a PályaElemID_Honnan-on");
+				Ut hova = pe2.lekerUt();
+				if (hova == null)
+					throw new Exception("Nincs út a PályaElemID_Hová-n");
+				pe1.addSzomszed(pe2);
+				pe2.addSzomszed(pe1);
+				honnan.beallitKovUt(hova);
 				kiir("A két út összelinkelődött" + egyesID + "->" + kettesID);
 			} catch (Exception e) {
 				kiir(e.getMessage());
 			}
 		} else
-			kiir("Nincs aktiválva a pályaszereksztő mód!");
+			kiir("A pályaszerkesztés nincs bekapcsolva, így sikertelen. A bekapcsoláshoz írdd be, hogy “PalyaSzerkeszt kezd”");
 
 	}
 
@@ -194,31 +213,50 @@ public class PrototypeController {
 		if (palyaszerkeszt) {
 			try {
 				int palyaElemID = Integer.parseInt(cmd[1]);
+				if (palyaElemID < 0)
+					throw new Exception(
+							"A PályaElemID nem egy pozitív egész szám.");
+				int vegzetHegyeID = Integer.parseInt(cmd[2]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-				pe.legyelVegzetHegye(motor);
-				kiir("A végzet hegyének lerakása sikerült " + palyaElemID
-						+ "-ra");
+				if (pe == null)
+					throw new Exception("A PályaElemID nem egy pályaelemé.");
+				if (pe.vanUtja())
+					throw new Exception(
+							"A vég lerakása sikertelen, mert már van vég vagy út vagy start.");
+				pe.legyelVegzetHegye(motor, vegzetHegyeID);
+				start = (Start) pe.lekerUt();
+				kiir("A végzet hegyének lerakása sikerült, " + palyaElemID
+						+ "-re" + vegzetHegyeID + "-vel");
 			} catch (Exception e) {
 				kiir(e.getMessage());
 			}
 		} else
-			kiir("Nincs aktiválva a pályaszereksztő mód!");
+			kiir("A pályaszerkesztés nincs bekapcsolva, így sikertelen. A bekapcsoláshoz írd be, hogy “PalyaSzerkeszt kezd”");
 	}
 
 	private static void startLerak(String[] cmd) {
 		if (palyaszerkeszt) {
 			try {
 				int palyaElemID = Integer.parseInt(cmd[1]);
+				if (palyaElemID < 0)
+					throw new Exception(
+							"A PályaElemID nem egy pozitív egész szám.");
 				int startID = Integer.parseInt(cmd[2]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
+				if (pe == null)
+					throw new Exception("A PályaElemID nem egy pályaelemé.");
+				if (pe.vanUtja())
+					throw new Exception(
+							"A start lerakása sikertelen, mert már van start vagy út vagy vég.");
 				pe.legyelStart(startID);
 				start = (Start) pe.lekerUt();
-				kiir("A start lerakása sikerült " + palyaElemID + "-re");
+				kiir("A start lerakása sikerült " + palyaElemID + "-re"
+						+ startID + "-vel");
 			} catch (Exception e) {
 				kiir(e.getMessage());
 			}
 		} else
-			kiir("Nincs aktiválva a pályaszereksztő mód!");
+			kiir("A pályaszerkesztés nincs bekapcsolva, így sikertelen. A bekapcsoláshoz írd be, hogy “PalyaSzerkeszt kezd”");
 	}
 
 	private static void utLerak(String[] cmd) {
@@ -232,6 +270,10 @@ public class PrototypeController {
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				if (pe == null)
 					throw new Exception("A PályaElemID nem egy pályaelemé.");
+				if (pe.vanUtja())
+					throw new Exception(
+							"Az út lerakása sikertelen, mert már van start vagy út vagy vég.");
+
 				pe.legyelUt(utID);
 				kiir("Az út lerakása sikerült " + palyaElemID + "-re" + utID
 						+ "-vel");
@@ -281,7 +323,8 @@ public class PrototypeController {
 				if (pe2 == null)
 					throw new Exception("A PalyaElemID2 nem egy PalyaElemID");
 				pe1.addSzomszed(pe2);
-				kiir("A két pályaelem összelinkelődött" + egyesID + "->"
+				pe2.addSzomszed(pe1);
+				kiir("A két pályaelem összelinkelődött" + egyesID + "<->"
 						+ kettesID);
 			} catch (Exception e) {
 				kiir(e.getMessage());
@@ -587,16 +630,17 @@ public class PrototypeController {
 					int tipus = (int) (Math.random() * 4);
 					switch (tipus) {
 					case 0:
-						ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
+						ellen.inditEllenseg(new Ember(start, ellen, szint, id++));
 						break;
 					case 1:
-						ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
+						ellen.inditEllenseg(new Torp(start, ellen, szint, id++));
 						break;
 					case 2:
-						ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
+						ellen.inditEllenseg(new Hobbit(start, ellen, szint,
+								id++));
 						break;
 					case 3:
-						ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
+						ellen.inditEllenseg(new Elf(start, ellen, szint, id++));
 						break;
 					}
 				}

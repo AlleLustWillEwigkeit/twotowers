@@ -4,7 +4,8 @@ public class Darda extends Lovedek {
 	/**
 	 * A dárda konstruktora
 	 */
-	public Darda() {
+	public Darda(int _id) {
+		super(_id);
 	}
 
 	/**

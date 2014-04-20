@@ -23,12 +23,9 @@ public class PalyaElem {
 	 * 
 	 * @return EpitesiTerulet
 	 */
-	public EpitesiTerulet lekerEpitesiTerulet() throws NullPointerException {
-		if (epitesiTerulet != null)
-			return this.epitesiTerulet;
-		else
-			throw new NullPointerException(
-					"Nincs építési terület a pályaelemen! ID:" + palyaElemID);
+	public EpitesiTerulet lekerEpitesiTerulet() {
+
+		return this.epitesiTerulet;
 	}
 
 	/**
@@ -36,12 +33,9 @@ public class PalyaElem {
 	 * 
 	 * @return Ut
 	 */
-	public Ut lekerUt() throws NullPointerException {
-		if (ut != null)
-			return this.ut;
-		else
-			throw new NullPointerException("Nincs út a pályaelemen! ID:"
-					+ palyaElemID);
+	public Ut lekerUt() {
+
+		return this.ut;
 	}
 
 	/**
