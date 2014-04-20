@@ -42,7 +42,12 @@ public class EpitesiTerulet {
 	 * 
 	 * @return
 	 */
-	public Torony lekerTorony() {
-		return this.torony;
+	public Torony lekerTorony() throws NullPointerException {
+		if (torony != null)
+			return this.torony;
+		else
+			throw new NullPointerException(
+					"Nincs torony az építési területen! ID:"
+							+ palyaElem.lekerID());
 	}
 }

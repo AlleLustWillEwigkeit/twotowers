@@ -7,11 +7,13 @@ public class Ut {
 	protected Akadaly akadaly = null;
 	protected List<Torony> beregisztraltak = new ArrayList<Torony>();
 	protected List<Ut> szomszedok = new ArrayList<Ut>();
+	protected PalyaElem palyaElem = null;
 
 	/**
 	 * Az út konstruktora
 	 */
-	public Ut() {
+	public Ut(PalyaElem _palyaelem) {
+		this.palyaElem = _palyaelem;
 	}
 
 	/**
@@ -80,8 +82,12 @@ public class Ut {
 	 * 
 	 * @return Akadaly
 	 */
-	public Akadaly lekerAkadaly() {
-		return this.akadaly;
+	public Akadaly lekerAkadaly() throws NullPointerException {
+		if (akadaly != null)
+			return this.akadaly;
+		else
+			throw new NullPointerException("Nincs akadály az úton! ID:"
+					+ palyaElem.lekerID());
 	}
 
 	/**

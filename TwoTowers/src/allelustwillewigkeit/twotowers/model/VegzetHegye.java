@@ -9,8 +9,8 @@ public class VegzetHegye extends Ut {
 	 * @param JatekMotor
 	 *            jm
 	 */
-	public VegzetHegye(Jatekmotor jm) {
-		super();
+	public VegzetHegye(Jatekmotor jm, PalyaElem _palyaelem) {
+		super(_palyaelem);
 		this.jatekmotor = jm;
 	}
 

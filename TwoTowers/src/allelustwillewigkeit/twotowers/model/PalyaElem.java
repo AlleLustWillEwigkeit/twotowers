@@ -23,8 +23,12 @@ public class PalyaElem {
 	 * 
 	 * @return EpitesiTerulet
 	 */
-	public EpitesiTerulet lekerEpitesiTerulet() {
-		return this.epitesiTerulet;
+	public EpitesiTerulet lekerEpitesiTerulet() throws NullPointerException {
+		if (epitesiTerulet != null)
+			return this.epitesiTerulet;
+		else
+			throw new NullPointerException(
+					"Nincs építési terület a pályaelemen! ID:" + palyaElemID);
 	}
 
 	/**
@@ -32,8 +36,12 @@ public class PalyaElem {
 	 * 
 	 * @return Ut
 	 */
-	public Ut lekerUt() {
-		return this.ut;
+	public Ut lekerUt() throws NullPointerException {
+		if (ut != null)
+			return this.ut;
+		else
+			throw new NullPointerException("Nincs út a pályaelemen! ID:"
+					+ palyaElemID);
 	}
 
 	/**
@@ -94,21 +102,21 @@ public class PalyaElem {
 	 * void legyelUt Létrehoz egy utat magára.
 	 */
 	public void legyelUt() {
-		this.ut = new Ut();
+		this.ut = new Ut(this);
 	}
 
 	/**
 	 * void legyelStart Létrehoz egy kezdőhelyet magára.
 	 */
 	public void legyelStart() {
-		this.ut = new Start();
+		this.ut = new Start(this);
 	}
 
 	/**
 	 * void legyelStart Létrehoz egy kezdőhelyet magára.
 	 */
 	public void legyelVegzetHegye(Jatekmotor _jm) {
-		this.ut = new VegzetHegye(_jm);
+		this.ut = new VegzetHegye(_jm, this);
 	}
 
 	/**

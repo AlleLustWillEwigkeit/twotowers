@@ -7,7 +7,7 @@ public class Start extends Ut {
 	/**
 	 * A start konstruktora
 	 */
-	public Start() {
-		super();
+	public Start(PalyaElem _palyaelem) {
+		super(_palyaelem);
 	}
 }
