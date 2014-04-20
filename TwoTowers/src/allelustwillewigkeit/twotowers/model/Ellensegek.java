@@ -20,9 +20,10 @@ public class Ellensegek {
 	 *            _start
 	 * @param int _osszletszam
 	 */
-	public Ellensegek(Jatekmotor _jatekmotor, int _osszletszam) {
+	public Ellensegek(Jatekmotor _jatekmotor, int _osszletszam, Start _kezdohely) {
 		this.jatekMotor = _jatekmotor;
 		this.osszLetszam = _osszletszam;
+		this.kezdohely = _kezdohely;
 	}
 
 	/**

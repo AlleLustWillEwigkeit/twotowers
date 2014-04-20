@@ -210,7 +210,7 @@ public class PrototypeController {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				pe.legyelStart();
-				start = pe.lekerStart();// FIXME
+				start = (Start) pe.lekerUt();
 				kiir("A start lerakása sikerült" + palyaElemID + "-re");
 			} catch (Exception e) {
 				kiir(e.getMessage());
@@ -306,7 +306,7 @@ public class PrototypeController {
 			szaruman = new JosagosSzaruman(MAXVARAZSERO);
 			program = new Program();
 			motor = new Jatekmotor(ellen, szaruman, palya, program);
-			ellen = new Ellensegek(motor, 1000);
+			ellen = new Ellensegek(motor, 1000, start);
 			palyaszerkeszt = false;
 			random = false;
 			fileba = false;
@@ -437,6 +437,7 @@ public class PrototypeController {
 			int darab = Integer.parseInt(cmd[2]);
 			for (int i = 0; i < darab; i++) {
 				Torp t = new Torp(start, ellen, szint);
+				ellen.beallitKezdohely(start);
 				ellen.inditEllenseg(t);
 				kiir(darab + "ellenség elkészült!");
 			}
@@ -451,6 +452,7 @@ public class PrototypeController {
 			int darab = Integer.parseInt(cmd[2]);
 			for (int i = 0; i < darab; i++) {
 				Elf e = new Elf(start, ellen, szint);
+				ellen.beallitKezdohely(start);
 				ellen.inditEllenseg(e);
 				kiir(darab + "ellenség elkészült!");
 			}
@@ -465,6 +467,7 @@ public class PrototypeController {
 			int darab = Integer.parseInt(cmd[2]);
 			for (int i = 0; i < darab; i++) {
 				Hobbit h = new Hobbit(start, ellen, szint);
+				ellen.beallitKezdohely(start);
 				ellen.inditEllenseg(h);
 				kiir(darab + "ellenség elkészült!");
 			}
@@ -479,6 +482,7 @@ public class PrototypeController {
 			int darab = Integer.parseInt(cmd[2]);
 			for (int i = 0; i < darab; i++) {
 				Ember e = new Ember(start, ellen, szint);
+				ellen.beallitKezdohely(start);
 				ellen.inditEllenseg(e);
 				kiir(darab + "ellenség elkészült!");
 			}

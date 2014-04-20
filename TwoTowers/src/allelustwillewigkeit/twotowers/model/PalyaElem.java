@@ -165,10 +165,4 @@ public class PalyaElem {
 	public int lekerID() {
 		return palyaElemID;
 	}
-
-	public Start lekerStart() throws NullPointerException {
-		if (ut != null)
-			return (Start) ut;
-		throw new NullPointerException("Nincs se út, se start a pályaelemen!");
-	}
 }
