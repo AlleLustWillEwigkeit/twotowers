@@ -557,10 +557,33 @@ public class PrototypeController {
 	}
 
 	private static void akadalyLerak(String[] cmd) {
+		int palyaElemID, akadalyID;
+		PalyaElem palyaElem;
+		
 		try {
-			int palyaElemID = Integer.parseInt(cmd[1]);
-			PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-			Ut u = pe.lekerUt();
+			palyaElemID = Integer.parseInt(cmd[1]);
+			palyaElem = palya.lekerPalyaElemIDvel(palyaElemID);
+			if (palyaElem == null)
+				throw new Exception();
+		} catch (Exception e) {
+			kiir("A PalyaElemID nem egy pályaelemé");
+			return;
+		}
+		
+		try {
+			akadalyID = Integer.parseInt(cmd[2]);
+			if (akadalyID < 0)
+				throw new Exception();
+		} catch (Exception e) {
+			kiir("Az AkadalyElemID nem egy pozitív egész szám");
+			return;
+		}
+		
+		try {
+			if (!palyaElem.vanUtja()) {
+				throw new Exception("Az adott PalyaElemID-n nincs út");
+			}	
+			Ut u = palyaElem.lekerUt();
 			u.lerakAkadaly();
 			kiir("Az akadály lerakása sikeres " + palyaElemID + "-re");
 		} catch (Exception e) {
