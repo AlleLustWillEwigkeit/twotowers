@@ -52,8 +52,8 @@ public class Jatekmotor {
 	 * @param PalyaElem
 	 *            hova
 	 */
-	public void lerakAkadaly(PalyaElem hova) {
-		hova.lekerUt().lerakAkadaly();
+	public void lerakAkadaly(PalyaElem hova, int _id) {
+		hova.lekerUt().lerakAkadaly(_id);
 	}
 
 	/**

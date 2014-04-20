@@ -8,12 +8,14 @@ public class Ut {
 	protected List<Torony> beregisztraltak = new ArrayList<Torony>();
 	protected List<Ut> szomszedok = new ArrayList<Ut>();
 	protected PalyaElem palyaElem = null;
+	protected int id;
 
 	/**
 	 * Az út konstruktora
 	 */
-	public Ut(PalyaElem _palyaelem) {
+	public Ut(PalyaElem _palyaelem, int _id) {
 		this.palyaElem = _palyaelem;
+		this.id = _id;
 	}
 
 	/**
@@ -62,8 +64,8 @@ public class Ut {
 	/**
 	 * Void lerakAkadaly Létrehoz egy új akadályt, és felveszi a referenciáját.
 	 */
-	public void lerakAkadaly() {
-		this.akadaly = new Akadaly(this);
+	public void lerakAkadaly(int _id) {
+		this.akadaly = new Akadaly(this, _id);
 	}
 
 	/**
@@ -130,5 +132,9 @@ public class Ut {
 			return palyaElem;
 		throw new NullPointerException(
 				"Kellemetlen, de az úthoz nem tartozik pályaelem...ez nem kéne történjen...");
+	}
+
+	public int lekerID() {
+		return id;
 	}
 }

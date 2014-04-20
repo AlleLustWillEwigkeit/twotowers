@@ -101,15 +101,15 @@ public class PalyaElem {
 	/**
 	 * void legyelUt Létrehoz egy utat magára.
 	 */
-	public void legyelUt() {
-		this.ut = new Ut(this);
+	public void legyelUt(int _id) {
+		this.ut = new Ut(this, _id);
 	}
 
 	/**
 	 * void legyelStart Létrehoz egy kezdőhelyet magára.
 	 */
-	public void legyelStart() {
-		this.ut = new Start(this);
+	public void legyelStart(int _id) {
+		this.ut = new Start(this, _id);
 	}
 
 	/**
@@ -122,8 +122,8 @@ public class PalyaElem {
 	/**
 	 * void legyelEpitesiTerulet Létrehoz egy építési területet magára.
 	 */
-	public void legyelEpitesiTerulet() {
-		this.epitesiTerulet = new EpitesiTerulet(this);
+	public void legyelEpitesiTerulet(int _id) {
+		this.epitesiTerulet = new EpitesiTerulet(this, _id);
 	}
 
 	/**

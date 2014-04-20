@@ -208,8 +208,9 @@ public class PrototypeController {
 		if (palyaszerkeszt) {
 			try {
 				int palyaElemID = Integer.parseInt(cmd[1]);
+				int startID = Integer.parseInt(cmd[2]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-				pe.legyelStart();
+				pe.legyelStart(startID);
 				start = (Start) pe.lekerUt();
 				kiir("A start lerakása sikerült " + palyaElemID + "-re");
 			} catch (Exception e) {
@@ -223,8 +224,10 @@ public class PrototypeController {
 		if (palyaszerkeszt) {
 			try {
 				int palyaElemID = Integer.parseInt(cmd[1]);
+				int utID = Integer.parseInt(cmd[2]);
+
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-				pe.legyelUt();
+				pe.legyelUt(utID);
 				kiir("Az út lerakása sikerült " + palyaElemID + "-re");
 			} catch (Exception e) {
 				kiir(e.getMessage());
@@ -238,8 +241,9 @@ public class PrototypeController {
 		if (palyaszerkeszt) {
 			try {
 				int palyaElemID = Integer.parseInt(cmd[1]);
+				int etID = Integer.parseInt(cmd[2]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-				pe.legyelEpitesiTerulet();
+				pe.legyelEpitesiTerulet(etID);
 				kiir("Építési terület létrejött " + palyaElemID + "-on");
 			} catch (Exception e) {
 				kiir(e.getMessage());
@@ -433,8 +437,10 @@ public class PrototypeController {
 		try {
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
+			int kezdo = Integer.parseInt(cmd[3]);
 			for (int i = 0; i < darab; i++) {
-				Torp t = new Torp(start, ellen, szint);
+				Torp t = new Torp(start, ellen, szint, kezdo);
+				kezdo++;
 				ellen.beallitKezdohely(start);
 				ellen.inditEllenseg(t);
 				kiir(darab + "ellenség elkészült!");
@@ -448,8 +454,10 @@ public class PrototypeController {
 		try {
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
+			int kezdo = Integer.parseInt(cmd[3]);
 			for (int i = 0; i < darab; i++) {
-				Elf e = new Elf(start, ellen, szint);
+				Elf e = new Elf(start, ellen, szint, kezdo);
+				kezdo++;
 				ellen.beallitKezdohely(start);
 				ellen.inditEllenseg(e);
 				kiir(darab + "ellenség elkészült!");
@@ -463,8 +471,10 @@ public class PrototypeController {
 		try {
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
+			int kezdo = Integer.parseInt(cmd[3]);
 			for (int i = 0; i < darab; i++) {
-				Hobbit h = new Hobbit(start, ellen, szint);
+				Hobbit h = new Hobbit(start, ellen, szint, kezdo);
+				kezdo++;
 				ellen.beallitKezdohely(start);
 				ellen.inditEllenseg(h);
 				kiir(darab + "ellenség elkészült!");
@@ -478,8 +488,10 @@ public class PrototypeController {
 		try {
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
+			int kezdo = Integer.parseInt(cmd[3]);
 			for (int i = 0; i < darab; i++) {
-				Ember e = new Ember(start, ellen, szint);
+				Ember e = new Ember(start, ellen, szint, kezdo);
+				kezdo++;
 				ellen.beallitKezdohely(start);
 				ellen.inditEllenseg(e);
 				kiir(darab + "ellenség elkészült!");
@@ -531,7 +543,7 @@ public class PrototypeController {
 				Torony t = e.lekerTorony();
 				for (Varazsko v : t.lekerVarazskovek()) {
 					kiir("toronyid: " + tmp.lekerID() + " varazskoid: "
-							+ v.lekerid() + " duration: " + v.lekerDuration());
+							+ v.lekerID() + " duration: " + v.lekerDuration());
 				}
 			}
 		} catch (Exception e) {
@@ -549,7 +561,7 @@ public class PrototypeController {
 			Varazsko v = new Varazsko(varazskoDictID);
 			t.felkovez(v);
 			kiir("A " + varazskoDictID
-					+ "-VarazskoDictID varázskő lerakása sikeres" + v.lekerid()
+					+ "-VarazskoDictID varázskő lerakása sikeres" + v.lekerID()
 					+ "VarazskoID-vel.");
 		} catch (Exception e) {
 			kiir(e.getMessage());
@@ -559,7 +571,7 @@ public class PrototypeController {
 	private static void akadalyLerak(String[] cmd) {
 		int palyaElemID, akadalyID;
 		PalyaElem palyaElem;
-		
+
 		try {
 			palyaElemID = Integer.parseInt(cmd[1]);
 			palyaElem = palya.lekerPalyaElemIDvel(palyaElemID);
@@ -569,7 +581,7 @@ public class PrototypeController {
 			kiir("A PalyaElemID nem egy pályaelemé");
 			return;
 		}
-		
+
 		try {
 			akadalyID = Integer.parseInt(cmd[2]);
 			if (akadalyID < 0)
@@ -578,13 +590,13 @@ public class PrototypeController {
 			kiir("Az AkadalyElemID nem egy pozitív egész szám");
 			return;
 		}
-		
+
 		try {
 			if (!palyaElem.vanUtja()) {
 				throw new Exception("Az adott PalyaElemID-n nincs út");
-			}	
+			}
 			Ut u = palyaElem.lekerUt();
-			u.lerakAkadaly();
+			u.lerakAkadaly(akadalyID);
 			kiir("Az akadály lerakása sikeres " + palyaElemID + "-re");
 		} catch (Exception e) {
 			kiir(e.getMessage());

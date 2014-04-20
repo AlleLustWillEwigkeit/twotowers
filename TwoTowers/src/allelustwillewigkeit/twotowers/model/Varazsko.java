@@ -9,14 +9,14 @@ public class Varazsko {
 	protected double eleteroSzorzo;
 	protected int duration;
 	protected Varazskovezheto tarolo;
-	protected static int nextid = 0;
 	protected int id;
 
-	public Varazsko(double _eleteroSzorzo, double _hatotavSzorzo, int _duration) {
+	public Varazsko(double _eleteroSzorzo, double _hatotavSzorzo,
+			int _duration, int _id) {
 		eleteroSzorzo = _eleteroSzorzo;
 		hatotavSzorzo = _hatotavSzorzo;
 		duration = _duration;
-		id = nextid++;
+		id = _id;
 	}
 
 	public Varazsko(int varazskoDictID) {
@@ -118,7 +118,7 @@ public class Varazsko {
 		}
 	}
 
-	public int lekerid() {
+	public int lekerID() {
 		return id;
 	}
 }

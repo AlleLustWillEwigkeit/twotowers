@@ -21,11 +21,11 @@ public abstract class Ellenseg {
 	 * @param Ellensegek
 	 *            ellens
 	 */
-	public Ellenseg(Ut start, Ellensegek ellens, int szint) {
+	public Ellenseg(Ut start, Ellensegek ellens, int szint, int _id) {
 		this.ut = start;
 		this.tar = ellens;
 		this.szint = szint;
-		this.id = tar.nextID();
+		this.id = _id;
 	}
 
 	public abstract Ellenseg Szetszakit() throws Exception;

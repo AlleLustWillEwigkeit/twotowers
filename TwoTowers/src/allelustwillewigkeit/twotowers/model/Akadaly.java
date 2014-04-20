@@ -3,10 +3,11 @@ package allelustwillewigkeit.twotowers.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Akadaly implements Varazskovezheto{
+public class Akadaly implements Varazskovezheto {
 	protected float eletero = 0;
 	protected List<Varazsko> varazsko = new ArrayList<Varazsko>();
 	protected Ut ut = null;
+	protected int id;
 
 	/**
 	 * Az akadály konstruktora
@@ -14,11 +15,12 @@ public class Akadaly implements Varazskovezheto{
 	 * @param Ut
 	 *            u
 	 */
-	public Akadaly(Ut u) throws NullPointerException {
-		if(u == null)
+	public Akadaly(Ut u, int _id) throws NullPointerException {
+		if (u == null)
 			throw new NullPointerException();
-		
+
 		this.ut = u;
+		this.id = _id;
 	}
 
 	/**
@@ -28,9 +30,9 @@ public class Akadaly implements Varazskovezheto{
 	 *            mivel
 	 */
 	public void felkovez(Varazsko mivel) throws NullPointerException {
-		if(mivel == null)
+		if (mivel == null)
 			throw new NullPointerException();
-		
+
 		mivel.beallitTarolo(this);
 		this.varazsko.add(mivel);
 	}
@@ -41,23 +43,23 @@ public class Akadaly implements Varazskovezheto{
 	 * @param int mennyit
 	 */
 	public void sebzodik(float mennyit) {
-		if(mennyit <= 0)
+		if (mennyit <= 0)
 			return;
-		
+
 		float szorzo = 0.0f;
-		
-		for(Varazsko v : varazsko){
+
+		for (Varazsko v : varazsko) {
 			szorzo += v.lekerEleteroSzorzo();
 		}
-		
+
 		eletero -= mennyit / szorzo;
-		
-		if(eletero <= 0){ //meghalás
+
+		if (eletero <= 0) { // meghalás
 			ut.akadalyomLebomlott();
 		}
 	}
-	
-	public void tick(){
+
+	public void tick() {
 		for (Varazsko v : this.varazsko) {
 			v.tick();
 		}
@@ -66,8 +68,13 @@ public class Akadaly implements Varazskovezheto{
 	@Override
 	public void lejarVarazsko(Varazsko v) {
 		// TODO Auto-generated method stub
-		if(!this.varazsko.contains(v)) return;
-		
+		if (!this.varazsko.contains(v))
+			return;
+
 		this.varazsko.remove(v);
+	}
+
+	public int lekerID() {
+		return id;
 	}
 }

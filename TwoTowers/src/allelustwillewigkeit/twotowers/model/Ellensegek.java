@@ -9,7 +9,6 @@ public class Ellensegek {
 	protected JosagosSzaruman josagosSzaruman = null;
 	protected Jatekmotor jatekMotor = null;
 	protected Start kezdohely = null;
-	protected int id = 0;
 
 	/**
 	 * Ez ellenségek konstruktora
@@ -94,7 +93,7 @@ public class Ellensegek {
 		osszLetszam = ertek;
 	}
 
-	public void inditEllenseg(int i, int szint) throws Exception {
+	public void inditEllenseg(int i, int szint, int _id) throws Exception {
 		// TODO
 		if (i <= 0)
 			return;
@@ -110,16 +109,16 @@ public class Ellensegek {
 			int raceRandom = (int) (Math.random() * 4);
 			switch (raceRandom) {
 			case 0:
-				e = new Ember(kezdohely, this, szint);
+				e = new Ember(kezdohely, this, szint, _id++);
 				break;
 			case 1:
-				e = new Torp(kezdohely, this, szint);
+				e = new Torp(kezdohely, this, szint, _id++);
 				break;
 			case 2:
-				e = new Hobbit(kezdohely, this, szint);
+				e = new Hobbit(kezdohely, this, szint, _id++);
 				break;
 			case 3:
-				e = new Elf(kezdohely, this, szint);
+				e = new Elf(kezdohely, this, szint, _id++);
 				break;
 			}
 
@@ -149,7 +148,4 @@ public class Ellensegek {
 		return ellensegek;
 	}
 
-	public int nextID() {
-		return id++;
-	}
 }

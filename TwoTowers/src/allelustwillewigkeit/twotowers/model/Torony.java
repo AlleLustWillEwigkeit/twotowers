@@ -9,15 +9,17 @@ public class Torony implements Varazskovezheto {
 	protected int alapTuzGyorsasag;
 	protected EpitesiTerulet minAll = null;
 	protected List<Ut> kikhezRegisztraltamFel = new ArrayList<Ut>();
+	protected int id;
 
 	/**
 	 * A torony konstruktora
 	 */
-	public Torony() {
-		kovek.add(new Varazsko(0));
-		alapHatotav = 8;
-		alapTuzGyorsasag = 1;
+	public Torony(int _id) {
+		this.kovek.add(new Varazsko(0));
+		this.alapHatotav = 8;
+		this.alapTuzGyorsasag = 1;
 		this.beRegisztralTavonBeluliUtakhoz();
+		this.id = _id;
 	}
 
 	/**
@@ -114,5 +116,9 @@ public class Torony implements Varazskovezheto {
 
 	public List<Varazsko> lekerVarazskovek() {
 		return kovek;
+	}
+
+	public int lekerID() {
+		return id;
 	}
 }

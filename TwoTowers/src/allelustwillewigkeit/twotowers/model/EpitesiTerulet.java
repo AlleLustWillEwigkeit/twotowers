@@ -3,13 +3,14 @@ package allelustwillewigkeit.twotowers.model;
 public class EpitesiTerulet {
 	protected Torony torony = null;
 	protected PalyaElem palyaElem = null;
+	protected int id;
 
 	/**
 	 * Ez az építési terület konstruktora
 	 */
-	public EpitesiTerulet(PalyaElem _palyaElem) {
-		palyaElem = _palyaElem;
-
+	public EpitesiTerulet(PalyaElem _palyaElem, int _id) {
+		this.palyaElem = _palyaElem;
+		this.id = _id;
 	}
 
 	/**
@@ -24,8 +25,8 @@ public class EpitesiTerulet {
 	/**
 	 * void lerakTornyot Létrehoz egy új tornyot, és felveszi a referenciáját.
 	 */
-	public void lerakTornyot() {
-		this.torony = new Torony();
+	public void lerakTornyot(int _id) {
+		this.torony = new Torony(_id);
 	}
 
 	/**
