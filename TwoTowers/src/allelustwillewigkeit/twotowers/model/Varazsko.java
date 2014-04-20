@@ -19,7 +19,8 @@ public class Varazsko {
 		id = _id;
 	}
 
-	public Varazsko(int varazskoDictID) {
+	public Varazsko(int varazskoDictID, int _id) {
+		id = _id;
 		switch (varazskoDictID) {
 		case 0:
 			eleteroSzorzo = 1;
@@ -57,7 +58,9 @@ public class Varazsko {
 			duration = 10;
 			break;
 		default:
-			System.out.println("Ilyen varázskő nincs!");
+			eleteroSzorzo = 1;
+			hatotavSzorzo = 1;
+			duration = -1;
 			break;
 		}
 	}
