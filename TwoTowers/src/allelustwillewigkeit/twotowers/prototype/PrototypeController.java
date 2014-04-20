@@ -592,11 +592,33 @@ public class PrototypeController {
 	}
 
 	private static void toronyLerak(String[] cmd) {
+		int palyaElemID, toronyID;
+		PalyaElem palyaElem;
+		
 		try {
-			int palyaElemID = Integer.parseInt(cmd[1]);
-			PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
-			EpitesiTerulet e = pe.lekerEpitesiTerulet();
-			e.lerakTornyot();
+			palyaElemID = Integer.parseInt(cmd[1]);
+			palyaElem = palya.lekerPalyaElemIDvel(palyaElemID);
+			if (palyaElem == null)
+				throw new Exception("A PalyaElemID nem egy pályaelemé");
+		} catch (Exception e) {
+			kiir(e.getMessage());
+			return;
+		}
+		
+		try {
+			toronyID = Integer.parseInt(cmd[2]);
+			if (toronyID < 0)
+				throw new Exception("A ToronyID nem egy pozitív egész szám");
+		} catch (Exception e) {
+			kiir(e.getMessage());
+			return;
+		}
+		
+		try {
+			if (!palyaElem.vanEpitesiTerulete())
+				throw new Exception("A torony lerakása sikertelen, a PalyaElemID nem építési terület");
+			palyaElem.lekerEpitesiTerulet().lerakTornyot();
+			kiir("A torony lerakása sikeres " + palyaElemID + "-re " + toronyID + "-vel.");
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
