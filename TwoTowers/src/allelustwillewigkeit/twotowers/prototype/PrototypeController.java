@@ -417,7 +417,6 @@ public class PrototypeController {
 					kiir(" akadállyal");
 				}
 			} catch (Exception ex) {
-				kiir(ex.getMessage());
 			}
 			try {
 				e = tmp.lekerEpitesiTerulet();
@@ -426,7 +425,6 @@ public class PrototypeController {
 					kiir(" toronnyal");
 				}
 			} catch (Exception ex) {
-				kiir(ex.getMessage());
 			}
 		}
 	}
