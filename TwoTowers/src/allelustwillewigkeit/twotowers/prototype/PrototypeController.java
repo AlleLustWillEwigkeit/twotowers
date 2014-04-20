@@ -137,12 +137,12 @@ public class PrototypeController {
 						utOsszekapcsol(cmd);
 						break;
 					default:
-						System.out.println("Érvénytelen parancs!");
+						kiir("Érvénytelen parancs!");
 					}
 				}
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -155,13 +155,12 @@ public class PrototypeController {
 				PalyaElem pe2 = palya.lekerPalyaElemIDvel(kettesID);
 				pe1.addSzomszed(pe2); // FIXME ha nem kell
 				pe1.lekerUt().beallitKovUt(pe2.lekerUt());
-				System.out.println("A két út összelinkelődött" + egyesID + "->"
-						+ kettesID);
+				kiir("A két út összelinkelődött" + egyesID + "->" + kettesID);
 			} catch (Exception e) {
-				System.out.println(e.getMessage());
+				kiir(e.getMessage());
 			}
 		} else
-			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
+			kiir("Nincs aktiválva a pályaszereksztő mód!");
 
 	}
 
@@ -171,13 +170,13 @@ public class PrototypeController {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				pe.legyelVegzetHegye(motor);
-				System.out.println("A végzet hegyének lerakása sikerült"
-						+ palyaElemID + "-ra");
+				kiir("A végzet hegyének lerakása sikerült" + palyaElemID
+						+ "-ra");
 			} catch (Exception e) {
-				System.out.println(e.getMessage());
+				kiir(e.getMessage());
 			}
 		} else
-			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
+			kiir("Nincs aktiválva a pályaszereksztő mód!");
 	}
 
 	private static void startLerak(String[] cmd) {
@@ -186,13 +185,12 @@ public class PrototypeController {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				pe.legyelStart();
-				System.out.println("A start lerakása sikerült" + palyaElemID
-						+ "-re");
+				kiir("A start lerakása sikerült" + palyaElemID + "-re");
 			} catch (Exception e) {
-				System.out.println(e.getMessage());
+				kiir(e.getMessage());
 			}
 		} else
-			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
+			kiir("Nincs aktiválva a pályaszereksztő mód!");
 	}
 
 	private static void utLerak(String[] cmd) {
@@ -201,13 +199,12 @@ public class PrototypeController {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				pe.legyelUt();
-				System.out.println("Az út lerakása sikerült " + palyaElemID
-						+ "-re");
+				kiir("Az út lerakása sikerült " + palyaElemID + "-re");
 			} catch (Exception e) {
-				System.out.println(e.getMessage());
+				kiir(e.getMessage());
 			}
 		} else
-			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
+			kiir("Nincs aktiválva a pályaszereksztő mód!");
 
 	}
 
@@ -217,13 +214,12 @@ public class PrototypeController {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				pe.legyelEpitesiTerulet();
-				System.out.println("Építési terület létrejött " + palyaElemID
-						+ "-on");
+				kiir("Építési terület létrejött " + palyaElemID + "-on");
 			} catch (Exception e) {
-				System.out.println(e.getMessage());
+				kiir(e.getMessage());
 			}
 		} else
-			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
+			kiir("Nincs aktiválva a pályaszereksztő mód!");
 	}
 
 	private static void palyaElemOsszekapcsol(String[] cmd) {
@@ -234,13 +230,13 @@ public class PrototypeController {
 				PalyaElem pe1 = palya.lekerPalyaElemIDvel(egyesID);
 				PalyaElem pe2 = palya.lekerPalyaElemIDvel(kettesID);
 				pe1.addSzomszed(pe2);
-				System.out.println("A két pályaelem összelinkelődött" + egyesID
-						+ "->" + kettesID);
+				kiir("A két pályaelem összelinkelődött" + egyesID + "->"
+						+ kettesID);
 			} catch (Exception e) {
-				System.out.println(e.getMessage());
+				kiir(e.getMessage());
 			}
 		} else
-			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
+			kiir("Nincs aktiválva a pályaszereksztő mód!");
 	}
 
 	private static void palyaElemKeszit(String[] cmd) {
@@ -249,13 +245,12 @@ public class PrototypeController {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = new PalyaElem(palyaElemID);
 				palya.hozzaAdPalyahoz(pe);
-				System.out.println("A pályaelem elkészült" + palyaElemID
-						+ "-vel");
+				kiir("A pályaelem elkészült" + palyaElemID + "-vel");
 			} catch (Exception e) {
-				System.out.println(e.getMessage());
+				kiir(e.getMessage());
 			}
 		} else
-			System.out.println("Nincs aktiválva a pályaszereksztő mód!");
+			kiir("Nincs aktiválva a pályaszereksztő mód!");
 	}
 
 	private static void palyaSzerkeszt(String[] cmd) {
@@ -264,18 +259,18 @@ public class PrototypeController {
 			switch (muvelet) {
 			case "kezd":
 				palyaszerkeszt = true;
-				System.out.println("A pályaszerkesztés megkezdődött.");
+				kiir("A pályaszerkesztés megkezdődött.");
 				break;
 			case "veg":
 				palyaszerkeszt = false;
-				System.out.println("A pályaszerkesztés befejeződött.");
+				kiir("A pályaszerkesztés befejeződött.");
 				break;
 			default:
-				System.out.println("Érvénytelen paraméter");
+				kiir("Érvénytelen paraméter");
 				break;
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -289,9 +284,9 @@ public class PrototypeController {
 			palyaszerkeszt = false;
 			random = false;
 			fileba = false;
-			System.out.println("A reset sikerült.");
+			kiir("A reset sikerült.");
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -308,13 +303,13 @@ public class PrototypeController {
 			case "allapot":
 				switch (motor.lekerallapot()) {
 				case 0:
-					System.out.println("Még folyik a mérkőzés!");
+					kiir("Még folyik a mérkőzés!");
 					break;
 				case 1337:
-					System.out.println("Győzelem!");
+					kiir("Győzelem!");
 					break;
 				case -666:
-					System.out.println("Vereség");
+					kiir("Vereség");
 					break;
 				default:
 					System.out
@@ -330,10 +325,10 @@ public class PrototypeController {
 				kilistazutak();
 				break;
 			default:
-				System.out.println("Érvénytelen paraméter!");
+				kiir("Érvénytelen paraméter!");
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 
 	}
@@ -345,19 +340,17 @@ public class PrototypeController {
 			EpitesiTerulet e = pe.lekerEpitesiTerulet();
 			Torony t = e.lekerTorony();
 			t.elkodosit();
-			System.out.println("A torony elködösítése sikeres" + palyaElemID
-					+ "-en.");
+			kiir("A torony elködösítése sikeres" + palyaElemID + "-en.");
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
 	private static void lekerHanyEllensegVanMeg(String[] cmd) {
 		try {
-			System.out.println("Ennyi ellenség van még:"
-					+ ellen.lekerHanyEllensegVanMeg());
+			kiir("Ennyi ellenség van még:" + ellen.lekerHanyEllensegVanMeg());
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -365,10 +358,9 @@ public class PrototypeController {
 		try {
 			int ertek = Integer.parseInt(cmd[1]);
 			ellen.allitHanyEllensegVanMeg(ertek);
-			System.out.println(ertek
-					+ "-re beállítva a hátralevő ellenségek száma");
+			kiir(ertek + "-re beállítva a hátralevő ellenségek száma");
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -379,36 +371,36 @@ public class PrototypeController {
 			while (--hanyszor != 0) {
 				motor.tick();
 			}
-			System.out.println(tmp + "lépés megtörtént");
+			kiir(tmp + "lépés megtörtént");
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
 	private static void kilistazMap() {
 
-		System.out.println("a palya:");
+		kiir("a palya:");
 		Ut u;
 		EpitesiTerulet e;
 		for (PalyaElem tmp : palya.lekerlista()) {
-			System.out.print("palyaelemid:" + tmp.lekerID());
+			kiir("palyaelemid:" + tmp.lekerID());
 			try {
 				u = tmp.lekerUt();
-				System.out.print(" ut");
+				kiir(" ut");
 				if (u.vanAkadalyRajta()) {
-					System.out.print(" akadállyal");
+					kiir(" akadállyal");
 				}
 			} catch (Exception ex) {
-				System.out.println(ex.getMessage());
+				kiir(ex.getMessage());
 			}
 			try {
 				e = tmp.lekerEpitesiTerulet();
-				System.out.print(" epitesi terulet");
+				kiir(" epitesi terulet");
 				if (e.vanToronyRajta()) {
-					System.out.print(" toronnyal");
+					kiir(" toronnyal");
 				}
 			} catch (Exception ex) {
-				System.out.println(ex.getMessage());
+				kiir(ex.getMessage());
 			}
 		}
 
@@ -421,10 +413,10 @@ public class PrototypeController {
 			for (int i = 0; i < darab; i++) {
 				Torp t = new Torp(START_IDE_VALAHOGY, ellen, szint);
 				ellen.inditEllenseg(t);
-				System.out.println(darab + "ellenség elkészült!");
+				kiir(darab + "ellenség elkészült!");
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -435,10 +427,10 @@ public class PrototypeController {
 			for (int i = 0; i < darab; i++) {
 				Elf e = new Elf(START_IDE_VALAHOGY, ellen, szint);
 				ellen.inditEllenseg(e);
-				System.out.println(darab + "ellenség elkészült!");
+				kiir(darab + "ellenség elkészült!");
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -449,10 +441,10 @@ public class PrototypeController {
 			for (int i = 0; i < darab; i++) {
 				Hobbit h = new Hobbit(START_IDE_VALAHOGY, ellen, szint);
 				ellen.inditEllenseg(h);
-				System.out.println(darab + "ellenség elkészült!");
+				kiir(darab + "ellenség elkészült!");
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -463,10 +455,10 @@ public class PrototypeController {
 			for (int i = 0; i < darab; i++) {
 				Ember e = new Ember(START_IDE_VALAHOGY, ellen, szint);
 				ellen.inditEllenseg(e);
-				System.out.println(darab + "ellenség elkészült!");
+				kiir(darab + "ellenség elkészült!");
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -476,7 +468,7 @@ public class PrototypeController {
 			int szint = Integer.parseInt(cmd[1]);
 			int kezdoID = Integer.parseInt(cmd[2]);
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -491,29 +483,28 @@ public class PrototypeController {
 				random = true;
 				break;
 			default:
-				System.out.println("Érvénytelen paraméter");
+				kiir("Érvénytelen paraméter");
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
 	private static void varazskoListaz() {
 		try {
-			System.out.println("varazskovek:");
+			kiir("varazskovek:");
 			EpitesiTerulet e;
 			for (PalyaElem tmp : palya.lekerlista()) {
-				System.out.print("palyaelemid:" + tmp.lekerID());
+				kiir("palyaelemid:" + tmp.lekerID());
 				e = tmp.lekerEpitesiTerulet();
 				Torony t = e.lekerTorony();
 				for (Varazsko v : t.lekerVarazskovek()) {
-					System.out.print("toronyid: " + tmp.lekerID()
-							+ " varazskoid: " + v.lekerid() + " duration: "
-							+ v.lekerDuration());
+					kiir("toronyid: " + tmp.lekerID() + " varazskoid: "
+							+ v.lekerid() + " duration: " + v.lekerDuration());
 				}
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -526,11 +517,11 @@ public class PrototypeController {
 			Torony t = e.lekerTorony();
 			Varazsko v = new Varazsko(varazskoDictID);
 			t.felkovez(v);
-			System.out.println("A " + varazskoDictID
+			kiir("A " + varazskoDictID
 					+ "-VarazskoDictID varázskő lerakása sikeres" + v.lekerid()
 					+ "VarazskoID-vel.");
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -540,10 +531,9 @@ public class PrototypeController {
 			PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 			Ut u = pe.lekerUt();
 			u.lerakAkadaly();
-			System.out.println("Az akadály lerakása sikeres " + palyaElemID
-					+ "-re");
+			kiir("Az akadály lerakása sikeres " + palyaElemID + "-re");
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -554,7 +544,7 @@ public class PrototypeController {
 			EpitesiTerulet e = pe.lekerEpitesiTerulet();
 			e.lerakTornyot();
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -567,7 +557,7 @@ public class PrototypeController {
 				utvonal = cmd[2];
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
@@ -576,55 +566,63 @@ public class PrototypeController {
 		try {
 			String utvonal = cmd[1];
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
 	private static void kilistazEllensegek() {
 		try {
-			System.out.println("ellensegek:");
+			kiir("ellensegek:");
 			for (Ellenseg tmp : ellen.lekerLista()) {
-				System.out.println("ellensegid " + tmp.lekerid()
-						+ ", ellenseghp" + tmp.eleteroLeker() + ", utid"
-						+ tmp.lekerut() + ", speed" + tmp.lekersebesseg());
+				kiir("ellensegid " + tmp.lekerid() + ", ellenseghp"
+						+ tmp.eleteroLeker() + ", utid" + tmp.lekerut()
+						+ ", speed" + tmp.lekersebesseg());
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
 	private static void kilistaztornyok() {
 		try {
-			System.out.println("tornyok:");
+			kiir("tornyok:");
 			EpitesiTerulet e;
 			for (PalyaElem tmp : palya.lekerlista()) {
-				System.out.print("palyaelemid:" + tmp.lekerID());
+				kiir("palyaelemid:" + tmp.lekerID());
 				e = tmp.lekerEpitesiTerulet();
-				System.out.print(" epitesi terulet");
+				kiir(" epitesi terulet");
 				if (e.vanToronyRajta()) {
-					System.out.print(" toronnyal");
+					kiir(" toronnyal");
 				}
 			}
 
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
 		}
 	}
 
 	private static void kilistazutak() {
 		try {
-			System.out.println("utak:");
+			kiir("utak:");
 			Ut u;
 			for (PalyaElem tmp : palya.lekerlista()) {
-				System.out.print("palyaelemid:" + tmp.lekerID());
+				kiir("palyaelemid:" + tmp.lekerID());
 				u = tmp.lekerUt();
-				System.out.print(" ut");
+				kiir(" ut");
 				if (u.vanAkadalyRajta()) {
-					System.out.print(" akadállyal");
+					kiir(" akadállyal");
 				}
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			kiir(e.getMessage());
+		}
+	}
+
+	private static void kiir(String _str) {
+		System.out.print(_str);
+		System.out.println();
+		if (fileba) {
+			// TODO fileba is kivezet
 		}
 	}
 }
