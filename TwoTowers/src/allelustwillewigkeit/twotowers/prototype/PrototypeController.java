@@ -195,7 +195,7 @@ public class PrototypeController {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				pe.legyelVegzetHegye(motor);
-				kiir("A végzet hegyének lerakása sikerült" + palyaElemID
+				kiir("A végzet hegyének lerakása sikerült " + palyaElemID
 						+ "-ra");
 			} catch (Exception e) {
 				kiir(e.getMessage());
@@ -211,7 +211,7 @@ public class PrototypeController {
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				pe.legyelStart();
 				start = (Start) pe.lekerUt();
-				kiir("A start lerakása sikerült" + palyaElemID + "-re");
+				kiir("A start lerakása sikerült " + palyaElemID + "-re");
 			} catch (Exception e) {
 				kiir(e.getMessage());
 			}
