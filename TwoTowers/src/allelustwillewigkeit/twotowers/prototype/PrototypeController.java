@@ -253,7 +253,7 @@ public class PrototypeController {
 							"A start lerakása sikertelen, mert már van start vagy út vagy vég.");
 				pe.legyelStart(startID);
 				start = (Start) pe.lekerUt();
-				ellen = new Ellensegek(motor, 1000, start, szaruman);
+				ellen.beallitKezdohely(start);
 				kiir("A start lerakása sikerült " + palyaElemID + "-re "
 						+ startID + "-vel");
 			} catch (Exception e) {
@@ -386,9 +386,9 @@ public class PrototypeController {
 			palya = new Palya();
 			szaruman = new JosagosSzaruman(MAXVARAZSERO);
 			program = new Program();
+			motor = new Jatekmotor(null, szaruman, palya, program);
 			ellen = new Ellensegek(motor, 1000, start, szaruman);
-			motor = new Jatekmotor(ellen, szaruman, palya, program);
-			ellen.beallitmotor(motor);
+			motor.beallitellen(ellen);
 			palyaszerkeszt = false;
 			random = false;
 			fileba = false;
@@ -662,56 +662,33 @@ public class PrototypeController {
 		}
 	}
 
-/*	private static void hullamIndit(String[] cmd) {
-		try {// FIXME
-			int szint = Integer.parseInt(cmd[1]);
-			int darab = Integer.parseInt(cmd[2]);
-			int id = Integer.parseInt(cmd[3]); // TODO DOKUMENTÁCIÓ CHECK
-			if (random) {
-				for (int i = 0; i != darab; i++) {
-					int tipus = (int) (Math.random() * 4);
-					switch (tipus) {
-					case 0:
-						ellen.inditEllenseg(new Ember(start, ellen, szint, id++));
-						break;
-					case 1:
-						ellen.inditEllenseg(new Torp(start, ellen, szint, id++));
-						break;
-					case 2:
-						ellen.inditEllenseg(new Hobbit(start, ellen, szint,
-								id++));
-						break;
-					case 3:
-						ellen.inditEllenseg(new Elf(start, ellen, szint, id++));
-						break;
-					}
-				}
-
-			} else { // if nem random
-				for (int i = 0; i != darab; i++)
-					ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
-
-			}
-		} catch (Exception e) {
-			kiir(e.getMessage());
-		}
-	}*/
+	/*
+	 * private static void hullamIndit(String[] cmd) { try {// FIXME int szint =
+	 * Integer.parseInt(cmd[1]); int darab = Integer.parseInt(cmd[2]); int id =
+	 * Integer.parseInt(cmd[3]); // TODO DOKUMENTÁCIÓ CHECK if (random) { for
+	 * (int i = 0; i != darab; i++) { int tipus = (int) (Math.random() * 4);
+	 * switch (tipus) { case 0: ellen.inditEllenseg(new Ember(start, ellen,
+	 * szint, id++)); break; case 1: ellen.inditEllenseg(new Torp(start, ellen,
+	 * szint, id++)); break; case 2: ellen.inditEllenseg(new Hobbit(start,
+	 * ellen, szint, id++)); break; case 3: ellen.inditEllenseg(new Elf(start,
+	 * ellen, szint, id++)); break; } }
+	 * 
+	 * } else { // if nem random for (int i = 0; i != darab; i++)
+	 * ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
+	 * 
+	 * } } catch (Exception e) { kiir(e.getMessage()); } }
+	 */
 
 	public static void hullamIndit(String[] cmd) {
 		int szint = Integer.parseInt(cmd[1]);
 		int id = Integer.parseInt(cmd[2]);
-		final int[][] konstansok = new int[][] { 
-				{ 0, 0, 1, 0 },
-				{ 1, 0, 1, 0 }, 
-				{ 2, 1, 2, 1 }, 
-				{ 3, 2, 3, 2 }, 
-				{ 4, 3, 5, 4 } 
-		};
+		final int[][] konstansok = new int[][] { { 0, 0, 1, 0 },
+				{ 1, 0, 1, 0 }, { 2, 1, 2, 1 }, { 3, 2, 3, 2 }, { 4, 3, 5, 4 } };
 
 		if (!random) {
 			try {
 				kiir("Egy szint szerinti hullám elindult");
-				
+
 				for (int i = 0; i != konstansok[szint][0]; i++) {
 					ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
 				}
@@ -724,11 +701,12 @@ public class PrototypeController {
 				for (int i = 0; i != konstansok[szint][3]; i++) {
 					ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
 				}
-			} catch (Exception e) {}
+			} catch (Exception e) {
+			}
 		} else {
 			Random rnd = new Random();
 			kiir("Egy véletlen hullám elindult");
-			
+
 			try {
 				for (int i = rnd.nextInt(5); i != 0; i--) {
 					ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
@@ -742,7 +720,8 @@ public class PrototypeController {
 				for (int i = rnd.nextInt(5); i != 0; i--) {
 					ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
 				}
-			} catch (Exception e) {}
+			} catch (Exception e) {
+			}
 		}
 	}
 
