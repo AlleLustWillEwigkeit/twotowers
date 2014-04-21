@@ -253,6 +253,7 @@ public class PrototypeController {
 							"A start lerakása sikertelen, mert már van start vagy út vagy vég.");
 				pe.legyelStart(startID);
 				start = (Start) pe.lekerUt();
+				ellen = new Ellensegek(motor, 1000, start);
 				kiir("A start lerakása sikerült " + palyaElemID + "-re"
 						+ startID + "-vel");
 			} catch (Exception e) {
@@ -704,7 +705,7 @@ public class PrototypeController {
 				{ 4, 3, 5, 4 } 
 		};
 
-		if (random) {
+		if (!random) {
 			try {
 				for (int i = 0; i != konstansok[szint][0]; i++) {
 					ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
@@ -723,16 +724,16 @@ public class PrototypeController {
 			Random rnd = new Random();
 			
 			try {
-				for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+				for (int i = rnd.nextInt(5); i != 0; i--) {
 					ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
 				}
-				for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+				for (int i = rnd.nextInt(5); i != 0; i--) {
 					ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
 				}
-				for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+				for (int i = rnd.nextInt(5); i != 0; i--) {
 					ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
 				}
-				for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+				for (int i = rnd.nextInt(5); i != 0; i--) {
 					ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
 				}
 			} catch (Exception e) {}
