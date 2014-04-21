@@ -203,7 +203,7 @@ public class PrototypeController {
 				pe1.addSzomszed(pe2);
 				pe2.addSzomszed(pe1);
 				honnan.beallitKovUt(hova);
-				kiir("A két út összelinkelődött" + egyesID + "->" + kettesID);
+				kiir("A két út összelinkelődött: " + egyesID + "->" + kettesID);
 			} catch (Exception e) {
 				kiir(e.getMessage());
 			}
@@ -253,8 +253,8 @@ public class PrototypeController {
 							"A start lerakása sikertelen, mert már van start vagy út vagy vég.");
 				pe.legyelStart(startID);
 				start = (Start) pe.lekerUt();
-				ellen = new Ellensegek(motor, 1000, start);
-				kiir("A start lerakása sikerült " + palyaElemID + "-re"
+				ellen = new Ellensegek(motor, 1000, start, szaruman);
+				kiir("A start lerakása sikerült " + palyaElemID + "-re "
 						+ startID + "-vel");
 			} catch (Exception e) {
 				kiir(e.getMessage());
