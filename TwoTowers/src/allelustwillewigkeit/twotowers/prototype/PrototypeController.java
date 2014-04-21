@@ -243,7 +243,7 @@ public class PrototypeController {
 				if (palyaElemID < 0)
 					throw new Exception(
 							"A PályaElemID nem egy pozitív egész szám.");
-				int startID = Integer.parseInt(cmd[2]);
+				int startID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				if (pe == null)
 					throw new Exception("A PályaElemID nem egy pályaelemé.");
@@ -268,7 +268,7 @@ public class PrototypeController {
 				if (palyaElemID < 0)
 					throw new Exception(
 							"A PályaElemID nem egy pozitív egész szám.");
-				int utID = Integer.parseInt(cmd[2]);
+				int utID = Integer.parseInt(cmd[1]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				if (pe == null)
 					throw new Exception("A PályaElemID nem egy pályaelemé.");
@@ -650,7 +650,7 @@ public class PrototypeController {
 				kezdo++;
 				ellen.beallitKezdohely(start);
 				ellen.inditEllenseg(e);
-				kiir(darab + "ellenség elkészült!");
+				kiir(darab + " ellenség elkészült!");
 			}
 		} catch (Exception e) {
 			kiir(e.getMessage());
