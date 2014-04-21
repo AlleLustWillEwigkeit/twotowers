@@ -366,11 +366,11 @@ public class PrototypeController {
 			switch (muvelet) {
 			case "KEZD":
 				palyaszerkeszt = true;
-				kiir("A pályaszerkesztés megkezdődött.");
+				kiir("A pályaszerkesztés megkezdődött");
 				break;
 			case "VEG":
 				palyaszerkeszt = false;
-				kiir("A pályaszerkesztés befejeződött.");
+				kiir("A pályaszerkesztés befejeződött");
 				break;
 			default:
 				kiir("Érvénytelen paraméter");
@@ -488,7 +488,7 @@ public class PrototypeController {
 			EpitesiTerulet e = pe.lekerEpitesiTerulet();
 			Torony t = e.lekerTorony();
 			t.elkodosit();
-			kiir("A torony elködösítése sikeres" + palyaElemID + "-en.");
+			kiir("A torony elködösítése sikeres " + palyaElemID + "-en.");
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
@@ -527,7 +527,7 @@ public class PrototypeController {
 				hanyszor--;
 				motor.tick();
 			}
-			kiir(tmp + "lépés megtörtént");
+			kiir(tmp + " lépés megtörtént");
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
@@ -710,6 +710,8 @@ public class PrototypeController {
 
 		if (!random) {
 			try {
+				kiir("Egy szint szerinti hullám elindult");
+				
 				for (int i = 0; i != konstansok[szint][0]; i++) {
 					ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
 				}
@@ -725,6 +727,7 @@ public class PrototypeController {
 			} catch (Exception e) {}
 		} else {
 			Random rnd = new Random();
+			kiir("Egy véletlen hullám elindult");
 			
 			try {
 				for (int i = rnd.nextInt(5); i != 0; i--) {
@@ -951,7 +954,7 @@ public class PrototypeController {
 					if (tmp.lekerEpitesiTerulet().vanToronyRajta()) {
 						Torony t = tmp.lekerEpitesiTerulet().lekerTorony();
 						kiir("toronyid " + t.lekerID() + " hatótáv "
-								+ t.lekerhatotav() + "palyaelemid "
+								+ t.lekerhatotav() + " palyaelemid "
 								+ tmp.lekerID());
 					}
 				}
