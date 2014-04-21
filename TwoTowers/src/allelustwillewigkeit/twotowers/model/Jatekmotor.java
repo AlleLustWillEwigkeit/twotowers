@@ -121,4 +121,9 @@ public class Jatekmotor {
 	public int lekerallapot() {
 		return jatekallas;
 	}
+
+	public void beallitellen(Ellensegek ellen) {
+		this.ellensegek = ellen;
+	}
+
 }
