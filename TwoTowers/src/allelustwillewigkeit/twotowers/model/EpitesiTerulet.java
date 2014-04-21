@@ -26,7 +26,7 @@ public class EpitesiTerulet {
 	 * void lerakTornyot Létrehoz egy új tornyot, és felveszi a referenciáját.
 	 */
 	public void lerakTornyot(int _id) {
-		this.torony = new Torony(_id);
+		this.torony = new Torony(this, _id);
 	}
 
 	/**
