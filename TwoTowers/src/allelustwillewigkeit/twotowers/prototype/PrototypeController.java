@@ -642,7 +642,7 @@ public class PrototypeController {
 		try {
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
-			if (darab < 0)
+			if (darab <= 0)
 				throw new Exception(
 						"a megadott intDarab paraméter nem egy pozitív egész szám.");
 			int kezdo = Integer.parseInt(cmd[3]);
@@ -655,7 +655,7 @@ public class PrototypeController {
 				kezdo++;
 				ellen.beallitKezdohely(start);
 				ellen.inditEllenseg(e);
-				kiir(darab + "ellenség elkészült!");
+				kiir(darab + " ellenség elkészült!");
 			}
 		} catch (Exception e) {
 			kiir(e.getMessage());
