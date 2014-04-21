@@ -693,7 +693,7 @@ public class PrototypeController {
 		}
 	}*/
 
-	public static void hullamIndit(String[] cmd) throws Exception {
+	public static void hullamIndit(String[] cmd) {
 		int szint = Integer.parseInt(cmd[1]);
 		int id = Integer.parseInt(cmd[2]);
 		final int[][] konstansok = new int[][] { 
@@ -705,33 +705,37 @@ public class PrototypeController {
 		};
 
 		if (random) {
-			for (int i = 0; i != konstansok[szint][0]; i++) {
-				ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
-			}
-			for (int i = 0; i != konstansok[szint][0]; i++) {
-				ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
-			}
-			for (int i = 0; i != konstansok[szint][0]; i++) {
-				ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
-			}
-			for (int i = 0; i != konstansok[szint][0]; i++) {
-				ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
-			}
+			try {
+				for (int i = 0; i != konstansok[szint][0]; i++) {
+					ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
+				}
+				for (int i = 0; i != konstansok[szint][1]; i++) {
+					ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
+				}
+				for (int i = 0; i != konstansok[szint][2]; i++) {
+					ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
+				}
+				for (int i = 0; i != konstansok[szint][3]; i++) {
+					ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
+				}
+			} catch (Exception e) {}
 		} else {
 			Random rnd = new Random();
 			
-			for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
-				ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
-			}
-			for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
-				ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
-			}
-			for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
-				ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
-			}
-			for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
-				ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
-			}
+			try {
+				for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+					ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
+				}
+				for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+					ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
+				}
+				for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+					ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
+				}
+				for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+					ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
+				}
+			} catch (Exception e) {}
 		}
 	}
 
