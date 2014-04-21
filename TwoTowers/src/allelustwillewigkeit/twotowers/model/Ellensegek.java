@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Ellensegek {
 	protected List<Ellenseg> ellensegek = new ArrayList<Ellenseg>();
+	protected List<Ellenseg> ujEllensegek = new ArrayList<Ellenseg>();
 	protected int osszLetszam = 0;
 	protected JosagosSzaruman josagosSzaruman = null;
 	protected Jatekmotor jatekMotor = null;
@@ -76,6 +77,8 @@ public class Ellensegek {
 				e.lep();
 			}
 		}
+		ellensegek.addAll(ujEllensegek);
+		ujEllensegek.clear();
 	}
 
 	/**
@@ -138,7 +141,7 @@ public class Ellensegek {
 
 		try {
 			Ellenseg clone = ellenseg.Szetszakit();
-			this.ellensegek.add(clone);
+			this.ujEllensegek.add(clone);
 			this.osszLetszam--;// FIXME Miért?
 		} catch (Exception e) {
 		}

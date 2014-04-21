@@ -23,6 +23,7 @@ public class Varazsko {
 
 	public Varazsko(int varazskoDictID, int _id) {
 		lovedek = new ArrayList<Lovedek>();
+		lovedek.add(new Lovedek(0));
 		id = _id;
 		switch (varazskoDictID) {
 		case 0:
@@ -54,6 +55,8 @@ public class Varazsko {
 			eleteroSzorzo = 2;
 			hatotavSzorzo = 0.8;
 			duration = -1;
+			lovedek.clear();
+			lovedek.add(new Szelo(_id));
 			break;
 		case 6:
 			eleteroSzorzo = 1;
@@ -66,7 +69,6 @@ public class Varazsko {
 			duration = -1;
 			break;
 		}
-		lovedek.add(new Lovedek(0));
 	}
 
 	public void beallitTarolo(Varazskovezheto t) {

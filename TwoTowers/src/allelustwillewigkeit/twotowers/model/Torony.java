@@ -91,9 +91,11 @@ public class Torony implements Varazskovezheto {
 
 	public void kiregisztral() {
 		if (kikhezRegisztraltamFel.size() > 0) {
-			for (Ut u : kikhezRegisztraltamFel) {
+			Iterator<Ut> it = kikhezRegisztraltamFel.iterator();
+			while (it.hasNext()) {
+				Ut u = it.next();
 				u.leiratkozik(this);
-				kikhezRegisztraltamFel.remove(u);
+				it.remove();
 			}
 		}
 	}
