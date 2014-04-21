@@ -77,7 +77,7 @@ public class PalyaElem {
 		if (tavolsag == 0)
 			return;
 
-		if (this.vanUtja() == true)
+		if (this.vanUtja())
 			this.lekerUt().feliratkozik(torony);
 
 		this.beregisztralt = true; // Ne kelljen még egyszer fölöslegesen

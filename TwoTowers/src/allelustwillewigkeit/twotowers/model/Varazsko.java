@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Varazsko {
-	protected List<Lovedek> lovedek = new ArrayList<Lovedek>();
+	protected List<Lovedek> lovedek;
 	protected double hatotavSzorzo;
 	protected double eleteroSzorzo;
 	protected int duration;
@@ -13,13 +13,16 @@ public class Varazsko {
 
 	public Varazsko(double _eleteroSzorzo, double _hatotavSzorzo,
 			int _duration, int _id) {
+		lovedek = new ArrayList<Lovedek>();
 		eleteroSzorzo = _eleteroSzorzo;
 		hatotavSzorzo = _hatotavSzorzo;
 		duration = _duration;
 		id = _id;
+		lovedek.add(new Lovedek(0));
 	}
 
 	public Varazsko(int varazskoDictID, int _id) {
+		lovedek = new ArrayList<Lovedek>();
 		id = _id;
 		switch (varazskoDictID) {
 		case 0:
@@ -63,6 +66,7 @@ public class Varazsko {
 			duration = -1;
 			break;
 		}
+		lovedek.add(new Lovedek(0));
 	}
 
 	public void beallitTarolo(Varazskovezheto t) {
