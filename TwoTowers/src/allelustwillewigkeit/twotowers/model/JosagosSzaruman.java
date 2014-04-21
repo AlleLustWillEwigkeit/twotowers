@@ -2,7 +2,7 @@ package allelustwillewigkeit.twotowers.model;
 
 public class JosagosSzaruman {
 	protected int maxVarazsero = 0;
-	protected int varazsero = 0; // TODO//FIXME
+	protected int varazsero = 0; // TODO //FIXME
 	protected Varazsko kivalasztottVarazsko = null;
 
 	/**
