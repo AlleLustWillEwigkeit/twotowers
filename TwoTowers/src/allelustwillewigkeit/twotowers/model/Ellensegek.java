@@ -6,6 +6,7 @@ import java.util.List;
 public class Ellensegek {
 	protected List<Ellenseg> ellensegek = new ArrayList<Ellenseg>();
 	protected List<Ellenseg> ujEllensegek = new ArrayList<Ellenseg>();
+	protected List<Ellenseg> elmuloEllensegek = new ArrayList<Ellenseg>();
 	protected int osszLetszam = 0;
 	protected JosagosSzaruman josagosSzaruman = null;
 	protected Jatekmotor jatekMotor = null;
@@ -59,11 +60,11 @@ public class Ellensegek {
 			return;
 
 		if (this.ellensegek.contains(ellenseg)) {
-			this.ellensegek.remove(ellenseg);
+			elmuloEllensegek.add(ellenseg);
 			this.josagosSzaruman.varazseroNovel(ellenseg.varazseroNovel);
 		}
 
-		if ((osszLetszam <= 0) && (this.ellensegek.size() == 0)) {
+		if ((osszLetszam <= 0) && ((this.ellensegek.size() - elmuloEllensegek.size()) == 0)) {
 			this.jatekMotor.gyozelem();
 		}
 	}
@@ -79,6 +80,8 @@ public class Ellensegek {
 		}
 		ellensegek.addAll(ujEllensegek);
 		ujEllensegek.clear();
+		ellensegek.removeAll(elmuloEllensegek);
+		elmuloEllensegek.clear();
 	}
 
 	/**
