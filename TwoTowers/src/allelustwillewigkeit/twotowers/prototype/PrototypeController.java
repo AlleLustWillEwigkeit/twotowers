@@ -55,116 +55,117 @@ public class PrototypeController {
 	}
 
 	private static void ertelmez(String _cmd) {
-		String[] cmd = _cmd.split(" ");
+		String[] cmd = _cmd.toUpperCase().split(" ");
 		if (cmd != null && _cmd.length() != 0 && _cmd.startsWith("//") == false) {
 			switch (cmd[0]) {
-			case "BetoltUtasitasok":
+			case "BETOLTUTASITASOK":
 				betoltUtasitasok(cmd);
 				break;
 
-			case "FajlbaIR":
+			case "FAJLBAIR":
 				fajlbaIr(cmd);
 				break;
 
-			case "ToronyLerak":
+			case "TORONYLERAK":
 				toronyLerak(cmd);
 				break;
 
-			case "AkadalyLerak":
+			case "AKADALYLERAK":
 				akadalyLerak(cmd);
 				break;
 
-			case "VarazskoLerak":
+			case "VARAZSKOLERAK":
 				varazskoLerak(cmd);
 				break;
 
-			case "VarazskoListaz":
+			case "VARAZSKOLISTAZ":
 				varazskoListaz();
 				break;
 
-			case "HullamRandom":
+			case "HULLAMRANDOM":
 				hullamOsszetetelRandom(cmd);
 				break;
 
-			case "HullamIndit":
+			case "HULLAMINDIT":
 				hullamIndit(cmd);
 				break;
 
-			case "EmberIndit":
+			case "EMBERINDIT":
 				emberIndit(cmd);
 				break;
 
-			case "HobbitIndit":
+			case "HOBBITINDIT":
 				hobbitIndit(cmd);
 				break;
 
-			case "ElfIndit":
+			case "ELFINDIT":
 				elfIndit(cmd);
 				break;
 
-			case "TorpIndit":
+			case "TORPINDIT":
 				torpIndit(cmd);
 				break;
 
-			case "KilistazMap":
+			case "KILISTAZMAP":
 				kilistazMap();
 				break;
 
-			case "Tick":
+			case "TICK":
 				tick(cmd);
 				break;
 
-			case "AllitHanyEllensegVanMeg":
+			case "ALLITHANYELLENSEGVANMEG":
 				allitHanyEllensegVanMeg(cmd);
 				break;
 
-			case "LekerHanyEllensegVanMeg":
+			case "LEKERHANYELLENSEGVANMEG":
 				lekerHanyEllensegVanMeg(cmd);
 				break;
 
-			case "Elkodosit":
+			case "ELKODOSIT":
 				elkodosit(cmd);
 				break;
 
-			case "Show":
+			case "SHOW":
 				show(cmd);
 				break;
 
-			case "Reset":
+			case "RESET":
 				reset(cmd);
 				break;
 
-			case "PalyaSzerkeszt":
+			case "PALYASZERKESZT":
 				palyaSzerkeszt(cmd);
 				break;
 
-			case "PalyaElemKeszit":
+			case "PALYAELEMKESZIT":
 				palyaElemKeszit(cmd);
 				break;
 
-			case "PalyaElemOsszekapcsol":
+			case "PALYAELEMOSSZEKAPCSOL":
 				palyaElemOsszekapcsol(cmd);
 				break;
 
-			case "EpitesiTeruletLerak":
+			case "EPITESITERULETLERAK":
 				epitesiTeruletLerak(cmd);
 				break;
 
-			case "UtLerak":
+			case "UTLERAK":
 				utLerak(cmd);
 				break;
 
-			case "StartLerak":
+			case "STARTLERAK":
 				startLerak(cmd);
 				break;
 
-			case "VegzetHegyeLerak":
+			case "VEGZETHEGYELERAK":
 				vegzetHegyeLerak(cmd);
 				break;
 
-			case "UtOsszekapcsol":
+			case "UTOSSZEKAPCSOL":
 				utOsszekapcsol(cmd);
 				break;
+				
 			default:
 				kiir("Érvénytelen parancs!");
 			}
@@ -359,11 +360,11 @@ public class PrototypeController {
 		try {
 			String muvelet = cmd[1];
 			switch (muvelet) {
-			case "kezd":
+			case "KEZD":
 				palyaszerkeszt = true;
 				kiir("A pályaszerkesztés megkezdődött.");
 				break;
-			case "veg":
+			case "VEG":
 				palyaszerkeszt = false;
 				kiir("A pályaszerkesztés befejeződött.");
 				break;
@@ -396,13 +397,13 @@ public class PrototypeController {
 		try {
 			String muvelet = cmd[1];
 			switch (muvelet) {
-			case "map":
+			case "MAP":
 				kilistazMap();
 				break;
-			case "ellensegek":
+			case "ELLENSEGEK":
 				kilistazEllensegek();
 				break;
-			case "allapot":
+			case "ALLAPOT":
 				switch (motor.lekerallapot()) {
 				case 0:
 					kiir("Még folyik a mérkőzés!");
@@ -417,13 +418,13 @@ public class PrototypeController {
 					System.out
 							.println("FAILSAFE: Gáz van, ilyet nem kéne látnod!");
 				}
-			case "varazskovek":
+			case "VARAZSKOVEK":
 				varazskoListaz();
 				break;
-			case "tornyok":
+			case "TORNYOK":
 				kilistaztornyok();
 				break;
-			case "utak":
+			case "UTAK":
 				kilistazutak();
 				break;
 			default:
@@ -683,11 +684,11 @@ public class PrototypeController {
 		try {
 			String muvelet = cmd[1];
 			switch (muvelet) {
-			case "ki":
+			case "KI":
 				random = false;
 				kiir("Az összetétel az előre definiált szinteknek megfelelő");
 				break;
-			case "be":
+			case "BE":
 				random = true;
 				kiir("Az összetétel véletlenszerű");
 				break;
