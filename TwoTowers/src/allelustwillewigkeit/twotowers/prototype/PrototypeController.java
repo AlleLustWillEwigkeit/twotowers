@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Random;
 
 import allelustwillewigkeit.twotowers.model.Akadaly;
 import allelustwillewigkeit.twotowers.model.Elf;
@@ -657,7 +658,7 @@ public class PrototypeController {
 		}
 	}
 
-	private static void hullamIndit(String[] cmd) {
+/*	private static void hullamIndit(String[] cmd) {
 		try {// FIXME
 			int szint = Integer.parseInt(cmd[1]);
 			int darab = Integer.parseInt(cmd[2]);
@@ -690,29 +691,48 @@ public class PrototypeController {
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
-	}
+	}*/
 
-	public static void ezMostMiAPicsa(String[] cmd) throws Exception { // TODO
-																		// @HegyiBálint
-																		// #SWAG
+	public static void hullamIndit(String[] cmd) throws Exception {
 		int szint = Integer.parseInt(cmd[1]);
 		int id = Integer.parseInt(cmd[2]);
-		final int[][] konstansok = new int[][] { { 0, 0, 1, 0 },
-				{ 1, 0, 1, 0 }, { 2, 1, 2, 1 }, { 3, 2, 3, 2 }, { 4, 3, 5, 4 } };
+		final int[][] konstansok = new int[][] { 
+				{ 0, 0, 1, 0 },
+				{ 1, 0, 1, 0 }, 
+				{ 2, 1, 2, 1 }, 
+				{ 3, 2, 3, 2 }, 
+				{ 4, 3, 5, 4 } 
+		};
 
-		for (int i = 0; i != konstansok[szint][0]; i++) {
-			ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
+		if (random) {
+			for (int i = 0; i != konstansok[szint][0]; i++) {
+				ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
+			}
+			for (int i = 0; i != konstansok[szint][0]; i++) {
+				ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
+			}
+			for (int i = 0; i != konstansok[szint][0]; i++) {
+				ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
+			}
+			for (int i = 0; i != konstansok[szint][0]; i++) {
+				ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
+			}
+		} else {
+			Random rnd = new Random();
+			
+			for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+				ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
+			}
+			for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+				ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
+			}
+			for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+				ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
+			}
+			for (int i = 0; i != rnd.nextInt(5) + 1; i++) {
+				ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
+			}
 		}
-		for (int i = 0; i != konstansok[szint][0]; i++) {
-			ellen.inditEllenseg(new Torp(start, ellen, 1, id++));
-		}
-		for (int i = 0; i != konstansok[szint][0]; i++) {
-			ellen.inditEllenseg(new Hobbit(start, ellen, 1, id++));
-		}
-		for (int i = 0; i != konstansok[szint][0]; i++) {
-			ellen.inditEllenseg(new Elf(start, ellen, 1, id++));
-		}
-
 	}
 
 	private static void hullamOsszetetelRandom(String[] cmd) {
