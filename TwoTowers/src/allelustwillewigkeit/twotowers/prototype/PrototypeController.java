@@ -328,7 +328,7 @@ public class PrototypeController {
 					throw new Exception("A PalyaElemID2 nem egy PalyaElemID");
 				pe1.addSzomszed(pe2);
 				pe2.addSzomszed(pe1);
-				kiir("A két pályaelem összelinkelődött" + egyesID + "<->"
+				kiir("A két pályaelem összelinkelődött " + egyesID + "<->"
 						+ kettesID);
 			} catch (Exception e) {
 				kiir(e.getMessage());
@@ -817,7 +817,7 @@ public class PrototypeController {
 				}
 				et.lekerTorony().felkovez(
 						new Varazsko(varazskodictID, varazskoID));
-				kiir("A varázskő lerakása sikeres" + palyaElemID + "-re"
+				kiir("A varázskő lerakása sikeres " + palyaElemID + "-re "
 						+ varazskoID + "-vel");
 			}
 		} catch (Exception e) {
