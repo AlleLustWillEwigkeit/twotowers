@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import allelustwillewigkeit.twotowers.model.Akadaly;
 import allelustwillewigkeit.twotowers.model.Elf;
 import allelustwillewigkeit.twotowers.model.Ellenseg;
 import allelustwillewigkeit.twotowers.model.Ellensegek;
@@ -165,7 +166,7 @@ public class PrototypeController {
 			case "UTOSSZEKAPCSOL":
 				utOsszekapcsol(cmd);
 				break;
-				
+
 			default:
 				kiir("Érvénytelen parancs!");
 			}
@@ -290,7 +291,8 @@ public class PrototypeController {
 			try {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				if (palyaElemID < 0)
-					throw new Exception("A PályaElemID nem egy pozitív egész szám.");
+					throw new Exception(
+							"A PályaElemID nem egy pozitív egész szám.");
 				int etID = Integer.parseInt(cmd[2]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				if (pe == null)
@@ -397,6 +399,10 @@ public class PrototypeController {
 		try {
 			String muvelet = cmd[1];
 			switch (muvelet) {
+			case "ALL":
+				kilistazEllensegek();
+				kilistazMap();
+				break;
 			case "MAP":
 				kilistazMap();
 				break;
@@ -406,10 +412,10 @@ public class PrototypeController {
 			case "ALLAPOT":
 				switch (motor.lekerallapot()) {
 				case 0:
-					kiir("Még folyik a mérkőzés!");
+					kiir("Folyamatban");
 					break;
 				case 1337:
-					kiir("Győzelem!");
+					kiir("Győzelem");
 					break;
 				case -666:
 					kiir("Vereség");
@@ -424,8 +430,14 @@ public class PrototypeController {
 			case "TORNYOK":
 				kilistaztornyok();
 				break;
+			case "AKADALYOK":
+				kilistazakadalyok();
+				break;
 			case "UTAK":
 				kilistazutak();
+				break;
+			case "ELLENSEGTAROLO":
+				kilistaztarolo();
 				break;
 			default:
 				kiir("Érvénytelen paraméter!");
@@ -434,6 +446,29 @@ public class PrototypeController {
 			kiir(e.getMessage());
 		}
 
+	}
+
+	private static void kilistazakadalyok() {
+		try {
+			kiir("akadalyok:");
+			for (PalyaElem tmp : palya.lekerlista()) {
+				if (tmp.vanUtja()) {
+					if (tmp.lekerUt().vanAkadalyRajta()) {
+						Akadaly t = tmp.lekerUt().lekerAkadaly();
+						kiir("akadalyid " + t.lekerID() + " akadalyhp "
+								+ t.lekerhp());
+					}
+				}
+			}
+
+		} catch (Exception e) {
+			kiir(e.getMessage());
+		}
+	}
+
+	private static void kilistaztarolo() {
+		kiir("spawnolhatoEllensegek " + ellen.lekerHanyEllensegVanMeg()
+				+ " kintlevoEllensegek " + ellen.lekerspawnolt());
 	}
 
 	private static void elkodosit(String[] cmd) {
@@ -704,13 +739,31 @@ public class PrototypeController {
 		try {
 			kiir("varazskovek:");
 			EpitesiTerulet e;
+			Akadaly a;
 			for (PalyaElem tmp : palya.lekerlista()) {
 				kiir("palyaelemid:" + tmp.lekerID());
-				e = tmp.lekerEpitesiTerulet();
-				Torony t = e.lekerTorony();
-				for (Varazsko v : t.lekerVarazskovek()) {
-					kiir("toronyid: " + tmp.lekerID() + " varazskoid: "
-							+ v.lekerID() + " duration: " + v.lekerDuration());
+				if (tmp.vanEpitesiTerulete()) {
+					if (tmp.lekerEpitesiTerulet().vanToronyRajta()) {
+						e = tmp.lekerEpitesiTerulet();
+						Torony t = e.lekerTorony();
+						for (Varazsko v : t.lekerVarazskovek()) {
+							kiir("palyaelemid: " + tmp.lekerID()
+									+ "parentToronyid" + t.lekerID()
+									+ " varazskoid: " + v.lekerID()
+									+ " duration: " + v.lekerDuration());
+						}
+					}
+				}
+				if (tmp.vanUtja()) {
+					if (tmp.lekerUt().vanAkadalyRajta()) {
+						a = tmp.lekerUt().lekerAkadaly();
+						for (Varazsko v : a.lekerVarazskovek()) {
+							kiir("palyaelemid: " + tmp.lekerID()
+									+ "parentAkadalyid" + a.lekerID()
+									+ " varazskoid: " + v.lekerID()
+									+ " duration: " + v.lekerDuration());
+						}
+					}
 				}
 			}
 		} catch (Exception e) {
@@ -866,11 +919,13 @@ public class PrototypeController {
 			kiir("tornyok:");
 			EpitesiTerulet e;
 			for (PalyaElem tmp : palya.lekerlista()) {
-				kiir("palyaelemid:" + tmp.lekerID());
-				e = tmp.lekerEpitesiTerulet();
-				kiir(" epitesi terulet");
-				if (e.vanToronyRajta()) {
-					kiir(" toronnyal");
+				if (tmp.vanEpitesiTerulete()) {
+					if (tmp.lekerEpitesiTerulet().vanToronyRajta()) {
+						Torony t = tmp.lekerEpitesiTerulet().lekerTorony();
+						kiir("toronyid " + t.lekerID() + " hatótáv "
+								+ t.lekerhatotav() + "palyaelemid "
+								+ tmp.lekerID());
+					}
 				}
 			}
 
@@ -882,15 +937,18 @@ public class PrototypeController {
 	private static void kilistazutak() {
 		try {
 			kiir("utak:");
-			Ut u;
 			for (PalyaElem tmp : palya.lekerlista()) {
-				kiir("palyaelemid:" + tmp.lekerID());
-				u = tmp.lekerUt();
-				kiir(" ut");
-				if (u.vanAkadalyRajta()) {
-					kiir(" akadállyal");
+				if (tmp.vanUtja()) {
+					if (tmp.lekerUt().vanAkadalyRajta()) {
+						Akadaly t = tmp.lekerUt().lekerAkadaly();
+						kiir("akadalyid " + t.lekerID() + " akadalyhp "
+								+ t.lekerhp() + "palyaelemid " + tmp.lekerID());
+					} else {
+						kiir("palyaelemid " + tmp.lekerID());
+					}
 				}
 			}
+
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}

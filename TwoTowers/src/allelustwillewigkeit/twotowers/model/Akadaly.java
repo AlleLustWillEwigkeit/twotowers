@@ -54,7 +54,7 @@ public class Akadaly implements Varazskovezheto {
 
 		eletero -= mennyit / szorzo;
 
-		if (eletero <= 0) { // meghalás
+		if (eletero <= 0) {
 			ut.akadalyomLebomlott();
 		}
 	}
@@ -67,7 +67,6 @@ public class Akadaly implements Varazskovezheto {
 
 	@Override
 	public void lejarVarazsko(Varazsko v) {
-		// TODO Auto-generated method stub
 		if (!this.varazsko.contains(v))
 			return;
 
@@ -76,5 +75,13 @@ public class Akadaly implements Varazskovezheto {
 
 	public int lekerID() {
 		return id;
+	}
+
+	public float lekerhp() {
+		return eletero;
+	}
+
+	public List<Varazsko> lekerVarazskovek() {
+		return varazsko;
 	}
 }

@@ -148,4 +148,8 @@ public class Ellensegek {
 		return ellensegek;
 	}
 
+	public int lekerspawnolt() {
+		return ellensegek.size();
+	}
+
 }
