@@ -7,8 +7,7 @@ public class Elf extends Ellenseg {
 	 * @param start
 	 * @param ellens
 	 */
-	public Elf(Ut start, Ellensegek ellens, int szint, int _id)
-			throws Exception { // FIXME
+	public Elf(Ut start, Ellensegek ellens, int szint, int _id) throws Exception {
 		super(start, ellens, szint, _id);
 
 		if ((szint < 0) || (szint > 5))
