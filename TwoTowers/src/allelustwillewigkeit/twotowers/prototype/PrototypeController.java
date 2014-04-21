@@ -750,14 +750,14 @@ public class PrototypeController {
 			EpitesiTerulet e;
 			Akadaly a;
 			for (PalyaElem tmp : palya.lekerlista()) {
-				kiir("palyaelemid:" + tmp.lekerID());
+				kiir("palyaelemid: " + tmp.lekerID());
 				if (tmp.vanEpitesiTerulete()) {
 					if (tmp.lekerEpitesiTerulet().vanToronyRajta()) {
 						e = tmp.lekerEpitesiTerulet();
 						Torony t = e.lekerTorony();
 						for (Varazsko v : t.lekerVarazskovek()) {
 							kiir("palyaelemid: " + tmp.lekerID()
-									+ "parentToronyid" + t.lekerID()
+									+ " parentToronyid " + t.lekerID()
 									+ " varazskoid: " + v.lekerID()
 									+ " duration: " + v.lekerDuration());
 						}
@@ -766,11 +766,13 @@ public class PrototypeController {
 				if (tmp.vanUtja()) {
 					if (tmp.lekerUt().vanAkadalyRajta()) {
 						a = tmp.lekerUt().lekerAkadaly();
-						for (Varazsko v : a.lekerVarazskovek()) {
-							kiir("palyaelemid: " + tmp.lekerID()
-									+ "parentAkadalyid" + a.lekerID()
-									+ " varazskoid: " + v.lekerID()
-									+ " duration: " + v.lekerDuration());
+						if (!a.lekerVarazskovek().isEmpty()) {
+							for (Varazsko v : a.lekerVarazskovek()) {
+								kiir("palyaelemid: " + tmp.lekerID()
+										+ " parentAkadalyid " + a.lekerID()
+										+ " varazskoid: " + v.lekerID()
+										+ " duration: " + v.lekerDuration());
+							}
 						}
 					}
 				}
@@ -807,15 +809,17 @@ public class PrototypeController {
 				}
 				u.lekerAkadaly().felkovez(
 						new Varazsko(varazskodictID, varazskoID));
+			} else {
+				EpitesiTerulet et = palyaElem.lekerEpitesiTerulet();
+				if (!et.vanToronyRajta()) {
+					throw new Exception(
+							"A varázskő lerakása sikertelen, a PalyaElemID nem építési terület toronnyal, és nem út akadállyal.");
+				}
+				et.lekerTorony().felkovez(
+						new Varazsko(varazskodictID, varazskoID));
+				kiir("A varázskő lerakása sikeres" + palyaElemID + "-re"
+						+ varazskoID + "-vel");
 			}
-			EpitesiTerulet et = palyaElem.lekerEpitesiTerulet();
-			if (!et.vanToronyRajta()) {
-				throw new Exception(
-						"A varázskő lerakása sikertelen, a PalyaElemID nem építési terület toronnyal, és nem út akadállyal.");
-			}
-			et.lekerTorony().felkovez(new Varazsko(varazskodictID, varazskoID));
-			kiir("A varázskő lerakása sikeres" + palyaElemID + "-re"
-					+ varazskoID + "-vel");
 		} catch (Exception e) {
 			kiir(e.getMessage());
 		}
