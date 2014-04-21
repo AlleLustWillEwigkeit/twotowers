@@ -386,8 +386,9 @@ public class PrototypeController {
 			palya = new Palya();
 			szaruman = new JosagosSzaruman(MAXVARAZSERO);
 			program = new Program();
-			ellen = new Ellensegek(motor, 1000, start);
+			ellen = new Ellensegek(motor, 1000, start, szaruman);
 			motor = new Jatekmotor(ellen, szaruman, palya, program);
+			ellen.beallitmotor(motor);
 			palyaszerkeszt = false;
 			random = false;
 			fileba = false;
@@ -425,7 +426,9 @@ public class PrototypeController {
 				default:
 					System.out
 							.println("FAILSAFE: Gáz van, ilyet nem kéne látnod!");
+					break;
 				}
+				break;
 			case "VARAZSKOVEK":
 				varazskoListaz();
 				break;

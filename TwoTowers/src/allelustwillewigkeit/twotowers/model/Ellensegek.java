@@ -19,10 +19,12 @@ public class Ellensegek {
 	 *            _start
 	 * @param int _osszletszam
 	 */
-	public Ellensegek(Jatekmotor _jatekmotor, int _osszletszam, Start _kezdohely) {
+	public Ellensegek(Jatekmotor _jatekmotor, int _osszletszam,
+			Start _kezdohely, JosagosSzaruman _szaruman) {
 		this.jatekMotor = _jatekmotor;
 		this.osszLetszam = _osszletszam;
 		this.kezdohely = _kezdohely;
+		this.josagosSzaruman = _szaruman;
 	}
 
 	/**
@@ -150,6 +152,10 @@ public class Ellensegek {
 
 	public int lekerspawnolt() {
 		return ellensegek.size();
+	}
+
+	public void beallitmotor(Jatekmotor motor) {
+		this.jatekMotor = motor;
 	}
 
 }
