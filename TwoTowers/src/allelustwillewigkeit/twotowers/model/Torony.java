@@ -1,6 +1,7 @@
 package allelustwillewigkeit.twotowers.model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Torony implements Varazskovezheto {
@@ -98,8 +99,12 @@ public class Torony implements Varazskovezheto {
 	}
 
 	public void tick() {
-		for (Varazsko v : this.kovek) {
-			v.tick();
+		Iterator<Varazsko> it = kovek.iterator();
+		while (it.hasNext()) {
+			Varazsko vk = it.next();
+			vk.tick();
+			if (vk.duration == 0)
+				it.remove();
 		}
 	}
 
