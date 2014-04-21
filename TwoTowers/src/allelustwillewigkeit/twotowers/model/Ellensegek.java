@@ -71,10 +71,8 @@ public class Ellensegek {
 	 * void mindLep Minden ellenségnek szól, hogy lépjen.
 	 */
 	public void mindLep() {
-		if (!this.ellensegek.isEmpty()) {
-			for (Ellenseg e : this.ellensegek) {
-				e.lep();
-			}
+		for (Ellenseg e : this.ellensegek) {
+			e.lep();
 		}
 	}
 
