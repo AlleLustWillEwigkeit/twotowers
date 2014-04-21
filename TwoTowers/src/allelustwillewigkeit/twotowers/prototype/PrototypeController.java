@@ -289,8 +289,7 @@ public class PrototypeController {
 			try {
 				int palyaElemID = Integer.parseInt(cmd[1]);
 				if (palyaElemID < 0)
-					throw new Exception(
-							"A PályaElemID nem egy pozitív egész szám.");
+					throw new Exception("A PályaElemID nem egy pozitív egész szám.");
 				int etID = Integer.parseInt(cmd[2]);
 				PalyaElem pe = palya.lekerPalyaElemIDvel(palyaElemID);
 				if (pe == null)
@@ -301,8 +300,9 @@ public class PrototypeController {
 			} catch (Exception e) {
 				kiir(e.getMessage());
 			}
-		} else
+		} else {
 			kiir("A pályaszerkesztés nincs bekapcsolva, így sikertelen. A bekapcsoláshoz írd be, hogy “PalyaSzerkeszt kezd”");
+		}
 	}
 
 	private static void palyaElemOsszekapcsol(String[] cmd) {
@@ -341,12 +341,13 @@ public class PrototypeController {
 					throw new Exception(
 							"Az adott PalyaElemID nem egy pozitív egész szám.");
 				PalyaElem pe1 = palya.lekerPalyaElemIDvel(palyaElemID);
-				if (pe1 != null) {
+				if (pe1 == null) {
 					PalyaElem pe = new PalyaElem(palyaElemID);
 					palya.hozzaAdPalyahoz(pe);
-					kiir("A pályaelem elkészült" + palyaElemID + "-vel");
+					kiir("A pályaelem elkészült " + palyaElemID + "-vel");
+				} else {
+					throw new Exception("Az adott PalyaElemID már foglalt.");
 				}
-				throw new Exception("Az adott PalyaElemID már foglalt.");
 			} catch (Exception e) {
 				kiir(e.getMessage());
 			}
