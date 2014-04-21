@@ -14,11 +14,11 @@ public class Torony implements Varazskovezheto {
 	/**
 	 * A torony konstruktora
 	 */
-	public Torony(int _id) {
-		this.kovek.add(new Varazsko(0, id * 10));// TODO WTF HOGYADJUNK ID_T AZ
-													// ALAPKONEK
+	public Torony(EpitesiTerulet _minAll, int _id) {
+		this.kovek.add(new Varazsko(0, id * 10));
 		this.alapHatotav = 8;
 		this.alapTuzGyorsasag = 1;
+		this.minAll = _minAll;
 		this.beRegisztralTavonBeluliUtakhoz();
 		this.id = _id;
 	}
