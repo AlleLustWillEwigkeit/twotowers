@@ -227,7 +227,6 @@ public class PrototypeController {
 					throw new Exception(
 							"A vég lerakása sikertelen, mert már van vég vagy út vagy start.");
 				pe.legyelVegzetHegye(motor, vegzetHegyeID);
-				start = (Start) pe.lekerUt();
 				kiir("A végzet hegyének lerakása sikerült, " + palyaElemID
 						+ "-re" + vegzetHegyeID + "-vel");
 			} catch (Exception e) {
