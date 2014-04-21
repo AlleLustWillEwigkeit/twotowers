@@ -15,7 +15,7 @@ public class Torony implements Varazskovezheto {
 	 * A torony konstruktora
 	 */
 	public Torony(int _id) {
-		this.kovek.add(new Varazsko(0, ));//TODO WTF HOGYADJUNK ID_T AZ ALAPKONEK
+		this.kovek.add(new Varazsko(0, id*10));//TODO WTF HOGYADJUNK ID_T AZ ALAPKONEK
 		this.alapHatotav = 8;
 		this.alapTuzGyorsasag = 1;
 		this.beRegisztralTavonBeluliUtakhoz();
@@ -111,7 +111,7 @@ public class Torony implements Varazskovezheto {
 	}
 
 	public void elkodosit() {
-		kovek.add(new Varazsko(6), ); //TODO WTF HOGYADJUNK ID_T
+		kovek.add(new Varazsko(6, id*10)); //TODO WTF HOGYADJUNK ID_T
 	}
 
 	public List<Varazsko> lekerVarazskovek() {
