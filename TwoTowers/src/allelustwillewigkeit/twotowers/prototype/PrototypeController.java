@@ -968,11 +968,11 @@ public class PrototypeController {
 	}
 
 	private static void kiir(String _str) {
-		System.out.print(_str);
-		System.out.println();
+		System.out.println(_str);
 		if (fileba) {
 			try {
-				o.write(_str);
+				o.write(_str + '\n');
+				o.flush();
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
