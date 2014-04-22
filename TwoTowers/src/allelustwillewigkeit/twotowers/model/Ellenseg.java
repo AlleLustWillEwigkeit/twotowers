@@ -14,7 +14,7 @@ public abstract class Ellenseg {
 	protected int id;
 
 	/**
-	 * Az ellenség konstruktora
+	 * Az ellenseg konstruktora
 	 * 
 	 * @param Ut
 	 *            start
@@ -31,34 +31,34 @@ public abstract class Ellenseg {
 	public abstract Ellenseg Szetszakit() throws Exception;
 
 	/**
-	 * abstract void sebezNyil Nyíl sebzés
+	 * abstract void sebezNyil Nyil sebzes
 	 */
 	public abstract void sebezNyil();
 
 	/**
-	 * abstract void sebezSzelo Szelő sebzés
+	 * abstract void sebezSzelo Szelo sebzes
 	 */
 	public void sebezSzelo() {
 		tar.egyEllensegSzetszakit(this);
 	}
 
 	/**
-	 * abstract void sebezTuzgolyo Tűzgolyó sebzés
+	 * abstract void sebezTuzgolyo Tuzgolyo sebzes
 	 */
 	public abstract void sebezTuzgolyo();
 
 	/**
-	 * abstract void sebezDarda Dárda sebzés
+	 * abstract void sebezDarda Darda sebzes
 	 */
 	public abstract void sebezDarda();
 
 	/**
-	 * abstract void sebezSzikla Szikla sebzés
+	 * abstract void sebezSzikla Szikla sebzes
 	 */
 	public abstract void sebezSzikla();
 
 	/**
-	 * int akadalySebzes Visszatér, hogy mennyit sebez az akadályra.
+	 * int akadalySebzes Visszater, hogy mennyit sebez az akadalyra.
 	 * 
 	 * @return int
 	 */
@@ -67,7 +67,7 @@ public abstract class Ellenseg {
 	}
 
 	/**
-	 * void lep A következő útra lép, ha tud.
+	 * void lep A kovetkezo utra lep, ha tud.
 	 */
 	public void lep() {
 		lepesigIdo--;
@@ -89,12 +89,12 @@ public abstract class Ellenseg {
 	}
 
 	/**
-	 * void sebezLovedek Lövedék sebzés
+	 * void sebezLovedek Lovedek sebzes
 	 */
 	public abstract void sebezLovedek();
 
 	/**
-	 * void eleteroAllit Beállítja az életerőt, az adott értékre.
+	 * void eleteroAllit Beallitja az eleterot, az adott ertekre.
 	 * 
 	 * @param int mennyire
 	 */
@@ -104,7 +104,7 @@ public abstract class Ellenseg {
 	}
 
 	/**
-	 * float eleteroLeker Visszatér az életerővel
+	 * float eleteroLeker Visszater az eleterovel
 	 * 
 	 * @return float
 	 */
@@ -113,7 +113,7 @@ public abstract class Ellenseg {
 	}
 
 	/**
-	 * void beallitUt Beállítja az út referenciáját az paraméterül kapottra.
+	 * void beallitUt Beallitja az ut referenciajat az parameterul kapottra.
 	 * 
 	 * @param Ut
 	 *            ut

@@ -12,7 +12,7 @@ public class Ember extends Ellenseg {
 		super(start, ellens, szint, _id);
 
 		if ((szint < 0) || (szint > 5))
-			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
+			throw new Exception("A szintnek 1, es 5 kozott kelle lennie");
 
 		this.varazseroNovel = 10;
 		this.eletero = 20 * szint;
@@ -21,7 +21,7 @@ public class Ember extends Ellenseg {
 	}
 
 	/**
-	 * void sebezNyil Sebzi magát a megfelelő métrékben
+	 * void sebezNyil Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezNyil() {
@@ -40,7 +40,7 @@ public class Ember extends Ellenseg {
 	}
 
 	/**
-	 * void sebezTuzgolyo Sebzi magát a megfelelő métrékben
+	 * void sebezTuzgolyo Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezTuzgolyo() {
@@ -51,7 +51,7 @@ public class Ember extends Ellenseg {
 	}
 
 	/**
-	 * void sebezDarda Sebzi magát a megfelelő métrékben
+	 * void sebezDarda Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezDarda() {
@@ -72,7 +72,7 @@ public class Ember extends Ellenseg {
 	@Override
 	public Ellenseg Szetszakit() throws Exception {
 		this.eleteroAllit(eletero / 2);
-		Ellenseg clone = new Ember(this.ut, this.tar, this.szint, this.id+1);
+		Ellenseg clone = new Ember(this.ut, this.tar, this.szint, this.id + 1);
 		clone.eleteroAllit(this.eletero);
 		return clone;
 	}

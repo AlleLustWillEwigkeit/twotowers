@@ -2,14 +2,14 @@ package allelustwillewigkeit.twotowers.model;
 
 public class Tuzgolyo extends Lovedek {
 	/**
-	 * A tűzgolyó konstruktora
+	 * A tuzgolyo konstruktora
 	 */
 	public Tuzgolyo(int _id) {
 		super(_id);
 	}
 
 	/**
-	 * void megLo Meglövi az ellenfelet.
+	 * void megLo Meglovi az ellenfelet.
 	 * 
 	 * @param Ellenseg
 	 *            kit

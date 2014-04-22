@@ -2,14 +2,14 @@ package allelustwillewigkeit.twotowers.model;
 
 public class Nyil extends Lovedek {
 	/**
-	 * A nyíl konstruktora
+	 * A nyil konstruktora
 	 */
 	public Nyil(int _id) {
 		super(_id);
 	}
 
 	/**
-	 * void megLo Meglövi az ellenfelet.
+	 * void megLo Meglovi az ellenfelet.
 	 * 
 	 * @param Ellenseg
 	 *            kit

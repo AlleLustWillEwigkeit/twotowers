@@ -76,7 +76,7 @@ public class Varazsko {
 	}
 
 	/**
-	 * void tuzel Minden lövedékének szól, hogy lője meg a célpontot
+	 * void tuzel Minden lovedekenek szol, hogy loje meg a celpontot
 	 * 
 	 * @param Ellenseg
 	 *            celpont
@@ -88,7 +88,7 @@ public class Varazsko {
 	}
 
 	/**
-	 * float lekerHatotavSzorzo Visszatér a hatótávszorzóval
+	 * float lekerHatotavSzorzo Visszater a hatotavszorzoval
 	 * 
 	 * @return double
 	 */
@@ -97,7 +97,7 @@ public class Varazsko {
 	}
 
 	/**
-	 * float lekerEleteroSzorzo Visszatér az életerőszorzóval
+	 * float lekerEleteroSzorzo Visszater az eleteroszorzoval
 	 * 
 	 * @return double
 	 */
@@ -116,7 +116,7 @@ public class Varazsko {
 	public List<Lovedek> lekerLovedekek() {
 		if (lovedek != null)
 			return lovedek;
-		throw new NullPointerException("Nincs lövedék, az gáz!");
+		throw new NullPointerException("Nincs lovedek, az gaz!");
 	}
 
 	public void tick() {

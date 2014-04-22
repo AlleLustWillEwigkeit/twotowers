@@ -6,26 +6,26 @@ public class JosagosSzaruman {
 	protected Varazsko kivalasztottVarazsko = null;
 
 	/**
-	 * A jóságos szarumán konstruktora
+	 * A josagos szaruman konstruktora
 	 */
 	public JosagosSzaruman(int maxVarazsero) {
 		this.varazsero = this.maxVarazsero = maxVarazsero;
 	}
 
 	/**
-	 * void varazseroNovel Növeli a varázserejét a megadott mértékben
+	 * void varazseroNovel Noveli a varazserejet a megadott mertekben
 	 * 
 	 * @param int mennyivel
 	 */
 	public void varazseroNovel(int mennyivel) {
 		this.varazsero += mennyivel;
-		if(this.varazsero > this.maxVarazsero)
+		if (this.varazsero > this.maxVarazsero)
 			this.varazsero = this.maxVarazsero;
 	}
 
 	/**
-	 * Varazsko lekerKivalasztottVarazsko Visszaadja a kiválasztott varászkövet.
-	 * Ha nincs, létrehoz egyet.
+	 * Varazsko lekerKivalasztottVarazsko Visszaadja a kivalasztott varaszkovet.
+	 * Ha nincs, letrehoz egyet.
 	 * 
 	 * @return Varazsko
 	 */
@@ -36,8 +36,10 @@ public class JosagosSzaruman {
 	public void beallitKivalasztottVarazsko(Varazsko erre) {
 		kivalasztottVarazsko = erre;
 	}
-	
-	public void beallitKivalasztottVarazsko(int VarazskoDictID) throws Exception{
-		throw new Exception("Varazskobeallitasra kerult a sor, ami nincs is mar a programban");
-}
+
+	public void beallitKivalasztottVarazsko(int VarazskoDictID)
+			throws Exception {
+		throw new Exception(
+				"Varazskobeallitasra kerult a sor, ami nincs is mar a programban");
+	}
 }

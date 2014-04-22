@@ -2,16 +2,17 @@ package allelustwillewigkeit.twotowers.model;
 
 public class Elf extends Ellenseg {
 	/**
-	 * A tünde konstruktora
+	 * A tunde konstruktora
 	 * 
 	 * @param start
 	 * @param ellens
 	 */
-	public Elf(Ut start, Ellensegek ellens, int szint, int _id) throws Exception {
+	public Elf(Ut start, Ellensegek ellens, int szint, int _id)
+			throws Exception {
 		super(start, ellens, szint, _id);
 
 		if ((szint < 0) || (szint > 5))
-			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
+			throw new Exception("A szintnek 1, es 5 kozott kelle lennie");
 
 		this.varazseroNovel = 10;
 		this.eletero = 20 + 10 * (szint);
@@ -20,7 +21,7 @@ public class Elf extends Ellenseg {
 	}
 
 	/**
-	 * void sebezNyil Sebzi magát a megfelelő métrékben
+	 * void sebezNyil Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezNyil() {
@@ -39,7 +40,7 @@ public class Elf extends Ellenseg {
 	}
 
 	/**
-	 * void sebezTuzgolyo Sebzi magát a megfelelő métrékben
+	 * void sebezTuzgolyo Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezTuzgolyo() {
@@ -50,7 +51,7 @@ public class Elf extends Ellenseg {
 	}
 
 	/**
-	 * void sebezDarda Sebzi magát a megfelelő mértékben
+	 * void sebezDarda Sebzi magat a megfelelo mertekben
 	 */
 	@Override
 	public void sebezDarda() {

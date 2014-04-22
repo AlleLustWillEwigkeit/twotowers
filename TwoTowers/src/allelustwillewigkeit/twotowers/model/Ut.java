@@ -11,7 +11,7 @@ public class Ut {
 	protected int id;
 
 	/**
-	 * Az út konstruktora
+	 * Az ut konstruktora
 	 */
 	public Ut(PalyaElem _palyaelem, int _id) {
 		this.palyaElem = _palyaelem;
@@ -19,7 +19,7 @@ public class Ut {
 	}
 
 	/**
-	 * Void raLep Minden tonyának szól, hogy tüzeljen a célpontra
+	 * Void raLep Minden tonyanak szol, hogy tuzeljen a celpontra
 	 * 
 	 * @param Ellenseg
 	 *            ellenseg
@@ -31,7 +31,7 @@ public class Ut {
 	}
 
 	/**
-	 * Void feliratkozik Ha a torony még nincs alistában, akkor felveszi oda
+	 * Void feliratkozik Ha a torony meg nincs alistaban, akkor felveszi oda
 	 * 
 	 * @param Torony
 	 *            torony
@@ -55,22 +55,22 @@ public class Ut {
 	}
 
 	/**
-	 * Void akadalyomLebomlott Az akadályát törli.
+	 * Void akadalyomLebomlott Az akadalyat torli.
 	 */
 	public void akadalyomLebomlott() {
 		this.akadaly = null;
 	}
 
 	/**
-	 * Void lerakAkadaly Létrehoz egy új akadályt, és felveszi a referenciáját.
+	 * Void lerakAkadaly Letrehoz egy uj akadalyt, es felveszi a referenciajat.
 	 */
 	public void lerakAkadaly(int _id) {
 		this.akadaly = new Akadaly(this, _id);
 	}
 
 	/**
-	 * boolean vanAkadalyRajta Igazzal tér vissza, ha van akadály rajta,
-	 * máskülönben hamissal
+	 * boolean vanAkadalyRajta Igazzal ter vissza, ha van akadaly rajta,
+	 * maskulonben hamissal
 	 * 
 	 * @return boolean
 	 */
@@ -79,8 +79,8 @@ public class Ut {
 	}
 
 	/**
-	 * Akadaly lekerAkadaly Az akadály referenciájával tér vissza, vagy nullal,
-	 * ha nincs rajta akadály.
+	 * Akadaly lekerAkadaly Az akadaly referenciajaval ter vissza, vagy nullal,
+	 * ha nincs rajta akadaly.
 	 * 
 	 * @return Akadaly
 	 */
@@ -88,13 +88,13 @@ public class Ut {
 		if (akadaly != null)
 			return this.akadaly;
 		else
-			throw new NullPointerException("Nincs akadály az úton! ID:"
+			throw new NullPointerException("Nincs akadaly az uton! ID:"
 					+ palyaElem.lekerID());
 	}
 
 	/**
-	 * Ut lekerKovUt Az első nála ismert úttal tér vissza, vagy ha a tároló
-	 * üres, akkor nullal.
+	 * Ut lekerKovUt Az elso nala ismert uttal ter vissza, vagy ha a tarolo
+	 * ures, akkor nullal.
 	 * 
 	 * @return Ut
 	 */
@@ -103,7 +103,7 @@ public class Ut {
 	}
 
 	/**
-	 * Void beallitKovUt Hozzáadja a paraméterül kapott utat a listához, ha még
+	 * Void beallitKovUt Hozzaadja a parameterul kapott utat a listahoz, ha meg
 	 * nincs benne.
 	 * 
 	 * @param ut
@@ -118,7 +118,7 @@ public class Ut {
 	}
 
 	/**
-	 * void akadalySebzes Sebzi a rajta lévő akadályt, ha van.
+	 * void akadalySebzes Sebzi a rajta levo akadalyt, ha van.
 	 * 
 	 * @param int mennyit
 	 */
@@ -131,7 +131,7 @@ public class Ut {
 		if (palyaElem != null)
 			return palyaElem;
 		throw new NullPointerException(
-				"Kellemetlen, de az úthoz nem tartozik pályaelem...ez nem kéne történjen...");
+				"Kellemetlen, de az uthoz nem tartozik palyaelem...ez nem kene tortenjen...");
 	}
 
 	public int lekerID() {

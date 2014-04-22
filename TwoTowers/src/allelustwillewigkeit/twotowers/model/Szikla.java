@@ -9,7 +9,7 @@ public class Szikla extends Lovedek {
 	}
 
 	/**
-	 * void megLo Meglövi az ellenfelet.
+	 * void megLo Meglovi az ellenfelet.
 	 * 
 	 * @param Ellenseg
 	 *            kit

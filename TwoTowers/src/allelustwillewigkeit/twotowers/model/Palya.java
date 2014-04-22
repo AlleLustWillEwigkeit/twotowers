@@ -7,7 +7,7 @@ public class Palya {
 	protected List<PalyaElem> palya = new ArrayList<PalyaElem>();
 
 	/**
-	 * A pálya konstruktora
+	 * A palya konstruktora
 	 */
 	public Palya() {
 	}
@@ -19,7 +19,7 @@ public class Palya {
 	}
 
 	/**
-	 * void ujPalya Létrehoz egy pálya összeállítást.
+	 * void ujPalya Letrehoz egy palya osszeallitast.
 	 */
 	public void ujPalya() { // TODO
 	}

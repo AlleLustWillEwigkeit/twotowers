@@ -12,13 +12,13 @@ public class Program {
 	}
 
 	/**
-	 * void ujJatek Új játékot indít
+	 * void ujJatek uj jatekot indit
 	 */
 	public void ujJatek() {
 	}
 
 	/**
-	 * static void main Itt van a program induló pontja
+	 * static void main Itt van a program indulo pontja
 	 */
 	public static void main() {
 	}

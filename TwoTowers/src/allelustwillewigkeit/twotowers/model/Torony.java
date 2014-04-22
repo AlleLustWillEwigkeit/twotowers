@@ -25,7 +25,7 @@ public class Torony implements Varazskovezheto {
 	}
 
 	/**
-	 * void tuzel Minden varászkövének szól, hogy tüzeljen a célpontra
+	 * void tuzel Minden varaszkovenek szol, hogy tuzeljen a celpontra
 	 * 
 	 * @param Ellenseg
 	 *            celpont
@@ -40,8 +40,8 @@ public class Torony implements Varazskovezheto {
 	}
 
 	/**
-	 * void beRegisztralTavonBeluliUtakhoz Szól az őt tároló pályaelemnek, hogy
-	 * beregisztrálna az utakhoz, a megfelelő hatótávon.
+	 * void beRegisztralTavonBeluliUtakhoz Szol az ot tarolo palyaelemnek, hogy
+	 * beregisztralna az utakhoz, a megfelelo hatotavon.
 	 */
 	public void beRegisztralTavonBeluliUtakhoz() {// TODO
 		kiregisztral();
@@ -70,8 +70,8 @@ public class Torony implements Varazskovezheto {
 	}
 
 	/**
-	 * void felkovez Ha még nincs rajta a paraméterül kapott varászkő, akkor
-	 * felkövezi vele
+	 * void felkovez Ha meg nincs rajta a parameterul kapott varaszko, akkor
+	 * felkovezi vele
 	 * 
 	 * @param Varazsko
 	 *            mivel

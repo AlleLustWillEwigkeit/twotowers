@@ -10,7 +10,7 @@ public class Akadaly implements Varazskovezheto {
 	protected int id;
 
 	/**
-	 * Az akadály konstruktora
+	 * Az akadaly konstruktora
 	 * 
 	 * @param Ut
 	 *            u
@@ -24,7 +24,7 @@ public class Akadaly implements Varazskovezheto {
 	}
 
 	/**
-	 * void felkovez Felveszi a paraméterül kapott varászkő referenciáját
+	 * void felkovez Felveszi a parameterul kapott varaszko referenciajat
 	 * 
 	 * @param Varazsko
 	 *            mivel
@@ -38,7 +38,7 @@ public class Akadaly implements Varazskovezheto {
 	}
 
 	/**
-	 * void sebzodik Levonja a paraméterül kapott értéket az életerejéből.
+	 * void sebzodik Levonja a parameterul kapott erteket az eleterejebol.
 	 * 
 	 * @param int mennyit
 	 */

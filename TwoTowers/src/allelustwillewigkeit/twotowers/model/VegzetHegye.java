@@ -4,7 +4,7 @@ public class VegzetHegye extends Ut {
 	public Jatekmotor jatekmotor = null;
 
 	/**
-	 * VégzetHegye konstruktora
+	 * VegzetHegye konstruktora
 	 * 
 	 * @param JatekMotor
 	 *            jm
@@ -15,8 +15,8 @@ public class VegzetHegye extends Ut {
 	}
 
 	/**
-	 * void raLep Ez a metódus felüldefiniálja az útét Szól a játékmotornak,
-	 * hogy vereség van.
+	 * void raLep Ez a metodus feluldefinialja az utet Szol a jatekmotornak,
+	 * hogy vereseg van.
 	 * 
 	 * @param Ellenseg
 	 *            ellenseg

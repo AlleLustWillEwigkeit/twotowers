@@ -6,7 +6,7 @@ public class EpitesiTerulet {
 	protected int id;
 
 	/**
-	 * Ez az építési terület konstruktora
+	 * Ez az epitesi terulet konstruktora
 	 */
 	public EpitesiTerulet(PalyaElem _palyaElem, int _id) {
 		this.palyaElem = _palyaElem;
@@ -14,7 +14,7 @@ public class EpitesiTerulet {
 	}
 
 	/**
-	 * PalyaElem minAll Visszaadja a pályaelemet, amin áll.
+	 * PalyaElem minAll Visszaadja a palyaelemet, amin all.
 	 * 
 	 * @return PalyaElem
 	 */
@@ -23,14 +23,14 @@ public class EpitesiTerulet {
 	}
 
 	/**
-	 * void lerakTornyot Létrehoz egy új tornyot, és felveszi a referenciáját.
+	 * void lerakTornyot Letrehoz egy uj tornyot, es felveszi a referenciajat.
 	 */
 	public void lerakTornyot(int _id) {
 		this.torony = new Torony(this, _id);
 	}
 
 	/**
-	 * boolean vanToronyRajta Igazat ad, ha van rajta torony, különben hamisat
+	 * boolean vanToronyRajta Igazat ad, ha van rajta torony, kulonben hamisat
 	 * 
 	 * @return boolean
 	 */
@@ -39,7 +39,7 @@ public class EpitesiTerulet {
 	}
 
 	/**
-	 * Torony lekerTorony Visszatér a torony referenciájával.
+	 * Torony lekerTorony Visszater a torony referenciajaval.
 	 * 
 	 * @return
 	 */
@@ -48,7 +48,7 @@ public class EpitesiTerulet {
 			return this.torony;
 		else
 			throw new NullPointerException(
-					"Nincs torony az építési területen! ID:"
+					"Nincs torony az epitesi teruleten! ID:"
 							+ palyaElem.lekerID());
 	}
 

@@ -2,14 +2,14 @@ package allelustwillewigkeit.twotowers.model;
 
 public class Darda extends Lovedek {
 	/**
-	 * A dárda konstruktora
+	 * A darda konstruktora
 	 */
 	public Darda(int _id) {
 		super(_id);
 	}
 
 	/**
-	 * void megLo Meglövi az ellenfelet.
+	 * void megLo Meglovi az ellenfelet.
 	 * 
 	 * @param Ellenseg
 	 *            kit

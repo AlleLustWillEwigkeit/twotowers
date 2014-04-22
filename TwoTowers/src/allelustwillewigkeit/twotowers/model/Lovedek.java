@@ -4,14 +4,14 @@ public class Lovedek {
 	int id;
 
 	/**
-	 * A lövedék konstruktora
+	 * A lovedek konstruktora
 	 */
 	public Lovedek(int _id) {
 		this.id = _id;
 	}
 
 	/**
-	 * void megLo Meglövi az ellenfelet.
+	 * void megLo Meglovi az ellenfelet.
 	 * 
 	 * @param Ellenseg
 	 *            kit

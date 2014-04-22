@@ -1,7 +1,7 @@
 package allelustwillewigkeit.twotowers.model;
 
 /**
- * Start class Ez az osztály arra szolgál, hogy megkülönböztessük a kezdő utat.
+ * Start class Ez az osztaly arra szolgal, hogy megkulonboztessuk a kezdo utat.
  */
 public class Start extends Ut {
 	/**

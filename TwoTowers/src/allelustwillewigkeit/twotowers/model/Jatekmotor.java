@@ -9,12 +9,12 @@ public class Jatekmotor {
 	protected Palya palya = null;
 	protected JosagosSzaruman josagosSzaruman = null;
 	protected List<Varazsko> kavicsok = new ArrayList<Varazsko>();
-	// TODO: ez itt minek? Neki kell tudnia a lehetséges kő összeállításokról?
+	// TODO: ez itt minek? Neki kell tudnia a lehetseges ko osszeallitasokrol?
 	// Nem a JSZ-nek?
 	protected int jatekallas = 0;
 
 	/**
-	 * A játékmotor konstruktora
+	 * A jatekmotor konstruktora
 	 * 
 	 * @param JosagosSzaruman
 	 *            jsz
@@ -29,7 +29,7 @@ public class Jatekmotor {
 	}
 
 	/**
-	 * void tick Szimulál egy időegységet.
+	 * void tick Szimulal egy idoegyseget.
 	 */
 	public void tick() {
 		this.ellensegek.mindLep();
@@ -37,7 +37,7 @@ public class Jatekmotor {
 	}
 
 	/**
-	 * void lerakTornyot Lerak egy tornyot egy adott pályaelemre.
+	 * void lerakTornyot Lerak egy tornyot egy adott palyaelemre.
 	 * 
 	 * @param PalyaElem
 	 *            hova
@@ -47,7 +47,7 @@ public class Jatekmotor {
 	}
 
 	/**
-	 * void lerakAkadaly Lerak egy akadályt egy adott pályaelemre.
+	 * void lerakAkadaly Lerak egy akadalyt egy adott palyaelemre.
 	 * 
 	 * @param PalyaElem
 	 *            hova
@@ -57,8 +57,8 @@ public class Jatekmotor {
 	}
 
 	/**
-	 * void felkovez Az adott pályaelem-nek szól, hogy kövezze fel a rajta lévő
-	 * tornyot, vagy akadályt.
+	 * void felkovez Az adott palyaelem-nek szol, hogy kovezze fel a rajta levo
+	 * tornyot, vagy akadalyt.
 	 * 
 	 * @param PalyaElem
 	 *            mit
@@ -82,9 +82,9 @@ public class Jatekmotor {
 	}
 
 	/**
-	 * void ujJatek Új játékot indít
+	 * void ujJatek uj jatekot indit
 	 */
-	public void ujJatek() { // TODO: ez valószínűleg nem jó implementáció...
+	public void ujJatek() { // TODO: ez valoszinuleg nem jo implementacio...
 							// While ciklus a modelben????
 		// this.palya = new Palya();
 		// this.palya.ujPalya();
@@ -95,29 +95,29 @@ public class Jatekmotor {
 		// tick();
 		// }
 		// if (jatekallas < 0) {
-		// System.out.println("Vereség!");
+		// System.out.println("Vereseg!");
 		// System.exit(0);
 		// } else if (jatekallas > 0) {
-		// System.out.println("Győzelem!");
+		// System.out.println("Gyozelem!");
 		// System.exit(0);
 		// }
 	}
 
 	/**
-	 * void vereseg Vereség történt.
+	 * void vereseg Vereseg tortent.
 	 */
 	public void vereseg() {
 		jatekallas = -666;
 	}
 
 	/**
-	 * void gyozelem Győzelem történt.
+	 * void gyozelem Gyozelem tortent.
 	 */
 	public void gyozelem() {
 		jatekallas = 1337;
 	}
 
-	/** int lekerallapot: visszatér a játék állapotával **/
+	/** int lekerallapot: visszater a jatek allapotaval **/
 	public int lekerallapot() {
 		return jatekallas;
 	}

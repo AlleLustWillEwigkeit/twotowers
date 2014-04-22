@@ -11,15 +11,15 @@ public class PalyaElem {
 	protected int palyaElemID;
 
 	/**
-	 * A pályaelem konstruktora
+	 * A palyaelem konstruktora
 	 */
 	public PalyaElem(int _palyaElemID) {
 		this.palyaElemID = _palyaElemID;
 	}
 
 	/**
-	 * EpitesiTerulet lekerEpitesiTerulet Visszatér a rajta lévő építési terület
-	 * referenciájával
+	 * EpitesiTerulet lekerEpitesiTerulet Visszater a rajta levo epitesi terulet
+	 * referenciajaval
 	 * 
 	 * @return EpitesiTerulet
 	 */
@@ -29,7 +29,7 @@ public class PalyaElem {
 	}
 
 	/**
-	 * Ut lekerUt Visszatér a rajta lévő út referenciájával
+	 * Ut lekerUt Visszater a rajta levo ut referenciajaval
 	 * 
 	 * @return Ut
 	 */
@@ -39,7 +39,7 @@ public class PalyaElem {
 	}
 
 	/**
-	 * boolean vanUtja Igazzal tér vissza, ha van rajta út, különben hamissal.
+	 * boolean vanUtja Igazzal ter vissza, ha van rajta ut, kulonben hamissal.
 	 * 
 	 * @return boolean
 	 */
@@ -48,8 +48,8 @@ public class PalyaElem {
 	}
 
 	/**
-	 * boolean vanEpitesiTerulete Igazzal tér vissza, ha van rajta építési
-	 * terület, különben hamissal.
+	 * boolean vanEpitesiTerulete Igazzal ter vissza, ha van rajta epitesi
+	 * terulet, kulonben hamissal.
 	 * 
 	 * @return boolean
 	 */
@@ -58,9 +58,9 @@ public class PalyaElem {
 	}
 
 	/**
-	 * void beregisztral Minden szomszédjánál rekurzívan beregisztrálja a
-	 * paraméterül kapott tornyot, ha az adott szomszédon van út. Mindezt a
-	 * megadott hatótávig csinálja.
+	 * void beregisztral Minden szomszedjanal rekurzivan beregisztralja a
+	 * parameterul kapott tornyot, ha az adott szomszedon van ut. Mindezt a
+	 * megadott hatotavig csinalja.
 	 * 
 	 * @param Torony
 	 *            torony
@@ -80,49 +80,49 @@ public class PalyaElem {
 		if (this.vanUtja())
 			this.lekerUt().feliratkozik(torony);
 
-		this.beregisztralt = true; // Ne kelljen még egyszer fölöslegesen
-									// figyelni őt.
+		this.beregisztralt = true; // Ne kelljen meg egyszer foloslegesen
+									// figyelni ot.
 
 		for (PalyaElem pe : szomszedok) {
 			pe.beregisztral(torony, tavolsag--);
 		}
 
-		this.beregisztralt = false; // Takarítás, hogy más is fel tudjon
-									// iratkozni hozzá.
+		this.beregisztralt = false; // Takaritas, hogy mas is fel tudjon
+									// iratkozni hozza.
 
 	}
 
 	/**
-	 * void legyelUt Létrehoz egy utat magára.
+	 * void legyelUt Letrehoz egy utat magara.
 	 */
 	public void legyelUt(int _id) {
 		this.ut = new Ut(this, _id);
 	}
 
 	/**
-	 * void legyelStart Létrehoz egy kezdőhelyet magára.
+	 * void legyelStart Letrehoz egy kezdohelyet magara.
 	 */
 	public void legyelStart(int _id) {
 		this.ut = new Start(this, _id);
 	}
 
 	/**
-	 * void legyelStart Létrehoz egy kezdőhelyet magára.
+	 * void legyelStart Letrehoz egy kezdohelyet magara.
 	 */
 	public void legyelVegzetHegye(Jatekmotor _jm, int _id) {
 		this.ut = new VegzetHegye(_jm, this, _id);
 	}
 
 	/**
-	 * void legyelEpitesiTerulet Létrehoz egy építési területet magára.
+	 * void legyelEpitesiTerulet Letrehoz egy epitesi teruletet magara.
 	 */
 	public void legyelEpitesiTerulet(int _id) {
 		this.epitesiTerulet = new EpitesiTerulet(this, _id);
 	}
 
 	/**
-	 * void addSzomszed Hozzáadja a paraméterül kapott szomszédot, ha még nincs
-	 * a listában.
+	 * void addSzomszed Hozzaadja a parameterul kapott szomszedot, ha meg nincs
+	 * a listaban.
 	 * 
 	 * @param PalyaElem
 	 *            sz

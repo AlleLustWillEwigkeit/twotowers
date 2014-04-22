@@ -66,7 +66,7 @@
 //					+ "\n");
 //
 //		} else {
-//			kiiro("Valaki úgy lépett ki, hogy nem lépett be!");
+//			kiiro("Valaki ugy lepett ki, hogy nem lepett be!");
 //		}
 //
 //	}
@@ -117,7 +117,7 @@
 //				throw new IllegalArgumentException();
 //			}
 //		} catch (IllegalArgumentException e) {
-//			println("Nem valid válasz. Probáld újra.");
+//			println("Nem valid valasz. Probald ujra.");
 //			return kerdezIH(mihez);
 //		}
 //
@@ -125,7 +125,7 @@
 //
 //	public static int kerdezEgesz(String mihez) {
 //		print(mihez);
-//		kiiro(" (egész)\n");
+//		kiiro(" (egesz)\n");
 //		String eredmeny = readln();
 //		return Integer.parseInt(eredmeny);
 //	}
@@ -133,12 +133,12 @@
 //	public static Lovedek kerdezLovedek(String mihez) {
 //		try {
 //			println(mihez);
-//			println("Adja meg milyen lövedékkel akar lőni! Itt a lista:");
-//			println("1 - Lövedék");
-//			println("2 - Nyíl ");
-//			println("3 - Tűzgolyó");
+//			println("Adja meg milyen lovedekkel akar loni! Itt a lista:");
+//			println("1 - Lovedek");
+//			println("2 - Nyil ");
+//			println("3 - Tuzgolyo");
 //			println("4 - Szikla");
-//			println("5 - Dárda");
+//			println("5 - Darda");
 //			String valasz = readln();
 //			int valaszINT = Integer.parseInt(valasz);
 //			switch (valaszINT) {
@@ -156,10 +156,10 @@
 //				throw new IllegalArgumentException();
 //			}
 //		} catch (NumberFormatException e) {
-//			println("A válasz valahol 1-5 között rejlik, számmal írva!");
+//			println("A valasz valahol 1-5 kozott rejlik, szammal irva!");
 //			return kerdezLovedek(mihez);
 //		} catch (IllegalArgumentException e) {
-//			println("Számot adtál meg, de nem az adott tartományban!");
+//			println("Szamot adtal meg, de nem az adott tartomanyban!");
 //			return kerdezLovedek(mihez);
 //		}
 //
@@ -168,7 +168,7 @@
 //	public static Ellenseg kerdezEllenseg(String mihez, Ut ut, Ellensegek el) {
 //		try {
 //			println(mihez);
-//			println("Adja meg milyen ellenségre akar lőni! Itt a lista:");
+//			println("Adja meg milyen ellensegre akar loni! Itt a lista:");
 //			println("1 - Ember");
 //			println("2 - Tunde ");
 //			println("3 - Torp");
@@ -188,10 +188,10 @@
 //				throw new IllegalArgumentException();
 //			}
 //		} catch (NumberFormatException e) {
-//			println("A válasz valahol 1-2 között rejlik, számmal írva!");
+//			println("A valasz valahol 1-2 kozott rejlik, szammal irva!");
 //			return kerdezEllenseg(mihez, ut, el);
 //		} catch (IllegalArgumentException e) {
-//			println("Számot adtál meg, de nem az adott tartományban!");
+//			println("Szamot adtal meg, de nem az adott tartomanyban!");
 //			return kerdezEllenseg(mihez, ut, el);
 //		}
 //
@@ -201,15 +201,15 @@
 //		boolean doexit = false;
 //		while (!doexit) {
 //			try {
-//				println("Kérem a lejátszandó use-case számát! A lehetőségek:");
-//				println("0. Kilépés a skeleton programból");
-//				println("1. Lépés");
-//				println("2. Lövés");
-//				println("3. Akadály lerakása");
-//				println("4. Torony lerakás");
-//				println("5. Varázskő lerakás");
-//				println("6. Győzelem");
-//				println("7. Vereség");
+//				println("Kerem a lejatszando use-case szamat! A lehetosegek:");
+//				println("0. Kilepes a skeleton programbol");
+//				println("1. Lepes");
+//				println("2. Loves");
+//				println("3. Akadaly lerakasa");
+//				println("4. Torony lerakas");
+//				println("5. Varazsko lerakas");
+//				println("6. Gyozelem");
+//				println("7. Vereseg");
 //
 //				switch (Integer.parseInt(SkeletonController.readln())) {
 //				case 1:
@@ -237,13 +237,13 @@
 //					doexit = true;
 //					break;
 //				default:
-//					println("Érvénytelen bemenet.");
+//					println("ervenytelen bemenet.");
 //					break;
 //				}
 //			} catch (NumberFormatException e) {
-//				println("A válasz valahol 0-7 között rejlik, számmal írva!");
+//				println("A valasz valahol 0-7 kozott rejlik, szammal irva!");
 //			} catch (IllegalArgumentException e) {
-//				println("Számot adtál meg, de nem az adott tartományban!");
+//				println("Szamot adtal meg, de nem az adott tartomanyban!");
 //			}
 //
 //		}
@@ -261,7 +261,7 @@
 //
 //		Ellensegek e = new Ellensegek(jm, st);
 //		e.inditEllenseg(3);
-//		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+//		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 //		e.mindLep();
 //	}
 //
@@ -276,7 +276,7 @@
 //		t.felkovez(v);
 //		u.feliratkozik(t);
 //		Ellenseg e = kerdezEllenseg("", u, null);
-//		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+//		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 //		u.raLep(e);
 //	}
 //
@@ -284,7 +284,7 @@
 //		Jatekmotor jm = new Jatekmotor(null);
 //		PalyaElem pe = new PalyaElem();
 //		pe.legyelEpitesiTerulet();
-//		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+//		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 //		jm.lerakTornyot(pe);
 //	}
 //
@@ -292,7 +292,7 @@
 //		Jatekmotor jm = new Jatekmotor(null);
 //		PalyaElem pe = new PalyaElem();
 //		pe.legyelUt();
-//		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+//		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 //		jm.lerakAkadaly(pe);
 //	}
 //
@@ -307,7 +307,7 @@
 //		// Ut u = new Ut();
 //		// u.akadaly = new Akadaly(u);
 //		// pe.ut = u;
-//		// System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+//		// System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 //		// jm.felkovez(pe);
 //	}
 //
@@ -317,7 +317,7 @@
 //		Ellensegek ellen = new Ellensegek(jm, st);
 //		Ellenseg e = new Ember(st, ellen);
 //		ellen.inditEllenseg(e);
-//		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+//		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 //		ellen.egyEllensegMeghalt(e);
 //	}
 //
@@ -326,8 +326,8 @@
 //		VegzetHegye vh = new VegzetHegye(jm);
 //		Ellensegek ellen = new Ellensegek(jm, null);
 //		Ellenseg e = new Ember(null, ellen);
-//		System.out.println("Inicializálás vége, kezdődik a szekvenciadiagram");
+//		System.out.println("Inicializalas vege, kezdodik a szekvenciadiagram");
 //		vh.raLep(e);
 //	}
 //
-//}
+// }

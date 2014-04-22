@@ -2,7 +2,7 @@ package allelustwillewigkeit.twotowers.model;
 
 public class Torp extends Ellenseg {
 	/**
-	 * A törp konstruktora
+	 * A torp konstruktora
 	 * 
 	 * @param start
 	 * @param ellens
@@ -12,7 +12,7 @@ public class Torp extends Ellenseg {
 		super(start, ellens, szint, _id);
 
 		if ((szint < 0) || (szint > 5))
-			throw new Exception("A szintnek 1, és 5 kozott kelle lennie");
+			throw new Exception("A szintnek 1, es 5 kozott kelle lennie");
 
 		this.varazseroNovel = 10;
 		this.eletero = 20 * (szint + 1);
@@ -21,7 +21,7 @@ public class Torp extends Ellenseg {
 	}
 
 	/**
-	 * void sebezNyil Sebzi magát a megfelelő métrékben
+	 * void sebezNyil Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezNyil() {
@@ -40,7 +40,7 @@ public class Torp extends Ellenseg {
 	}
 
 	/**
-	 * void sebezTuzgolyo Sebzi magát a megfelelő métrékben
+	 * void sebezTuzgolyo Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezTuzgolyo() {
@@ -51,7 +51,7 @@ public class Torp extends Ellenseg {
 	}
 
 	/**
-	 * void sebezDarda Sebzi magát a megfelelő métrékben
+	 * void sebezDarda Sebzi magat a megfelelo metrekben
 	 */
 	@Override
 	public void sebezDarda() {

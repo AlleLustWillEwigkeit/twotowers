@@ -13,7 +13,7 @@ public class Ellensegek {
 	protected Start kezdohely = null;
 
 	/**
-	 * Ez ellenségek konstruktora
+	 * Ez ellensegek konstruktora
 	 * 
 	 * @param Jatekmotor
 	 *            _jatekmotor
@@ -30,7 +30,7 @@ public class Ellensegek {
 	}
 
 	/**
-	 * void inditEllenseg az adott ellenséget leteszi a kezdőhelyre
+	 * void inditEllenseg az adott ellenseget leteszi a kezdohelyre
 	 * 
 	 * @param int mennyit
 	 */
@@ -49,9 +49,9 @@ public class Ellensegek {
 	}
 
 	/**
-	 * void egyEllensegMeghalt Kiszedi a paraméterül kapott ellenséget a
-	 * listájából. Ha elfogyott az összes, akkor szól a játékmotornak, hogy
-	 * gőzelem van.
+	 * void egyEllensegMeghalt Kiszedi a parameterul kapott ellenseget a
+	 * listajabol. Ha elfogyott az osszes, akkor szol a jatekmotornak, hogy
+	 * gozelem van.
 	 * 
 	 * @param ellenseg
 	 */
@@ -64,16 +64,17 @@ public class Ellensegek {
 			this.josagosSzaruman.varazseroNovel(ellenseg.varazseroNovel);
 		}
 
-		if ((osszLetszam <= 0) && ((this.ellensegek.size() - elmuloEllensegek.size()) == 0)) {
+		if ((osszLetszam <= 0)
+				&& ((this.ellensegek.size() - elmuloEllensegek.size()) == 0)) {
 			this.jatekMotor.gyozelem();
 		}
 	}
 
 	/**
-	 * void mindLep Minden ellenségnek szól, hogy lépjen.
+	 * void mindLep Minden ellensegnek szol, hogy lepjen.
 	 */
 	public void mindLep() {
-		if (!ellensegek.isEmpty()){
+		if (!ellensegek.isEmpty()) {
 			for (Ellenseg e : this.ellensegek) {
 				e.lep();
 			}
@@ -85,17 +86,17 @@ public class Ellensegek {
 	}
 
 	/**
-	 * int lekerHanyEllensegVanMeg Megmondja hány ellenség spawnolható még
+	 * int lekerHanyEllensegVanMeg Megmondja hany ellenseg spawnolhato meg
 	 */
 	public int lekerHanyEllensegVanMeg() {
 		return osszLetszam;
 	}
 
 	/**
-	 * void allitHanyEllensegVanMeg Beállítja hány ellenséget spawnoljon még a
-	 * közeljövőben a játék.
+	 * void allitHanyEllensegVanMeg Beallitja hany ellenseget spawnoljon meg a
+	 * kozeljovoben a jatek.
 	 * 
-	 * @param: ertek amire állítjuk.
+	 * @param: ertek amire allitjuk.
 	 */
 	public void allitHanyEllensegVanMeg(int ertek) {
 		if (ertek < 0)
@@ -104,7 +105,7 @@ public class Ellensegek {
 	}
 
 	public void inditEllenseg(int i, int szint, int _id) throws Exception {
-		// TODO EZ KURVASZAR MERT SZÉTRANDOMOZZA AMIKOR NEM IS KELLENE
+		// TODO EZ KURVASZAR MERT SZeTRANDOMOZZA AMIKOR NEM IS KELLENE
 		if (i <= 0)
 			return;
 
@@ -145,7 +146,7 @@ public class Ellensegek {
 		try {
 			Ellenseg clone = ellenseg.Szetszakit();
 			this.ujEllensegek.add(clone);
-			this.osszLetszam--;// FIXME Miért?
+			this.osszLetszam--;// FIXME Miert?
 		} catch (Exception e) {
 		}
 	}
