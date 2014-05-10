@@ -3,12 +3,10 @@ package allelustwillewigkeit.twotowers.graphical;
 import java.awt.Dimension;
 import java.net.URL;
 
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class JatekButton extends JButton {
-
 	String name;
 	
 	public JatekButton(String name) {
@@ -27,5 +25,7 @@ public class JatekButton extends JButton {
 		ii = new ImageIcon(resource);
 		this.setIcon(ii);
 	}
+	
+	
 	
 }

@@ -6,6 +6,11 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class MezoPanel extends AlphaPanel {
+	Controller controller;
+	
+	public MezoPanel(Controller controller) {
+		this.controller = controller;
+	}
 	
 	private class MezoMouseListener implements MouseListener {  //EZT OTTHON NE PRÓBÁLJÁTOK KI
 		@Override

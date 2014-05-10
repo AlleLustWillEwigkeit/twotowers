@@ -9,7 +9,6 @@ import java.net.URL;
 
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class JatekPanel extends JPanel {

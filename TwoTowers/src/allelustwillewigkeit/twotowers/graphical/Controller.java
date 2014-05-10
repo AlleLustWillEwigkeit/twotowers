@@ -4,7 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
-import allelustwillewigkeit.twotowers.model.*;
+import allelustwillewigkeit.twotowers.model.Ellensegek;
+import allelustwillewigkeit.twotowers.model.Jatekmotor;
+import allelustwillewigkeit.twotowers.model.JosagosSzaruman;
+import allelustwillewigkeit.twotowers.model.PalyaElem;
 
 public class Controller implements ActionListener {
 	View mainFrame;
