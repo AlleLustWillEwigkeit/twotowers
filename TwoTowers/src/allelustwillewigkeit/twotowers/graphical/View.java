@@ -19,7 +19,7 @@ public class View extends JFrame {
 	}
 	
 	public void feluletEpit() {
-		this.add(jelenlegiPanel);
+		this.setContentPane(jelenlegiPanel);
 		this.pack();
 		this.setSize(928, 700);
 	}
@@ -47,5 +47,10 @@ public class View extends JFrame {
 	
 	public void tickTortent() {
 		
+	}
+	
+	public void kilep() {
+		this.setVisible(false);
+	    this.dispose();
 	}
 }
