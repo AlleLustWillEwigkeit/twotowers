@@ -10,7 +10,7 @@ public class Palya {
 	/**
 	 * A palya konstruktora
 	 */
-	public Palya() {
+	public Palya(Jatekmotor jm) {
 		// MAPGENERÁLÁS	
 		int id = 1;
 		for (int x = 0; x < 12; x++) {
@@ -33,6 +33,8 @@ public class Palya {
 		//UT GENERATION MAGIC
 		palyaelemek[0][2].legyelStart(0);
 		
+		palyaelemek[11][11].legyelVegzetHegye(jm, 0);
+		
 		start = (Start)palyaelemek[0][2].lekerUt();
 		
 	//	utatRak(0,2,1,2);
@@ -51,6 +53,14 @@ public class Palya {
 		utatRak(10,7,8,7);
 		utatRak(8,7,8,11);
 		utatRak(8,11,11,11);
+		
+		for (int x = 0; x < 12; x++) {
+			for (int y = 0; y < 12; y++) {
+				if(!palyaelemek[x][y].vanUtja()){
+					palyaelemek[x][y].legyelEpitesiTerulet(0);
+				}
+			}
+		}
 		
 		palyaelemek[0][2].lekerUt().beallitKovUt(palyaelemek[1][2].lekerUt());
 		

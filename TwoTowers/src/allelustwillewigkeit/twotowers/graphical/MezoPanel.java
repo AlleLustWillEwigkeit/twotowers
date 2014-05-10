@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
 
 import allelustwillewigkeit.twotowers.model.EpitesiTerulet;
 import allelustwillewigkeit.twotowers.model.PalyaElem;
+import allelustwillewigkeit.twotowers.model.Ut;
 
 public class MezoPanel extends AlphaPanel {
 	boolean selected;
@@ -60,25 +61,66 @@ public class MezoPanel extends AlphaPanel {
 			return;
 		}
 		
-		PalyaElem pe = controller.getPalyaElemByXY(coord.x, coord.y);
-		
-		if (controller.getLerakas() == Controller.Lerakas.TORONY) {
-			EpitesiTerulet et = pe.lekerEpitesiTerulet();
-			if (et == null || et.lekerTorony() != null)
-				g.setColor(new Color(255, 0, 0, 100));
-			else
-				g.setColor(new Color(255, 255, 255, 100));
-			g.fillRect(0, 0, 52, 52);
+		if(controller.getLerakas() != null){
+			PalyaElem pe = controller.getPalyaElemByXY(coord.x, coord.y);
 			
-			URL resource = MezoPanel.class.getResource("/res/toronyLerak_intermediate.png");
-			ImageIcon ii = new ImageIcon(resource);
-			g.drawImage(ii.getImage(), 0, 0, null);
-		} else if (controller.getLerakas() == Controller.Lerakas.AKADALY) {
-			URL resource = MezoPanel.class.getResource("/res/akadalyLerak_intermediate.png");
-			ImageIcon ii = new ImageIcon(resource);
-			g.drawImage(ii.getImage(), 0, 0, null);
-		} else if (controller.getLerakas() == Controller.Lerakas.AKADALY) {
-			//TODO varázskő overlay
+			switch(controller.getLerakas()){
+				case TORONY:
+					EpitesiTerulet et = pe.lekerEpitesiTerulet();
+					if (et == null || et.vanToronyRajta()){
+						g.setColor(new Color(255, 0, 0, 100));
+					}else{
+						g.setColor(new Color(255, 255, 255, 100));
+					}
+					g.fillRect(0, 0, 52, 52);
+					
+					/*ImageIcon torony = new ImageIcon(MezoPanel.class.getResource("/res/toronyLerak_intermediate.png"));
+					g.drawImage(torony.getImage(), 0, 0, null);*/
+					break;	
+					
+				case AKADALY:
+					Ut ut = pe.lekerUt();
+					if (ut == null || ut.vanAkadalyRajta())
+						g.setColor(new Color(255, 0, 0, 100));
+					else
+						g.setColor(new Color(255, 255, 255, 100));
+					g.fillRect(0, 0, 52, 52);
+					
+					/*ImageIcon akadaly = new ImageIcon(MezoPanel.class.getResource("/res/akadalyLerak_intermediate.png"));
+					g.drawImage(akadaly.getImage(), 0, 0, null);*/
+					break;
+				case VARAZSKO:
+					//TODO varázskő overlay
+					Ut utt = pe.lekerUt();
+					EpitesiTerulet ett = pe.lekerEpitesiTerulet();
+					
+					if ((utt != null) && (utt.vanAkadalyRajta()))
+						g.setColor(new Color(255, 255, 255, 100));
+					else if((ett != null) && (ett.vanToronyRajta()))
+						g.setColor(new Color(255, 255, 255, 100));
+					else
+						g.setColor(new Color(255, 0, 0, 100));
+						
+					g.fillRect(0, 0, 52, 52);
+					
+					switch(controller.getVarazskoSzinek()){
+						case SARGA:
+							break;
+						case ZOLD:
+							break;
+						case PIROS:
+							break;
+						case KEK:
+							break;
+						case LILA:
+							break;
+						case LSD:
+							break;
+					}
+					
+					break;
+	
+			}
 		}
 	}
 	

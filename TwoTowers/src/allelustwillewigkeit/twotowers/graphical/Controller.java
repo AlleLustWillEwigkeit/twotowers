@@ -26,7 +26,6 @@ public class Controller implements ActionListener {
 	Jatekmotor motor;
 	Ellensegek ellensegek;
 	JosagosSzaruman szaruman;
-	JatekButton jb;
 	Start start;
 	int osszletszamAmiResetelunk = 500;
 	Lerakas lerakas;
@@ -41,12 +40,11 @@ public class Controller implements ActionListener {
 		mainFrame.setVisible(true);
 		
 		mainFrame.menuRajzol();
-		jb = null;
 	}
 	
 	public void ujJatek() {
 
-		palya = new Palya();
+		palya = new Palya(motor);
 		start = palya.getStart(); // TODO 
 
 		szaruman = new JosagosSzaruman(500);
@@ -167,9 +165,10 @@ public class Controller implements ActionListener {
 	}
 
 	public Lerakas getLerakas() {
-		return lerakas;
+		return this.lerakas;
 	}
-	public JatekButton getLastJatekButton(){
-		return jb;
+	
+	public VarazskoSzinek getVarazskoSzinek(){
+		return this.vkSzinek;
 	}
 }
