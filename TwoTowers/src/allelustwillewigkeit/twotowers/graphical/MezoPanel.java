@@ -2,16 +2,17 @@ package allelustwillewigkeit.twotowers.graphical;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class MezoPanel extends AlphaPanel {
+	boolean selected;
 	Controller controller;
 	
 	private class MezoMouseListener implements MouseListener {  //EZT OTTHON NE PRÓBÁLJÁTOK KI
 		@Override
 		public void mouseClicked(MouseEvent arg0) {
-			//TODO mezőre való kattintás
 		}
 
 		@Override
@@ -35,7 +36,6 @@ public class MezoPanel extends AlphaPanel {
 		}
 	}
 	
-	final static Color SELECTED = new Color(255, 255, 255, 100);
 	Dimension coord;
 	
 	public MezoPanel(Dimension coord, Controller controller) {
@@ -46,13 +46,24 @@ public class MezoPanel extends AlphaPanel {
 		this.controller = controller;
 	}
 	
-	public void setSelected(boolean selected) {
-		if (selected)
-			this.setBackground(SELECTED);
-		else
-			this.setBackground(TRANSPARENT);
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
 		
-		this.getParent().repaint();
+		if (!selected)
+			return;
+		
+		if (controller.getToronyLerakas()) {
+			//TODO torony overlay
+		} else if (controller.getAkadalyLerakas()) {
+			//TODO akadály overlay
+		} else if (controller.getVarazskoLerakas()) {
+			//TODO varázskő overlay
+		}
+	}
+	
+	public void setSelected(boolean selected) {
+		this.selected = selected;
 	}
 	
 	public Dimension getPosition() {

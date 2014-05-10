@@ -15,6 +15,7 @@ public class Controller implements ActionListener {
 	Jatekmotor motor;
 	Ellensegek ellensegek;
 	JosagosSzaruman szaruman;
+	boolean toronyLerakas, akadalyLerakas, varazskoLerakas;
 	
 	public static void main(String[] args) throws IOException {
 		Controller c = new Controller();
@@ -113,5 +114,17 @@ public class Controller implements ActionListener {
 			break;
 		}
 
+	}
+
+	public boolean getToronyLerakas() {
+		return toronyLerakas;
+	}
+
+	public boolean getAkadalyLerakas() {
+		return akadalyLerakas;
+	}
+
+	public boolean getVarazskoLerakas() {
+		return varazskoLerakas;
 	}
 }
