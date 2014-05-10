@@ -13,14 +13,18 @@ import allelustwillewigkeit.twotowers.model.Start;
 import allelustwillewigkeit.twotowers.model.Ut;
 
 public class Controller implements ActionListener {
+	public enum Lerakas {
+		TORONY, AKADALY
+	};
+	
 	View mainFrame;
 	Palya palya;
 	Jatekmotor motor;
 	Ellensegek ellensegek;
 	JosagosSzaruman szaruman;
-	boolean toronyLerakas, akadalyLerakas, varazskoLerakas;
 	Start start;
 	int osszletszamAmiResetelunk = 500;
+	Lerakas lerakas;
 	
 	public static void main(String[] args) throws IOException {
 		Controller c = new Controller();
@@ -96,10 +100,10 @@ public class Controller implements ActionListener {
 	public void actionPerformed(ActionEvent a) {
 		switch (a.getActionCommand()) {
 		case "toronyLerak":
-			toronyLerak();
+			lerakas = Lerakas.TORONY;
 			break;
 		case "akadalyLerak":
-			akadalyLerak();
+			lerakas = Lerakas.AKADALY;
 			break;
 		case "varazskoLerak_sarga":
 			varazskoLerak_sarga();
@@ -129,15 +133,7 @@ public class Controller implements ActionListener {
 
 	}
 
-	public boolean getToronyLerakas() {
-		return toronyLerakas;
-	}
-
-	public boolean getAkadalyLerakas() {
-		return akadalyLerakas;
-	}
-
-	public boolean getVarazskoLerakas() {
-		return varazskoLerakas;
+	public Lerakas getLerakas() {
+		return lerakas;
 	}
 }

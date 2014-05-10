@@ -3,12 +3,20 @@ package allelustwillewigkeit.twotowers.graphical;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.net.URL;
+
+import javax.swing.ImageIcon;
+
+import allelustwillewigkeit.twotowers.model.EpitesiTerulet;
+import allelustwillewigkeit.twotowers.model.PalyaElem;
 
 public class MezoPanel extends AlphaPanel {
 	boolean selected;
 	Controller controller;
+	Point coord;
 	
 	private class MezoMouseListener implements MouseListener {  //EZT OTTHON NE PRÓBÁLJÁTOK KI
 		@Override
@@ -36,9 +44,7 @@ public class MezoPanel extends AlphaPanel {
 		}
 	}
 	
-	Dimension coord;
-	
-	public MezoPanel(Dimension coord, Controller controller) {
+	public MezoPanel(Point coord, Controller controller) {
 		this.setOpaque(false);
 		this.setBackground(TRANSPARENT);
 		this.addMouseListener(new MezoMouseListener());
@@ -48,25 +54,40 @@ public class MezoPanel extends AlphaPanel {
 	
 	@Override
 	protected void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		
-		if (!selected)
+		if (!selected) {
+			g.setColor(new Color(255, 255, 255, 255));
+			g.drawRect(0, 0, 52, 52);
 			return;
+		}
 		
-		if (controller.getToronyLerakas()) {
-			//TODO torony overlay
-		} else if (controller.getAkadalyLerakas()) {
-			//TODO akadály overlay
-		} else if (controller.getVarazskoLerakas()) {
+		PalyaElem pe = controller.getPalyaElemByXY(coord.x, coord.y);
+		
+		if (controller.getLerakas() == Controller.Lerakas.TORONY) {
+			EpitesiTerulet et = pe.lekerEpitesiTerulet();
+			if (et == null || et.lekerTorony() != null)
+				g.setColor(new Color(255, 0, 0, 100));
+			else
+				g.setColor(new Color(255, 255, 255, 100));
+			g.fillRect(0, 0, 52, 52);
+			
+			URL resource = MezoPanel.class.getResource("/res/toronyLerak_intermediate.png");
+			ImageIcon ii = new ImageIcon(resource);
+			g.drawImage(ii.getImage(), 0, 0, null);
+		} else if (controller.getLerakas() == Controller.Lerakas.AKADALY) {
+			URL resource = MezoPanel.class.getResource("/res/akadalyLerak_intermediate.png");
+			ImageIcon ii = new ImageIcon(resource);
+			g.drawImage(ii.getImage(), 0, 0, null);
+		} else if (controller.getLerakas() == Controller.Lerakas.AKADALY) {
 			//TODO varázskő overlay
 		}
 	}
 	
 	public void setSelected(boolean selected) {
 		this.selected = selected;
+		this.repaint();
 	}
 	
-	public Dimension getPosition() {
+	public Point getPosition() {
 		return coord;
 	}
 }

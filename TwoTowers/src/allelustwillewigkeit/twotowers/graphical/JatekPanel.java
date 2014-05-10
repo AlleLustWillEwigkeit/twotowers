@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.Image;
+import java.awt.Point;
 import java.net.URL;
 
 import javax.swing.BoxLayout;
@@ -25,7 +26,7 @@ public class JatekPanel extends JPanel {
 		
 		for (int x = 0; x < 12; x++) {
 			for (int y = 0; y < 12; y++) {
-				MezoPanel mezo = new MezoPanel(new Dimension(x, y), this.controller);
+				MezoPanel mezo = new MezoPanel(new Point(x, y), this.controller);
 				mezo.setSize(52, 52);
 				mezo.setLocation(27 + (x * 50), 50 + (y * 50));
 				this.add(mezo);
