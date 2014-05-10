@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Palya {
 	PalyaElem[][] palyaelemek = new PalyaElem[12][12]; // TODO MODIFIED!
+	PalyaElem kezdopalyaElem;
 
 	/**
 	 * A palya konstruktora
@@ -30,20 +31,21 @@ public class Palya {
 		//END OF MAP GENERATION MAGIC
 		//~~YOLO SWAG~~
 		//UT GENERATION MAGIC
+		kezdopalyaElem = palyaelemek[0][2];
 		utatRak(0,2,1,2);
 		utatRak(1,2,1,5);
 		utatRak(1,5,4,5);
-		utatRak(4,5,4,0);
+		//utatRak(4,5,4,0);
 		utatRak(4,0,8,0);
 		utatRak(8,0,8,3);
 		
-		utatRak(8,3,6,3);
+		//utatRak(8,3,6,3);
 		utatRak(6,3,6,11);
 		utatRak(6,11,11,11);
 		
 		utatRak(8,3,10,3);
 		utatRak(10,3,10,7);
-		utatRak(10,7,8,7);
+		//utatRak(10,7,8,7);
 		utatRak(8,7,8,11);
 		utatRak(8,11,11,11);
 		
@@ -51,6 +53,10 @@ public class Palya {
 		//END OF UT GENERATION MAGIC
 	}
 
+	public PalyaElem getKezdoPalyaElem(){
+		return kezdopalyaElem;
+	}
+	
 	private void utatRak(int kezdx, int kezdy, int vegx, int vegy){
 		if(kezdx == vegx){
 			for(int y = kezdy; y != vegy; y++){
@@ -79,11 +85,17 @@ public class Palya {
 			}
 		}
 	}
+	
+	public PalyaElem getElementByXY(int x, int y){
+		return palyaelemek[x][y];
+		
+	}
 
 	/**
 	 * void ujPalya Letrehoz egy palya osszeallitast.
 	 * @throws Exception 
 	 */
+	/*
 	public void ujPalya() throws Exception { // TODO
 		throw new Exception("Not implemented"); // TODO
 	} //FIXME
@@ -99,4 +111,6 @@ public class Palya {
 	public List<PalyaElem> lekerlista()throws Exception { // TODO
 		throw new Exception("Not implemented"); // TODO
 	} //FIXME
+	*/
 }
+
