@@ -8,10 +8,6 @@ import java.awt.event.MouseListener;
 public class MezoPanel extends AlphaPanel {
 	Controller controller;
 	
-	public MezoPanel(Controller controller) {
-		this.controller = controller;
-	}
-	
 	private class MezoMouseListener implements MouseListener {  //EZT OTTHON NE PRÓBÁLJÁTOK KI
 		@Override
 		public void mouseClicked(MouseEvent arg0) {
@@ -42,11 +38,12 @@ public class MezoPanel extends AlphaPanel {
 	final static Color SELECTED = new Color(255, 255, 255, 100);
 	Dimension coord;
 	
-	public MezoPanel(Dimension coord) {
+	public MezoPanel(Dimension coord, Controller controller) {
 		this.setOpaque(false);
 		this.setBackground(TRANSPARENT);
 		this.addMouseListener(new MezoMouseListener());
 		this.coord = coord;
+		this.controller = controller;
 	}
 	
 	public void setSelected(boolean selected) {
