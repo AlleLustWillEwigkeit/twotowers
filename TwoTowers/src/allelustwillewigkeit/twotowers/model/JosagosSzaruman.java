@@ -32,6 +32,10 @@ public class JosagosSzaruman {
 	public Varazsko lekerKivalasztottVarazsko() {
 		return this.kivalasztottVarazsko;
 	}
+	
+	public int lekerMaxVarazsero() {
+		return maxVarazsero;
+	}
 
 	public void beallitKivalasztottVarazsko(Varazsko erre) {
 		kivalasztottVarazsko = erre;

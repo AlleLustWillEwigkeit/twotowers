@@ -1,18 +1,44 @@
 package allelustwillewigkeit.twotowers.graphical;
 
 import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-import javax.swing.JPanel;
-
-public class MezoPanel extends JPanel {
+public class MezoPanel extends AlphaPanel {
 	
-	final static Color TRANSPARENT = new Color(0, 0, 0, 0);
+	private class MezoMouseListener implements MouseListener {  //EZT OTTHON NE PRÓBÁLJÁTOK KI
+		@Override
+		public void mouseClicked(MouseEvent arg0) {
+			//TODO mezőre való kattintás
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent arg0) {
+			MezoPanel mezo = (MezoPanel)arg0.getSource();
+			mezo.setSelected(true);
+		}
+
+		@Override
+		public void mouseExited(MouseEvent arg0) {
+			MezoPanel mezo = (MezoPanel)arg0.getSource();
+			mezo.setSelected(false);
+		}
+
+		@Override
+		public void mousePressed(MouseEvent arg0) {
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent arg0) {
+		}
+	}
+	
 	final static Color SELECTED = new Color(255, 255, 255, 100);
 	
 	public MezoPanel() {
 		this.setOpaque(false);
 		this.setBackground(TRANSPARENT);
+		this.addMouseListener(new MezoMouseListener());
 	}
 	
 	public void setSelected(boolean selected) {
@@ -23,11 +49,4 @@ public class MezoPanel extends JPanel {
 		
 		this.getParent().repaint();
 	}
-	
-	protected void paintComponent(Graphics g)
-    {
-        g.setColor( getBackground() );
-        g.fillRect(0, 0, getWidth(), getHeight());
-        super.paintComponent(g);
-    }
 }
