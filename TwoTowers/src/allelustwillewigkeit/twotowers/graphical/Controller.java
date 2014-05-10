@@ -35,7 +35,8 @@ public class Controller implements ActionListener {
 	public void ujJatek() {
 
 		palya = new Palya();
-		start = (Start) palya.getKezdoPalyaElem().lekerUt(); // TODO 
+		start =  //(Start) palya.getKezdoPalyaElem().lekerUt(); // TODO 
+				null;
 		szaruman = new JosagosSzaruman(500);
 		ellensegek = new Ellensegek(motor = new Jatekmotor(ellensegek, szaruman, palya), 500, start, szaruman);
 		//Ellensegek(Jatekmotor _jatekmotor, int _osszletszam, Start _kezdohely, JosagosSzaruman _szaruman) {
@@ -52,7 +53,6 @@ public class Controller implements ActionListener {
 	
 	public PalyaElem getPalyaElemByXY(int x, int y){
 		return palya.getElementByXY(x, y);
-		
 	}
 	
 	public void tick() {

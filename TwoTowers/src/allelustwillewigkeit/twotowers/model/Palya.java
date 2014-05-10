@@ -35,17 +35,17 @@ public class Palya {
 		utatRak(0,2,1,2);
 		utatRak(1,2,1,5);
 		utatRak(1,5,4,5);
-		utatRak(4,5,4,0);
+		//utatRak(4,5,4,0);
 		utatRak(4,0,8,0);
 		utatRak(8,0,8,3);
 		
-		utatRak(8,3,6,3);
+		//utatRak(8,3,6,3);
 		utatRak(6,3,6,11);
 		utatRak(6,11,11,11);
 		
 		utatRak(8,3,10,3);
 		utatRak(10,3,10,7);
-		utatRak(10,7,8,7);
+		//utatRak(10,7,8,7);
 		utatRak(8,7,8,11);
 		utatRak(8,11,11,11);
 		
