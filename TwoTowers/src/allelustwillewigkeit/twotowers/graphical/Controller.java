@@ -19,6 +19,7 @@ public class Controller implements ActionListener {
 	Ellensegek ellensegek;
 	JosagosSzaruman szaruman;
 	boolean toronyLerakas, akadalyLerakas, varazskoLerakas;
+	String varazskoTipus;
 	Start start;
 	int osszletszamAmiResetelunk = 500;
 	
@@ -31,6 +32,7 @@ public class Controller implements ActionListener {
 		mainFrame.setVisible(true);
 		
 		mainFrame.menuRajzol();
+		varazskoTipus = "";
 	}
 	
 	public void ujJatek() {
@@ -61,35 +63,57 @@ public class Controller implements ActionListener {
 	}
 	
 	public void toronyLerak(){
-		
+		toronyLerakas = true;
+		akadalyLerakas = false;
+		varazskoLerakas = false;
 	}
 	
 	public void akadalyLerak(){
-		
+		toronyLerakas = false;
+		akadalyLerakas = true;
+		varazskoLerakas = false;
 	}
 	
 	public void varazskoLerak_sarga(){
-		
+		toronyLerakas = false;
+		akadalyLerakas = false;
+		varazskoLerakas = true;
+		varazskoTipus = "sarga";
 	}
 	
 	public void varazskoLerak_piros(){
-		
+		toronyLerakas = false;
+		akadalyLerakas = false;
+		varazskoLerakas = true;
+		varazskoTipus = "piros";
 	}
 	
 	public void varazskoLerak_zold(){
-		
+		toronyLerakas = false;
+		akadalyLerakas = false;
+		varazskoLerakas = true;
+		varazskoTipus = "zold";
 	}
 	
 	public void varazskoLerak_kek(){
-		
+		toronyLerakas = false;
+		akadalyLerakas = false;
+		varazskoLerakas = true;
+		varazskoTipus = "kek";
 	}
 	
 	public void varazskoLerak_lila(){
-		
+		toronyLerakas = false;
+		akadalyLerakas = false;
+		varazskoLerakas = true;
+		varazskoTipus = "lila";
 	}
 	
 	public void varazskoLerak_lsd(){
-		
+		toronyLerakas = false;
+		akadalyLerakas = false;
+		varazskoLerakas = true;
+		varazskoTipus = "lsd";
 	}
 	
 	@Override
@@ -139,5 +163,18 @@ public class Controller implements ActionListener {
 
 	public boolean getVarazskoLerakas() {
 		return varazskoLerakas;
+	}
+	
+	public String getActionType(){
+		
+		if(toronyLerakas){
+			return "toronyLerak";
+		}else if(akadalyLerakas){
+			return "akadalyLerak";
+		}else if(varazskoLerakas){
+			return "varazskoLerak_"+varazskoTipus;
+		}else{
+			return "";
+		}
 	}
 }
