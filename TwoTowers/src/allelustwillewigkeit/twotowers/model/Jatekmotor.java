@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Jatekmotor {
 	protected Ellensegek ellensegek = null;
-	protected Program program = null;
 	protected Palya palya = null;
 	protected JosagosSzaruman josagosSzaruman = null;
 	protected List<Varazsko> kavicsok = new ArrayList<Varazsko>();
@@ -20,10 +19,10 @@ public class Jatekmotor {
 	 *            jsz
 	 */
 	public Jatekmotor(Ellensegek _ellensegek, JosagosSzaruman _josagosSzaruman,
-			Palya _palya, Program _program) {
+			Palya _palya) {
 		this.josagosSzaruman = _josagosSzaruman;
 		this.palya = _palya;
-		this.program = _program;
+
 		this.ellensegek = _ellensegek;
 		this.jatekallas = 0;
 	}
