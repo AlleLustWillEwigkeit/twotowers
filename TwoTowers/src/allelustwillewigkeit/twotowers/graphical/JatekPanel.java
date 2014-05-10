@@ -89,6 +89,7 @@ public class JatekPanel extends JPanel {
 		// - ZÖLD VARÁZSKŐ
 		VarazskoButton zoldVarazskoGomb = new VarazskoButton("varazskoLerak_zold");
 		zoldVarazskoGomb.addActionListener(controller);
+		zoldVarazskoGomb.setButtonState(JatekButton.ButtonState.INACTIVE);
 		zoldVarazskoGomb.setToolTipText("Zöld varázskő lerakása");
 		akadalyGombSor.add(zoldVarazskoGomb);
 
@@ -122,12 +123,16 @@ public class JatekPanel extends JPanel {
 	
 	public void setButtonState(JatekButton.ButtonState bs){
 		for(JatekButton gmb : this.gombok){
-			gmb.setButtonState(bs);
+			gmb.setButtonState(bs,false);
 		}
 	}
 	
 	public void setButtonState(JatekButton jb, JatekButton.ButtonState bs){
-		jb.setButtonState(bs);
+		jb.setButtonState(bs,false);
+	}
+	
+	public void setButtonState(JatekButton jb, JatekButton.ButtonState bs, boolean force){
+		jb.setButtonState(bs,force);
 	}
 	
 	@Override

@@ -74,51 +74,59 @@ public class Controller implements ActionListener {
 
 	public void toronyLerak(JatekButton jbt){
 		lerakas = Lerakas.TORONY;
-		jb = jbt;
+		setActualButton(jbt);
 	}
 	
 
 	public void akadalyLerak(JatekButton jbt){
-		jb = jbt;
 		lerakas = Lerakas.AKADALY;
+		setActualButton(jbt);
 	}
 	
 
 	public void varazskoLerak_sarga(JatekButton jbt){
-		jb = jbt;
 		lerakas = Lerakas.VARAZSKO;
 		vkSzinek = VarazskoSzinek.SARGA;
+		setActualButton(jbt);
 	}
 	
 
 	public void varazskoLerak_piros(JatekButton jbt){
-		jb = jbt;
 		lerakas = Lerakas.VARAZSKO;
 		vkSzinek = VarazskoSzinek.PIROS;
+		setActualButton(jbt);
 	}
 
 	public void varazskoLerak_zold(JatekButton jbt){
-		jb = jbt;
 		lerakas = Lerakas.VARAZSKO;
 		vkSzinek = VarazskoSzinek.ZOLD;
+		setActualButton(jbt);
 	}
 
 	public void varazskoLerak_kek(JatekButton jbt){
-		jb = jbt;
 		lerakas = Lerakas.VARAZSKO;
 		vkSzinek = VarazskoSzinek.KEK;
+		setActualButton(jbt);
 	}
 	
 	public void varazskoLerak_lila(JatekButton jbt){
-		jb = jbt;
 		lerakas = Lerakas.VARAZSKO;
 		vkSzinek = VarazskoSzinek.LILA;
+		setActualButton(jbt);
 	}
 	
 	public void varazskoLerak_lsd(JatekButton jbt){
-		jb = jbt;
 		lerakas = Lerakas.VARAZSKO;
 		vkSzinek = VarazskoSzinek.LSD;
+		setActualButton(jbt);
+	}
+	
+	public void setActualButton(JatekButton jbt){
+		if(mainFrame.isPlaying){
+			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
+			jp.setButtonState(JatekButton.ButtonState.ACTIVE);
+			jp.setButtonState(jbt, JatekButton.ButtonState.SELECTED);
+		}
 	}
 	
 	@Override

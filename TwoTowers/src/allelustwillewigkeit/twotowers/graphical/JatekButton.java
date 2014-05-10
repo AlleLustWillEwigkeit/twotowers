@@ -80,18 +80,25 @@ public class JatekButton extends JButton {
 		this.buttonState = ButtonState.ACTIVE;
 	}
 	
-	public void setButtonState(ButtonState bs){
-		this.buttonState = bs;
-		switch(this.buttonState){
-			case ACTIVE:
-				this.setEnabled(true);
-				break;
-			case INACTIVE:
-				this.setEnabled(false);
-				break;
-			case SELECTED:
-				break;
+	public void setButtonState(ButtonState bs, boolean force){
+		if(this.buttonState != ButtonState.INACTIVE || force ){
+			this.buttonState = bs;
+			switch(this.buttonState){
+				case ACTIVE:
+					this.setEnabled(true);
+					break;
+				case INACTIVE:
+					this.setEnabled(false);
+					break;
+				case SELECTED:
+					break;
+			}
+			this.repaint();
 		}
+	}
+	
+	public void setButtonState(ButtonState bs){
+		setButtonState(bs,false);
 	}
 	
 	public void setMouseState(MouseState ms){
@@ -102,6 +109,7 @@ public class JatekButton extends JButton {
 			case HOVER:
 				break;
 		}
+		this.repaint();
 	}
 	
 	@Override
