@@ -46,6 +46,11 @@ public class Controller implements ActionListener {
 		}
 		//END OF MAP GENERATION MAGIC
 		
+		//szaruman = new JosagosSzaruman(1000);
+		//ellensegek = new Ellensegek(_jatekmotor, _osszletszam, _kezdohely, _szaruman)
+		//motor = new Jatekmotor(_ellensegek, _josagosSzaruman, _palya, _program)        //FIXME kölcsönös kizárás, WTF!!
+		
+		
 		mainFrame.jatekRajzol();
 	}
 	
@@ -63,8 +68,6 @@ public class Controller implements ActionListener {
 			mainFrame.kilep();
 			break;
 		}
-		//szaruman = new JosagosSzaruman(1000);
-		//ellensegek = new Ellensegek(_jatekmotor, _osszletszam, _kezdohely, _szaruman)
-		//motor = new Jatekmotor(_ellensegek, _josagosSzaruman, _palya, _program)        //FIXME kölcsönös kizárás, WTF!!
+
 	}
 }
