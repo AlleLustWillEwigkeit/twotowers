@@ -19,7 +19,7 @@ public class Controller implements ActionListener {
 	Ellensegek ellensegek;
 	JosagosSzaruman szaruman;
 	boolean toronyLerakas, akadalyLerakas, varazskoLerakas;
-	String varazskoTipus;
+	JatekButton jb;
 	Start start;
 	int osszletszamAmiResetelunk = 500;
 	
@@ -32,7 +32,7 @@ public class Controller implements ActionListener {
 		mainFrame.setVisible(true);
 		
 		mainFrame.menuRajzol();
-		varazskoTipus = "";
+		jb = null;
 	}
 	
 	public void ujJatek() {
@@ -62,86 +62,88 @@ public class Controller implements ActionListener {
 		
 	}
 	
-	public void toronyLerak(){
+	public void toronyLerak(JatekButton jbt){
 		toronyLerakas = true;
 		akadalyLerakas = false;
 		varazskoLerakas = false;
+		jb = jbt;
 	}
 	
-	public void akadalyLerak(){
+	public void akadalyLerak(JatekButton jbt){
 		toronyLerakas = false;
 		akadalyLerakas = true;
 		varazskoLerakas = false;
+		jb = jbt;
 	}
 	
-	public void varazskoLerak_sarga(){
+	public void varazskoLerak_sarga(JatekButton jbt){
 		toronyLerakas = false;
 		akadalyLerakas = false;
 		varazskoLerakas = true;
-		varazskoTipus = "sarga";
+		jb = jbt;
 	}
 	
-	public void varazskoLerak_piros(){
+	public void varazskoLerak_piros(JatekButton jbt){
 		toronyLerakas = false;
 		akadalyLerakas = false;
 		varazskoLerakas = true;
-		varazskoTipus = "piros";
+		jb = jbt;
 	}
 	
-	public void varazskoLerak_zold(){
+	public void varazskoLerak_zold(JatekButton jbt){
 		toronyLerakas = false;
 		akadalyLerakas = false;
 		varazskoLerakas = true;
-		varazskoTipus = "zold";
+		jb = jbt;
 	}
 	
-	public void varazskoLerak_kek(){
+	public void varazskoLerak_kek(JatekButton jbt){
 		toronyLerakas = false;
 		akadalyLerakas = false;
 		varazskoLerakas = true;
-		varazskoTipus = "kek";
+		jb = jbt;
 	}
 	
-	public void varazskoLerak_lila(){
+	public void varazskoLerak_lila(JatekButton jbt){
 		toronyLerakas = false;
 		akadalyLerakas = false;
 		varazskoLerakas = true;
-		varazskoTipus = "lila";
+		jb = jbt;
 	}
 	
-	public void varazskoLerak_lsd(){
+	public void varazskoLerak_lsd(JatekButton jbt){
 		toronyLerakas = false;
 		akadalyLerakas = false;
 		varazskoLerakas = true;
-		varazskoTipus = "lsd";
+		jb = jbt;
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent a) {
 		switch (a.getActionCommand()) {
 		case "toronyLerak":
-			toronyLerak();
+			toronyLerak((JatekButton)a.getSource());
 			break;
 		case "akadalyLerak":
-			akadalyLerak();
+			akadalyLerak((JatekButton)a.getSource());
 			break;
 		case "varazskoLerak_sarga":
-			varazskoLerak_sarga();
+			varazskoLerak_sarga((JatekButton)a.getSource());
 			break;
 		case "varazskoLerak_piros":
-			varazskoLerak_piros();
+			varazskoLerak_piros((JatekButton)a.getSource());
 			break;
 		case "varazskoLerak_zold":
-			varazskoLerak_zold();
+			varazskoLerak_zold((JatekButton)a.getSource());
 			break;
 		case "varazskoLerak_kek":
-			varazskoLerak_kek();
+			varazskoLerak_kek((JatekButton)a.getSource());
 			break;
 		case "varazskoLerak_lila":
-			varazskoLerak_lila();
+			varazskoLerak_lila((JatekButton)a.getSource());
 			break;
 		case "varazskoLerak_lsd":
-			varazskoLerak_lsd();
+			varazskoLerak_lsd((JatekButton)a.getSource());
 			break;
 		case "ujJatek":
 			ujJatek();
@@ -165,16 +167,7 @@ public class Controller implements ActionListener {
 		return varazskoLerakas;
 	}
 	
-	public String getActionType(){
-		
-		if(toronyLerakas){
-			return "toronyLerak";
-		}else if(akadalyLerakas){
-			return "akadalyLerak";
-		}else if(varazskoLerakas){
-			return "varazskoLerak_"+varazskoTipus;
-		}else{
-			return "";
-		}
+	public JatekButton getLastJatekButton(){
+		return jb;
 	}
 }
