@@ -62,6 +62,7 @@ public class JatekButton extends JButton {
 		this.inActiveIcon = new ImageIcon(MenuPanel.class.getResource("res/" + name + "_disabled.png"));
 		
 		this.setIcon(this.activeIcon);
+		this.setDisabledIcon(this.inActiveIcon);
 	}
 	
 	@Override

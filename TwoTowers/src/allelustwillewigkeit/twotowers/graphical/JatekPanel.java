@@ -93,7 +93,6 @@ public class JatekPanel extends JPanel {
 		VarazskoButton lsdVarazskoGomb = new VarazskoButton("varazskoLerak_lsd");
 		lsdVarazskoGomb.addActionListener(controller);
 		lsdVarazskoGomb.setToolTipText("LSD varázskő lerakása"); // FIXME Na most ez itt így marad?
-		lsdVarazskoGomb.setEnabled(false);
 		akadalyGombSor.add(lsdVarazskoGomb);
 		
 		gombPanel.add(lerakhatoGombSor);
