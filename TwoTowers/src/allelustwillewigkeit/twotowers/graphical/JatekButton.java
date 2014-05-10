@@ -22,6 +22,10 @@ public class JatekButton extends JButton {
 		URL resource = MenuPanel.class.getResource("res/" + name + ".png");
 		ImageIcon ii = new ImageIcon(resource);
 		this.setIcon(ii);
+		
+		resource = MenuPanel.class.getResource("res/" + name + "_disabled.png");
+		ii = new ImageIcon(resource);
+		this.setIcon(ii);
 	}
 	
 }

@@ -1,6 +1,7 @@
 package allelustwillewigkeit.twotowers.graphical;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -34,11 +35,13 @@ public class MezoPanel extends AlphaPanel {
 	}
 	
 	final static Color SELECTED = new Color(255, 255, 255, 100);
+	Dimension coord;
 	
-	public MezoPanel() {
+	public MezoPanel(Dimension coord) {
 		this.setOpaque(false);
 		this.setBackground(TRANSPARENT);
 		this.addMouseListener(new MezoMouseListener());
+		this.coord = coord;
 	}
 	
 	public void setSelected(boolean selected) {
@@ -48,5 +51,9 @@ public class MezoPanel extends AlphaPanel {
 			this.setBackground(TRANSPARENT);
 		
 		this.getParent().repaint();
+	}
+	
+	public Dimension getPosition() {
+		return coord;
 	}
 }
