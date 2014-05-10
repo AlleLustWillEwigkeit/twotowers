@@ -2,6 +2,7 @@ package allelustwillewigkeit.twotowers.graphical;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URL;
@@ -24,13 +25,11 @@ public class JatekButton extends JButton {
 		@Override
 		public void mouseEntered(MouseEvent arg0) {
 			JatekButton gomb = (JatekButton)arg0.getSource();
-			gomb.setSelected(true);
 		}
 
 		@Override
 		public void mouseExited(MouseEvent arg0) {
 			JatekButton gomb = (JatekButton)arg0.getSource();
-			gomb.setSelected(false);
 		}
 
 		@Override
@@ -44,6 +43,7 @@ public class JatekButton extends JButton {
 	
 	final static Color SELECTED = new Color(255, 255, 255, 100);
 	final static Color TRANSPARENT = new Color(0, 0, 0, 0);
+	
 	ImageIcon activeIcon;
 	ImageIcon inActiveIcon;
 	
@@ -64,13 +64,12 @@ public class JatekButton extends JButton {
 		this.setIcon(this.activeIcon);
 	}
 	
-	public void setSelected(boolean selected) {
-		if (selected)
-			this.setBackground(SELECTED);
+	@Override
+	protected void paintComponent(Graphics g) {
+		if(this.isEnabled())
+			g.drawImage(this.activeIcon.getImage(), 0, 0, null, null);
 		else
-			this.setBackground(TRANSPARENT);
-		
-		this.getParent().repaint();
+			g.drawImage(this.inActiveIcon.getImage(), 0, 0, null, null);
 	}
 	
 	
