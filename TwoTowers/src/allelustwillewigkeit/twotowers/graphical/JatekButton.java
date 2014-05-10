@@ -68,7 +68,7 @@ public class JatekButton extends JButton {
 	public JatekButton(String name) {
 		this.name = name;
 		this.setActionCommand(name);
-		this.setPreferredSize(new Dimension(68, 69));
+		this.setPreferredSize(new Dimension(68, 68));
 		this.setBorderPainted(false);
 		this.setFocusPainted(false);
 		this.setContentAreaFilled(false);
@@ -112,7 +112,7 @@ public class JatekButton extends JButton {
 				break;
 		}
 		
-		g.fillRoundRect((size.width-pSize.width+1)/2, (size.height-pSize.height+1)/2, pSize.width, pSize.height, (int)(pSize.width * 0.5), (int)(pSize.height * 0.5));
+		g.fillRoundRect((size.width-pSize.width)/2, (size.height-pSize.height)/2, pSize.width, pSize.height, (int)(pSize.width * 0.4), (int)(pSize.height * 0.4));
 		
 	}
 	
