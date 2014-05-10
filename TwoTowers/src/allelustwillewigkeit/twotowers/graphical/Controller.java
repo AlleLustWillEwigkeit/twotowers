@@ -7,6 +7,7 @@ import java.io.IOException;
 import allelustwillewigkeit.twotowers.model.Ellensegek;
 import allelustwillewigkeit.twotowers.model.Jatekmotor;
 import allelustwillewigkeit.twotowers.model.JosagosSzaruman;
+import allelustwillewigkeit.twotowers.model.Palya;
 import allelustwillewigkeit.twotowers.model.PalyaElem;
 
 public class Controller implements ActionListener {
