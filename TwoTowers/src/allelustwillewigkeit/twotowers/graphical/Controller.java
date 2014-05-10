@@ -25,26 +25,11 @@ public class Controller implements ActionListener {
 	}
 	
 	public void ujJatek() {
-		// MAPGENERÁLÁS
-		PalyaElem[][] palyaelemek = new PalyaElem[12][12];
+
+		Palya palya = new Palya();
 		
-		int id = 1;
-		for (int x = 0; x < 12; x++) {
-			for (int y = 0; y < 12; y++) {
-				palyaelemek[x][y] = new PalyaElem(id++);
-			}
-		}
 		
-		for (int x = 0; x < 12; x++) {
-			for (int y = 0; y < 12; y++) {
-				PalyaElem palyaelem = palyaelemek[x][y];
-				if ((x + 1) < 12)
-					palyaelem.addSzomszed(palyaelemek[x + 1][y]);
-				if ((y + 1) < 12)
-					palyaelem.addSzomszed(palyaelemek[x][y + 1]);
-			}
-		}
-		//END OF MAP GENERATION MAGIC
+
 		
 		//szaruman = new JosagosSzaruman(1000);
 		//ellensegek = new Ellensegek(_jatekmotor, _osszletszam, _kezdohely, _szaruman)
