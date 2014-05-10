@@ -35,8 +35,8 @@ public class Controller implements ActionListener {
 	public void ujJatek() {
 
 		palya = new Palya();
-		start =  //(Start) palya.getKezdoPalyaElem().lekerUt(); // TODO 
-				null;
+		start = palya.getStart(); // TODO 
+
 		szaruman = new JosagosSzaruman(500);
 		ellensegek = new Ellensegek(motor = new Jatekmotor(ellensegek, szaruman, palya), 500, start, szaruman);
 		//Ellensegek(Jatekmotor _jatekmotor, int _osszletszam, Start _kezdohely, JosagosSzaruman _szaruman) {
