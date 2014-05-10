@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Palya {
 	PalyaElem[][] palyaelemek = new PalyaElem[12][12]; // TODO MODIFIED!
+	PalyaElem kezdopalyaElem;
 
 	/**
 	 * A palya konstruktora
@@ -30,6 +31,7 @@ public class Palya {
 		//END OF MAP GENERATION MAGIC
 		//~~YOLO SWAG~~
 		//UT GENERATION MAGIC
+		kezdopalyaElem = palyaelemek[0][2];
 		utatRak(0,2,1,2);
 		utatRak(1,2,1,5);
 		utatRak(1,5,4,5);
@@ -51,6 +53,10 @@ public class Palya {
 		//END OF UT GENERATION MAGIC
 	}
 
+	public PalyaElem getKezdoPalyaElem(){
+		return kezdopalyaElem;
+	}
+	
 	private void utatRak(int kezdx, int kezdy, int vegx, int vegy){
 		if(kezdx == vegx){
 			for(int y = kezdy; y != vegy; y++){
