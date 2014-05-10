@@ -112,7 +112,7 @@ public class JatekButton extends JButton {
 				break;
 		}
 		
-		g.fillRoundRect((size.width-pSize.width)/2, (size.height-pSize.height)/2, pSize.width, pSize.height, (int)(pSize.width * 0.4), (int)(pSize.height * 0.4));
+		g.fillRoundRect((size.width-pSize.width)/2, (size.height-pSize.height)/2, pSize.width, pSize.height, (int)(pSize.width * 0.35), (int)(pSize.height * 0.35));
 		
 	}
 	
