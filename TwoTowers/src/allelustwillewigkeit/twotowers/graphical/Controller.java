@@ -13,15 +13,24 @@ import allelustwillewigkeit.twotowers.model.Start;
 import allelustwillewigkeit.twotowers.model.Ut;
 
 public class Controller implements ActionListener {
+	public enum Lerakas {
+		TORONY, AKADALY, VARAZSKO
+	};
+	
+	public enum VarazskoSzinek {
+		SARGA, ZOLD, PIROS, KEK, LILA, LSD
+	};
+	
 	View mainFrame;
 	Palya palya;
 	Jatekmotor motor;
 	Ellensegek ellensegek;
 	JosagosSzaruman szaruman;
-	boolean toronyLerakas, akadalyLerakas, varazskoLerakas;
 	JatekButton jb;
 	Start start;
 	int osszletszamAmiResetelunk = 500;
+	Lerakas lerakas;
+	VarazskoSzinek vkSzinek;
 	
 	public static void main(String[] args) throws IOException {
 		Controller c = new Controller();
@@ -62,60 +71,54 @@ public class Controller implements ActionListener {
 		
 	}
 	
+
 	public void toronyLerak(JatekButton jbt){
-		toronyLerakas = true;
-		akadalyLerakas = false;
-		varazskoLerakas = false;
+		lerakas = Lerakas.TORONY;
 		jb = jbt;
 	}
 	
+
 	public void akadalyLerak(JatekButton jbt){
-		toronyLerakas = false;
-		akadalyLerakas = true;
-		varazskoLerakas = false;
 		jb = jbt;
+		lerakas = Lerakas.AKADALY;
 	}
 	
+
 	public void varazskoLerak_sarga(JatekButton jbt){
-		toronyLerakas = false;
-		akadalyLerakas = false;
-		varazskoLerakas = true;
 		jb = jbt;
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.SARGA;
 	}
 	
+
 	public void varazskoLerak_piros(JatekButton jbt){
-		toronyLerakas = false;
-		akadalyLerakas = false;
-		varazskoLerakas = true;
 		jb = jbt;
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.PIROS;
 	}
-	
+
 	public void varazskoLerak_zold(JatekButton jbt){
-		toronyLerakas = false;
-		akadalyLerakas = false;
-		varazskoLerakas = true;
 		jb = jbt;
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.ZOLD;
 	}
-	
+
 	public void varazskoLerak_kek(JatekButton jbt){
-		toronyLerakas = false;
-		akadalyLerakas = false;
-		varazskoLerakas = true;
 		jb = jbt;
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.KEK;
 	}
 	
 	public void varazskoLerak_lila(JatekButton jbt){
-		toronyLerakas = false;
-		akadalyLerakas = false;
-		varazskoLerakas = true;
 		jb = jbt;
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.LILA;
 	}
 	
 	public void varazskoLerak_lsd(JatekButton jbt){
-		toronyLerakas = false;
-		akadalyLerakas = false;
-		varazskoLerakas = true;
 		jb = jbt;
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.LSD;
 	}
 	
 	@Override
@@ -155,18 +158,9 @@ public class Controller implements ActionListener {
 
 	}
 
-	public boolean getToronyLerakas() {
-		return toronyLerakas;
+	public Lerakas getLerakas() {
+		return lerakas;
 	}
-
-	public boolean getAkadalyLerakas() {
-		return akadalyLerakas;
-	}
-
-	public boolean getVarazskoLerakas() {
-		return varazskoLerakas;
-	}
-	
 	public JatekButton getLastJatekButton(){
 		return jb;
 	}
