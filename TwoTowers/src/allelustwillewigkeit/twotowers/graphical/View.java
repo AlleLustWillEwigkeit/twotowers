@@ -6,10 +6,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class View extends JFrame {
-	ActionListener controller = null;
+	Controller controller = null;
 	JPanel jelenlegiPanel = null;
 	
-	View(ActionListener controller) {
+	View(Controller controller) {
 		super("Two Towers");
 		
 		this.controller = controller;
