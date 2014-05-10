@@ -9,7 +9,6 @@ import java.net.URL;
 
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class JatekPanel extends JPanel {
@@ -26,7 +25,7 @@ public class JatekPanel extends JPanel {
 		
 		for (int x = 0; x < 12; x++) {
 			for (int y = 0; y < 12; y++) {
-				MezoPanel mezo = new MezoPanel();
+				MezoPanel mezo = new MezoPanel(new Dimension(x, y), this.controller);
 				mezo.setSize(52, 52);
 				mezo.setLocation(27 + (x * 50), 50 + (y * 50));
 				this.add(mezo);

@@ -3,10 +3,8 @@ package allelustwillewigkeit.twotowers.graphical;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Rectangle;
 import java.awt.event.ActionListener;
 import java.net.URL;
-import java.util.Random;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;

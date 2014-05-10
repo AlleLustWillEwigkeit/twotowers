@@ -4,7 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
-import allelustwillewigkeit.twotowers.model.*;
+import allelustwillewigkeit.twotowers.model.Ellensegek;
+import allelustwillewigkeit.twotowers.model.Jatekmotor;
+import allelustwillewigkeit.twotowers.model.JosagosSzaruman;
+import allelustwillewigkeit.twotowers.model.PalyaElem;
 
 public class Controller implements ActionListener {
 	View mainFrame;
@@ -43,9 +46,65 @@ public class Controller implements ActionListener {
 		
 	}
 	
+	public void toronyLerak(){
+		
+	}
+	
+	public void akadalyLerak(){
+		
+	}
+	
+	public void varazskoLerak_sarga(){
+		
+	}
+	
+	public void varazskoLerak_piros(){
+		
+	}
+	
+	public void varazskoLerak_zold(){
+		
+	}
+	
+	public void varazskoLerak_kek(){
+		
+	}
+	
+	public void varazskoLerak_lila(){
+		
+	}
+	
+	public void varazskoLerak_lsd(){
+		
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent a) {
 		switch (a.getActionCommand()) {
+		case "toronyLerak":
+			toronyLerak();
+			break;
+		case "akadalyLerak":
+			akadalyLerak();
+			break;
+		case "varazskoLerak_sarga":
+			varazskoLerak_sarga();
+			break;
+		case "varazskoLerak_piros":
+			varazskoLerak_piros();
+			break;
+		case "varazskoLerak_zold":
+			varazskoLerak_zold();
+			break;
+		case "varazskoLerak_kek":
+			varazskoLerak_kek();
+			break;
+		case "varazskoLerak_lila":
+			varazskoLerak_lila();
+			break;
+		case "varazskoLerak_lsd":
+			varazskoLerak_lsd();
+			break;
 		case "ujJatek":
 			ujJatek();
 			break;
