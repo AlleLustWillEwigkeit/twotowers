@@ -46,6 +46,11 @@ public class Controller implements ActionListener {
 		}
 		//END OF MAP GENERATION MAGIC
 		
+		//szaruman = new JosagosSzaruman(1000);
+		//ellensegek = new Ellensegek(_jatekmotor, _osszletszam, _kezdohely, _szaruman)
+		//motor = new Jatekmotor(_ellensegek, _josagosSzaruman, _palya, _program)        //FIXME kölcsönös kizárás, WTF!!
+		
+		
 		mainFrame.jatekRajzol();
 	}
 	
@@ -53,9 +58,65 @@ public class Controller implements ActionListener {
 		
 	}
 	
+	public void toronyLerak(){
+		
+	}
+	
+	public void akadalyLerak(){
+		
+	}
+	
+	public void varazskoLerak_sarga(){
+		
+	}
+	
+	public void varazskoLerak_piros(){
+		
+	}
+	
+	public void varazskoLerak_zold(){
+		
+	}
+	
+	public void varazskoLerak_kek(){
+		
+	}
+	
+	public void varazskoLerak_lila(){
+		
+	}
+	
+	public void varazskoLerak_lsd(){
+		
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent a) {
 		switch (a.getActionCommand()) {
+		case "toronyLerak":
+			toronyLerak();
+			break;
+		case "akadalyLerak":
+			akadalyLerak();
+			break;
+		case "varazskoLerak_sarga":
+			varazskoLerak_sarga();
+			break;
+		case "varazskoLerak_piros":
+			varazskoLerak_piros();
+			break;
+		case "varazskoLerak_zold":
+			varazskoLerak_zold();
+			break;
+		case "varazskoLerak_kek":
+			varazskoLerak_kek();
+			break;
+		case "varazskoLerak_lila":
+			varazskoLerak_lila();
+			break;
+		case "varazskoLerak_lsd":
+			varazskoLerak_lsd();
+			break;
 		case "ujJatek":
 			ujJatek();
 			break;
@@ -63,8 +124,6 @@ public class Controller implements ActionListener {
 			mainFrame.kilep();
 			break;
 		}
-		//szaruman = new JosagosSzaruman(1000);
-		//ellensegek = new Ellensegek(_jatekmotor, _osszletszam, _kezdohely, _szaruman)
-		//motor = new Jatekmotor(_ellensegek, _josagosSzaruman, _palya, _program)        //FIXME kölcsönös kizárás, WTF!!
+
 	}
 }

@@ -29,7 +29,7 @@ public class EletVonalProgressBar extends JProgressBar {
 		g.drawImage(border, 0, 0, null, null);
 		
 		double progress_percent = this.getValue() / (double)this.getMaximum();
-		if (Double.isFinite(progress_percent) && progress_percent > 0) {
+		if (!Double.isInfinite(progress_percent) && progress_percent > 0) {
 			g.setColor(new Color(255, 0, 0, 100));
 			g.fillRect(7, 6, (int)(195 * progress_percent), 20);
 		}
