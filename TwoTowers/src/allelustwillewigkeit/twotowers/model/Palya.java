@@ -85,11 +85,17 @@ public class Palya {
 			}
 		}
 	}
+	
+	public PalyaElem getElementByXY(int x, int y){
+		return palyaelemek[x][y];
+		
+	}
 
 	/**
 	 * void ujPalya Letrehoz egy palya osszeallitast.
 	 * @throws Exception 
 	 */
+	/*
 	public void ujPalya() throws Exception { // TODO
 		throw new Exception("Not implemented"); // TODO
 	} //FIXME
@@ -105,4 +111,6 @@ public class Palya {
 	public List<PalyaElem> lekerlista()throws Exception { // TODO
 		throw new Exception("Not implemented"); // TODO
 	} //FIXME
+	*/
 }
+

@@ -14,7 +14,7 @@ import allelustwillewigkeit.twotowers.model.Ut;
 
 public class Controller implements ActionListener {
 	View mainFrame;
-	
+	Palya palya;
 	Jatekmotor motor;
 	Ellensegek ellensegek;
 	JosagosSzaruman szaruman;
@@ -34,7 +34,7 @@ public class Controller implements ActionListener {
 	
 	public void ujJatek() {
 
-		Palya palya = new Palya();
+		palya = new Palya();
 		start = (Start) palya.getKezdoPalyaElem().lekerUt(); // TODO 
 		szaruman = new JosagosSzaruman(500);
 		ellensegek = new Ellensegek(motor = new Jatekmotor(ellensegek, szaruman, palya), 500, start, szaruman);
@@ -48,6 +48,11 @@ public class Controller implements ActionListener {
 		
 		
 		mainFrame.jatekRajzol();
+	}
+	
+	public PalyaElem getPalyaElemByXY(int x, int y){
+		return palya.getElementByXY(x, y);
+		
 	}
 	
 	public void tick() {
