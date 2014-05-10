@@ -17,7 +17,7 @@ public class JatekButton extends JButton {
 		NORMAL,HOVER 
 	}
 	
-	private enum ButtonState{
+	public enum ButtonState{
 		ACTIVE, INACTIVE, SELECTED 
 	}
 
@@ -26,35 +26,29 @@ public class JatekButton extends JButton {
 	MouseState mouseState;
 	ButtonState buttonState;
 	
-	private class ButtonMouseListener implements MouseListener {  //EZT OTTHON NE PRÓBÁLJÁTOK KI
-		@Override
-		public void mouseClicked(MouseEvent arg0) {
-			//TODO mezőre való kattintás
-			JatekButton gomb = (JatekButton)arg0.getSource();
-			gomb.mouseState = MouseState.NORMAL;
-			gomb.buttonState = ButtonState.SELECTED;
-		}
-
+	private class ButtonMouseListener implements MouseListener {
 		@Override
 		public void mouseEntered(MouseEvent arg0) {
 			JatekButton gomb = (JatekButton)arg0.getSource();
-			gomb.mouseState = MouseState.HOVER;
+			gomb.setMouseState(MouseState.HOVER);
 		}
 
 		@Override
 		public void mouseExited(MouseEvent arg0) {
 			JatekButton gomb = (JatekButton)arg0.getSource();
-			gomb.mouseState = MouseState.NORMAL;
+			gomb.setMouseState(MouseState.NORMAL);
 		}
 
 		@Override
 		public void mousePressed(MouseEvent arg0) {
-			JatekButton gomb = (JatekButton)arg0.getSource();
 		}
 
 		@Override
 		public void mouseReleased(MouseEvent arg0) {
-			JatekButton gomb = (JatekButton)arg0.getSource();
+		}
+
+		@Override
+		public void mouseClicked(MouseEvent e){
 		}
 	}
 	
@@ -84,6 +78,30 @@ public class JatekButton extends JButton {
 		
 		this.mouseState = MouseState.NORMAL;
 		this.buttonState = ButtonState.ACTIVE;
+	}
+	
+	public void setButtonState(ButtonState bs){
+		this.buttonState = bs;
+		switch(this.buttonState){
+			case ACTIVE:
+				this.setEnabled(true);
+				break;
+			case INACTIVE:
+				this.setEnabled(false);
+				break;
+			case SELECTED:
+				break;
+		}
+	}
+	
+	public void setMouseState(MouseState ms){
+		this.mouseState = ms;
+		switch(this.mouseState){
+			case NORMAL:
+				break;
+			case HOVER:
+				break;
+		}
 	}
 	
 	@Override

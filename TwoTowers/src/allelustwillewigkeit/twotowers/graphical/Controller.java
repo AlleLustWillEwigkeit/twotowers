@@ -14,7 +14,11 @@ import allelustwillewigkeit.twotowers.model.Ut;
 
 public class Controller implements ActionListener {
 	public enum Lerakas {
-		TORONY, AKADALY
+		TORONY, AKADALY, VARAZSKO
+	};
+	
+	public enum VarazskoSzinek {
+		SARGA, ZOLD, PIROS, KEK, LILA, LSD
 	};
 	
 	View mainFrame;
@@ -25,6 +29,7 @@ public class Controller implements ActionListener {
 	Start start;
 	int osszletszamAmiResetelunk = 500;
 	Lerakas lerakas;
+	VarazskoSzinek vkSzinek;
 	
 	public static void main(String[] args) throws IOException {
 		Controller c = new Controller();
@@ -65,35 +70,41 @@ public class Controller implements ActionListener {
 	}
 	
 	public void toronyLerak(){
-		
+		lerakas = Lerakas.TORONY;
 	}
 	
 	public void akadalyLerak(){
-		
+		lerakas = Lerakas.AKADALY;
 	}
 	
-	public void varazskoLerak_sarga(){
-		
+	public void varazskoLerak_sarga() {
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.SARGA;
 	}
 	
-	public void varazskoLerak_piros(){
-		
+	public void varazskoLerak_piros() {
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.PIROS;
 	}
 	
 	public void varazskoLerak_zold(){
-		
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.ZOLD;
 	}
 	
 	public void varazskoLerak_kek(){
-		
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.KEK;
 	}
 	
 	public void varazskoLerak_lila(){
-		
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.LILA;
 	}
 	
 	public void varazskoLerak_lsd(){
-		
+		lerakas = Lerakas.VARAZSKO;
+		vkSzinek = VarazskoSzinek.LSD;
 	}
 	
 	@Override
@@ -135,5 +146,18 @@ public class Controller implements ActionListener {
 
 	public Lerakas getLerakas() {
 		return lerakas;
+	}
+	
+	public String getActionType(){
+		
+		if(lerakas == Lerakas.TORONY){
+			return "toronyLerak";
+		}else if (lerakas == Lerakas.AKADALY) {
+			return "akadalyLerak";
+		}else if (lerakas == Lerakas.VARAZSKO) {
+			return "varazskoLerak_"; //+varazskoTipus; - ez itt enum miatt vicces, de megoldható
+		}else{
+			return "";
+		}
 	}
 }
