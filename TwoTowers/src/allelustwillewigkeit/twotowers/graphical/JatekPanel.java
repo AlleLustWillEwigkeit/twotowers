@@ -117,14 +117,14 @@ public class JatekPanel extends JPanel {
 		// - LILA VARÁZSKŐ
 		VarazskoButton lilaVarazskoGomb = new VarazskoButton("varazskoLerak_lila", 50);
 		lilaVarazskoGomb.addActionListener(controller);
-		lilaVarazskoGomb.setToolTipText("Lila varázskő lerakása");
+		lilaVarazskoGomb.setToolTipText("Szelő varázskő lerakása");
 		akadalyGombSor.add(lilaVarazskoGomb);
 		this.gombok.add(lilaVarazskoGomb);
 		
 		// - LSD VARÁZSKŐ
 		VarazskoButton lsdVarazskoGomb = new VarazskoButton("varazskoLerak_lsd", 60);
 		lsdVarazskoGomb.addActionListener(controller);
-		lsdVarazskoGomb.setToolTipText("LSD varázskő lerakása");
+		lsdVarazskoGomb.setToolTipText("Ködösítő varázskő lerakása");
 		akadalyGombSor.add(lsdVarazskoGomb);
 		this.gombok.add(lsdVarazskoGomb);
 		
