@@ -65,21 +65,21 @@ public class MezoPanel extends AlphaPanel {
 
 	@Override
 	protected void paintComponent(Graphics g) {
-		if (!focus)
-			return;
-		
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 		RenderingHints.VALUE_ANTIALIAS_ON);
 		
-		if (enabled)
-			g2.setColor(ENABLED_C);
-		else
-			g2.setColor(DISABLED_C);
+		if (focus) {
+			if (enabled)
+				g2.setColor(ENABLED_C);
+			else
+				g2.setColor(DISABLED_C);
+			
+			g2.fillRoundRect(0, 0, 52, 52, 8, 8);
+			if (overlayImage != null)
+				g2.drawImage(overlayImage, 0, 0, null);
+		}
 		
-		g2.fillRoundRect(0, 0, 52, 52, 8, 8);
-		if (overlayImage != null)
-			g2.drawImage(overlayImage, 0, 0, null);
 		if (roleImage != null)
 			g2.drawImage(roleImage, 0, 0, null);
 	}
@@ -99,19 +99,20 @@ public class MezoPanel extends AlphaPanel {
 						enabled = false;
 						overlayImage = new ImageIcon(MezoPanel.class.getResource("res/toronyLerak_intermediate.png")).getImage();
 					} else {
-						if (et.vanToronyRajta())
+						if (et.vanToronyRajta()) {
+							enabled = false;
 							overlayImage = null;
-						else
+						} else
 							overlayImage = new ImageIcon(MezoPanel.class.getResource("res/toronyLerak_intermediate.png")).getImage();
 					}
 					break;
 					
 				case AKADALY:
-					if (et == null) {
+					if (ut == null) {
 						enabled = false;
 						overlayImage = new ImageIcon(MezoPanel.class.getResource("res/akadalyLerak_intermediate.png")).getImage();
 					} else {
-						if (et.vanToronyRajta())
+						if (ut.vanAkadalyRajta())
 							overlayImage = null;
 						else
 							overlayImage = new ImageIcon(MezoPanel.class.getResource("res/akadalyLerak_intermediate.png")).getImage();
@@ -119,9 +120,9 @@ public class MezoPanel extends AlphaPanel {
 					break;	
 					
 				case VARAZSKO:
-					//TODO varázskő overlay
-					if (ut != null && !ut.vanAkadalyRajta() || et != null && !et.vanToronyRajta())
-						enabled = false;
+					enabled = false;
+					if (ut != null && ut.vanAkadalyRajta() || et != null && et.vanToronyRajta())
+						enabled = true;
 					
 					switch(controller.getVarazskoSzinek()) {
 						case SARGA:
