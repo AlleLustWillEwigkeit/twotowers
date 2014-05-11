@@ -3,6 +3,7 @@ package allelustwillewigkeit.twotowers.graphical;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import allelustwillewigkeit.twotowers.model.Ellenseg;
@@ -24,6 +25,8 @@ public class Controller implements ActionListener {
 		SARGA, ZOLD, PIROS, KEK, LILA, LSD
 	};
 	
+	int koltseg;
+	
 	View mainFrame;
 	Palya palya;
 	Jatekmotor motor;
@@ -43,6 +46,7 @@ public class Controller implements ActionListener {
 		mainFrame.setVisible(true);
 		
 		mainFrame.menuRajzol();
+		this.koltseg = 0;
 	}
 	
 	public void ujJatek() {
@@ -51,6 +55,9 @@ public class Controller implements ActionListener {
 		start = palya.getStart(); // TODO 
 
 		szaruman = new JosagosSzaruman(500);
+		szaruman.varazseroNovel(125);
+		this.koltseg = 0;
+		
 		ellensegek = new Ellensegek(motor = new Jatekmotor(ellensegek, szaruman, palya), 500, start, szaruman);
 		//Ellensegek(Jatekmotor _jatekmotor, int _osszletszam, Start _kezdohely, JosagosSzaruman _szaruman) {
 		
@@ -62,11 +69,10 @@ public class Controller implements ActionListener {
 		
 		
 		mainFrame.jatekRajzol();
-		
 		try {
-			ellensegek.inditEllenseg(1, 1, 1000000);
+			ellensegek.inditEllenseg(1, 1, 10000);
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 		}
 	}
 	
@@ -129,9 +135,20 @@ public class Controller implements ActionListener {
 	
 	public void setActualButton(JatekButton jbt){
 		if(mainFrame.isPlaying){
+			this.koltseg = jbt.koltseg;
 			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
 			jp.setButtonState(JatekButton.ButtonState.ACTIVE);
 			jp.setButtonState(jbt, JatekButton.ButtonState.SELECTED);
+		}
+	}
+	
+	public void varazseroFeldolgoz(){
+		if(mainFrame.isPlaying){
+			int varazsero = this.szaruman.lekerVarazsero();
+			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
+			jp.pbar.setValue(varazsero);
+			
+			
 		}
 	}
 	
@@ -199,14 +216,17 @@ public class Controller implements ActionListener {
 				
 				break;
 		}
-		
-		
+
+		this.szaruman.varazseroCsokkent(this.koltseg);
 
 		System.out.println("Mezoelemek frissitese");
 		if(mainFrame.isPlaying){
 			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
 			jp.statusChange();
 		}
+		
+		this.varazseroFeldolgoz();
+		
 		System.out.println("Kesz");
 		return;
 	}
@@ -263,7 +283,7 @@ public class Controller implements ActionListener {
 
 	public List<Ellenseg> getEllensegekAt(int x, int y) {
 		List<Ellenseg> ellenek = ellensegek.lekerLista();
-		List<Ellenseg> result = ellensegek.lekerLista();
+		List<Ellenseg> result = new ArrayList<Ellenseg>();
 		PalyaElem pe = palya.getElementByXY(x, y);
 		Ut ut = pe.lekerUt();
 		
