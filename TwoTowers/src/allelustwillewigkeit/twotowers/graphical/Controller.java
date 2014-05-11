@@ -152,6 +152,7 @@ public class Controller implements ActionListener {
 			jp.varazseroFeldolgoz(varazsero);
 			
 			if(this.koltseg > varazsero){
+				this.koltseg = 0;
 				this.lerakas = null;
 				this.vkSzinek = null;
 			}
