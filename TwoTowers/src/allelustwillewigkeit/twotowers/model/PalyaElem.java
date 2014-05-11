@@ -93,7 +93,6 @@ public class PalyaElem {
 
 		//this.beregisztralt = false; // Takaritas, hogy mas is fel tudjon
 									// iratkozni hozza.
-
 	}
 
 	/**
