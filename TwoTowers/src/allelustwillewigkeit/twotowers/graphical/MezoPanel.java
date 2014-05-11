@@ -174,8 +174,15 @@ public class MezoPanel extends AlphaPanel {
 		
 		if (ut != null && ut.vanAkadalyRajta())
 			roleImage = new ImageIcon(MezoPanel.class.getResource("res/akadaly.png")).getImage();
+		else if(ut != null && !ut.vanAkadalyRajta()){
+			roleImage = null;
+		}
+		
 		if (et != null && et.vanToronyRajta())
 			roleImage = new ImageIcon(MezoPanel.class.getResource("res/torony.png")).getImage();
+		else if (et != null && !et.vanToronyRajta()){
+			roleImage = null;
+		}
 	}
 	
 	public void doAction() {
