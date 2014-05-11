@@ -1,12 +1,14 @@
 package allelustwillewigkeit.twotowers.graphical;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.Point;
+import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.net.URL;
 
 import javax.swing.ImageIcon;
 
@@ -15,13 +17,20 @@ import allelustwillewigkeit.twotowers.model.PalyaElem;
 import allelustwillewigkeit.twotowers.model.Ut;
 
 public class MezoPanel extends AlphaPanel {
-	boolean selected;
+	static final Color ENABLED_C = new Color(255, 255, 255, 100);
+	static final Color DISABLED_C = new Color(255, 0, 0, 100);
+	
+	boolean focus = false;
+	boolean enabled = true;
 	Controller controller;
 	Point coord;
+	Image bgImage = null;
 	
 	private class MezoMouseListener implements MouseListener {  //EZT OTTHON NE PRÓBÁLJÁTOK KI
 		@Override
 		public void mouseClicked(MouseEvent arg0) {
+			MezoPanel mezo = (MezoPanel)arg0.getSource();
+			mezo.doAction();
 		}
 
 		@Override
@@ -52,81 +61,92 @@ public class MezoPanel extends AlphaPanel {
 		this.coord = coord;
 		this.controller = controller;
 	}
-	
+
 	@Override
 	protected void paintComponent(Graphics g) {
-		if (!selected) {
-			g.setColor(new Color(255, 255, 255, 255));
-			g.drawRect(0, 0, 52, 52);
+		if (!focus)
 			return;
-		}
 		
-		if(controller.getLerakas() != null){
-			PalyaElem pe = controller.getPalyaElemByXY(coord.x, coord.y);
-			
-			switch(controller.getLerakas()){
-				case TORONY:
-					EpitesiTerulet et = pe.lekerEpitesiTerulet();
-					if (et == null || et.vanToronyRajta()){
-						g.setColor(new Color(255, 0, 0, 100));
-					}else{
-						g.setColor(new Color(255, 255, 255, 100));
-					}
-					g.fillRect(0, 0, 52, 52);
-					
-					/*ImageIcon torony = new ImageIcon(MezoPanel.class.getResource("/res/toronyLerak_intermediate.png"));
-					g.drawImage(torony.getImage(), 0, 0, null);*/
-					break;	
-					
-				case AKADALY:
-					Ut ut = pe.lekerUt();
-					if (ut == null || ut.vanAkadalyRajta())
-						g.setColor(new Color(255, 0, 0, 100));
-					else
-						g.setColor(new Color(255, 255, 255, 100));
-					g.fillRect(0, 0, 52, 52);
-					
-					/*ImageIcon akadaly = new ImageIcon(MezoPanel.class.getResource("/res/akadalyLerak_intermediate.png"));
-					g.drawImage(akadaly.getImage(), 0, 0, null);*/
-					break;
-				case VARAZSKO:
-					//TODO varázskő overlay
-					Ut utt = pe.lekerUt();
-					EpitesiTerulet ett = pe.lekerEpitesiTerulet();
-					
-					if ((utt != null) && (utt.vanAkadalyRajta()))
-						g.setColor(new Color(255, 255, 255, 100));
-					else if((ett != null) && (ett.vanToronyRajta()))
-						g.setColor(new Color(255, 255, 255, 100));
-					else
-						g.setColor(new Color(255, 0, 0, 100));
-						
-					g.fillRect(0, 0, 52, 52);
-					
-					switch(controller.getVarazskoSzinek()){
-						case SARGA:
-							break;
-						case ZOLD:
-							break;
-						case PIROS:
-							break;
-						case KEK:
-							break;
-						case LILA:
-							break;
-						case LSD:
-							break;
-					}
-					
-					break;
-	
-			}
-		}
+		Graphics2D g2 = (Graphics2D) g;
+		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+		RenderingHints.VALUE_ANTIALIAS_ON);
+		
+		if (enabled)
+			g2.setColor(ENABLED_C);
+		else
+			g2.setColor(DISABLED_C);
+		
+		g2.fillRoundRect(0, 0, 52, 52, 8, 8);
+		if (bgImage != null)
+			g2.drawImage(bgImage, 0, 0, null);
 	}
 	
 	public void setSelected(boolean selected) {
-		this.selected = selected;
+		this.focus = selected;
+
+		if(selected && controller.getLerakas() != null) {
+			PalyaElem pe = controller.getPalyaElemByXY(coord.x, coord.y);
+			EpitesiTerulet et = pe.lekerEpitesiTerulet();
+			Ut ut = pe.lekerUt();
+			
+			this.enabled = true;
+			switch(controller.getLerakas()) {
+				case TORONY:
+					bgImage = new ImageIcon(MezoPanel.class.getResource("res/toronyLerak_intermediate.png")).getImage();
+					if (et == null || et.vanToronyRajta())
+						enabled = false;
+					break;	
+					
+				case AKADALY:
+					bgImage = new ImageIcon(MezoPanel.class.getResource("res/akadalyLerak_intermediate.png")).getImage();
+					if (ut == null || ut.vanAkadalyRajta())
+						enabled = false;
+					break;
+					
+				case VARAZSKO:
+					//TODO varázskő overlay
+					try {
+						if (ut != null)
+							ut.lekerAkadaly();
+						if (et != null)
+							et.lekerTorony();
+					} catch (Exception e) {
+						enabled = false;
+					}
+					
+					switch(controller.getVarazskoSzinek()) {
+						case SARGA:
+							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_sarga_intermediate.png")).getImage();
+							break;
+						case ZOLD:
+							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_zold_intermediate.png")).getImage();
+							break;
+						case PIROS:
+							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_piros_intermediate.png")).getImage();
+							break;
+						case KEK:
+							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_kek_intermediate.png")).getImage();
+							break;
+						case LILA:
+							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_lila_intermediate.png")).getImage();
+							break;
+						case LSD:
+							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_lsd_intermediate.png")).getImage();
+							break;
+					}
+					break;
+					
+				default:
+					bgImage = null;
+			} 
+		}
+		
 		this.repaint();
+	}
+	
+	public void doAction() {
+		if (this.enabled)
+			controller.actionPerformed(new ActionEvent(this, 0, "mezoKattint")); // ILYET SOHA TÖBBET NEM CSINÁLUNK, TRÓGER LVL 9000
 	}
 	
 	public Point getPosition() {

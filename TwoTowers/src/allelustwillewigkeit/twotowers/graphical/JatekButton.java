@@ -3,6 +3,8 @@ package allelustwillewigkeit.twotowers.graphical;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URL;
@@ -119,27 +121,30 @@ public class JatekButton extends JButton {
 		Dimension pSize = this.getPreferredSize();
 		Dimension size = this.getSize();
 		
+		Graphics2D g2 = (Graphics2D) g;
+		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+		RenderingHints.VALUE_ANTIALIAS_ON);
+		
 		switch(this.buttonState){
 			case ACTIVE:
 				switch(this.mouseState){
 					case NORMAL:
-						g.setColor(TRANSPARENT);
+						g2.setColor(TRANSPARENT);
 						break;
 					case HOVER:
-						g.setColor(HOVER);
+						g2.setColor(HOVER);
 						break;
 				}
 				break;
 			case INACTIVE:
-				g.setColor(TRANSPARENT);
+				g2.setColor(TRANSPARENT);
 				break;
 			case SELECTED:
-				g.setColor(SELECTED);
+				g2.setColor(SELECTED);
 				break;
 		}
 		
-		g.fillRoundRect((size.width-pSize.width)/2, (size.height-pSize.height)/2, pSize.width, pSize.height, (int)(pSize.width * 0.35), (int)(pSize.height * 0.35));
-		
+		g2.fillRoundRect((size.width-pSize.width)/2, (size.height-pSize.height)/2, pSize.width, pSize.height, (int)(pSize.width * 0.35), (int)(pSize.height * 0.35));
 	}
 	
 	

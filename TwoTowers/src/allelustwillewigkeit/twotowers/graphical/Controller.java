@@ -130,6 +130,10 @@ public class Controller implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent a) {
 		switch (a.getActionCommand()) {
+		case "mezoKattint":
+			//TODO mezőre kattintás
+			System.out.println("☢☢☢ LOL ☢☢☢");
+			break;
 		case "toronyLerak":
 			toronyLerak((JatekButton)a.getSource());
 			break;

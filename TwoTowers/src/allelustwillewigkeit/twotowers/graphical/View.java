@@ -2,6 +2,7 @@ package allelustwillewigkeit.twotowers.graphical;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.ToolTipManager;
 
 public class View extends JFrame {
 	Controller controller = null;
@@ -16,6 +17,8 @@ public class View extends JFrame {
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
 		this.isPlaying = false;
+		
+		ToolTipManager.sharedInstance().setInitialDelay(500);
 	}
 	
 	public void feluletEpit() {

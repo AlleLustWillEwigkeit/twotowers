@@ -45,8 +45,8 @@ public class JatekPanel extends JPanel {
 		
 		// ÉLETVONAL
 		AlphaPanel eletVonalSor = new AlphaPanel();
-		EletVonalProgressBar progressBar = new EletVonalProgressBar(1000);
-		progressBar.setValue(1000);
+		EletVonalProgressBar progressBar = new EletVonalProgressBar(controller.szaruman.lekerMaxVarazsero());
+		progressBar.setValue(0);
         progressBar.setStringPainted(true);
         progressBar.setToolTipText("Varázserő");
 		eletVonalSor.add(progressBar);
@@ -77,43 +77,41 @@ public class JatekPanel extends JPanel {
 		sargaVarazskoGomb.addActionListener(controller);
 		sargaVarazskoGomb.setToolTipText("Sárga varázskő lerakása");
 		akadalyGombSor.add(sargaVarazskoGomb);
-
 		this.gombok.add(sargaVarazskoGomb);
+		
 		// - PIROS VARÁZSKŐ
 		VarazskoButton pirosVarazskoGomb = new VarazskoButton("varazskoLerak_piros");
 		pirosVarazskoGomb.addActionListener(controller);
 		pirosVarazskoGomb.setToolTipText("Piros varázskő lerakása");
 		akadalyGombSor.add(pirosVarazskoGomb);
-
 		this.gombok.add(pirosVarazskoGomb);
+		
 		// - ZÖLD VARÁZSKŐ
 		VarazskoButton zoldVarazskoGomb = new VarazskoButton("varazskoLerak_zold");
 		zoldVarazskoGomb.addActionListener(controller);
-		zoldVarazskoGomb.setButtonState(JatekButton.ButtonState.INACTIVE);
 		zoldVarazskoGomb.setToolTipText("Zöld varázskő lerakása");
 		akadalyGombSor.add(zoldVarazskoGomb);
-
 		this.gombok.add(zoldVarazskoGomb);
+		
 		// - KÉK VARÁZSKŐ
 		VarazskoButton kekVarazskoGomb = new VarazskoButton("varazskoLerak_kek");
 		kekVarazskoGomb.addActionListener(controller);
 		kekVarazskoGomb.setToolTipText("Kék varázskő lerakása");
 		akadalyGombSor.add(kekVarazskoGomb);
-
 		this.gombok.add(kekVarazskoGomb);
+		
 		// - LILA VARÁZSKŐ
 		VarazskoButton lilaVarazskoGomb = new VarazskoButton("varazskoLerak_lila");
 		lilaVarazskoGomb.addActionListener(controller);
 		lilaVarazskoGomb.setToolTipText("Lila varázskő lerakása");
 		akadalyGombSor.add(lilaVarazskoGomb);
-
 		this.gombok.add(lilaVarazskoGomb);
+		
 		// - LSD VARÁZSKŐ
 		VarazskoButton lsdVarazskoGomb = new VarazskoButton("varazskoLerak_lsd");
 		lsdVarazskoGomb.addActionListener(controller);
 		lsdVarazskoGomb.setToolTipText("LSD varázskő lerakása"); // FIXME Na most ez itt így marad?
 		akadalyGombSor.add(lsdVarazskoGomb);
-
 		this.gombok.add(lsdVarazskoGomb);
 		
 		gombPanel.add(lerakhatoGombSor);
