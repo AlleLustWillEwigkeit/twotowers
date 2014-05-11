@@ -111,28 +111,32 @@ public class PalyaElem {
 	 * void legyelUt Letrehoz egy utat magara.
 	 */
 	public void legyelUt(int _id) {
-		this.ut = new Ut(this, _id);
+		if(!this.vanUtja())
+			this.ut = new Ut(this, _id);
 	}
 
 	/**
 	 * void legyelStart Letrehoz egy kezdohelyet magara.
 	 */
 	public void legyelStart(int _id) {
-		this.ut = new Start(this, _id);
+		if(!this.vanUtja())
+			this.ut = new Start(this, _id);
 	}
 
 	/**
 	 * void legyelStart Letrehoz egy kezdohelyet magara.
 	 */
 	public void legyelVegzetHegye(Jatekmotor _jm, int _id) {
-		this.ut = new VegzetHegye(_jm, this, _id);
+		if(!this.vanUtja())
+			this.ut = new VegzetHegye(_jm, this, _id);
 	}
 
 	/**
 	 * void legyelEpitesiTerulet Letrehoz egy epitesi teruletet magara.
 	 */
 	public void legyelEpitesiTerulet(int _id) {
-		this.epitesiTerulet = new EpitesiTerulet(this, _id);
+		if(!this.vanEpitesiTerulete())
+			this.epitesiTerulet = new EpitesiTerulet(this, _id);
 	}
 
 	/**

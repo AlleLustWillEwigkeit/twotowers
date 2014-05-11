@@ -79,6 +79,11 @@ public abstract class Ellenseg {
 			
 			Ut kov = this.ut;
 			if(lehetosegek.size() > 0){
+				System.out.print("Köv utak: ");
+				for(Ut u : lehetosegek){
+					System.out.print("("+u.palyaElem.palyaElemID+"),");
+				}
+				System.out.println();
 				kov = lehetosegek.get((int) (Math.random() * lehetosegek.size()));
 			}
 
