@@ -213,6 +213,9 @@ public class MezoPanel extends AlphaPanel {
 				tooltip.append("<br>Torony: hatótáv=" + t.lekerhatotav());
 				List<Varazsko> kovek = t.lekerVarazskovek();
 				for (Varazsko k : kovek) {
+					if (k.lekerVarazskoDictID() == 0)
+						continue;
+					
 					tooltip.append("<br>");
 					switch (k.lekerVarazskoDictID()) {
 					case 1:
