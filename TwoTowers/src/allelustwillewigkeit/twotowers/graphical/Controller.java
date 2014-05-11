@@ -3,7 +3,9 @@ package allelustwillewigkeit.twotowers.graphical;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.List;
 
+import allelustwillewigkeit.twotowers.model.Ellenseg;
 import allelustwillewigkeit.twotowers.model.Ellensegek;
 import allelustwillewigkeit.twotowers.model.Jatekmotor;
 import allelustwillewigkeit.twotowers.model.JosagosSzaruman;
@@ -60,6 +62,12 @@ public class Controller implements ActionListener {
 		
 		
 		mainFrame.jatekRajzol();
+		
+		try {
+			ellensegek.inditEllenseg(1, 1, 1000000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public PalyaElem getPalyaElemByXY(int x, int y){
@@ -67,7 +75,6 @@ public class Controller implements ActionListener {
 	}
 	
 	public void tick() {
-		
 	}
 	
 
@@ -211,7 +218,6 @@ public class Controller implements ActionListener {
 			//TODO mezőre kattintás
 			this.mezoKattint((MezoPanel)a.getSource());
 			System.out.println("Mezokattint kesz");
-			//System.out.println("☢☢☢ LOL ☢☢☢");
 			break;
 		case "toronyLerak":
 			toronyLerak((JatekButton)a.getSource());
@@ -253,5 +259,19 @@ public class Controller implements ActionListener {
 	
 	public VarazskoSzinek getVarazskoSzinek(){
 		return this.vkSzinek;
+	}
+
+	public List<Ellenseg> getEllensegekAt(int x, int y) {
+		List<Ellenseg> ellenek = ellensegek.lekerLista();
+		List<Ellenseg> result = ellensegek.lekerLista();
+		PalyaElem pe = palya.getElementByXY(x, y);
+		Ut ut = pe.lekerUt();
+		
+		for (Ellenseg e : ellenek) {
+			if (e.lekerut() == ut)
+				result.add(e);
+		}
+		
+		return result;
 	}
 }

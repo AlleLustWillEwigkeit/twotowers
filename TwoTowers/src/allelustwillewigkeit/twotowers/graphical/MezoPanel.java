@@ -9,9 +9,11 @@ import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 
+import allelustwillewigkeit.twotowers.model.Ellenseg;
 import allelustwillewigkeit.twotowers.model.EpitesiTerulet;
 import allelustwillewigkeit.twotowers.model.PalyaElem;
 import allelustwillewigkeit.twotowers.model.Ut;
@@ -23,6 +25,7 @@ public class MezoPanel extends AlphaPanel {
 	boolean focus = false;
 	boolean enabled = true;
 	Controller controller;
+	PalyaElem pe;
 	Point coord;
 	Image overlayImage = null;
 	Image roleImage = null;
@@ -61,6 +64,8 @@ public class MezoPanel extends AlphaPanel {
 		this.addMouseListener(new MezoMouseListener());
 		this.coord = coord;
 		this.controller = controller;
+		
+		this.pe = controller.getPalyaElemByXY(coord.x, coord.y);
 	}
 
 	@Override
@@ -82,13 +87,20 @@ public class MezoPanel extends AlphaPanel {
 		
 		if (roleImage != null)
 			g2.drawImage(roleImage, 0, 0, null);
+		
+		if (pe.lekerUt() != null) {
+			List<Ellenseg> ellensegek = controller.getEllensegekAt(coord.x, coord.y);
+			for (Ellenseg e : ellensegek) {
+				Image ellensegImg = new ImageIcon(MezoPanel.class.getResource("res/" + e.lekerFaj() + ".png")).getImage();
+				g2.drawImage(ellensegImg, 0, 0, null);
+			}
+		}
 	}
 	
 	public void setSelected(boolean selected) {
 		this.focus = selected;
 
 		if(selected && controller.getLerakas() != null) {
-			PalyaElem pe = controller.getPalyaElemByXY(coord.x, coord.y);
 			EpitesiTerulet et = pe.lekerEpitesiTerulet();
 			Ut ut = pe.lekerUt();
 			
@@ -155,7 +167,6 @@ public class MezoPanel extends AlphaPanel {
 	}
 	
 	public void statusChange() {
-		PalyaElem pe = controller.getPalyaElemByXY(coord.x, coord.y);
 		EpitesiTerulet et = pe.lekerEpitesiTerulet();
 		Ut ut = pe.lekerUt();
 		

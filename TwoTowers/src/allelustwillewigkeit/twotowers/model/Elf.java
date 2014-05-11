@@ -77,4 +77,9 @@ public class Elf extends Ellenseg {
 		return clone;
 	}
 
+	@Override
+	public String lekerFaj() {
+		return "elf";
+	}
+
 }

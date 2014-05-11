@@ -89,4 +89,9 @@ public class Hobbit extends Ellenseg {
 		clone.eleteroAllit(this.eletero);
 		return clone;
 	}
+
+	@Override
+	public String lekerFaj() {
+		return "hobbit";
+	}
 }

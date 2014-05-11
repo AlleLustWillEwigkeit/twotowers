@@ -135,4 +135,6 @@ public abstract class Ellenseg {
 			return ut;
 		throw new NullPointerException("Nincs utam!");
 	}
+	
+	public abstract String lekerFaj();
 }
