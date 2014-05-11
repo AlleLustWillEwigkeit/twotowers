@@ -27,7 +27,7 @@ public class Controller implements ActionListener {
 		protected Boolean doInBackground() throws Exception {
 			tc=0;
 			while(doWork){
-				Thread.sleep(1000);
+				Thread.sleep(100);
 				try{
 					if(motor.lekerallapot() == 0){
 						ellensegek.mindLep();
