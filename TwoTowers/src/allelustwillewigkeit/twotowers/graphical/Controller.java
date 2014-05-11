@@ -27,20 +27,32 @@ public class Controller implements ActionListener {
 		protected Boolean doInBackground() throws Exception {
 			tc=0;
 			while(doWork){
-				Thread.sleep(1000);
-				ellensegek.mindLep();
-				palya.tick();
-				tc++;
-				
-				/*Ellengeneralo logika*/
-				final int magicConstant = 5;
-				if(tc % magicConstant == 0){
-					for(int i = 0; i < tc/ magicConstant ; i++){
-						ellensegek.inditEllenseg(1,1, 10000 );
+				Thread.sleep(250);
+				try{
+					if(motor.lekerallapot() == 0){
+						ellensegek.mindLep();
+						palya.tick();
+						tc++;
+						
+						/*Ellengeneralo logika*/
+						final int magicConstant = 5;
+						if(tc % magicConstant == 0){
+							for(int i = 0; i < tc/ magicConstant ; i++){
+								ellensegek.inditEllenseg(1,1, 10000 );
+							}
+						}
+						
+						publish(tc);
+					}else{
+						doWork = false;
+						if(motor.lekerallapot() == 1337)
+							System.out.println("Nyertél!");
+						else
+							System.out.println("Vesztettél!");
 					}
+				}catch(Exception e){
+					System.out.println(e.getStackTrace());
 				}
-				
-				publish(tc);
 			}
 			
 			System.out.println("Tick végek");
@@ -103,13 +115,16 @@ public class Controller implements ActionListener {
 	
 	public void ujJatek() {
 
-		palya = new Palya(motor);
+		palya = new Palya();
+		motor = new Jatekmotor(ellensegek, szaruman, palya);
+		palya.init(motor);
 		start = palya.getStart(); // TODO 
 
 		szaruman = new JosagosSzaruman(500);
 		this.aktGomb = null;
 		
-		ellensegek = new Ellensegek(motor = new Jatekmotor(ellensegek, szaruman, palya), 500, start, szaruman);
+		ellensegek = new Ellensegek(motor, 500, start, szaruman);
+		
 		//Ellensegek(Jatekmotor _jatekmotor, int _osszletszam, Start _kezdohely, JosagosSzaruman _szaruman) {
 		
 

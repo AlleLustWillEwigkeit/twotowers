@@ -7,11 +7,17 @@ public class Palya {
 	PalyaElem[][] palyaelemek = new PalyaElem[12][12]; // TODO MODIFIED!
 	Start start;
 	VegzetHegye vegzet;
+	Jatekmotor jm;
 
 	/**
 	 * A palya konstruktora
 	 */
-	public Palya(Jatekmotor jm) {
+	public Palya() {
+		
+	}
+	
+	public void init(Jatekmotor jm){
+		this.jm = jm;
 		// MAPGENERÁLÁS	
 		int id = 1;
 		for (int x = 0; x < 12; x++) {
@@ -34,7 +40,7 @@ public class Palya {
 		//UT GENERATION MAGIC
 		palyaelemek[0][2].legyelStart(0);
 		
-		palyaelemek[11][11].legyelVegzetHegye(jm, 0);
+		palyaelemek[11][11].legyelVegzetHegye(this.jm, 0);
 		
 		start = (Start)palyaelemek[0][2].lekerUt();
 		vegzet = (VegzetHegye)palyaelemek[11][11].lekerUt();

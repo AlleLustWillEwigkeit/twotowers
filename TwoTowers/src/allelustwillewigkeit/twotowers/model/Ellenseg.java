@@ -93,6 +93,7 @@ public abstract class Ellenseg {
 			} catch (NullPointerException ex) {
 				this.beallitUt(kov);
 			}
+			
 			ut.raLep(this);
 		}
 	}
