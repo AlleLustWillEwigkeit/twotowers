@@ -27,11 +27,10 @@ public class Controller implements ActionListener {
 		protected Boolean doInBackground() throws Exception {
 			tc=0;
 			while(doWork){
+				Thread.sleep(1000);
 				ellensegek.mindLep();
 				palya.tick();
 				tc++;
-				
-				System.out.println(tc+". tick");
 				
 				/*Ellengeneralo logika*/
 				final int magicConstant = 5;
@@ -42,7 +41,6 @@ public class Controller implements ActionListener {
 				}
 				
 				publish(tc);
-				Thread.sleep(1000);
 			}
 			
 			System.out.println("Tick végek");
@@ -51,7 +49,13 @@ public class Controller implements ActionListener {
 		}
 		
 		@Override
+		protected void done() {
+			System.out.println("Worker kész");
+	    }
+		
+		@Override
 		protected void process(List<Integer> chunks) {
+			System.out.println(tc+". tick");
 			tickCounter = chunks.get(chunks.size()-1);
 			ujraRajzol();
 		}
