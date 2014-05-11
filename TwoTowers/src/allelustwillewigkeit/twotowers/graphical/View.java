@@ -1,8 +1,11 @@
 package allelustwillewigkeit.twotowers.graphical;
 
+import java.awt.Color;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.ToolTipManager;
+import javax.swing.UIManager;
 
 public class View extends JFrame {
 	Controller controller = null;
@@ -19,6 +22,7 @@ public class View extends JFrame {
 		this.isPlaying = false;
 		
 		ToolTipManager.sharedInstance().setInitialDelay(500);
+		UIManager.put("ToolTip.background", Color.WHITE);
 	}
 	
 	public void feluletEpit() {

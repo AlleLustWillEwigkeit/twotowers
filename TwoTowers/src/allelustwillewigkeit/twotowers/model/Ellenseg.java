@@ -129,6 +129,10 @@ public abstract class Ellenseg {
 	public int lekersebesseg() {
 		return sebesseg;
 	}
+	
+	public float lekerEletero() {
+		return eletero;
+	}
 
 	public Ut lekerut() throws NullPointerException {
 		if (ut != null)

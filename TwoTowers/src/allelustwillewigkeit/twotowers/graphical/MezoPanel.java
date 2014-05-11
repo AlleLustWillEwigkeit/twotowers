@@ -12,10 +12,13 @@ import java.awt.event.MouseListener;
 import java.util.List;
 
 import javax.swing.ImageIcon;
+import javax.swing.ToolTipManager;
 
+import allelustwillewigkeit.twotowers.model.Akadaly;
 import allelustwillewigkeit.twotowers.model.Ellenseg;
 import allelustwillewigkeit.twotowers.model.EpitesiTerulet;
 import allelustwillewigkeit.twotowers.model.PalyaElem;
+import allelustwillewigkeit.twotowers.model.Torony;
 import allelustwillewigkeit.twotowers.model.Ut;
 
 public class MezoPanel extends AlphaPanel {
@@ -66,6 +69,7 @@ public class MezoPanel extends AlphaPanel {
 		this.controller = controller;
 		
 		this.pe = controller.getPalyaElemByXY(coord.x, coord.y);
+		ToolTipManager.sharedInstance().registerComponent(this);
 	}
 
 	@Override
@@ -181,5 +185,39 @@ public class MezoPanel extends AlphaPanel {
 	
 	public Point getPosition() {
 		return coord;
+	}
+	
+	int a = 1;
+	@Override
+	public String getToolTipText() {
+		StringBuilder tooltip = new StringBuilder("<html>");
+		if (pe.vanEpitesiTerulete()) {
+			tooltip.append("<u>Építési terület</u>");
+			EpitesiTerulet et = pe.lekerEpitesiTerulet();
+			if (et.vanToronyRajta()) {
+				Torony t = et.lekerTorony();
+				tooltip.append("<br>Torony: hatótáv=" + t.lekerhatotav());
+				tooltip.append("</html>");
+			}
+		}
+		if (pe.vanUtja()) {
+			tooltip.append("<u>Út</u>");
+			Ut ut = pe.lekerUt();
+			
+			if (ut.vanAkadalyRajta()) {
+				Akadaly a = ut.lekerAkadaly();
+				tooltip.append("<br>Akadály: életerő:" + a.lekerhp());
+			}
+			
+			List<Ellenseg> ellensegek = controller.getEllensegekAt(coord.x, coord.y);
+			if (ellensegek.size() > 0)
+				tooltip.append("<br>Ellenségek:");
+			for (Ellenseg e : ellensegek) {
+				tooltip.append("<br>" + e.lekerFaj() + ", életerő:" + Float.toString(e.lekerEletero()));
+			}
+		}
+		tooltip.append("</html>");
+		
+		return tooltip.toString();
 	}
 }
