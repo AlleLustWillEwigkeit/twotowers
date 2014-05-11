@@ -6,6 +6,7 @@ import java.util.List;
 public class Palya {
 	PalyaElem[][] palyaelemek = new PalyaElem[12][12]; // TODO MODIFIED!
 	Start start;
+	VegzetHegye vegzet;
 
 	/**
 	 * A palya konstruktora
@@ -36,6 +37,7 @@ public class Palya {
 		palyaelemek[11][11].legyelVegzetHegye(jm, 0);
 		
 		start = (Start)palyaelemek[0][2].lekerUt();
+		vegzet = (VegzetHegye)palyaelemek[11][11].lekerUt();
 		
 	//	utatRak(0,2,1,2);
 		utatRak(1,2,1,5);
@@ -62,13 +64,17 @@ public class Palya {
 			}
 		}
 		
-		palyaelemek[0][2].lekerUt().beallitKovUt(palyaelemek[1][2].lekerUt());
+		start.beallitKovUt(palyaelemek[1][2].lekerUt());
 		
 		//END OF UT GENERATION MAGIC
 	}
 
 	public Start getStart(){
 		return start;
+	}
+	
+	public VegzetHegye getVegzet(){
+		return vegzet;
 	}
 	
 	public void EndBeregisztral(){

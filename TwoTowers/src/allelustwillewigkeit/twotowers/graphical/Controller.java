@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.SwingWorker;
+
 import allelustwillewigkeit.twotowers.model.Ellenseg;
 import allelustwillewigkeit.twotowers.model.Ellensegek;
 import allelustwillewigkeit.twotowers.model.Jatekmotor;
@@ -17,6 +19,44 @@ import allelustwillewigkeit.twotowers.model.Ut;
 import allelustwillewigkeit.twotowers.model.Varazsko;
 
 public class Controller implements ActionListener {
+	
+	private class Worker extends SwingWorker<Boolean, Integer>{
+		int tc;
+		
+		@Override
+		protected Boolean doInBackground() throws Exception {
+			tc=0;
+			while(doWork){
+				ellensegek.mindLep();
+				palya.tick();
+				tc++;
+				
+				System.out.println(tc+". tick");
+				
+				/*Ellengeneralo logika*/
+				final int magicConstant = 5;
+				if(tc % magicConstant == 0){
+					for(int i = 0; i < tc/ magicConstant ; i++){
+						ellensegek.inditEllenseg(1,1, 10000 );
+					}
+				}
+				
+				publish(tc);
+				Thread.sleep(1000);
+			}
+			
+			System.out.println("Tick végek");
+			
+			return true;
+		}
+		
+		@Override
+		protected void process(List<Integer> chunks) {
+			tickCounter = chunks.get(chunks.size()-1);
+			ujraRajzol();
+		}
+	}
+	
 	public enum Lerakas {
 		TORONY, AKADALY, VARAZSKO
 	};
@@ -36,7 +76,12 @@ public class Controller implements ActionListener {
 	int osszletszamAmiResetelunk = 500;
 	Lerakas lerakas;
 	VarazskoSzinek vkSzinek;
+	
+	Worker worker;
+	boolean doWork;
+	
 	int tickCounter;
+	
 	
 	public static void main(String[] args) throws IOException {
 		Controller c = new Controller();
@@ -48,6 +93,8 @@ public class Controller implements ActionListener {
 		
 		mainFrame.menuRajzol();
 		this.aktGomb = null;
+		this.doWork = false;
+		
 	}
 	
 	public void ujJatek() {
@@ -78,29 +125,14 @@ public class Controller implements ActionListener {
 		}
 		
 		this.ujraRajzol();
+		
+		this.doWork = true;
+		this.worker = new Worker();
+		this.worker.execute();
 	}
 	
 	public PalyaElem getPalyaElemByXY(int x, int y){
 		return palya.getElementByXY(x, y);
-	}
-	
-	public void tick() {
-		ellensegek.mindLep();
-		palya.tick();
-		tickCounter++;
-		
-		
-		
-		/*Ellengeneralo logika*/
-		final int magicConstant = 5;
-		if(tickCounter % magicConstant == 0){
-			for(int i = 0; i < tickCounter/ magicConstant ; i++){
-				
-				ellensegek.inditEllenseg(1,1, 10000 );
-				
-				
-			}
-		}
 	}
 	
 
