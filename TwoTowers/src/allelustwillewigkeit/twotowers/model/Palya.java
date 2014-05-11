@@ -39,22 +39,22 @@ public class Palya {
 		start = (Start)palyaelemek[0][2].lekerUt();
 		vegzet = (VegzetHegye)palyaelemek[11][11].lekerUt();
 		
-	//	utatRak(0,2,1,2);
-		utatRak(1,2,1,5);
-		utatRak(1,5,4,5);
-		utatRak(4,5,4,0);
-		utatRak(4,0,8,0);
-		utatRak(8,0,8,3);
+		utatRak(0,2,1,2);
+		utatRak(1,2,1,6);
+		utatRak(1,5,5,5);
+		utatRak(4,5,4,-1);
+		utatRak(4,0,9,0);
+		utatRak(8,0,8,4);
 		
-		utatRak(8,3,6,3);
-		utatRak(6,3,6,11);
-		utatRak(6,11,11,11);
+		utatRak(8,3,5,3);
+		utatRak(6,3,6,12);
+		utatRak(6,11,12,11);
 		
-		utatRak(8,3,10,3);
-		utatRak(10,3,10,7);
-		utatRak(10,7,8,7);
-		utatRak(8,7,8,11);
-		utatRak(8,11,11,11);
+		utatRak(8,3,11,3);
+		utatRak(10,3,10,8);
+		utatRak(10,7,7,7);
+		utatRak(8,7,8,12);
+		utatRak(8,11,12,11);
 		
 		for (int x = 0; x < 12; x++) {
 			for (int y = 0; y < 12; y++) {
@@ -68,6 +68,7 @@ public class Palya {
 		
 		//END OF UT GENERATION MAGIC
 	}
+
 
 	public Start getStart(){
 		return start;
@@ -88,20 +89,46 @@ public class Palya {
 	
 	private void utatRak(int kezdx, int kezdy, int vegx, int vegy){
 		if(kezdx == vegx){
-			for(int y = kezdy; y != vegy; y = kezdy < vegy ? ++y : --y){
-				palyaelemek[kezdx][y].legyelUt(0);
-			}
-			for(int y = kezdy;  kezdy < vegy ? y!=vegy-1 : y!=vegy+1 ; y = kezdy < vegy ? ++y : --y){
-				palyaelemek[kezdx][y].lekerUt().beallitKovUt(palyaelemek[kezdx][y+1].lekerUt());
-			}
 			
+			if(kezdy < vegy){
+				for(int y = kezdy; y != vegy;  ++y){
+					palyaelemek[kezdx][y].legyelUt(0);
+				}
+				for(int y = kezdy; y!=vegy-1 ;++y){
+					palyaelemek[kezdx][y].lekerUt().beallitKovUt(palyaelemek[kezdx][y+1].lekerUt());
+				}
+
+			}else{
+				for(int y = kezdy; y != vegy;  --y){
+					palyaelemek[kezdx][y].legyelUt(0);
+				}
+				for(int y = kezdy; y!=vegy+1; --y){
+					palyaelemek[kezdx][y].lekerUt().beallitKovUt(palyaelemek[kezdx][y-1].lekerUt());
+				}
+				
+			}
+
 		}else if (kezdy == vegy){
-			for(int x = kezdx; x != vegx; x = kezdx < vegx ? ++x : --x){
-				palyaelemek[x][kezdy].legyelUt(0);
+			
+			if(kezdx < vegx){
+				for(int x = kezdx; x != vegx;  ++x){
+					palyaelemek[x][kezdy].legyelUt(0);
+				}
+				for(int x = kezdx; x!=vegx-1; ++x){
+					palyaelemek[x][kezdy].lekerUt().beallitKovUt(palyaelemek[x+1][kezdy].lekerUt());
+				}
+				
 			}
-			for(int x = kezdx; kezdx < vegx ? x!=vegx-1 : x!=vegx+1; x = kezdx < vegx ? ++x : --x){
-				palyaelemek[x][kezdy].lekerUt().beallitKovUt(palyaelemek[x+1][kezdy].lekerUt());
+			else{
+				for(int x = kezdx; x != vegx;  --x){
+					palyaelemek[x][kezdy].legyelUt(0);
+				}
+				for(int x = kezdx; x!=vegx+1; --x){
+					palyaelemek[x][kezdy].lekerUt().beallitKovUt(palyaelemek[x-1][kezdy].lekerUt());
+				}
+				
 			}
+
 		}else{
 			return; //SHIT
 		}
