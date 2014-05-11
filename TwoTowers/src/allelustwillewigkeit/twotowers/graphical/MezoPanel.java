@@ -99,6 +99,7 @@ public class MezoPanel extends AlphaPanel {
 	
 	public void setSelected(boolean selected) {
 		this.focus = selected;
+		
 
 		if(selected && controller.getLerakas() != null) {
 			EpitesiTerulet et = pe.lekerEpitesiTerulet();
