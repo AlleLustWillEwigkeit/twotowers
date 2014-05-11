@@ -25,7 +25,7 @@ public class Controller implements ActionListener {
 		SARGA, ZOLD, PIROS, KEK, LILA, LSD
 	};
 	
-	int koltseg;
+	JatekButton aktGomb;
 	
 	View mainFrame;
 	Palya palya;
@@ -46,7 +46,7 @@ public class Controller implements ActionListener {
 		mainFrame.setVisible(true);
 		
 		mainFrame.menuRajzol();
-		this.koltseg = 0;
+		this.aktGomb = null;
 	}
 	
 	public void ujJatek() {
@@ -55,7 +55,7 @@ public class Controller implements ActionListener {
 		start = palya.getStart(); // TODO 
 
 		szaruman = new JosagosSzaruman(500);
-		this.koltseg = 0;
+		this.aktGomb = null;
 		
 		ellensegek = new Ellensegek(motor = new Jatekmotor(ellensegek, szaruman, palya), 500, start, szaruman);
 		//Ellensegek(Jatekmotor _jatekmotor, int _osszletszam, Start _kezdohely, JosagosSzaruman _szaruman) {
@@ -68,7 +68,6 @@ public class Controller implements ActionListener {
 		
 		
 		mainFrame.jatekRajzol();
-		this.varazseroFeldolgoz();
 		
 		//TESZT ELLENSÉG HOZZÁADÁSA
 		try {
@@ -76,6 +75,8 @@ public class Controller implements ActionListener {
 		} catch (Exception e) {
 			
 		}
+		
+		this.ujraRajzol();
 	}
 	
 	public PalyaElem getPalyaElemByXY(int x, int y){
@@ -138,7 +139,7 @@ public class Controller implements ActionListener {
 	
 	public void setActualButton(JatekButton jbt){
 		if(mainFrame.isPlaying){
-			this.koltseg = jbt.koltseg;
+			this.aktGomb = jbt;
 			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
 			jp.setButtonState(JatekButton.ButtonState.ACTIVE);
 			jp.setButtonState(jbt, JatekButton.ButtonState.SELECTED);
@@ -151,8 +152,8 @@ public class Controller implements ActionListener {
 			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
 			jp.varazseroFeldolgoz(varazsero);
 			
-			if(this.koltseg > varazsero){
-				this.koltseg = 0;
+			if((this.aktGomb != null) && (this.aktGomb.koltseg > varazsero)){
+				this.aktGomb = null;
 				this.lerakas = null;
 				this.vkSzinek = null;
 			}
@@ -160,22 +161,15 @@ public class Controller implements ActionListener {
 	}
 	
 	public void mezoKattint(MezoPanel mezo){
-		System.out.println("Mezo kattintas");
 		if(this.getLerakas() == null) return;
-		
-		System.out.println("Van gomb kivalasztva");
 		PalyaElem pe = this.getPalyaElemByXY(mezo.coord.x, mezo.coord.y);
 		
 		switch(this.getLerakas()){
 			case TORONY:
-				System.out.println("Torony lerakas");
 				if(!pe.vanEpitesiTerulete()) return;
-				System.out.println("Van epitesi terulet");
 				if(pe.lekerEpitesiTerulet().vanToronyRajta()) return;
-				System.out.println("Nincs torony rajta");
 				
 				pe.lekerEpitesiTerulet().lerakTornyot(0);
-				System.out.println("Torony lerakása sikerult");
 				break;
 			case AKADALY:
 				if(!pe.vanUtja()) return;
@@ -224,17 +218,7 @@ public class Controller implements ActionListener {
 				break;
 		}
 
-		this.szaruman.varazseroCsokkent(this.koltseg);
-
-		System.out.println("Mezoelemek frissitese");
-		if(mainFrame.isPlaying){
-			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
-			jp.statusChange();
-		}
-		
-		this.varazseroFeldolgoz();
-		
-		System.out.println("Kesz");
+		this.szaruman.varazseroCsokkent(this.aktGomb.koltseg);
 		return;
 	}
 	
@@ -278,7 +262,22 @@ public class Controller implements ActionListener {
 			break;
 		}
 
+		this.ujraRajzol();
+	}
+	
+	public void ujraRajzol(){
 		this.mainFrame.repaint();
+		this.varazseroFeldolgoz();
+		
+		if(mainFrame.isPlaying){
+			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
+			jp.statusChange();
+			
+			if(this.aktGomb != null){
+				jp.setButtonState(this.aktGomb, JatekButton.ButtonState.SELECTED);
+			}
+		}
+		
 	}
 
 	public Lerakas getLerakas() {
