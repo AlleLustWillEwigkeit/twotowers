@@ -89,6 +89,20 @@ public class Palya {
 		
 		return tList;
 	}
+	
+	public List<Akadaly> lekerAkadalyok(){
+		List<Akadaly> tList = new ArrayList<Akadaly>();
+		
+		for (PalyaElem[] plist : this.palyaelemek) {
+			for( PalyaElem p : plist ){
+				if(p.vanUtja() && p.lekerUt().vanAkadalyRajta()){
+					tList.add(p.lekerUt().lekerAkadaly());
+				}	
+			}
+		}
+		
+		return tList;
+	}
 
 
 	public Start getStart(){

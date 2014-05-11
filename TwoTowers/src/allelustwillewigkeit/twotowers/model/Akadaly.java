@@ -18,6 +18,8 @@ public class Akadaly implements Varazskovezheto {
 	public Akadaly(Ut u, int _id) throws NullPointerException {
 		if (u == null)
 			throw new NullPointerException();
+		
+		this.eletero = 250.0f;
 
 		this.ut = u;
 		this.id = _id;
@@ -43,13 +45,14 @@ public class Akadaly implements Varazskovezheto {
 	 * @param int mennyit
 	 */
 	public void sebzodik(float mennyit) {
+		
 		if (mennyit <= 0)
 			return;
 
-		float szorzo = 0.0f;
+		float szorzo = 1.0f;
 
 		for (Varazsko v : varazsko) {
-			szorzo += v.lekerEleteroSzorzo();
+			szorzo *= v.lekerEleteroSzorzo();
 		}
 
 		eletero -= mennyit / szorzo;

@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.swing.SwingWorker;
 
+import allelustwillewigkeit.twotowers.model.Akadaly;
 import allelustwillewigkeit.twotowers.model.Ellenseg;
 import allelustwillewigkeit.twotowers.model.Ellensegek;
 import allelustwillewigkeit.twotowers.model.Jatekmotor;
@@ -43,7 +44,7 @@ public class Controller implements ActionListener {
 							}
 						}
 						
-						if(tc % (int) (Math.random() * 100) == 0){
+						if(tc % (int) (1+(Math.random() * 100)) == 0){
 							List<Torony> lehetosegek = palya.lekerKodositetlenTornyok();
 							if(lehetosegek.size() > 0){
 								Torony t = lehetosegek.get((int) (Math.random() * lehetosegek.size()));
