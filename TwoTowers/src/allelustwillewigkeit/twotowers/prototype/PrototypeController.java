@@ -27,7 +27,7 @@ import allelustwillewigkeit.twotowers.model.Torony;
 import allelustwillewigkeit.twotowers.model.Torp;
 import allelustwillewigkeit.twotowers.model.Ut;
 import allelustwillewigkeit.twotowers.model.Varazsko;
-
+/*
 public class PrototypeController {
 	private static final int MAXVARAZSERO = 1000;
 	private static boolean palyaszerkeszt = false;
@@ -676,7 +676,7 @@ public class PrototypeController {
 	 * ellen.inditEllenseg(new Ember(start, ellen, 1, id++));
 	 * 
 	 * } } catch (Exception e) { kiir(e.getMessage()); } }
-	 */
+	 * /
 
 	public static void hullamIndit(String[] cmd) {
 		int szint = Integer.parseInt(cmd[1]);
@@ -979,3 +979,4 @@ public class PrototypeController {
 		}
 	}
 }
+*/
