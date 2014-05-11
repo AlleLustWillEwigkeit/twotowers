@@ -60,14 +60,14 @@ public class JatekPanel extends JPanel {
 		AlphaPanel lerakhatoGombSor = new AlphaPanel();
 		lerakhatoGombSor.setLayout(new GridLayout(1, 2));
 		// - TORONY LERAK
-		JatekButton toronyLerakGomb = new JatekButton("toronyLerak",20);
+		JatekButton toronyLerakGomb = new JatekButton("toronyLerak", 175);
 		toronyLerakGomb.addActionListener(controller);
 		toronyLerakGomb.setToolTipText("Torony lerakása");
 		lerakhatoGombSor.add(toronyLerakGomb);
 		this.gombok.add(toronyLerakGomb);
 		
 		// - AKADÁLY LERAK
-		JatekButton akadalyLerakGomb = new JatekButton("akadalyLerak",30);
+		JatekButton akadalyLerakGomb = new JatekButton("akadalyLerak", 200);
 		akadalyLerakGomb.addActionListener(controller);
 		akadalyLerakGomb.setToolTipText("Akadály lerakása");
 		lerakhatoGombSor.add(akadalyLerakGomb);
@@ -77,42 +77,42 @@ public class JatekPanel extends JPanel {
 		AlphaPanel akadalyGombSor = new AlphaPanel();
 		akadalyGombSor.setLayout(new GridLayout(2, 3));
 		// - SÁRGA VARÁZSKŐ
-		VarazskoButton sargaVarazskoGomb = new VarazskoButton("varazskoLerak_sarga",40);
+		VarazskoButton sargaVarazskoGomb = new VarazskoButton("varazskoLerak_sarga", 40);
 		sargaVarazskoGomb.addActionListener(controller);
 		sargaVarazskoGomb.setToolTipText("Sárga varázskő lerakása");
 		akadalyGombSor.add(sargaVarazskoGomb);
 		this.gombok.add(sargaVarazskoGomb);
 		
 		// - PIROS VARÁZSKŐ
-		VarazskoButton pirosVarazskoGomb = new VarazskoButton("varazskoLerak_piros",40);
+		VarazskoButton pirosVarazskoGomb = new VarazskoButton("varazskoLerak_piros", 40);
 		pirosVarazskoGomb.addActionListener(controller);
 		pirosVarazskoGomb.setToolTipText("Piros varázskő lerakása");
 		akadalyGombSor.add(pirosVarazskoGomb);
 		this.gombok.add(pirosVarazskoGomb);
 		
 		// - ZÖLD VARÁZSKŐ
-		VarazskoButton zoldVarazskoGomb = new VarazskoButton("varazskoLerak_zold",40);
+		VarazskoButton zoldVarazskoGomb = new VarazskoButton("varazskoLerak_zold", 40);
 		zoldVarazskoGomb.addActionListener(controller);
 		zoldVarazskoGomb.setToolTipText("Zöld varázskő lerakása");
 		akadalyGombSor.add(zoldVarazskoGomb);
 		this.gombok.add(zoldVarazskoGomb);
 		
 		// - KÉK VARÁZSKŐ
-		VarazskoButton kekVarazskoGomb = new VarazskoButton("varazskoLerak_kek",50);
+		VarazskoButton kekVarazskoGomb = new VarazskoButton("varazskoLerak_kek", 50);
 		kekVarazskoGomb.addActionListener(controller);
 		kekVarazskoGomb.setToolTipText("Kék varázskő lerakása");
 		akadalyGombSor.add(kekVarazskoGomb);
 		this.gombok.add(kekVarazskoGomb);
 		
 		// - LILA VARÁZSKŐ
-		VarazskoButton lilaVarazskoGomb = new VarazskoButton("varazskoLerak_lila",50);
+		VarazskoButton lilaVarazskoGomb = new VarazskoButton("varazskoLerak_lila", 50);
 		lilaVarazskoGomb.addActionListener(controller);
 		lilaVarazskoGomb.setToolTipText("Lila varázskő lerakása");
 		akadalyGombSor.add(lilaVarazskoGomb);
 		this.gombok.add(lilaVarazskoGomb);
 		
 		// - LSD VARÁZSKŐ
-		VarazskoButton lsdVarazskoGomb = new VarazskoButton("varazskoLerak_lsd",60);
+		VarazskoButton lsdVarazskoGomb = new VarazskoButton("varazskoLerak_lsd", 60);
 		lsdVarazskoGomb.addActionListener(controller);
 		lsdVarazskoGomb.setToolTipText("LSD varázskő lerakása");
 		akadalyGombSor.add(lsdVarazskoGomb);

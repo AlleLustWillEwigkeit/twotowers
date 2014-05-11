@@ -83,6 +83,7 @@ public class Controller implements ActionListener {
 	}
 	
 	public void tick() {
+		ellensegek.mindLep();
 	}
 	
 
