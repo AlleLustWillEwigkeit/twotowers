@@ -22,6 +22,16 @@ public class JosagosSzaruman {
 		if (this.varazsero > this.maxVarazsero)
 			this.varazsero = this.maxVarazsero;
 	}
+	
+	public void varazseroCsokkent(int mennyivel){
+		this.varazsero -= mennyivel;
+		if (this.varazsero < 0)
+			this.varazsero = 0;
+	}
+	
+	public int lekerVarazsero(){
+		return this.varazsero;
+	}
 
 	/**
 	 * Varazsko lekerKivalasztottVarazsko Visszaadja a kivalasztott varaszkovet.

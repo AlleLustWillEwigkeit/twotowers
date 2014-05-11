@@ -19,6 +19,7 @@ public class JatekPanel extends JPanel {
 	
 	ArrayList<JatekButton> gombok;
 	ArrayList<MezoPanel> mezok;
+	EletVonalProgressBar pbar;
 	
 	public JatekPanel(Controller controller) {
 		this.controller = controller;
@@ -48,25 +49,25 @@ public class JatekPanel extends JPanel {
 		
 		// ÉLETVONAL
 		AlphaPanel eletVonalSor = new AlphaPanel();
-		EletVonalProgressBar progressBar = new EletVonalProgressBar(controller.szaruman.lekerMaxVarazsero());
-		progressBar.setValue(0);
-        progressBar.setStringPainted(true);
-        progressBar.setToolTipText("Varázserő");
-		eletVonalSor.add(progressBar);
+		pbar = new EletVonalProgressBar(controller.szaruman.lekerMaxVarazsero());
+		pbar.setValue(0);
+		pbar.setStringPainted(true);
+		pbar.setToolTipText("Varázserő");
+		eletVonalSor.add(pbar);
 		gombPanel.add(eletVonalSor);
 		
 		// ELSŐDLEGES GOMBOK - TORONY LEREAK / AKADÁLY LERAK
 		AlphaPanel lerakhatoGombSor = new AlphaPanel();
 		lerakhatoGombSor.setLayout(new GridLayout(1, 2));
 		// - TORONY LERAK
-		JatekButton toronyLerakGomb = new JatekButton("toronyLerak");
+		JatekButton toronyLerakGomb = new JatekButton("toronyLerak",20);
 		toronyLerakGomb.addActionListener(controller);
 		toronyLerakGomb.setToolTipText("Torony lerakása");
 		lerakhatoGombSor.add(toronyLerakGomb);
 		this.gombok.add(toronyLerakGomb);
 		
 		// - AKADÁLY LERAK
-		JatekButton akadalyLerakGomb = new JatekButton("akadalyLerak");
+		JatekButton akadalyLerakGomb = new JatekButton("akadalyLerak",30);
 		akadalyLerakGomb.addActionListener(controller);
 		akadalyLerakGomb.setToolTipText("Akadály lerakása");
 		lerakhatoGombSor.add(akadalyLerakGomb);
@@ -76,42 +77,42 @@ public class JatekPanel extends JPanel {
 		AlphaPanel akadalyGombSor = new AlphaPanel();
 		akadalyGombSor.setLayout(new GridLayout(2, 3));
 		// - SÁRGA VARÁZSKŐ
-		VarazskoButton sargaVarazskoGomb = new VarazskoButton("varazskoLerak_sarga");
+		VarazskoButton sargaVarazskoGomb = new VarazskoButton("varazskoLerak_sarga",40);
 		sargaVarazskoGomb.addActionListener(controller);
 		sargaVarazskoGomb.setToolTipText("Sárga varázskő lerakása");
 		akadalyGombSor.add(sargaVarazskoGomb);
 		this.gombok.add(sargaVarazskoGomb);
 		
 		// - PIROS VARÁZSKŐ
-		VarazskoButton pirosVarazskoGomb = new VarazskoButton("varazskoLerak_piros");
+		VarazskoButton pirosVarazskoGomb = new VarazskoButton("varazskoLerak_piros",40);
 		pirosVarazskoGomb.addActionListener(controller);
 		pirosVarazskoGomb.setToolTipText("Piros varázskő lerakása");
 		akadalyGombSor.add(pirosVarazskoGomb);
 		this.gombok.add(pirosVarazskoGomb);
 		
 		// - ZÖLD VARÁZSKŐ
-		VarazskoButton zoldVarazskoGomb = new VarazskoButton("varazskoLerak_zold");
+		VarazskoButton zoldVarazskoGomb = new VarazskoButton("varazskoLerak_zold",40);
 		zoldVarazskoGomb.addActionListener(controller);
 		zoldVarazskoGomb.setToolTipText("Zöld varázskő lerakása");
 		akadalyGombSor.add(zoldVarazskoGomb);
 		this.gombok.add(zoldVarazskoGomb);
 		
 		// - KÉK VARÁZSKŐ
-		VarazskoButton kekVarazskoGomb = new VarazskoButton("varazskoLerak_kek");
+		VarazskoButton kekVarazskoGomb = new VarazskoButton("varazskoLerak_kek",50);
 		kekVarazskoGomb.addActionListener(controller);
 		kekVarazskoGomb.setToolTipText("Kék varázskő lerakása");
 		akadalyGombSor.add(kekVarazskoGomb);
 		this.gombok.add(kekVarazskoGomb);
 		
 		// - LILA VARÁZSKŐ
-		VarazskoButton lilaVarazskoGomb = new VarazskoButton("varazskoLerak_lila");
+		VarazskoButton lilaVarazskoGomb = new VarazskoButton("varazskoLerak_lila",50);
 		lilaVarazskoGomb.addActionListener(controller);
 		lilaVarazskoGomb.setToolTipText("Lila varázskő lerakása");
 		akadalyGombSor.add(lilaVarazskoGomb);
 		this.gombok.add(lilaVarazskoGomb);
 		
 		// - LSD VARÁZSKŐ
-		VarazskoButton lsdVarazskoGomb = new VarazskoButton("varazskoLerak_lsd");
+		VarazskoButton lsdVarazskoGomb = new VarazskoButton("varazskoLerak_lsd",60);
 		lsdVarazskoGomb.addActionListener(controller);
 		lsdVarazskoGomb.setToolTipText("LSD varázskő lerakása"); // FIXME Na most ez itt így marad?
 		akadalyGombSor.add(lsdVarazskoGomb);
@@ -134,6 +135,16 @@ public class JatekPanel extends JPanel {
 	
 	public void setButtonState(JatekButton jb, JatekButton.ButtonState bs, boolean force){
 		jb.setButtonState(bs,force);
+	}
+	
+	public void varazseroFeldolgoz(int varazsero){
+		for(JatekButton gmb : this.gombok){
+			if(gmb.koltseg <= varazsero){
+				this.setButtonState(gmb, JatekButton.ButtonState.ACTIVE, true);
+			}else{
+				this.setButtonState(gmb, JatekButton.ButtonState.INACTIVE, true);
+			}
+		}
 	}
 	
 	public void statusChange(){

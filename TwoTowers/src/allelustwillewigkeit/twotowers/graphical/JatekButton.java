@@ -27,6 +27,7 @@ public class JatekButton extends JButton {
 	String name;
 	MouseState mouseState;
 	ButtonState buttonState;
+	int koltseg;
 	
 	private class ButtonMouseListener implements MouseListener {
 		@Override
@@ -61,8 +62,9 @@ public class JatekButton extends JButton {
 	ImageIcon activeIcon;
 	ImageIcon inActiveIcon;
 	
-	public JatekButton(String name) {
+	public JatekButton(String name, int koltseg) {
 		this.name = name;
+		this.koltseg = koltseg;
 		this.setActionCommand(name);
 		this.setPreferredSize(new Dimension(68, 68));
 		this.setBorderPainted(false);
