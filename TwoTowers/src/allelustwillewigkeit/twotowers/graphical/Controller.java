@@ -59,9 +59,9 @@ public class Controller implements ActionListener {
 		@Override
 		protected void done() {
 			if(motor.lekerallapot() == 1337)
-				System.out.println("Nyertél!");
+				mainFrame.gyozelemRajz();
 			else
-				System.out.println("Vesztettél!");
+				mainFrame.veresegRajz();
 			
 			System.out.println("Worker kész");
 	    }
@@ -324,6 +324,9 @@ public class Controller implements ActionListener {
 			break;
 		case "ujJatek":
 			ujJatek();
+			break;
+		case "menuRajzol":
+			mainFrame.menuRajzol();
 			break;
 		case "kilep":
 			mainFrame.kilep();

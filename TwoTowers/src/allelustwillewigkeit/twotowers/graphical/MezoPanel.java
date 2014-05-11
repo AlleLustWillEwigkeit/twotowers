@@ -211,6 +211,31 @@ public class MezoPanel extends AlphaPanel {
 			if (et.vanToronyRajta()) {
 				Torony t = et.lekerTorony();
 				tooltip.append("<br>Torony: hatótáv=" + t.lekerhatotav());
+				List<Varazsko> kovek = t.lekerVarazskovek();
+				for (Varazsko k : kovek) {
+					tooltip.append("<br>");
+					switch (k.lekerVarazskoDictID()) {
+					case 1:
+						tooltip.append("Nyílas");
+						break;
+					case 2:
+						tooltip.append("Tűzgolyó");
+						break;
+					case 3:
+						tooltip.append("Szikla");
+						break;
+					case 4:
+						tooltip.append("Dárda");
+						break;
+					case 5:
+						tooltip.append("Szelő");
+						break;
+					case 6:
+						tooltip.append("Köd");
+						break;
+					}
+					tooltip.append(" varázskő, hatótávszorzó: " + k.lekerHatotavSzorzo() + " életerőszorzó: " + k.lekerEleteroSzorzo());
+				}
 				tooltip.append("</html>");
 			}
 		}
