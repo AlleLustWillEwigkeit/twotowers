@@ -11,6 +11,7 @@ import allelustwillewigkeit.twotowers.model.Palya;
 import allelustwillewigkeit.twotowers.model.PalyaElem;
 import allelustwillewigkeit.twotowers.model.Start;
 import allelustwillewigkeit.twotowers.model.Ut;
+import allelustwillewigkeit.twotowers.model.Varazsko;
 
 public class Controller implements ActionListener {
 	public enum Lerakas {
@@ -127,12 +128,90 @@ public class Controller implements ActionListener {
 		}
 	}
 	
+	public void mezoKattint(MezoPanel mezo){
+		System.out.println("Mezo kattintas");
+		if(this.getLerakas() == null) return;
+		
+		System.out.println("Van gomb kivalasztva");
+		PalyaElem pe = this.getPalyaElemByXY(mezo.coord.x, mezo.coord.y);
+		
+		switch(this.getLerakas()){
+			case TORONY:
+				System.out.println("Torony lerakas");
+				if(!pe.vanEpitesiTerulete()) return;
+				System.out.println("Van epitesi terulet");
+				if(pe.lekerEpitesiTerulet().vanToronyRajta()) return;
+				System.out.println("Nincs torony rajta");
+				
+				pe.lekerEpitesiTerulet().lerakTornyot(0);
+				System.out.println("Torony lerakása sikerult");
+				break;
+			case AKADALY:
+				if(!pe.vanUtja()) return;
+				if(pe.lekerUt().vanAkadalyRajta()) return;
+				
+				pe.lekerUt().lerakAkadaly(0);
+				break;
+			case VARAZSKO:
+				if(!pe.vanEpitesiTerulete() && !pe.vanUtja()) return;
+				
+				if(this.getVarazskoSzinek() == null) return;
+				Varazsko v = null;
+				switch(this.getVarazskoSzinek()){
+					case SARGA:
+						v = new Varazsko(1,0);
+						break;
+					case ZOLD: 
+						v = new Varazsko(3,0); 
+						break;
+					case PIROS: 
+						v = new Varazsko(2,0); 
+						break;
+					case KEK:  
+						v = new Varazsko(4,0);
+						break;
+					case LILA:
+						v = new Varazsko(5,0);  
+						break;
+					case LSD: 
+						v = new Varazsko(6,0);
+						break;
+				}
+				
+				if(pe.vanEpitesiTerulete()){
+					if(!pe.lekerEpitesiTerulet().vanToronyRajta()) return;
+					
+					pe.lekerEpitesiTerulet().lekerTorony().felkovez(v);
+				}
+				
+				if(pe.vanUtja()){
+					if(!pe.lekerUt().vanAkadalyRajta()) return;
+					
+					pe.lekerUt().lekerAkadaly().felkovez(v);
+				}
+				
+				break;
+		}
+		
+		
+
+		System.out.println("Mezoelemek frissitese");
+		if(mainFrame.isPlaying){
+			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
+			jp.statusChange();
+		}
+		System.out.println("Kesz");
+		return;
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent a) {
 		switch (a.getActionCommand()) {
 		case "mezoKattint":
 			//TODO mezőre kattintás
-			System.out.println("☢☢☢ LOL ☢☢☢");
+			this.mezoKattint((MezoPanel)a.getSource());
+			System.out.println("Mezokattint kesz");
+			//System.out.println("☢☢☢ LOL ☢☢☢");
 			break;
 		case "toronyLerak":
 			toronyLerak((JatekButton)a.getSource());

@@ -68,23 +68,25 @@ public class PalyaElem {
 	 */
 	public void beregisztral(Torony torony, int tavolsag) {
 
+		System.out.println("Pe: "+this.palyaElemID+", Tav: "+tavolsag);
+		
 		if (torony == null)
 			return;
 
+		if (tavolsag <= 0)
+			return;
+		
 		if (this.beregisztralt)
 			return;
-
-		if (tavolsag == 0)
-			return;
+		
+		this.beregisztralt = true; // Ne kelljen meg egyszer foloslegesen
+								   // figyelni ot.
 
 		if (this.vanUtja())
 			this.lekerUt().feliratkozik(torony);
 
-		this.beregisztralt = true; // Ne kelljen meg egyszer foloslegesen
-									// figyelni ot.
-
 		for (PalyaElem pe : szomszedok) {
-			pe.beregisztral(torony, tavolsag--);
+			pe.beregisztral(torony, --tavolsag);
 		}
 
 		this.beregisztralt = false; // Takaritas, hogy mas is fel tudjon

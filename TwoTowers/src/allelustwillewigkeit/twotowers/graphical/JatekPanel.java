@@ -18,11 +18,13 @@ public class JatekPanel extends JPanel {
 	Image hatter;
 	
 	ArrayList<JatekButton> gombok;
+	ArrayList<MezoPanel> mezok;
 	
 	public JatekPanel(Controller controller) {
 		this.controller = controller;
 		this.setLayout(null);
 		this.gombok = new ArrayList<JatekButton>();
+		this.mezok = new ArrayList<MezoPanel>();
 		
 		URL resource = MenuPanel.class.getResource("res/palya.jpg");
 		ImageIcon ii = new ImageIcon(resource);
@@ -34,6 +36,7 @@ public class JatekPanel extends JPanel {
 				mezo.setSize(52, 52);
 				mezo.setLocation(27 + (x * 50), 50 + (y * 50));
 				this.add(mezo);
+				this.mezok.add(mezo);
 			}
 		}
 		
@@ -131,6 +134,12 @@ public class JatekPanel extends JPanel {
 	
 	public void setButtonState(JatekButton jb, JatekButton.ButtonState bs, boolean force){
 		jb.setButtonState(bs,force);
+	}
+	
+	public void statusChange(){
+		for(MezoPanel mezo : this.mezok){
+			mezo.statusChange();
+		}
 	}
 	
 	@Override
