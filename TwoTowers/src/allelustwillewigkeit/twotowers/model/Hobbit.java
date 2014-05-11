@@ -8,11 +8,11 @@ public class Hobbit extends Ellenseg {
 	 * @param ellens
 	 */
 	public Hobbit(Ut start, Ellensegek ellens, int szint, int _id)
-			throws Exception {
+			{
 		super(start, ellens, szint, _id);
 
-		if ((szint < 0) || (szint > 5))
-			throw new Exception("A szintnek 1, es 5 kozott kell lennie");
+		/*if ((szint < 0) || (szint > 5))
+		throw new Exception("A szintnek 1, es 5 kozott kelle lennie");*/
 
 		this.varazseroNovel = 10;
 		this.eletero = 5 * (szint);
@@ -28,6 +28,9 @@ public class Hobbit extends Ellenseg {
 			break;
 		case 5:
 			this.sebzes = 3;
+			break;
+		default:
+			this.sebzes = 4;
 			break;
 		}
 

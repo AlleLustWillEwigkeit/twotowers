@@ -36,6 +36,7 @@ public class Controller implements ActionListener {
 	int osszletszamAmiResetelunk = 500;
 	Lerakas lerakas;
 	VarazskoSzinek vkSzinek;
+	int tickCounter;
 	
 	public static void main(String[] args) throws IOException {
 		Controller c = new Controller();
@@ -84,6 +85,21 @@ public class Controller implements ActionListener {
 	
 	public void tick() {
 		ellensegek.mindLep();
+		palya.tick();
+		tickCounter++;
+		
+		
+		
+		/*Ellengeneralo logika*/
+		final int magicConstant = 5;
+		if(tickCounter % magicConstant == 0){
+			for(int i = 0; i < tickCounter/ magicConstant ; i++){
+				
+				ellensegek.inditEllenseg(1,1, 10000 );
+				
+				
+			}
+		}
 	}
 	
 

@@ -104,7 +104,7 @@ public class Ellensegek {
 		osszLetszam = ertek;
 	}
 
-	public void inditEllenseg(int i, int szint, int _id) throws Exception {
+	public void inditEllenseg(int i, int szint, int _id) {
 		// TODO EZ KURVASZAR MERT SZeTRANDOMOZZA AMIKOR NEM IS KELLENE
 		if (i <= 0)
 			return;

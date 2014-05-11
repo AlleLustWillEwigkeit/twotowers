@@ -8,11 +8,11 @@ public class Ember extends Ellenseg {
 	 * @param ellens
 	 */
 	public Ember(Ut start, Ellensegek ellens, int szint, int _id)
-			throws Exception {
+			 {
 		super(start, ellens, szint, _id);
 
-		if ((szint < 0) || (szint > 5))
-			throw new Exception("A szintnek 1, es 5 kozott kelle lennie");
+		/*if ((szint < 0) || (szint > 5))
+		throw new Exception("A szintnek 1, es 5 kozott kelle lennie");*/ 
 
 		this.varazseroNovel = 10;
 		this.eletero = 20 * szint;
