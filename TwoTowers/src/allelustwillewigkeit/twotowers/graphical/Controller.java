@@ -339,6 +339,8 @@ public class Controller implements ActionListener {
 		if(mainFrame.isPlaying){
 			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
 			jp.statusChange();
+			jp.mbar.setValue(this.ellensegek.lekerHanyEllensegVanMeg());
+			jp.mbar.setToolTipText("Maradék ellenségek száma: "+jp.mbar.getValue());
 			
 			if(this.aktGomb != null){
 				jp.setButtonState(this.aktGomb, JatekButton.ButtonState.SELECTED);

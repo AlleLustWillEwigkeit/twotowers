@@ -46,7 +46,7 @@ public class JatekPanel extends JPanel {
 		AlphaPanel gombPanel = new AlphaPanel();
 		gombPanel.setLayout(new BoxLayout(gombPanel, BoxLayout.Y_AXIS));
 		gombPanel.setLocation(650, 50);
-		gombPanel.setSize(new Dimension(278, 280));
+		gombPanel.setSize(new Dimension(278, 320));
 		
 		// ÉLETVONAL
 		AlphaPanel eletVonalSor = new AlphaPanel();
@@ -54,7 +54,16 @@ public class JatekPanel extends JPanel {
 		pbar.setValue(0);
 		pbar.setStringPainted(true);
 		pbar.setToolTipText("Varázserő");
+		
+		// ELLENSEGEK
+		mbar = new EletVonalProgressBar(controller.ellensegek.lekerHanyEllensegVanMeg());
+		mbar.setValue(0);
+		mbar.setStringPainted(true);
+		mbar.setToolTipText("Maradék ellenségek");
+
+		eletVonalSor.add(mbar);
 		eletVonalSor.add(pbar);
+		
 		gombPanel.add(eletVonalSor);
 		
 		// ELSŐDLEGES GOMBOK - TORONY LEREAK / AKADÁLY LERAK
