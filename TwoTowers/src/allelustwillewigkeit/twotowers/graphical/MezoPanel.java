@@ -237,7 +237,7 @@ public class MezoPanel extends AlphaPanel {
 						tooltip.append("Köd");
 						break;
 					}
-					tooltip.append(" varázskő, hatótávszorzó: " + k.lekerHatotavSzorzo() + " életerőszorzó: " + k.lekerEleteroSzorzo());
+					tooltip.append(" varázskő, hatótávszorzó: " + k.lekerHatotavSzorzo() + " életerőszorzó: " + k.lekerEleteroSzorzo() + " duration: "+k.lekerDuration());
 				}
 				tooltip.append("</html>");
 			}
