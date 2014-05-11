@@ -99,13 +99,11 @@ public class MezoPanel extends AlphaPanel {
 	
 	public void setSelected(boolean selected) {
 		this.focus = selected;
-		
-
+		this.enabled = true;
 		if(selected && controller.getLerakas() != null) {
 			EpitesiTerulet et = pe.lekerEpitesiTerulet();
 			Ut ut = pe.lekerUt();
 			
-			this.enabled = true;
 			switch(controller.getLerakas()) {
 				case TORONY:
 					if (et == null) {
@@ -158,10 +156,9 @@ public class MezoPanel extends AlphaPanel {
 							break;
 					}
 					break;
-					
-				default:
-					overlayImage = null;
-			} 
+			}
+		} else {
+			overlayImage = null;
 		}
 		
 		this.repaint();
