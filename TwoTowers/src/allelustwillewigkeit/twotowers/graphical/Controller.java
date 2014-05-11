@@ -140,6 +140,11 @@ public class Controller implements ActionListener {
 			int varazsero = this.szaruman.lekerVarazsero();
 			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
 			jp.varazseroFeldolgoz(varazsero);
+			
+			if(this.koltseg > varazsero){
+				this.lerakas = null;
+				this.vkSzinek = null;
+			}
 		}
 	}
 	
