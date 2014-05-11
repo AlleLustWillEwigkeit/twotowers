@@ -60,6 +60,7 @@ public class Torony implements Varazskovezheto {
 		hatotav = (int) Math.floor(hatotav);
 
 		pe.beregisztral(this, (int) (hatotav--));
+		pe.palya.EndBeregisztral();
 	}
 
 	public void utBeregisztralt(Ut u) {

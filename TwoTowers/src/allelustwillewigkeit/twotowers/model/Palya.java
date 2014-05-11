@@ -15,7 +15,7 @@ public class Palya {
 		int id = 1;
 		for (int x = 0; x < 12; x++) {
 			for (int y = 0; y < 12; y++) {
-				palyaelemek[x][y] = new PalyaElem(id++);
+				palyaelemek[x][y] = new PalyaElem(id++,this);
 			}
 		}
 		
@@ -69,6 +69,14 @@ public class Palya {
 
 	public Start getStart(){
 		return start;
+	}
+	
+	public void EndBeregisztral(){
+		for (PalyaElem[] plist : this.palyaelemek) {
+			for( PalyaElem p : plist ){
+				p.beregisztralt = false;
+			}
+		}
 	}
 	
 	private void utatRak(int kezdx, int kezdy, int vegx, int vegy){

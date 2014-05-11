@@ -9,12 +9,14 @@ public class PalyaElem {
 	protected boolean beregisztralt = false;
 	protected Ut ut = null;
 	protected int palyaElemID;
+	protected Palya palya;
 
 	/**
 	 * A palyaelem konstruktora
 	 */
-	public PalyaElem(int _palyaElemID) {
+	public PalyaElem(int _palyaElemID, Palya p) {
 		this.palyaElemID = _palyaElemID;
+		this.palya = p;
 	}
 
 	/**
@@ -89,7 +91,7 @@ public class PalyaElem {
 			pe.beregisztral(torony, tavolsag-1);
 		}
 
-		this.beregisztralt = false; // Takaritas, hogy mas is fel tudjon
+		//this.beregisztralt = false; // Takaritas, hogy mas is fel tudjon
 									// iratkozni hozza.
 
 	}
