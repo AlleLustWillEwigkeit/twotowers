@@ -75,7 +75,7 @@ public abstract class Ellenseg {
 			lepesigIdo = sebesseg;
 
 			List<Ut> lehetosegek = ut.lekerKovUtak();
-			System.out.println("Út lehetőségek száma: "+lehetosegek.size());
+			System.out.println("Út("+this.ut.palyaElem.palyaElemID+") lehetőségek száma: "+lehetosegek.size());
 			
 			Ut kov = this.ut;
 			if(lehetosegek.size() > 0){
