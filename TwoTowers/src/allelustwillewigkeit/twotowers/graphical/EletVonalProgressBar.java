@@ -14,7 +14,7 @@ public class EletVonalProgressBar extends JProgressBar {
 	
 	public EletVonalProgressBar(int max) {
 		super(0, max);
-		this.setValue(50);
+		this.setValue(0);
 		
 		this.setPreferredSize(new Dimension(208, 31));
 		this.setBorderPainted(false);

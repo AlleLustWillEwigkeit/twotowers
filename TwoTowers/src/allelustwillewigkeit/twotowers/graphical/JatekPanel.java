@@ -138,6 +138,8 @@ public class JatekPanel extends JPanel {
 	}
 	
 	public void varazseroFeldolgoz(int varazsero){
+		System.out.println("Varazsero: "+varazsero);
+		this.pbar.setValue(varazsero);
 		for(JatekButton gmb : this.gombok){
 			if(gmb.koltseg <= varazsero){
 				this.setButtonState(gmb, JatekButton.ButtonState.ACTIVE, true);
