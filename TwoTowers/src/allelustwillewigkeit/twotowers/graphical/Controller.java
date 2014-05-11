@@ -45,10 +45,6 @@ public class Controller implements ActionListener {
 						publish(tc);
 					}else{
 						doWork = false;
-						if(motor.lekerallapot() == 1337)
-							System.out.println("Nyertél!");
-						else
-							System.out.println("Vesztettél!");
 					}
 				}catch(Exception e){
 					System.out.println(e.getStackTrace());
@@ -62,6 +58,11 @@ public class Controller implements ActionListener {
 		
 		@Override
 		protected void done() {
+			if(motor.lekerallapot() == 1337)
+				System.out.println("Nyertél!");
+			else
+				System.out.println("Vesztettél!");
+			
 			System.out.println("Worker kész");
 	    }
 		
