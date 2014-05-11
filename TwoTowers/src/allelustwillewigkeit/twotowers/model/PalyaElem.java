@@ -76,8 +76,8 @@ public class PalyaElem {
 		if (tavolsag <= 0)
 			return;
 		
-		if (this.beregisztralt)
-			return;
+		//if (this.beregisztralt)
+			//return;
 		
 		System.out.println("Pe: "+this.palyaElemID+", Tav: "+tavolsag);
 		
