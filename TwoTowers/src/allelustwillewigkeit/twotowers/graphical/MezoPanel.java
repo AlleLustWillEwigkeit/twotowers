@@ -24,7 +24,8 @@ public class MezoPanel extends AlphaPanel {
 	boolean enabled = true;
 	Controller controller;
 	Point coord;
-	Image bgImage = null;
+	Image overlayImage = null;
+	Image roleImage = null;
 	
 	private class MezoMouseListener implements MouseListener {  //EZT OTTHON NE PRÓBÁLJÁTOK KI
 		@Override
@@ -77,8 +78,10 @@ public class MezoPanel extends AlphaPanel {
 			g2.setColor(DISABLED_C);
 		
 		g2.fillRoundRect(0, 0, 52, 52, 8, 8);
-		if (bgImage != null)
-			g2.drawImage(bgImage, 0, 0, null);
+		if (overlayImage != null)
+			g2.drawImage(overlayImage, 0, 0, null);
+		if (roleImage != null)
+			g2.drawImage(roleImage, 0, 0, null);
 	}
 	
 	public void setSelected(boolean selected) {
@@ -92,13 +95,16 @@ public class MezoPanel extends AlphaPanel {
 			this.enabled = true;
 			switch(controller.getLerakas()) {
 				case TORONY:
-					bgImage = new ImageIcon(MezoPanel.class.getResource("res/toronyLerak_intermediate.png")).getImage();
-					if (et == null || et.vanToronyRajta())
+					if (et == null || et.vanToronyRajta()) {
 						enabled = false;
+						overlayImage = null;
+					} else {
+						overlayImage = new ImageIcon(MezoPanel.class.getResource("res/toronyLerak_intermediate.png")).getImage();
+					}
 					break;	
 					
 				case AKADALY:
-					bgImage = new ImageIcon(MezoPanel.class.getResource("res/akadalyLerak_intermediate.png")).getImage();
+					overlayImage = new ImageIcon(MezoPanel.class.getResource("res/akadalyLerak_intermediate.png")).getImage();
 					if (ut == null || ut.vanAkadalyRajta())
 						enabled = false;
 					break;
@@ -116,32 +122,48 @@ public class MezoPanel extends AlphaPanel {
 					
 					switch(controller.getVarazskoSzinek()) {
 						case SARGA:
-							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_sarga_intermediate.png")).getImage();
+							overlayImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_sarga_intermediate.png")).getImage();
 							break;
 						case ZOLD:
-							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_zold_intermediate.png")).getImage();
+							overlayImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_zold_intermediate.png")).getImage();
 							break;
 						case PIROS:
-							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_piros_intermediate.png")).getImage();
+							overlayImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_piros_intermediate.png")).getImage();
 							break;
 						case KEK:
-							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_kek_intermediate.png")).getImage();
+							overlayImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_kek_intermediate.png")).getImage();
 							break;
 						case LILA:
-							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_lila_intermediate.png")).getImage();
+							overlayImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_lila_intermediate.png")).getImage();
 							break;
 						case LSD:
-							bgImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_lsd_intermediate.png")).getImage();
+							overlayImage = new ImageIcon(MezoPanel.class.getResource("res/varazskoLerak_lsd_intermediate.png")).getImage();
 							break;
 					}
 					break;
 					
 				default:
-					bgImage = null;
+					overlayImage = null;
 			} 
 		}
 		
 		this.repaint();
+	}
+	
+	public void statusChange() {
+		PalyaElem pe = controller.getPalyaElemByXY(coord.x, coord.y);
+		EpitesiTerulet et = pe.lekerEpitesiTerulet();
+		Ut ut = pe.lekerUt();
+		
+		try {
+			if (ut != null)
+				ut.lekerAkadaly();
+				roleImage = new ImageIcon(MezoPanel.class.getResource("res/akadaly.png")).getImage();
+			if (et != null)
+				et.lekerTorony();
+				roleImage = new ImageIcon(MezoPanel.class.getResource("res/torony.png")).getImage();
+		} catch (Exception e) {
+		}
 	}
 	
 	public void doAction() {
