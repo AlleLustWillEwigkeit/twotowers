@@ -37,21 +37,29 @@ public class Varazsko {
 			eleteroSzorzo = 1.5;
 			hatotavSzorzo = 1.5;
 			duration = -1;
+			lovedek.clear();
+			lovedek.add(new Nyil(_id));
 			break;
 		case 2:
 			eleteroSzorzo = 2;
 			hatotavSzorzo = 1.1;
 			duration = -1;
+			lovedek.clear();
+			lovedek.add(new Tuzgolyo(_id));
 			break;
 		case 3:
 			eleteroSzorzo = 2;
 			hatotavSzorzo = 2;
 			duration = -1;
+			lovedek.clear();
+			lovedek.add(new Szikla(_id));
 			break;
 		case 4:
 			eleteroSzorzo = 2;
 			hatotavSzorzo = 0.8;
 			duration = -1;
+			lovedek.clear();
+			lovedek.add(new Darda(_id));
 			break;
 		case 5:
 			eleteroSzorzo = 2;

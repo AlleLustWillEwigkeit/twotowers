@@ -89,28 +89,28 @@ public class JatekPanel extends JPanel {
 		// - SÁRGA VARÁZSKŐ
 		VarazskoButton sargaVarazskoGomb = new VarazskoButton("varazskoLerak_sarga", 40);
 		sargaVarazskoGomb.addActionListener(controller);
-		sargaVarazskoGomb.setToolTipText("Sárga varázskő lerakása");
+		sargaVarazskoGomb.setToolTipText("Nyíl varázskő lerakása");
 		akadalyGombSor.add(sargaVarazskoGomb);
 		this.gombok.add(sargaVarazskoGomb);
 		
 		// - PIROS VARÁZSKŐ
 		VarazskoButton pirosVarazskoGomb = new VarazskoButton("varazskoLerak_piros", 40);
 		pirosVarazskoGomb.addActionListener(controller);
-		pirosVarazskoGomb.setToolTipText("Piros varázskő lerakása");
+		pirosVarazskoGomb.setToolTipText("Tűzgolyó varázskő lerakása");
 		akadalyGombSor.add(pirosVarazskoGomb);
 		this.gombok.add(pirosVarazskoGomb);
 		
 		// - ZÖLD VARÁZSKŐ
 		VarazskoButton zoldVarazskoGomb = new VarazskoButton("varazskoLerak_zold", 40);
 		zoldVarazskoGomb.addActionListener(controller);
-		zoldVarazskoGomb.setToolTipText("Zöld varázskő lerakása");
+		zoldVarazskoGomb.setToolTipText("Szikla varázskő lerakása");
 		akadalyGombSor.add(zoldVarazskoGomb);
 		this.gombok.add(zoldVarazskoGomb);
 		
 		// - KÉK VARÁZSKŐ
 		VarazskoButton kekVarazskoGomb = new VarazskoButton("varazskoLerak_kek", 50);
 		kekVarazskoGomb.addActionListener(controller);
-		kekVarazskoGomb.setToolTipText("Kék varázskő lerakása");
+		kekVarazskoGomb.setToolTipText("Dárda varázskő lerakása");
 		akadalyGombSor.add(kekVarazskoGomb);
 		this.gombok.add(kekVarazskoGomb);
 		
