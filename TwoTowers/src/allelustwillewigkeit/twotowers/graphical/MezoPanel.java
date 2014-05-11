@@ -181,11 +181,8 @@ public class MezoPanel extends AlphaPanel {
 		
 		if (et != null && et.vanToronyRajta()){
 			roleImage = new ImageIcon(MezoPanel.class.getResource("res/torony.png")).getImage();
-			Torony t = et.lekerTorony();
-			for(Varazsko v : t.lekerVarazskovek()){
-				if(v.lekerVarazskoDictID() == 6){
-					roleImage = new ImageIcon(MezoPanel.class.getResource("res/kod.png")).getImage();
-				}
+			if(et.lekerTorony().kodositett()){
+				roleImage = new ImageIcon(MezoPanel.class.getResource("res/kod.png")).getImage();
 			}
 		}else if (et != null && !et.vanToronyRajta()){
 			roleImage = null;
