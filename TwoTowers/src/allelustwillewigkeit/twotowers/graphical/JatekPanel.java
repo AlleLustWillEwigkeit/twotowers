@@ -20,6 +20,7 @@ public class JatekPanel extends JPanel {
 	ArrayList<JatekButton> gombok;
 	ArrayList<MezoPanel> mezok;
 	EletVonalProgressBar pbar;
+	EletVonalProgressBar mbar;
 	
 	public JatekPanel(Controller controller) {
 		this.controller = controller;

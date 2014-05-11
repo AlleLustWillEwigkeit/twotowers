@@ -18,7 +18,7 @@ public class Torony implements Varazskovezheto {
 	public Torony(EpitesiTerulet _minAll, int _id) {
 		System.out.println("Torony init");
 		this.kovek.add(new Varazsko(0, id * 10));
-		this.alapHatotav = 8;
+		this.alapHatotav = 3;
 		this.alapTuzGyorsasag = 1;
 		this.minAll = _minAll;
 		this.beRegisztralTavonBeluliUtakhoz();
