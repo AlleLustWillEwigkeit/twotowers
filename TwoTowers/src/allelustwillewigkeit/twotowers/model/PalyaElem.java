@@ -83,7 +83,7 @@ public class PalyaElem {
 		
 		System.out.println("Pe: "+this.palyaElemID+", Tav: "+tavolsag);
 		this.beregisztralt = true;
-		this.tav = tavolsag;
+		this.tav = tavolsag-1;
 		if (this.vanUtja())
 			this.lekerUt().feliratkozik(torony);
 		
