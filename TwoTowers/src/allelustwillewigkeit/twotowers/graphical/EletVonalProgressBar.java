@@ -14,7 +14,7 @@ public class EletVonalProgressBar extends JProgressBar {
 	
 	public EletVonalProgressBar(int max) {
 		super(0, max);
-		this.setValue(50);
+		this.setValue(0);
 		
 		this.setPreferredSize(new Dimension(208, 31));
 		this.setBorderPainted(false);
@@ -25,14 +25,16 @@ public class EletVonalProgressBar extends JProgressBar {
 	}
 	
 	@Override
-	protected void paintComponent(Graphics g) {
-		g.drawImage(border, 0, 0, null, null);
-		
+	protected void paintComponent(Graphics g) {		
 		double progress_percent = this.getValue() / (double)this.getMaximum();
 		if (!Double.isInfinite(progress_percent) && progress_percent > 0) {
+			g.setColor(new Color(0, 0, 0, 0));
+			g.fillRect(7, 6, 195, 20);
 			g.setColor(new Color(255, 0, 0, 100));
 			g.fillRect(7, 6, (int)(195 * progress_percent), 20);
 		}
+		
+		g.drawImage(border, 0, 0, null, null);
 	}
 }
 

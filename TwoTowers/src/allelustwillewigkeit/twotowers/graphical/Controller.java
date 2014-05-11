@@ -55,7 +55,6 @@ public class Controller implements ActionListener {
 		start = palya.getStart(); // TODO 
 
 		szaruman = new JosagosSzaruman(500);
-		szaruman.varazseroNovel(125);
 		this.koltseg = 0;
 		
 		ellensegek = new Ellensegek(motor = new Jatekmotor(ellensegek, szaruman, palya), 500, start, szaruman);
@@ -69,6 +68,9 @@ public class Controller implements ActionListener {
 		
 		
 		mainFrame.jatekRajzol();
+		this.varazseroFeldolgoz();
+		
+		//TESZT ELLENSÉG HOZZÁADÁSA
 		try {
 			ellensegek.inditEllenseg(1, 1, 10000);
 		} catch (Exception e) {
@@ -146,9 +148,12 @@ public class Controller implements ActionListener {
 		if(mainFrame.isPlaying){
 			int varazsero = this.szaruman.lekerVarazsero();
 			JatekPanel jp = (JatekPanel)mainFrame.jelenlegiPanel;
-			jp.pbar.setValue(varazsero);
+			jp.varazseroFeldolgoz(varazsero);
 			
-			
+			if(this.koltseg > varazsero){
+				this.lerakas = null;
+				this.vkSzinek = null;
+			}
 		}
 	}
 	
@@ -271,6 +276,7 @@ public class Controller implements ActionListener {
 			break;
 		}
 
+		this.mainFrame.repaint();
 	}
 
 	public Lerakas getLerakas() {
