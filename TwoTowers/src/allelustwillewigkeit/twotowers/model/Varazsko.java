@@ -10,6 +10,7 @@ public class Varazsko {
 	protected int duration;
 	protected Varazskovezheto tarolo;
 	protected int id;
+	protected int dictID;
 
 	public Varazsko(double _eleteroSzorzo, double _hatotavSzorzo,
 			int _duration, int _id) {
@@ -25,6 +26,7 @@ public class Varazsko {
 		lovedek = new ArrayList<Lovedek>();
 		lovedek.add(new Lovedek(0));
 		id = _id;
+		dictID = varazskoDictID;
 		switch (varazskoDictID) {
 		case 0:
 			eleteroSzorzo = 1;
@@ -69,6 +71,10 @@ public class Varazsko {
 			duration = -1;
 			break;
 		}
+	}
+	
+	public int lekerVarazskoDictID(){
+		return dictID;
 	}
 
 	public void beallitTarolo(Varazskovezheto t) {

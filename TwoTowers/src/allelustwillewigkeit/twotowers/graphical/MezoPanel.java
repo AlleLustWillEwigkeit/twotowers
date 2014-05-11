@@ -20,6 +20,7 @@ import allelustwillewigkeit.twotowers.model.EpitesiTerulet;
 import allelustwillewigkeit.twotowers.model.PalyaElem;
 import allelustwillewigkeit.twotowers.model.Torony;
 import allelustwillewigkeit.twotowers.model.Ut;
+import allelustwillewigkeit.twotowers.model.Varazsko;
 
 public class MezoPanel extends AlphaPanel {
 	static final Color ENABLED_C = new Color(255, 255, 255, 100);
@@ -178,9 +179,15 @@ public class MezoPanel extends AlphaPanel {
 			roleImage = null;
 		}
 		
-		if (et != null && et.vanToronyRajta())
+		if (et != null && et.vanToronyRajta()){
 			roleImage = new ImageIcon(MezoPanel.class.getResource("res/torony.png")).getImage();
-		else if (et != null && !et.vanToronyRajta()){
+			Torony t = et.lekerTorony();
+			for(Varazsko v : t.lekerVarazskovek()){
+				if(v.lekerVarazskoDictID() == 6){
+					roleImage = new ImageIcon(MezoPanel.class.getResource("res/kod.png")).getImage();
+				}
+			}
+		}else if (et != null && !et.vanToronyRajta()){
 			roleImage = null;
 		}
 	}
