@@ -95,30 +95,33 @@ public class MezoPanel extends AlphaPanel {
 			this.enabled = true;
 			switch(controller.getLerakas()) {
 				case TORONY:
-					if (et == null || et.vanToronyRajta()) {
+					if (et == null) {
 						enabled = false;
-						overlayImage = null;
-					} else {
 						overlayImage = new ImageIcon(MezoPanel.class.getResource("res/toronyLerak_intermediate.png")).getImage();
+					} else {
+						if (et.vanToronyRajta())
+							overlayImage = null;
+						else
+							overlayImage = new ImageIcon(MezoPanel.class.getResource("res/toronyLerak_intermediate.png")).getImage();
+					}
+					break;
+					
+				case AKADALY:
+					if (et == null) {
+						enabled = false;
+						overlayImage = new ImageIcon(MezoPanel.class.getResource("res/akadalyLerak_intermediate.png")).getImage();
+					} else {
+						if (et.vanToronyRajta())
+							overlayImage = null;
+						else
+							overlayImage = new ImageIcon(MezoPanel.class.getResource("res/akadalyLerak_intermediate.png")).getImage();
 					}
 					break;	
 					
-				case AKADALY:
-					overlayImage = new ImageIcon(MezoPanel.class.getResource("res/akadalyLerak_intermediate.png")).getImage();
-					if (ut == null || ut.vanAkadalyRajta())
-						enabled = false;
-					break;
-					
 				case VARAZSKO:
 					//TODO varázskő overlay
-					try {
-						if (ut != null)
-							ut.lekerAkadaly();
-						if (et != null)
-							et.lekerTorony();
-					} catch (Exception e) {
+					if (ut != null && !ut.vanAkadalyRajta() || et != null && !et.vanToronyRajta())
 						enabled = false;
-					}
 					
 					switch(controller.getVarazskoSzinek()) {
 						case SARGA:
@@ -155,15 +158,10 @@ public class MezoPanel extends AlphaPanel {
 		EpitesiTerulet et = pe.lekerEpitesiTerulet();
 		Ut ut = pe.lekerUt();
 		
-		try {
-			if (ut != null)
-				ut.lekerAkadaly();
-				roleImage = new ImageIcon(MezoPanel.class.getResource("res/akadaly.png")).getImage();
-			if (et != null)
-				et.lekerTorony();
-				roleImage = new ImageIcon(MezoPanel.class.getResource("res/torony.png")).getImage();
-		} catch (Exception e) {
-		}
+		if (ut != null && ut.vanAkadalyRajta())
+			roleImage = new ImageIcon(MezoPanel.class.getResource("res/akadaly.png")).getImage();
+		if (et != null && et.vanToronyRajta())
+			roleImage = new ImageIcon(MezoPanel.class.getResource("res/torony.png")).getImage();
 	}
 	
 	public void doAction() {
