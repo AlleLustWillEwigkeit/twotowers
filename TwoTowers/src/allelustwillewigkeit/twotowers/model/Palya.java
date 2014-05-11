@@ -74,6 +74,21 @@ public class Palya {
 		
 		//END OF UT GENERATION MAGIC
 	}
+	
+	public List<Torony> lekerKodositetlenTornyok(){
+		List<Torony> tList = new ArrayList<Torony>();
+		
+		for (PalyaElem[] plist : this.palyaelemek) {
+			for( PalyaElem p : plist ){
+				if(p.vanEpitesiTerulete() && p.lekerEpitesiTerulet().vanToronyRajta()){
+					if(!p.lekerEpitesiTerulet().lekerTorony().kodositett())
+						tList.add(p.lekerEpitesiTerulet().lekerTorony());
+				}	
+			}
+		}
+		
+		return tList;
+	}
 
 
 	public Start getStart(){

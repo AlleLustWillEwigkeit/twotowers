@@ -15,6 +15,7 @@ import allelustwillewigkeit.twotowers.model.JosagosSzaruman;
 import allelustwillewigkeit.twotowers.model.Palya;
 import allelustwillewigkeit.twotowers.model.PalyaElem;
 import allelustwillewigkeit.twotowers.model.Start;
+import allelustwillewigkeit.twotowers.model.Torony;
 import allelustwillewigkeit.twotowers.model.Ut;
 import allelustwillewigkeit.twotowers.model.Varazsko;
 
@@ -39,6 +40,14 @@ public class Controller implements ActionListener {
 						if(tc % magicConstant == 0){
 							for(int i = 0; i < tc/ magicConstant ; i++){
 								ellensegek.inditEllenseg(1,1, 10000 );
+							}
+						}
+						
+						if(tc % (int) (Math.random() * 100) == 0){
+							List<Torony> lehetosegek = palya.lekerKodositetlenTornyok();
+							if(lehetosegek.size() > 0){
+								Torony t = lehetosegek.get((int) (Math.random() * lehetosegek.size()));
+								t.elkodosit();
 							}
 						}
 						

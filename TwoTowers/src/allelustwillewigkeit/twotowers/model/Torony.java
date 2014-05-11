@@ -91,6 +91,17 @@ public class Torony implements Varazskovezheto {
 				this.beRegisztralTavonBeluliUtakhoz();
 		}
 	}
+	
+	public boolean kodositett(){
+		boolean kodos = false;
+		
+		for(Varazsko v: this.kovek){
+			if(v.lekerVarazskoDictID() == 6)
+				kodos = true;
+		}
+		
+		return kodos;
+	}
 
 	public void kiregisztral() {
 		if (kikhezRegisztraltamFel.size() > 0) {
