@@ -75,6 +75,7 @@ public class Palya {
 		for (PalyaElem[] plist : this.palyaelemek) {
 			for( PalyaElem p : plist ){
 				p.beregisztralt = false;
+				p.tav = 0;
 			}
 		}
 	}

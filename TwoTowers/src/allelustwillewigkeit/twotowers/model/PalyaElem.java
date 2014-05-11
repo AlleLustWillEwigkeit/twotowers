@@ -6,10 +6,13 @@ import java.util.List;
 public class PalyaElem {
 	protected EpitesiTerulet epitesiTerulet = null;
 	protected List<PalyaElem> szomszedok = new ArrayList<PalyaElem>();
-	protected boolean beregisztralt = false;
+	
 	protected Ut ut = null;
 	protected int palyaElemID;
 	protected Palya palya;
+	
+	protected boolean beregisztralt = false;
+	protected int tav = 0;
 
 	/**
 	 * A palyaelem konstruktora
@@ -69,30 +72,41 @@ public class PalyaElem {
 	 * @param int tavolsag
 	 */
 	public void beregisztral(Torony torony, int tavolsag) {
-
 		if (torony == null)
 			return;
-
+		
 		if (tavolsag <= 0)
 			return;
 		
-		//if (this.beregisztralt)
-			//return;
+		ArrayList<PalyaElem> q = new ArrayList<PalyaElem>();
+		PalyaElem x;
 		
 		System.out.println("Pe: "+this.palyaElemID+", Tav: "+tavolsag);
-		
-		this.beregisztralt = true; // Ne kelljen meg egyszer foloslegesen
-								   // figyelni ot.
-
+		this.beregisztralt = true;
+		this.tav = tavolsag;
 		if (this.vanUtja())
 			this.lekerUt().feliratkozik(torony);
-
-		for (PalyaElem pe : szomszedok) {
-			pe.beregisztral(torony, tavolsag-1);
+		
+		q.add(this);
+		
+		while(q.size() > 0){
+			x = q.remove(0);
+			if(x.tav > 0){
+				for (PalyaElem y : x.szomszedok) {
+					if(!y.beregisztralt){
+						y.beregisztralt = true;
+						y.tav = x.tav-1;
+						System.out.println("Pe: "+y.palyaElemID+", Tav: "+y.tav);
+						if (y.vanUtja())
+							y.lekerUt().feliratkozik(torony);
+						
+						q.add(y);
+					}
+				}
+			}
 		}
-
-		//this.beregisztralt = false; // Takaritas, hogy mas is fel tudjon
-									// iratkozni hozza.
+		
+		
 	}
 
 	/**
