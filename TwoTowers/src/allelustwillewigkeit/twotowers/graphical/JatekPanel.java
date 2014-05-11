@@ -148,7 +148,6 @@ public class JatekPanel extends JPanel {
 	}
 	
 	public void varazseroFeldolgoz(int varazsero){
-		System.out.println("Varazsero: "+varazsero);
 		this.pbar.setValue(varazsero);
 		this.pbar.setToolTipText("Varázserő: "+this.pbar.getValue());
 		for(JatekButton gmb : this.gombok){

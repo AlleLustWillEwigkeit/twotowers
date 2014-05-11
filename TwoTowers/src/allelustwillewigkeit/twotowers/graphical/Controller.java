@@ -56,11 +56,9 @@ public class Controller implements ActionListener {
 						doWork = false;
 					}
 				}catch(Exception e){
-					System.out.println(e.getStackTrace());
+					e.printStackTrace();
 				}
 			}
-			
-			System.out.println("Tick végek");
 			
 			return true;
 		}
@@ -71,13 +69,10 @@ public class Controller implements ActionListener {
 				mainFrame.gyozelemRajz();
 			else
 				mainFrame.veresegRajz();
-			
-			System.out.println("Worker kész");
 	    }
 		
 		@Override
 		protected void process(List<Integer> chunks) {
-			System.out.println(tc+". tick");
 			tickCounter = chunks.get(chunks.size()-1);
 			ujraRajzol();
 		}
@@ -305,7 +300,6 @@ public class Controller implements ActionListener {
 		case "mezoKattint":
 			//TODO mezőre kattintás
 			this.mezoKattint((MezoPanel)a.getSource());
-			System.out.println("Mezokattint kesz");
 			break;
 		case "toronyLerak":
 			toronyLerak((JatekButton)a.getSource());

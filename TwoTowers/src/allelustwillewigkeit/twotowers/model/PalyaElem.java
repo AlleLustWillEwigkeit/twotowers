@@ -81,7 +81,6 @@ public class PalyaElem {
 		ArrayList<PalyaElem> q = new ArrayList<PalyaElem>();
 		PalyaElem x;
 		
-		System.out.println("Pe: "+this.palyaElemID+", Tav: "+tavolsag);
 		this.beregisztralt = true;
 		this.tav = tavolsag-1;
 		if (this.vanUtja())
@@ -96,7 +95,6 @@ public class PalyaElem {
 					if(!y.beregisztralt){
 						y.beregisztralt = true;
 						y.tav = x.tav-1;
-						System.out.println("Pe: "+y.palyaElemID+", Tav: "+y.tav);
 						if (y.vanUtja())
 							y.lekerUt().feliratkozik(torony);
 						

@@ -16,7 +16,6 @@ public class Torony implements Varazskovezheto {
 	 * A torony konstruktora
 	 */
 	public Torony(EpitesiTerulet _minAll, int _id) {
-		System.out.println("Torony init");
 		this.kovek.add(new Varazsko(0, id * 10));
 		this.alapHatotav = 3;
 		this.alapTuzGyorsasag = 1;
@@ -45,7 +44,6 @@ public class Torony implements Varazskovezheto {
 	 * beregisztralna az utakhoz, a megfelelo hatotavon.
 	 */
 	public void beRegisztralTavonBeluliUtakhoz() {// TODO
-		System.out.println("Torony beregisztral");
 		kiregisztral();
 
 		PalyaElem pe = minAll.minAll();

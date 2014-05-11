@@ -75,15 +75,9 @@ public abstract class Ellenseg {
 			lepesigIdo = sebesseg;
 
 			List<Ut> lehetosegek = ut.lekerKovUtak();
-			System.out.println("Út("+this.ut.palyaElem.palyaElemID+") lehetőségek száma: "+lehetosegek.size());
 			
 			Ut kov = this.ut;
 			if(lehetosegek.size() > 0){
-				System.out.print("Köv utak: ");
-				for(Ut u : lehetosegek){
-					System.out.print("("+u.palyaElem.palyaElemID+"),");
-				}
-				System.out.println();
 				kov = lehetosegek.get((int) (Math.random() * lehetosegek.size()));
 			}
 
